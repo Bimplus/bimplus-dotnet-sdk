@@ -1,0 +1,891 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BimPlus.Client</name>
+    </assembly>
+    <members>
+        <member name="T:BimPlus.Client.BimPlusEventArgs">
+            <summary>
+            BimPlusEventArgs.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.BimPlusEventArgs.Id">
+            <summary>
+            Object Guid.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.BimPlusEventArgs.Selected">
+            <summary>
+            Object is selected.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.BimPlusEventArgs.Multiselect">
+            <summary>
+            Add an Object to the selection.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.BimPlusEventArgs.Value">
+            <summary>
+            An object property.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Client.BimPlusEventHandler">
+            <summary>
+            Bimplus EventHandler.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:BimPlus.Client.SignalRProjectItemChangedEventHandler">
+            <summary>
+            SignalR event handler for DtoStructure.
+            </summary>
+            <param name="sender"></param>
+            <param name="info"></param>
+        </member>
+        <member name="T:BimPlus.Client.SignalRProjectIssueChangedHandler">
+            <summary>
+            SignalR event handler for DtoShortIssue.
+            </summary>
+            <param name="sender"></param>
+            <param name="info"></param>
+        </member>
+        <member name="T:BimPlus.Client.SignalRProjectLockEventHandler">
+            <summary>
+            SignalR event handler for Locks.
+            </summary>
+            <param name="sender"></param>
+            <param name="info"></param>
+        </member>
+        <member name="T:BimPlus.Client.EventHandlerCore">
+            <summary>
+            Core for handling events.
+            </summary>
+        </member>
+        <member name="E:BimPlus.Client.EventHandlerCore.ShowVplControl">
+            <summary>
+            Show Vpl control event.
+            </summary>
+        </member>
+        <member name="E:BimPlus.Client.EventHandlerCore.ProjectChanged">
+            <summary>
+            Project changed event.
+            </summary>
+        </member>
+        <member name="E:BimPlus.Client.EventHandlerCore.TeamChanged">
+            <summary>
+            Team changed event.
+            </summary>
+        </member>
+        <member name="E:BimPlus.Client.EventHandlerCore.IssueSelected">
+            <summary>
+            Issue selected event.
+            </summary>
+        </member>
+        <member name="E:BimPlus.Client.EventHandlerCore.IssueViewSelected">
+            <summary>
+            Issue view selected event.
+            </summary>
+        </member>
+        <member name="E:BimPlus.Client.EventHandlerCore.IssueUpdated">
+            <summary>
+            Issue updated event.
+            </summary>
+        </member>
+        <member name="E:BimPlus.Client.EventHandlerCore.PinSelected">
+            <summary>
+            Pin selected event.
+            </summary>
+        </member>
+        <member name="E:BimPlus.Client.EventHandlerCore.ClientConnected">
+            <summary>
+            Client connected event.
+            </summary>
+        </member>
+        <member name="E:BimPlus.Client.EventHandlerCore.ObjectSelected">
+            <summary>
+            Object selected event.
+            </summary>
+        </member>
+        <member name="E:BimPlus.Client.EventHandlerCore.CreateIssue">
+            <summary>
+            Issue created event.
+            </summary>
+        </member>
+        <member name="E:BimPlus.Client.EventHandlerCore.IssueDeleted">
+            <summary>
+            Issue deleted event.
+            </summary>
+        </member>
+        <member name="E:BimPlus.Client.EventHandlerCore.Unauthorized">
+            <summary>
+            Unauthorized event.
+            </summary>
+        </member>
+        <member name="E:BimPlus.Client.EventHandlerCore.DataLoaded">
+            <summary>
+            Data of view loaded event.
+            </summary>
+        </member>
+        <member name="E:BimPlus.Client.EventHandlerCore.ObjectsSelected">
+            <summary>
+            Object selected event.
+            </summary>
+        </member>
+        <member name="E:BimPlus.Client.EventHandlerCore.ObjectStructureSelected">
+            <summary>
+            Object structure selected event.
+            </summary>
+        </member>
+        <member name="E:BimPlus.Client.EventHandlerCore.CurrentObjectSelected">
+            <summary>
+            Current object selected event.
+            </summary>
+        </member>
+        <member name="E:BimPlus.Client.EventHandlerCore.ModuleSelected">
+            <summary>
+            Module selected event.
+            </summary>
+        </member>
+        <member name="E:BimPlus.Client.EventHandlerCore.ModelToggled">
+            <summary>
+            Model toogled event.
+            </summary>
+        </member>
+        <member name="E:BimPlus.Client.EventHandlerCore.ModelLayerToggled">
+            <summary>
+            Model layer selected event.
+            </summary>
+        </member>
+        <member name="E:BimPlus.Client.EventHandlerCore.TopologyNodeToggled">
+            <summary>
+            Topology node toggled event.
+            </summary>
+        </member>
+        <member name="E:BimPlus.Client.EventHandlerCore.StructureSelected">
+            <summary>
+            Structure Selected event.
+            </summary>
+        </member>
+        <member name="E:BimPlus.Client.EventHandlerCore.StructureNodeSelected">
+            <summary>
+            StructureNode Selected event.
+            </summary>
+        </member>
+        <member name="E:BimPlus.Client.EventHandlerCore.StructureNodeToggled">
+            <summary>
+            Structure node toggled event.
+            </summary>
+        </member>
+        <member name="E:BimPlus.Client.EventHandlerCore.FilterSelected">
+            <summary>
+            Filter Selected event.
+            </summary>
+        </member>
+        <member name="E:BimPlus.Client.EventHandlerCore.FilterNodeSelected">
+            <summary>
+            FilterNode Selected event.
+            </summary>
+        </member>
+        <member name="E:BimPlus.Client.EventHandlerCore.FilterNodeToggled">
+            <summary>
+            Filter node toggled event.
+            </summary>
+        </member>
+        <member name="E:BimPlus.Client.EventHandlerCore.KeyBoardEventRaised">
+            <summary>
+            Key event raised.
+            </summary>
+        </member>
+        <member name="E:BimPlus.Client.EventHandlerCore.SignalRProjectItemChanged">
+            <summary>
+            SignalR event handler for DtoStructure (all events).
+            </summary>
+        </member>
+        <member name="E:BimPlus.Client.EventHandlerCore.SignalR_StructureCreated">
+            <summary>
+            SignalR event handler for DtoStructure created.
+            </summary>
+        </member>
+        <member name="E:BimPlus.Client.EventHandlerCore.SignalR_StructureChanged">
+            <summary>
+            SignalR event handler for DtoStructure changed.
+            </summary>
+        </member>
+        <member name="E:BimPlus.Client.EventHandlerCore.SignalR_StructureDeleted">
+            <summary>
+            SignalR event handler for DtoStructure deleted.
+            </summary>
+        </member>
+        <member name="E:BimPlus.Client.EventHandlerCore.SignalRProjectIssueChanged">
+            <summary>
+            SignalR event handler for DtoShortIssue (all events).
+            </summary>
+        </member>
+        <member name="E:BimPlus.Client.EventHandlerCore.SignalR_IssueCreated">
+            <summary>
+            SignalR event handler for DtoShortIssue created.
+            </summary>
+        </member>
+        <member name="E:BimPlus.Client.EventHandlerCore.SignalR_IssueChanged">
+            <summary>
+            SignalR event handler for DtoShortIssue changed.
+            </summary>
+        </member>
+        <member name="E:BimPlus.Client.EventHandlerCore.SignalR_IssueDeleted">
+            <summary>
+            SignalR event handler for DtoShortIssue deleted.
+            </summary>
+        </member>
+        <member name="E:BimPlus.Client.EventHandlerCore.SignalRLockChanged">
+            <summary>
+            SignalR event handler for DtoStructure (all events).
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.GetUsedEventHandler">
+            <summary>
+            Get used event handler.
+            </summary>
+            <returns>List of objects.</returns>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.ShowVplControlHandler(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Event handler for ShowVplControl event.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnProjectChanged(BimPlus.Client.BimPlusEventArgs)">
+            <summary>
+            Event handler for ProjectChanged event.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnProjectChanged(System.Object,BimPlus.Client.BimPlusEventArgs)">
+            <summary>
+            Event handler for ProjectChanged event.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnTeamChanged(BimPlus.Client.BimPlusEventArgs)">
+            <summary>
+            Event handler for TeamChanged event.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnTeamChanged(System.Object,BimPlus.Client.BimPlusEventArgs)">
+            <summary>
+            Event handler for TeamChanged event.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnIssueSelected(BimPlus.Client.BimPlusEventArgs)">
+            <summary>
+            Event handler for IssueSelected event.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnIssueSelected(System.Object,BimPlus.Client.BimPlusEventArgs)">
+            <summary>
+            Event handler for IssueSelected event.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnIssueViewSelected(BimPlus.Client.BimPlusEventArgs)">
+            <summary>
+            Event handler for IssueViewSelected event.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnIssueViewSelected(System.Object,BimPlus.Client.BimPlusEventArgs)">
+            <summary>
+            Event handler for IssueViewSelected event.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnIssueDeleted(BimPlus.Client.BimPlusEventArgs)">
+            <summary>
+            Event handler for IssueDeleted event.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnIssueDeleted(System.Object,BimPlus.Client.BimPlusEventArgs)">
+            <summary>
+            Event handler for IssueDeleted event.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnPinSelected(BimPlus.Client.BimPlusEventArgs)">
+            <summary>
+            Event handler for PinSelected event.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnPinSelected(System.Object,BimPlus.Client.BimPlusEventArgs)">
+            <summary>
+            Event handler for PinSelected event.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnClientConnected(BimPlus.Client.BimPlusEventArgs)">
+            <summary>
+            Event handler for ClientConnected event.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnClientConnected(System.Object,BimPlus.Client.BimPlusEventArgs)">
+            <summary>
+            Event handler for ClientConnected event.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnObjectSelected(BimPlus.Client.BimPlusEventArgs)">
+            <summary>
+            Event handler for ObjectSelected event.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnObjectSelected(System.Object,BimPlus.Client.BimPlusEventArgs)">
+            <summary>
+            Event handler for ObjectSelected event.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnCreateIssue(BimPlus.Client.BimPlusEventArgs)">
+            <summary>
+            Event handler for CreateIssue event.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnCreateIssue(System.Object,BimPlus.Client.BimPlusEventArgs)">
+            <summary>
+            Event handler for CreateIssue event.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnKeyBoardEventRaised(System.Windows.Input.KeyEventArgs)">
+            <summary>
+            Event handler for KeyBoardEventRaised event.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnKeyBoardEventRaised(System.Object,System.Windows.Input.KeyEventArgs)">
+            <summary>
+            Event handler for KeyBoardEventRaised event.
+            </summary>
+            <param name="e"></param>
+            <param name="sender"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnIssueUpdated(BimPlus.Client.BimPlusEventArgs)">
+            <summary>
+            Event handler for IssueUpdated event.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnIssueUpdated(System.Object,BimPlus.Client.BimPlusEventArgs)">
+            <summary>
+            Event handler for IssueUpdated event.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnExpiredAccesstoken(BimPlus.Client.BimPlusEventArgs)">
+            <summary>
+            Event handler for Unauthorized event.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnExpiredAccesstoken(System.Object,BimPlus.Client.BimPlusEventArgs)">
+            <summary>
+            Event handler for Unauthorized event.
+            </summary>
+            <param name="e"></param>
+            <param name="sender"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnObjectsSelected(BimPlus.Client.BimPlusEventArgs)">
+            <summary>
+            Event handler for ObjectsSelected event.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnObjectsSelected(System.Object,BimPlus.Client.BimPlusEventArgs)">
+            <summary>
+            Event handler for ObjectsSelected event.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnObjectStructureSelected(BimPlus.Client.BimPlusEventArgs)">
+            <summary>
+            Event handler for ObjectStructureSelected event.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnObjectStructureSelected(System.Object,BimPlus.Client.BimPlusEventArgs)">
+            <summary>
+            Event handler for ObjectStructureSelected event.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnCurrentObjectSelected(BimPlus.Client.BimPlusEventArgs)">
+            <summary>
+            Event handler for CurrentObjectSelected event.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnCurrentObjectSelected(System.Object,BimPlus.Client.BimPlusEventArgs)">
+            <summary>
+            Event handler for CurrentObjectSelected event.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnDataLoaded(System.Object,BimPlus.Client.BimPlusEventArgs)">
+            <summary>
+            Event handler for DataLoaded event.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnModuleSelected(System.Object,BimPlus.Client.BimPlusEventArgs)">
+            <summary>
+            Event handler for ModuleSelected event.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnModelToggled(System.Object,BimPlus.Client.BimPlusEventArgs)">
+            <summary>
+            Event handler for ModelToggled event.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnModelLayerToggled(System.Object,BimPlus.Client.BimPlusEventArgs)">
+            <summary>
+            Event handler for ModelLayerToggled event.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnTopologyNodeToggled(System.Object,BimPlus.Client.BimPlusEventArgs)">
+            <summary>
+            Event handler for TopologyNodeToggled event.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnStructureSelected(System.Object,BimPlus.Client.BimPlusEventArgs)">
+            <summary>
+            Event handler for StructureSelected event.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnStructureNodeSelected(System.Object,BimPlus.Client.BimPlusEventArgs)">
+            <summary>
+            Event handler for StructureNodeSelected event.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnStructureNodeToggled(System.Object,BimPlus.Client.BimPlusEventArgs)">
+            <summary>
+            Event handler for StructureNodeToggled event.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnFilterSelected(System.Object,BimPlus.Client.BimPlusEventArgs)">
+            <summary>
+            Event handler for FilterSelected event.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnFilterNodeSelected(System.Object,BimPlus.Client.BimPlusEventArgs)">
+            <summary>
+            Event handler for FilterNode event.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnFilterNodeToggled(System.Object,BimPlus.Client.BimPlusEventArgs)">
+            <summary>
+            Event handler for FilterNodeToggled event.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnSignalRProjectItemChanged(System.Object,BimPlus.Sdk.Data.Notification.ProjectHubItemChangedInfo)">
+            <summary>
+            Raise SignalR event for DtoStructure (all events).
+            </summary>
+            <param name="sender"></param>
+            <param name="info"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnSignalR_StructureCreated(System.Object,BimPlus.Sdk.Data.Notification.ProjectHubItemChangedInfo)">
+            <summary>
+            Raise SignalR event for DtoStructure created.
+            </summary>
+            <param name="sender"></param>
+            <param name="info"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnSignalR_StructureChanged(System.Object,BimPlus.Sdk.Data.Notification.ProjectHubItemChangedInfo)">
+            <summary>
+            Raise SignalR event for DtoStructure changed.
+            </summary>
+            <param name="sender"></param>
+            <param name="info"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnSignalR_StructureDeleted(System.Object,BimPlus.Sdk.Data.Notification.ProjectHubItemChangedInfo)">
+            <summary>
+            Raise SignalR event for DtoStructure deleted.
+            </summary>
+            <param name="sender"></param>
+            <param name="info"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnSignalRProjectIssueChanged(System.Object,BimPlus.Sdk.Data.Notification.ProjectIssueChangedInfo)">
+            <summary>
+            SignalR event handler for DtoShortIssue (all events).
+            </summary>
+            <param name="sender"></param>
+            <param name="info"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnSignalR_IssueCreated(System.Object,BimPlus.Sdk.Data.Notification.ProjectIssueChangedInfo)">
+            <summary>
+            Raise SignalR event for DtoShortIssue created.
+            </summary>
+            <param name="sender"></param>
+            <param name="info"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnSignalR_IssueChanged(System.Object,BimPlus.Sdk.Data.Notification.ProjectIssueChangedInfo)">
+            <summary>
+            Raise SignalR event for DtoShortIssue changed.
+            </summary>
+            <param name="sender"></param>
+            <param name="info"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnSignalR_IssueDeleted(System.Object,BimPlus.Sdk.Data.Notification.ProjectIssueChangedInfo)">
+            <summary>
+            Raise SignalR event for DtoShortIssue deleted.
+            </summary>
+            <param name="sender"></param>
+            <param name="info"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnSignalRProjectLockChanged(System.Object,BimPlus.Sdk.Data.Notification.ProjectLockChangedInfo)">
+            <summary>
+            Raise SignalR event for update Lock status
+            </summary>
+            <param name="sender"></param>
+            <param name="info"></param>
+        </member>
+        <member name="T:BimPlus.Client.Logging.BimplusClientEvents">
+            <summary>
+            BimplusClientEvents
+            </summary>
+        </member>
+        <member name="F:BimPlus.Client.Logging.BimplusClientEvents.Log">
+            Log
+        </member>
+        <member name="M:BimPlus.Client.Logging.BimplusClientEvents.Critical(System.String)">
+            <summary>
+            Critical
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:BimPlus.Client.Logging.BimplusClientEvents.Error(System.String)">
+            <summary>
+            Error
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:BimPlus.Client.Logging.BimplusClientEvents.Informational(System.String)">
+            <summary>
+            Informational
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:BimPlus.Client.Logging.BimplusClientEvents.LogAlways(System.String)">
+            <summary>
+            LogAlways
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:BimPlus.Client.Logging.BimplusClientEvents.Verbose(System.String)">
+            <summary>
+            Verbose
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:BimPlus.Client.Logging.BimplusClientEvents.Warning(System.String)">
+            <summary>
+            Warning
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:BimPlus.Client.Logging.BimplusClientEvents.ClientEvents(System.String)">
+            <summary>
+            ClientEvents
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="T:BimPlus.Client.Logging.BimplusClientType">
+            BimplusClientType
+        </member>
+        <member name="F:BimPlus.Client.Logging.BimplusClientType.BimplusClientInformational">
+            BimplusClientInformational
+        </member>
+        <member name="F:BimPlus.Client.Logging.BimplusClientType.BimplusClientCritical">
+            BimplusClientCritical
+        </member>
+        <member name="F:BimPlus.Client.Logging.BimplusClientType.BimplusClientError">
+            BimplusClientError
+        </member>
+        <member name="F:BimPlus.Client.Logging.BimplusClientType.BimplusClientLogAlways">
+            BimplusClientLogAlways
+        </member>
+        <member name="F:BimPlus.Client.Logging.BimplusClientType.BimplusClientVerbose">
+            BimplusClientVerbose
+        </member>
+        <member name="F:BimPlus.Client.Logging.BimplusClientType.BimplusClientWarning">
+            BimplusClientWarning
+        </member>
+        <member name="F:BimPlus.Client.Logging.BimplusClientType.BimplusClientEvents">
+            BimplusClientEvents
+        </member>
+        <member name="T:BimPlus.Client.SignalR.SignalRBaseClient">
+            <summary>
+            SignalR base client.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.SignalR.SignalRBaseClient.#ctor(BimPlus.Client.SignalRCore,System.String,BimPlus.Client.EventHandlerCore)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="signalRCore"></param>
+            <param name="hubName"></param>
+            <param name="eventHandlerCore"></param>
+        </member>
+        <member name="F:BimPlus.Client.SignalR.SignalRBaseClient.HubName">
+            <summary>
+            The hub name.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Client.SignalR.SignalRBaseClient.AccessToken">
+            <summary>
+            The acess token.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Client.SignalR.SignalRBaseClient.Slug">
+            <summary>
+            The slug.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Client.SignalR.SignalRBaseClient.ServerName">
+            <summary>
+            The server name.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Client.SignalR.SignalRBaseClient.EventHandlerCore">
+            <summary>
+            EventHandler core.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Client.SignalR.SignalRBaseClient.SignalRCore">
+            <summary>
+            SignalR core.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.SignalR.SignalRBaseClient.Created">
+            <summary>
+            CreateProxies successful.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.SignalR.SignalRBaseClient.GetPreferredSignalRClientTransport">
+            <summary>
+            Returns preferred default SignalR client transport.
+            </summary>
+            <returns>IClientTransport</returns>
+        </member>
+        <member name="M:BimPlus.Client.SignalR.SignalRBaseClient.StartConnection(Microsoft.AspNet.SignalR.Client.HubConnection)">
+            <summary>
+            Start the connection.
+            </summary>
+            <param name="connection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BimPlus.Client.SignalR.SignalRBaseClient.AddMessage(System.String)">
+            <summary>
+            Write a debug message.
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="M:BimPlus.Client.SignalR.SignalRBaseClient.GetDateTime">
+            <summary>
+            Get Utc time.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:BimPlus.Client.SignalR.ProjectItemChangedHandler">
+            <summary>
+            ProjectItemChangedHandler.
+            </summary>
+            <param name="itemChangedInfo"></param>
+        </member>
+        <member name="T:BimPlus.Client.SignalR.ProjectIssueChangedHandler">
+            <summary>
+            ProjectIssueChangedHandler.
+            </summary>
+            <param name="issueChangedInfo"></param>
+        </member>
+        <member name="T:BimPlus.Client.SignalR.SignalRExternalClientHub">
+            <summary>
+            External client hub.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.SignalR.SignalRExternalClientHub.#ctor(BimPlus.Client.SignalRCore,System.String,BimPlus.Client.EventHandlerCore)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="signalRCore"></param>
+            <param name="hubName"></param>
+            <param name="eventHandlerCore"></param>
+        </member>
+        <member name="P:BimPlus.Client.SignalR.SignalRExternalClientHub.ExternalClientHubProxyOut">
+            <summary>
+            External client hub proxy (out direction).
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.SignalR.SignalRExternalClientHub.ExternalClientHubProxyIn">
+            <summary>
+            External client hub proxy (in direction).
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.SignalR.SignalRExternalClientHub.ExternalClientHubOut">
+            <summary>
+            Client hub (out direction).
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.SignalR.SignalRExternalClientHub.ExternalClientHubIn">
+            <summary>
+            Client hub (in direction).
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.SignalR.SignalRExternalClientHub.Disconnect(System.Boolean)">
+            <summary>
+            Disconnect the hubs.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.SignalR.SignalRExternalClientHub.CreateProxies">
+            <summary>
+            Create external client hub proxy.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:BimPlus.Client.SignalR.SignalRProjectHubClient">
+            <summary>
+            SignalR project client hub.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.SignalR.SignalRProjectHubClient.#ctor(BimPlus.Client.SignalRCore,System.String,BimPlus.Client.EventHandlerCore)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="signalRCore"></param>
+            <param name="hubName"></param>
+            <param name="eventHandlerCore"></param>
+        </member>
+        <member name="P:BimPlus.Client.SignalR.SignalRProjectHubClient.ProjectHub">
+            <summary>
+            Project hub.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.SignalR.SignalRProjectHubClient.ProjectHubProxy">
+            <summary>
+            Project hub proxy.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.SignalR.SignalRProjectHubClient.UserHubProxy">
+            <summary>
+            User hub proxy.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.SignalR.SignalRProjectHubClient.CreateProxies">
+            <summary>
+            Create proxies.
+            </summary>
+            <returns>True, if connected.</returns>
+        </member>
+        <member name="M:BimPlus.Client.SignalR.SignalRProjectHubClient.Disconnect(System.Boolean)">
+            <summary>
+            Disconnect the hub.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Client.SignalRCore">
+            <summary>
+            SignalR core.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.SignalRCore.#ctor(System.String,BimPlus.Sdk.Data.UserAdministration.DtoClientTeam,System.Guid,System.String,System.String,BimPlus.Sdk.Utilities.V2.Connection,BimPlus.Client.EventHandlerCore,System.Boolean)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="serverName"></param>
+            <param name="team"></param>
+            <param name="projectId"></param>
+            <param name="signalAppCode"></param>
+            <param name="signalRLogFileName"></param>
+            <param name="connection"></param>
+            <param name="eventHandlerCore"></param>
+            <param name="signalREnableUIMessages"></param>
+        </member>
+        <member name="P:BimPlus.Client.SignalRCore.ProjectHubClient">
+            <summary>
+            Project hub client.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.SignalRCore.ExternalClientHub">
+            <summary>
+            External client hub.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.SignalRCore.HubConnectionChangedInfos">
+            <summary>
+            Observable collection of object changed informations.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.SignalRCore.HubConnectionEvents">
+            <summary>
+            Observable collection of HubConnection events.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.SignalRCore.IsConnected">
+            <summary>
+            Are all proxies connected?
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.SignalRCore.Disconnect(System.Boolean)">
+            <summary>
+            Disconnect the hubs.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.SignalRCore.Reconnect(BimPlus.Sdk.Data.UserAdministration.DtoClientTeam,System.Guid)">
+            <summary>
+            Reconnect with an project.
+            </summary>
+            <param name="team"></param>
+            <param name="projectId"></param>
+        </member>
+    </members>
+</doc>

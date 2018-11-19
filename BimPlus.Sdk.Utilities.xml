@@ -1,0 +1,2798 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BimPlus.Sdk.Utilities</name>
+    </assembly>
+    <members>
+        <member name="T:BimPlus.Sdk.Utilities.ConnectionException">
+            <summary>
+            Connection exception class.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.ConnectionException.#ctor">
+            <summary>
+            Create ConnectionException.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.ConnectionException.#ctor(System.String)">
+            <summary>
+            Create ConnectionException with string message.
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.ConnectionException.#ctor(System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Create ConnectionException with string message and status code.
+            </summary>
+            <param name="msg"></param>
+            <param name="code"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.ConnectionException.#ctor(System.String,System.Exception)">
+            <summary>
+            Create ConnectionException with string message and inner exception.
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.ConnectionException.#ctor(System.Net.WebException)">
+            <summary>
+            Create ConnectionException from WebException.
+            </summary>
+            <param name="ex"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.ConnectionException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            This protected constructor is used for deserialization. 
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.ConnectionException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            GetObjectData performs a custom serialization. 
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="P:BimPlus.Sdk.Utilities.ConnectionException.StatusCode">
+            <summary>
+            Property StatusCode
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Utilities.V2.Connection">
+            <summary>
+            The connection class.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.Connection.#ctor">
+            <summary>
+            Create a connection.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.Connection.#ctor(System.Guid)">
+            <summary>
+            Create a connection by clientId.
+            </summary>
+            <param name="clientId"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.Connection.#ctor(BimPlus.Sdk.Utilities.V2.Connection)">
+            <summary>
+            Create a connection from other connection.
+            </summary>
+            <param name="connection"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.Connection.Finalize">
+            <summary>
+            Destructor.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.Connection.Assign(BimPlus.Sdk.Utilities.V2.Connection)">
+            <summary>
+            Assign a connection.
+            </summary>
+            <param name="connection"></param>
+        </member>
+        <member name="P:BimPlus.Sdk.Utilities.V2.Connection.InvalidateTokenOnExit">
+            <summary>
+            Protected member InvalidateTokenOnExit.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.Connection.Connect(System.String,System.String,System.String,System.Int32,System.Guid)">
+            <summary>
+            Connect with user data.
+            </summary>
+            <param name="host"></param>
+            <param name="user"></param>
+            <param name="password"></param>
+            <param name="checkAlive"></param>
+            <param name="clientId"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.Connection.Connect(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Connect with empty client Id.
+            </summary>
+            <param name="host"></param>
+            <param name="user"></param>
+            <param name="password"></param>
+            <param name="checkAlive"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.Connection.Connect(System.String,System.String,System.String,System.Guid,System.Int32)">
+            <summary>
+            Connect with client Id.
+            </summary>
+            <param name="host"></param>
+            <param name="user"></param>
+            <param name="password"></param>
+            <param name="clientId"></param>
+            <param name="checkAlive"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.Connection.Log(System.String)">
+            <summary>
+            Log a string message.
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.Connection.GetAccessTokenFromClientConfiguration">
+            <summary>
+            Get access token from client configuration.
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.Connection.GetTokenInfo">
+            <summary>
+            Get token info.
+            </summary>
+            <returns>TokenInfoResponse</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.Connection.RenewTokenInfo">
+            <summary>
+            Renew token info.
+            </summary>
+            <returns>TokenInfoResponse</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.Connection.RequestCrossToken">
+            <summary>
+            Request cross token.
+            </summary>
+            <returns>AuthenticationCrossTokenResponse</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.Connection.CrossAuthorize(System.String)">
+            <summary>
+            Request cross token.
+            </summary>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.Connection.CheckConnection">
+            <summary>
+            Check connection.
+            </summary>
+            <returns>true if TokenInfoResponse != null</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.Connection.Disconnect">
+            <summary>
+            Disconnect connection.
+            </summary>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.Connection.GetTeams">
+            <summary>
+            Get all teams.
+            </summary>
+            <returns>List of DtoClientTeam</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.Connection.GetTeam(System.String)">
+            <summary>
+            Get DtoClientTeam by team slug string.
+            </summary>
+            <param name="slugOrId"></param>
+            <returns>DtoClientTeam</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.Connection.GetUserInfo">
+            <summary>
+            Get Userinfo about current user.
+            </summary>
+            <returns>DtoUserOverview</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.Connection.SearchDivision(System.String,System.String)">
+            <summary>
+            Search division in all available teams by inputType and identifier
+            </summary>
+            <param name="inputType">can be Allplan, IFC, SKP</param>
+            <param name="identifier">Allplan ProjectId, IFC Filename, SKP Filename</param>
+            <returns>null if not found, otherwise DtoDivision</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.Connection.SearchDivisions(System.String,System.String)">
+            <summary>
+            Search divisions in all available teams by inputType and identifier.
+            </summary>
+            <param name="inputType">can be Allplan, IFC, SKP</param>
+            <param name="identifier">Allplan ProjectId, IFC Filename, SKP Filename</param>
+            <returns>List of DtoDivisions.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.Connection.GetDivisions">
+            <summary>
+            returns all divisions (models) in all teams, which are available by current user
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.Connection.CreateTeamSession(System.String)">
+            <summary>
+            Create team session by team slug string.
+            </summary>
+            <param name="teamSlug"></param>
+            <returns>ITeamSession</returns>
+        </member>
+        <member name="P:BimPlus.Sdk.Utilities.V2.Connection.Loggger">
+            <summary>
+            Get property Logger.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.Connection.CheckConnection(System.Object)">
+            <summary>
+            Check valid connection.
+            </summary>
+            <param name="o"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.Connection.CloseAllConnections">
+            <summary>
+            Close all connections.
+            </summary>
+            <returns>true, if all connections closed</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.Connection.AccessToken">
+            <summary>
+            Get access token.
+            </summary>
+            <returns>Guid</returns>
+        </member>
+        <member name="P:BimPlus.Sdk.Utilities.V2.Connection.Config">
+            <summary>
+            Property Config.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Utilities.V2.Connection.Host">
+            <summary>
+            Property Host.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Utilities.V2.Connection.ApplicationId">
+            <summary>
+            Property ApplicationId.
+            </summary>
+        </member>
+        <member name="E:BimPlus.Sdk.Utilities.V2.Connection.ConnectionLost">
+            <summary>
+            Event ConnectionLost.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Utilities.V2.Connection.m_Host">
+            <summary>
+            Protected member m_Host.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Utilities.V2.Connection.m_Config">
+            <summary>
+            Protected member m_Config.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Utilities.V2.Connection.m_Log">
+            <summary>
+            Protected member m_Log.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Utilities.V2.Connection.m_Timer">
+            <summary>
+            Protected member m_Timer.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Utilities.V2.IConnection">
+            <summary>
+            Interface for Connection class.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.IConnection.CheckConnection">
+            <summary>
+            CheckConnection method.
+            </summary>
+            <returns>true if connected</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.IConnection.Connect(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Connect with empty client Id.
+            </summary>
+            <param name="host"></param>
+            <param name="user"></param>
+            <param name="password"></param>
+            <param name="checkAlive"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.IConnection.Connect(System.String,System.String,System.String,System.Int32,System.Guid)">
+            <summary>
+            Connect with client Id.
+            </summary>
+            <param name="host"></param>
+            <param name="user"></param>
+            <param name="password"></param>
+            <param name="checkAlive"></param>
+            <param name="clientId"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.IConnection.GetAccessTokenFromClientConfiguration">
+            <summary>
+            Get access token from client configuration.
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.IConnection.GetTokenInfo">
+            <summary>
+            Get token info.
+            </summary>
+            <returns>TokenInfoResponse</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.IConnection.RequestCrossToken">
+            <summary>
+            Request cross token.
+            </summary>
+            <returns>AuthenticationCrossTokenResponse</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.IConnection.CrossAuthorize(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="crossToken"></param>
+            <returns></returns>
+        </member>
+        <member name="E:BimPlus.Sdk.Utilities.V2.IConnection.ConnectionLost">
+            <summary>
+            Event ConnectionLost.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.IConnection.CreateTeamSession(System.String)">
+            <summary>
+            Create team session by team slug string.
+            </summary>
+            <param name="teamSlug"></param>
+            <returns>ITeamSession</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.IConnection.Disconnect">
+            <summary>
+            Disconnect connection.
+            </summary>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.IConnection.CloseAllConnections">
+            <summary>
+            Close all connections.
+            </summary>
+            <returns>true, if all connections closed</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.IConnection.AccessToken">
+            <summary>
+            Get access token.
+            </summary>
+            <returns>Guid</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.IConnection.GetTeams">
+            <summary>
+            Get all teams.
+            </summary>
+            <returns>List of DtoClientTeam</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.IConnection.SearchDivision(System.String,System.String)">
+            <summary>
+            Search division in all available teams by inputType and identifier
+            </summary>
+            <param name="inputType">can be Allplan, IFC, SKP</param>
+            <param name="identifier">Allplan ProjectId, IFC Filename, SKP Filename</param>
+            <returns>null if not found, otherwise DtoDivision</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.IConnection.SearchDivisions(System.String,System.String)">
+            <summary>
+            Search divisions in all available teams by inputType and identifier.
+            </summary>
+            <param name="inputType">can be Allplan, IFC, SKP</param>
+            <param name="identifier">Allplan ProjectId, IFC Filename, SKP Filename</param>
+            <returns>List of DtoDivisions.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.IConnection.GetUserInfo">
+            <summary>
+            Get Userinfo about current user.
+            </summary>
+            <returns>DtoUserOverview</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.IConnection.GetDivisions">
+            <summary>
+            returns all divisions (models) in all teams, which are available by current user
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Utilities.V2.IConnection.Loggger">
+            <summary>
+            Get property Logger.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Utilities.V2.ObjectRequestProperties">
+            <summary>
+            Enum ObjectRequestProperties
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Utilities.V2.ObjectRequestProperties.None">
+            <summary>
+            None
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Utilities.V2.ObjectRequestProperties.InternalValues">
+            <summary>
+            Get internal values.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Utilities.V2.ObjectRequestProperties.Children">
+            <summary>
+            Get children.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Utilities.V2.ObjectRequestProperties.Geometry">
+            <summary>
+            Get geometry.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Utilities.V2.ObjectRequestProperties.AttributDefinition">
+            <summary>
+            Get attribut definitions.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Utilities.V2.ObjectRequestProperties.Pset">
+            <summary>
+            Get property sets
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Utilities.V2.ObjectRequestProperties.FreeAttribId">
+            <summary>
+            Get free attribute Id.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Utilities.V2.ETagDelegate">
+            <summary>
+            Public delegate ETagDelegate.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Utilities.V2.ITeamSession">
+            <summary>
+            Public interface ITeamSession.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.DeleteObject(System.Guid)">
+            <summary>
+            Delete a DtObject.
+            </summary>
+            <param name="objectId"></param>
+            <returns>bool id deleted</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetObject(System.Guid,BimPlus.Sdk.Utilities.V2.ObjectRequestProperties)">
+            <summary>
+            Get an DtObject with attributes by objectId.
+            </summary>
+            <param name="objectId"></param>
+            <param name="flags"></param>
+            <returns>DtObject</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetObjects``1(System.Guid,BimPlus.Sdk.Utilities.V2.ObjectRequestProperties)">
+            <summary>
+            GetObjects from requested ElementType (DtObject)
+            </summary>
+            <typeparam name="T">BimPlus.Sdk.Data.DbCore.DtObject</typeparam>
+            <param name="projectId">usually the projectId</param>
+            <param name="flags"></param>
+            <returns>List of DtObjects</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetObjects(System.Guid,System.Type,BimPlus.Sdk.Utilities.V2.ObjectRequestProperties)">
+            <summary>
+            GetObjects from requested ElementType type.
+            </summary>
+            <param name="projectId"></param>
+            <param name="type"></param>
+            <param name="flags"></param>
+            <returns>List of DtObjects</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetObjects(System.Guid,BimPlus.Sdk.IfcData.DbLayer,System.Boolean)">
+            <summary>
+            GetObjects from requested Discipline.
+            </summary>
+            <param name="projectId"></param>
+            <param name="layer"></param>
+            <param name="internalValues"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetObjectInternal(System.Guid)">
+            <summary>
+            Get an internal DtObject by objectId.
+            </summary>
+            <param name="objectId"></param>
+            <returns>DtObject</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetObjectAsync(System.Guid,BimPlus.LightCaseClient.Support.RestCallBack{BimPlus.Sdk.Data.DbCore.DtObject})">
+            <summary>
+            Get an DtObject asynchronously by objectId.
+            </summary>
+            <param name="objectId"></param>
+            <param name="callback"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetObjectGeometry(System.Guid)">
+            <summary>
+            Get object geometry from DtObject objectId.
+            </summary>
+            <param name="objectId"></param>
+            <returns>DtoModel</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetObjectGeometry(System.Guid,System.Guid)">
+            <summary>
+            Get object geometry from DtObject objectId and layerId.
+            </summary>
+            <param name="objectId"></param>
+            <param name="layerId"></param>
+            <returns>DtoModel</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetObjectGeometryAsThreeJs(System.Guid)">
+            <summary>
+            Get threejs geometry from DtObject by objectId.
+            </summary>
+            <param name="objectId"></param>
+            <returns>DtoModel</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetObjectGeometryAsThreeJs(System.Guid,System.Guid)">
+            <summary>
+            Get threejs geometry from DtObject by objectId and layerId.
+            </summary>
+            <param name="objectId"></param>
+            <param name="layerId"></param>
+            <returns>DtoModel</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetObjectGeometryAsThreeJsMesh(System.Guid)">
+            <summary>
+            Get threejs mesh geometry from DtObject by objectId.
+            </summary>
+            <param name="objectId"></param>
+            <returns>DtoModel</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetObjectGeometryAsThreeJsMesh(System.Guid,System.Guid)">
+            <summary>
+            Get threejs mesh geometry from DtObject by objectId and layerId.
+            </summary>
+            <param name="objectId"></param>
+            <param name="layerId"></param>
+            <returns>DtoModel</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetObjectGeometryAsync(System.Guid,BimPlus.LightCaseClient.Support.RestCallBack{BimPlus.Sdk.Data.TenantDto.DtoModel})">
+            <summary>
+            Get object geometry asynchronously by objectId.
+            </summary>
+            <param name="objectId"></param>
+            <param name="callback"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetObjectGeometryAsync(System.Guid,System.Guid,BimPlus.LightCaseClient.Support.RestCallBack{BimPlus.Sdk.Data.TenantDto.DtoModel})">
+            <summary>
+            Get object geometry asynchronously by layerId and objectId.
+            </summary>
+            <param name="objectId"></param>
+            <param name="layerId"></param>
+            <param name="callback"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetObjectTopology(System.Guid)">
+            <summary>
+            GetObjectTopology 
+            </summary>
+            <param name="objectId"></param>
+            <returns>DtoTopology</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetLayoutStructure(System.Guid)">
+            <summary>
+            returns Plans (Layouts) Structure 
+            </summary>
+            <param name="divisionTopologyId">rootnode for LayoutStructure</param>
+            <returns>DtoTopology</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.MoveTopologyNode(BimPlus.Sdk.Data.TenantDto.DtoTopology)">
+            <summary>
+            Move or Rename Topology Nodes
+            use 'Parent' for moving one node to a new parent
+            use 'number' for moving current position 
+            hint: all other nodes will be automatically reorded, if you change 
+            the current position by using 'number' 
+            </summary>
+            <param name="node"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetObjectTree(System.Guid)">
+            <summary>
+            Get object tree.
+            </summary>
+            <param name="objectId"></param>
+            <returns>DtObject</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetProjectProperties(System.Guid)">
+            <summary>
+            Get project properties.
+            </summary>
+            <param name="projectId"></param>
+            <returns>DtoProject</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.CreateProject(BimPlus.Sdk.Data.TenantDto.DtoProject)">
+            <summary>
+            Create DtoProject.
+            </summary>
+            <param name="project"></param>
+            <returns>DtoProject</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.ConvertGeometry(System.Guid)">
+            <summary>
+            Convert geometries from a project.
+            </summary>
+            <param name="projectId"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetProjectThumbnail(System.Guid)">
+            <summary>
+            Get project thumnail.
+            </summary>
+            <param name="projectId"></param>
+            <returns>Image</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetProjectDivisions(System.Guid)">
+            <summary>
+            Get procject divisions.
+            </summary>
+            <param name="projectId"></param>
+            <returns>List of DtoDivision</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetDivision(System.Guid)">
+            <summary>
+            Get DtoDivision by Id.
+            </summary>
+            <param name="divisionId"></param>
+            <returns>DtoDivision</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.PutDivision(BimPlus.Sdk.Data.TenantDto.DtoDivision)">
+            <summary>
+            Put DtoDivision.
+            </summary>
+            <param name="division"></param>
+            <returns>DtoDivision</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetRevisions(System.Guid)">
+            <summary>
+            Get DtoRevisions by divisionId.
+            </summary>
+            <param name="divisionId"></param>
+            <returns>List of DtoRevision</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.PostRevision(System.Guid,BimPlus.Sdk.Data.TenantDto.DtoRevision)">
+            <summary>
+            Post a revision to a division.
+            </summary>
+            <param name="divisionId"></param>
+            <param name="revision"></param>
+            <returns>DtoRevision</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.PostProjectDivision(System.Guid,BimPlus.Sdk.Data.TenantDto.DtoDivision)">
+            <summary>
+            Post DtoDivision to a project.
+            </summary>
+            <param name="projectId"></param>
+            <param name="division"></param>
+            <returns>DtoDivision</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetProjectLayers(System.Guid)">
+            <summary>
+            Get project layers.
+            </summary>
+            <param name="projectId"></param>
+            <returns>List of DtoProjectDiscipline</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetProjects">
+            <summary>
+            Get a list of DtoShortProject.
+            </summary>
+            <returns>list of DtoShortProject</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetProjectTopology(System.Guid)">
+            <summary>
+            Get DtoTopology from projrct.
+            </summary>
+            <param name="projectId"></param>
+            <returns>DtoTopology</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.ObjectExists(System.Guid)">
+            <summary>
+            Returns whether the object exists.
+            </summary>
+            <param name="objectId"></param>
+            <returns>true if object exist</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.PostObject(BimPlus.Sdk.Data.DbCore.DtObject)">
+            <summary>
+            Post a DtObject.
+            </summary>
+            <param name="obj"></param>
+            <returns>DtObject</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.Validate(BimPlus.Sdk.Data.DbCore.DtObject)">
+            <summary>
+            Validate a DtObject.
+            </summary>
+            <param name="obj"></param>
+            <returns>True if object is valid</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.PostObjectAsync(BimPlus.Sdk.Data.DbCore.DtObject,BimPlus.LightCaseClient.Support.RestCallBack{BimPlus.Sdk.Data.DbCore.DtObject})">
+            <summary>
+            Post a DtObject asynchronously.
+            </summary>
+            <param name="obj"></param>
+            <param name="callback"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.PutAlterObject(BimPlus.Sdk.Data.DbCore.DtObject)">
+            <summary>
+            Put alter object.
+            </summary>
+            <param name="obj"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.PutAlterObject(BimPlus.Sdk.Data.DbCore.DtObject,System.Boolean)">
+            <summary>
+            Put alter object.
+            </summary>
+            <param name="obj"></param>
+            <param name="convertGeometry"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.DeleteChildObjects(BimPlus.Sdk.Data.DbCore.DtObject)">
+            <summary>
+            Delete child objects by object Id.
+            </summary>
+            <param name="obj"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.DeleteChildObjectsAsync(BimPlus.Sdk.Data.DbCore.DtObject,BimPlus.LightCaseClient.Support.RestCallBackStatusCode)">
+            <summary>
+            Delete child objects asynchronously by object Id.
+            </summary>
+            <param name="obj"></param>
+            <param name="callback"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.PutObject(BimPlus.Sdk.Data.DbCore.DtObject)">
+            <summary>
+            Put a DtObject.
+            </summary>
+            <param name="obj"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.PutObjectAsync(BimPlus.Sdk.Data.DbCore.DtObject,BimPlus.LightCaseClient.Support.RestCallBackStatusCode)">
+            <summary>
+            Put a DtObject asynchronously.
+            </summary>
+            <param name="obj"></param>
+            <param name="callback"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.AlterObjectAsync(BimPlus.Sdk.Data.DbCore.DtObject,System.Boolean,BimPlus.LightCaseClient.Support.RestCallBackStatusCode)">
+            <summary>
+            Put a DtObject asynchronously.
+            </summary>
+            <param name="obj"></param>
+            <param name="convertGeometry"></param>
+            <param name="callback"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetElementTypes">
+            <summary>
+            Get all element types.
+            </summary>
+            <returns>List of DtoElementType</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetObjectViews">
+            <summary>
+            Get table of all object navigator targets of current Teamslug 
+            (API-function calling)
+            </summary>
+            <returns>Table of all object navigator targets of current Teamslug</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetComment(System.Guid)">
+            <summary>
+            Get an comment from object.
+            </summary>
+            <param name="objectId"></param>
+            <returns>DtoComment</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.DeleteComment(System.Guid)">
+            <summary>
+            Deletes a comment.
+            </summary>
+            <param name="id"></param>
+            <returns>true if deleted</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.PutComment(BimPlus.Sdk.Data.TenantDto.DtoComment)">
+            <summary>
+            Put a comment.
+            </summary>
+            <param name="comment"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetObjectComments(System.Guid)">
+            <summary>
+            Get comments from object.
+            </summary>
+            <param name="objectId"></param>
+            <returns>List of DtoComment</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.PostObjectComment(System.Guid,BimPlus.Sdk.Data.TenantDto.DtoComment)">
+            <summary>
+            Post a comment.
+            </summary>
+            <param name="objectId"></param>
+            <param name="comment"></param>
+            <returns>DtoComment</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetObjectAttachment(System.Guid)">
+            <summary>
+            Get a attachment from object.
+            </summary>
+            <param name="objectId"></param>
+            <returns>DtoAttachment</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetObjectAttachments(System.Guid)">
+            <summary>
+            Get all attachments by issueId.
+            </summary>
+            <param name="objectId"></param>
+            <returns>List of DtoAttachment</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetObjectAttachments(System.Guid,System.String)">
+            <summary>
+             Get all attachments by projectId (or any other objectId).
+            </summary>
+            <param name="objectId"></param>
+            <param name="filter"></param>
+            <returns>List of DtoAttachment</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.PostObjectAttachment(System.Guid,System.String,System.Byte[])">
+            <summary>
+            Post attachment for a specific object.
+            </summary>
+            <param name="objectId">Object id.</param>
+            <param name="filename">File name.</param>
+            <param name="data">Data.</param>
+            <returns>DtoAttachment</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.PostObjectAttachment(System.Guid,System.String,System.String,System.Byte[])">
+            <summary>
+            Post attachment for a specific object.
+            </summary>
+            <param name="objectId">Object id.</param>
+            <param name="filename">File name.</param>
+            <param name="name">Attachment name.</param>
+            <param name="data">Data.</param>
+            <returns>DtoAttachment</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.PostAttachment(System.Guid,System.String,System.Byte[],BimPlus.Sdk.Data.AttachmentType)">
+            <summary>
+            Post internal attachment for a specific object.
+            </summary>
+            <param name="objectId"></param>
+            <param name="filename"></param>
+            <param name="data"></param>
+            <param name="type"></param>
+            <returns>DtoAttachment</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.UpdateAttachment(System.Guid,System.Byte[])">
+            <summary>
+            UpdateAttachment internal attachment for a specific object.
+            </summary>
+            <param name="attachmentId"></param>
+            <param name="data"></param>
+            <returns>DtoAttachment</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.DeleteAttachment(System.Guid)">
+            <summary>
+            Delete attachment by Id.
+            </summary>
+            <param name="id"></param>
+            <returns>true if attachment deleted</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetHyperlink(System.Guid)">
+            <summary>
+            Get hyperlink by Id.
+            </summary>
+            <param name="objectId"></param>
+            <returns>DtoHyperlink</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetObjectHyperlinks(System.Guid)">
+            <summary>
+            Get hyperlinks by Id.
+            </summary>
+            <param name="objectId"></param>
+            <returns>List of DtoHyperlink</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.PostObjectHyperlink(System.Guid,BimPlus.Sdk.Data.TenantDto.DtoHyperlink)">
+            <summary>
+            Post hyperlink by object Id.
+            </summary>
+            <param name="objectId"></param>
+            <param name="hyperlink"></param>
+            <returns>DtoHyperlink</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.DeleteHyperlink(System.Guid)">
+            <summary>
+            Delete hyperlink by Id.
+            </summary>
+            <param name="id"></param>
+            <returns>true if deleted</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetAttachementData(System.Guid)">
+            <summary>
+            Get attachement data by Id.
+            </summary>
+            <param name="id"></param>
+            <returns>byte[]</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.DownloadData(System.String,System.Guid)">
+            <summary>
+            Download Data
+            </summary>
+            <param name="type">supportet types are at the moment 'attachments' and 'divsions'</param>
+            <param name="id">requested attachment- or divisionId</param>
+            <returns>byte[]</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetAllObjectViewColumnnames(System.String)">
+            <summary>
+            Get table of all column names for specifies Objectview target of current Teamslug 
+            </summary>
+            <param name="viewname">The name of specifies Objectview target</param>
+            <returns>Table of all column names for specifies Objectview targets of current Teamslug</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetAllUserSettingsHierarchy_API(System.String,System.Guid,System.String)">
+            <summary>
+            Get table of all user settings hierarchy data
+            (DataContainer creating)
+            </summary>
+            <param name="moduleID">Specifies the ID of the module.</param>
+            <param name="userID">Specifies the current user.</param>
+            <param name="catname">Category name</param>
+            <returns>Table of all user settings hierarchy data</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetObjectViewContent(System.String,System.Collections.Generic.List{System.Guid},System.Collections.ObjectModel.ObservableCollection{System.String})">
+            <summary>
+            Get all elements for defined hierarchy object and Objectview target
+            </summary>
+            <param name="viewname">The name of specifies Objectview target</param>
+            <param name="elemid">All id for defined hierarchy object and Objectview target</param>
+            <param name="columnsFilter">Columns filter </param>
+            <returns>Table of all elements for defined hierarchy object and Objectview target</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetObjectViewContent(System.String,System.Collections.Generic.List{System.Guid},System.Collections.Generic.List{System.String})">
+            <summary>
+            Get all elements for defined hierarchy object and Objectview target
+            </summary>
+            <param name="viewname">The name of specifies Objectview target</param>
+            <param name="elemid">All id for defined hierarchy object and Objectview target</param>
+            <param name="columnsFilter">Columns filter </param>
+            <returns>Table of all elements for defined hierarchy object and Objectview target</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.UpdateUserSettingsHierarchyList_API(BimPlus.Sdk.Data.TenantDto.DtoUserSettingsCompleteElementList)">
+            <summary>
+            Update list of objects in table of all user settings hierarchy data
+            (Changed will be all elements with status "Added" and "Modified")
+            </summary>
+            <param name="elementlist">List of all elements for update.</param>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.UpdateChangedValuesInDatabase_API(BimPlus.Sdk.Data.DbCore.DtObject)">
+            <summary>
+            Update one changed elements in database
+            </summary>
+            <param name="dtbobj">Object with values for element update.</param>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.CreateObjectView(BimPlus.Sdk.Data.TenantDto.DtoUserDefinedViewObject)">
+            <summary>
+            Create new user defined ObjectView in database
+            </summary>
+            <param name="objview">New ObjectView</param>
+            <returns>Information about created ObjectView</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.DeleteUserSettingsHierarchyList_API(BimPlus.Sdk.Data.TenantDto.DtoUserSettingsCompleteElementList)">
+            <summary>
+            Delete list of objects in table of all user settings hierarchy data
+            (Changed will be all elements with status "Deleted")
+            </summary>
+            <param name="elementlist">List of all elements for update.</param>
+            <returns>List of elements, which wasn't deleted (if null, than all elements from input list was deleted)</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.DeleteObjectViews(System.Collections.Generic.List{System.String})">
+            <summary>
+            Delete user defined ObjectViews from database
+            </summary>
+            <param name="objviews">New ObjectView</param>
+            <returns>ObjectView delete OK true else false</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetProjectIssues(System.Guid)">
+            <summary>
+            Get project issues.
+            </summary>
+            <param name="projectId"></param>
+            <returns>List of DtoShortIssue</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetProjectDtoIssues(System.Guid)">
+            <summary>
+            Get a list of project DtoIssues.
+            </summary>
+            <param name="projectId"></param>
+            <returns>List of DtoIssue</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetProjectIssuesWithRights(System.Guid)">
+            <summary>
+            Get project issues with rights.
+            </summary>
+            <param name="projectId"></param>
+            <returns>List of DtoIssue</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetIssueComments(System.Guid)">
+            <summary>
+            Get all issue comments.
+            </summary>
+            <param name="issueId"></param>
+            <returns>List of DtoComment</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetIssueAttachments(System.Guid)">
+            <summary>
+            Get all attachments from an issue.
+            </summary>
+            <param name="issueId"></param>
+            <returns>List of DtoAttachment</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetIssueHyperlinks(System.Guid)">
+            <summary>
+            Get all hyperlinks from issue.
+            </summary>
+            <param name="issueId"></param>
+            <returns>List of DtoHyperlink</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetIssuePins(System.Guid)">
+            <summary>
+            Get all issue pins.
+            </summary>
+            <param name="issueId"></param>
+            <returns>List of DtoPin</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.PostIssueComment(System.Guid,BimPlus.Sdk.Data.TenantDto.DtoComment)">
+            <summary>
+            Post one DtoComment to issue.
+            </summary>
+            <param name="issueId"></param>
+            <param name="comment"></param>
+            <returns>DtoComment</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.PostIssueAttachment(System.Guid,System.String,System.Byte[])">
+            <summary>
+            Post issue attachment.
+            </summary>
+            <param name="objectId"></param>
+            <param name="filename"></param>
+            <param name="data"></param>
+            <returns>DtoAttachment</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.PostIssueHyperlink(System.Guid,BimPlus.Sdk.Data.TenantDto.DtoHyperlink)">
+            <summary>
+            Post issue hyperlink.
+            </summary>
+            <param name="issueId"></param>
+            <param name="attachment"></param>
+            <returns>DtoHyperlink</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.PostIssuePin(System.Guid,BimPlus.Sdk.Data.TenantDto.DtoPin)">
+            <summary>
+            Post an issue pin.
+            </summary>
+            <param name="issueId"></param>
+            <param name="pin"></param>
+            <returns>DtoPin</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.PostProjectIssue(System.Guid,BimPlus.Sdk.Data.TenantDto.DtoShortIssue)">
+            <summary>
+            Post a project DtoShortIssue.
+            </summary>
+            <param name="projectId"></param>
+            <param name="issue"></param>
+            <returns>DtoShortIssue</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.PostProjectDtoIssue(System.Guid,BimPlus.Sdk.Data.TenantDto.DtoIssue)">
+            <summary>
+            Post a project DtoIssue.
+            </summary>
+            <param name="projectId"></param>
+            <param name="issue"></param>
+            <returns>DtoIssue</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.DeletePin(System.Guid)">
+            <summary>
+            Delete an issue pin.
+            </summary>
+            <param name="id"></param>
+            <returns>true if deleted</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.PutIssue(BimPlus.Sdk.Data.TenantDto.DtoShortIssue)">
+            <summary>
+            Put a DtoShortIssue.
+            </summary>
+            <param name="issue"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.PutDtoIssue(BimPlus.Sdk.Data.TenantDto.DtoIssue)">
+            <summary>
+            Put a DtoIssue.
+            </summary>
+            <param name="issue"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.DeleteIssue(System.Guid)">
+            <summary>
+            Delete an issue.
+            </summary>
+            <param name="id"></param>
+            <returns>true if deleted</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetTeamMembers">
+            <summary>
+            Get all team members.
+            </summary>
+            <returns>List of DtoMember</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetProjectMembers(System.Guid)">
+            <summary>
+            Get project members.
+            </summary>
+            <param name="projectId"></param>
+            <returns>List of DtoProjectMember</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetProjectStructures(System.Guid,System.String)">
+            <summary>
+            Get project structures.
+            </summary>
+            <param name="projectId"></param>
+            <param name="structureType">additional filter for requested StructureType</param>
+            <returns>List of DtoStructure</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetProjectElementTypes(System.Guid)">
+            <summary>
+            Returns list of elementTypes, who are exist in requested project.
+            </summary>
+            <param name="projectId"></param>
+            <returns>List of DtoElementType</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.PostProjectStructure(System.Guid,BimPlus.Sdk.Data.TenantDto.DtoStructure)">
+            <summary>
+            Post a DtoStructure to a project
+            </summary>
+            <param name="projectId"></param>
+            <param name="structure"></param>
+            <returns>DtoStructure</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetStructureTopology(System.Guid)">
+            <summary>
+            Get DtoTopologyStructure by Id.
+            </summary>
+            <param name="structureId"></param>
+            <returns>DtoTopologyStructure</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetStructureTopology(System.Guid,System.Boolean,System.Nullable{System.Guid})">
+            <summary>
+            Get DtoTopologyStructure by Id and optional with attributes.
+            </summary>
+            <param name="structureId"></param>
+            <param name="withAttributes"></param>
+            <param name="variantType"></param>
+            <returns>DtoTopologyStructure</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetStructure(System.Guid)">
+            <summary>
+            Get a DtoStructure by structure Id.
+            </summary>
+            <param name="structureId"></param>
+            <returns>DtoStructure</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.PostStructure(System.Guid,BimPlus.Sdk.Data.TenantDto.DtoTopologyStructure)">
+            <summary>
+            Post a DtoStructure to a project.
+            </summary>
+            <param name="projectId"></param>
+            <param name="structure"></param>
+            <returns>DtoStructure</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.PostSubStructure(System.Guid,BimPlus.Sdk.Data.TenantDto.DtoStructure)">
+            <summary>
+            Post a sub structure.
+            </summary>
+            <param name="parentStructure"></param>
+            <param name="structure"></param>
+            <returns>DtoStructure</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.PostStructureElement(System.Guid,BimPlus.Sdk.Data.TenantDto.DtoStructureElement)">
+            <summary>
+            Post a structure element to a structure.
+            </summary>
+            <param name="structure"></param>
+            <param name="elementId"></param>
+            <returns>DtoStructureElement</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.AssignStructureElement(System.Guid,System.Guid)">
+            <summary>
+            Assign a structure element elemenent Id.
+            </summary>
+            <param name="structureId"></param>
+            <param name="elementId"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.RemoveStructureElement(System.Guid,System.Guid)">
+            <summary>
+            Remove a structure element.
+            </summary>
+            <param name="structureId"></param>
+            <param name="elementId"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.ReorderStructure(System.Guid)">
+            <summary>
+            Reorder DtoStructureElement.
+            </summary>
+            <param name="structureId"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.PutStructure(BimPlus.Sdk.Data.TenantDto.DtoStructure)">
+            <summary>
+            Put DtoStructure.
+            </summary>
+            <param name="structure"></param>
+            <returns>DtoStructure</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetStructureTypes">
+            <summary>
+            Get structure types as List of string.
+            </summary>
+            <returns>List of string</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.DeleteStructure(System.Guid)">
+            <summary>
+            Delete a structure.
+            </summary>
+            <param name="id"></param>
+            <returns>true if deleted</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.CopyStructure(System.Guid,BimPlus.Sdk.Data.TenantDto.DtoStructure)">
+            <summary>
+            Copy DtoStructure.
+            </summary>
+            <param name="structureId"></param>
+            <param name="structure"></param>
+            <returns>DtoStructure</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetAllplanId(System.Guid)">
+            <summary>
+            Get the Allplan ID by object ID (ONLY FOR ALLPLAN PROJECTS !!!).
+            </summary>
+            <param name="objectId"></param>
+            <returns>Guid</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetIfcId(System.Guid)">
+            <summary>
+            Get the Ifc ID by object ID  
+            </summary>
+            <param name="objectId"></param>
+            <returns>Guid.Empty if Ifc_Id is not available</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetBimPlusId(System.Guid,System.Guid)">
+            <summary>
+            Get the BimPusId from requested project and AllplanID.
+            </summary>
+            <param name="projectId"></param>
+            <param name="allplanId"></param>
+            <returns>Guid</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetBimPlusId(System.Guid,System.String)">
+            <summary>
+            Get the BimPusId from requested project and ifcId.
+            </summary>
+            <param name="projectId"></param>
+            <param name="ifcId"></param>
+            <returns>Guid</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetBimPlusId(System.Guid,System.Guid,System.String)">
+            <summary>
+            Search object by given Attribute and requested value.
+            </summary>
+            <param name="projectId"></param>
+            <param name="attributeId"></param>
+            <param name="value"></param>
+            <returns>Guid</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetTeams">
+            <summary>
+            Get all the Teams of the current session.
+            </summary>
+            <returns>List of DtoClientTeam</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.SetCurrentTeam(System.String)">
+            <summary>
+            Set current Teamslug by slugname.
+            </summary>
+            <param name="slugName"></param>
+            <returns>true, if call is successful</returns>
+        </member>
+        <member name="P:BimPlus.Sdk.Utilities.V2.ITeamSession.Timeout">
+            <summary>
+            The Timeout (saved in m_Config).
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.ETag(System.String,BimPlus.Sdk.Utilities.V2.ETagDelegate)">
+            <summary>
+            Save a new ETag.
+            </summary>
+            <param name="eTag"></param>
+            <param name="func"></param>
+            <returns>ETag as string</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.ETag(BimPlus.Sdk.Utilities.V2.ETagDelegate)">
+            <summary>
+            Get an ETag.
+            </summary>
+            <param name="func"></param>
+            <returns>ETag as string</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetElementsByTypeId(System.Guid,System.Guid)">
+            <summary>
+            Get all elements from project by typeGuid.
+            </summary>
+            <param name="projectGuid"></param>
+            <param name="typeGuid"></param>
+            <returns>List of DtoOneElement</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetDtObjectsById(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            Get DtObjects by Id.
+            </summary>
+            <param name="objectsIds"></param>
+            <returns>List of DtObject</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetDtObjectsWithPropertiesById(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            Get DtObjects by Id with extended attribute properties.
+            </summary>
+            <param name="objectsIds"></param>
+            <returns>List of DtObject</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetDtoIssue(System.Guid)">
+            <summary>
+            Get one DtoIssue by Id.
+            </summary>
+            <param name="issueId"></param>
+            <returns>DtoIssue</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetPin(System.Guid)">
+            <summary>
+            Get DtoPin by Id.
+            </summary>
+            <param name="pinId"></param>
+            <returns>DtoPin</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.ExecuteService(System.String,System.String,BimPlus.Sdk.Data.TenantDto.DtoExternalService)">
+            <summary>
+            Execute an external service.
+            </summary>
+            <param name="assembly"></param>
+            <param name="service"></param>
+            <param name="inputData"></param>
+            <returns>DtoExternalService</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.CreateConnection(System.Guid,BimPlus.Sdk.Data.TenantDto.DtoConnections)">
+            <summary>
+            Post a DtoConnections.
+            </summary>
+            <param name="projectGuid"></param>
+            <param name="connection"></param>
+            <returns>DtoConnections</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.DeleteConnections(System.Guid)">
+            <summary>
+            Delete a DtoConnections by Id.
+            </summary>
+            <param name="objectId"></param>
+            <returns>true if deleted</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.DeleteDtoDivision(System.Guid)">
+            <summary>
+            Delete a division by Id.
+            </summary>
+            <param name="divisionId"></param>
+            <returns>true if deleted.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetIssueEditablePropertiesObject(BimPlus.Sdk.Data.TenantDto.DtoIssue)">
+            <summary>
+            Get a JObject with editable properties.
+            </summary>
+            <param name="issue"></param>
+            <returns>JObject</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetIssueEditableProperties(BimPlus.Sdk.Data.TenantDto.DtoIssue)">
+            <summary>
+            Get a list of editable properties.
+            </summary>
+            <param name="issue"></param>
+            <returns>List of string</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.PostCache``1(System.Guid,System.String,``0)">
+            <summary>
+            Post some ClientCacheData.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="objectId"></param>
+            <param name="filename"></param>
+            <param name="data"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetCache``1(System.Guid,System.String)">
+            <summary>
+            read cache 
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="objectId"></param>
+            <param name="filename"></param>
+            <returns>T</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetPropertySets(System.Type)">
+            <summary>
+            read Object PropertySets
+            </summary>
+            <param name="type"></param>
+            <returns>IEnumerable of DtoAttributeTemplate</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetPropertySets(System.Guid,System.Nullable{System.Guid})">
+            <summary>
+            returns default attribute PropertySet of requested object
+            </summary>
+            <param name="elementType">guid of requested object</param>
+            <param name="projectAttributeTemplate"></param>
+            <returns>IEnumerable of DtoAttributeTemplate</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.IsPropertySetUptodate(System.String,System.Guid,System.Nullable{System.Guid})">
+            <summary>
+            Check recentEtag with ServerEtag
+            </summary>
+            <param name="recentEtag"></param>
+            <param name="elementType"></param>
+            <param name="projectAttributeTemplate"></param>
+            <returns>true if not modified</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetAttribute(System.Guid,System.Guid)">
+            <summary>
+            Evaluate one Attribute from one object.
+            </summary>
+            <param name="objectId"></param>
+            <param name="attributeId"></param>
+            <returns>DtoAttributDefinition</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetAttributeValues(System.Guid,System.Guid)">
+            <summary>
+            Get attribute values from an project by attributeId.
+            </summary>
+            <param name="projectId"></param>
+            <param name="attributeId"></param>
+            <returns>Dictionary of Guid and object</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetTAttributeValues``1(System.Guid,System.Guid)">
+            <summary>
+            Searches in Project (or any other node) all objects wich have requested attribute .
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="projectId"></param>
+            <param name="attributeId"></param>
+            <returns>Dictionary of Guid and T</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetSubscriptions">
+            <summary>
+            Get ShopSubscriptions from actual user.
+            </summary>
+            <returns>DtoShopSubscriptionResponse</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.ValidateSubscription(System.String)">
+            <summary>
+            Validate Subscription from actual user.
+            </summary>
+            <returns>HttpStatusCode.OK if succeed</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetAccountSettings">
+            <summary>
+            Get account settings.
+            </summary>
+            <returns>Newtonsoft.Json.Linq.JArray.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetLocks(System.Guid)">
+            <summary>
+            Get all Locks.
+            </summary>
+            <param name="objectId">use projectId to get all locks of project</param>
+            <returns>List of DtoUserLocks</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.DeleteLock(System.Guid,System.Boolean,System.Boolean)">
+            <summary>
+            Delete lock.
+            </summary>
+            <param name="objectId"></param>
+            <param name="withChildren"></param>
+            <param name="asAdmin"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.SetLock(System.Guid,System.Boolean,System.Boolean)">
+            <summary>
+            Set lock.
+            </summary>
+            <param name="objectId"></param>
+            <param name="withChildren"></param>
+            <param name="asAdmin"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.UpdateAttributeValues(System.Guid,System.Guid,System.Collections.Generic.Dictionary{System.Guid,System.Object})">
+            <summary>
+            Update AttributeValues for a list of objects.
+            </summary>
+            <param name="projectId"></param>
+            <param name="attributeId"></param>
+            <param name="values"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.CreateTemplate(BimPlus.Sdk.Data.GeometryTemplates.DtoTemplateArticle)">
+            <summary>
+            Create a DtoTemplateArticle.
+            </summary>
+            <param name="obj"></param>
+            <returns>Guid</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetTemplate(System.Guid,System.String)">
+            <summary>
+            Get a DtoTemplateArticle by templateId and type.
+            </summary>
+            <param name="templateId"></param>
+            <param name="type"></param>
+            <returns>DtoTemplateArticle</returns>
+        </member>
+        <member name="T:BimPlus.Sdk.Utilities.V2.TeamSession">
+            <summary>
+            Partial class TeamSession. Contains all REST calls.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Utilities.V2.TeamSession.ScopedTimeout">
+            <summary>
+            Scoped timeout class.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.ScopedTimeout.#ctor(BimPlus.LightCaseClient.Support.ClientConfiguration,System.Int32)">
+            <summary>
+            Set scoped timeout.
+            </summary>
+            <param name="config"></param>
+            <param name="timeout"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.ScopedTimeout.Dispose">
+            <summary>
+            Restore old timeout.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Utilities.V2.TeamSession.ScopedTimeout.m_Config">
+            <summary>
+            Protected member m_Config.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Utilities.V2.TeamSession.ScopedTimeout.m_Timeout">
+            <summary>
+            Protected member m_Timeout.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.#ctor(System.String,System.String,BimPlus.LightCaseClient.Support.ClientConfiguration,System.IO.TextWriter)">
+            <summary>
+            Create a new TeamSession object.
+            </summary>
+            <param name="host"></param>
+            <param name="teamSlug"></param>
+            <param name="config"></param>
+            <param name="log"></param>
+        </member>
+        <member name="F:BimPlus.Sdk.Utilities.V2.TeamSession.m_LogLock">
+            <summary>
+            Protected member m_LogLock.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.Log(System.String)">
+            <summary>
+            Log a string message.
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetV2TeamUrl">
+            <summary>
+            Get team slug URL.
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="P:BimPlus.Sdk.Utilities.V2.TeamSession.TeamSlug">
+            <summary>
+            Get TeamSlug property.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetAttachementData(System.Guid)">
+            <summary>
+            Get attachement data by Id.
+            </summary>
+            <param name="id"></param>
+            <returns>byte[]</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.DownloadData(System.String,System.Guid)">
+            <summary>
+            Download Data
+            </summary>
+            <param name="type">supportet types are at the moment 'attachments' and 'divsions'</param>
+            <param name="id">requested attachment- or divisionId</param>
+            <returns>byte[]</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetElementTypes">
+            <summary>
+            Get all element types.
+            </summary>
+            <returns>List of DtoElementType</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetElementsByTypeId(System.Guid,System.Guid)">
+            <summary>
+            Get all elements from project by typeGuid.
+            </summary>
+            <param name="projectGuid"></param>
+            <param name="typeGuid"></param>
+            <returns>List of DtoOneElement</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetDtObjectsById(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            Get DtObjects by Id.
+            </summary>
+            <param name="objectsIds"></param>
+            <returns>List of DtObject</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetDtObjectsWithPropertiesById(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            Get DtObjects by Id with extended attribute properties.
+            </summary>
+            <param name="objectsIds"></param>
+            <returns>List of DtObject</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetObjectViews">
+            <summary>
+            Get table of all object navigator targets of current Teamslug 
+            (API-function calling)
+            </summary>
+            <returns>Table of all object navigator targets of current Teamslug</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetAllObjectViewColumnnames(System.String)">
+            <summary>
+            Get table of all column names for specifies Objectview target of current Teamslug 
+            </summary>
+            <param name="viewname">The name of specifies Objectview target</param>
+            <returns>Table of all column names for specifies Objectview targets of current Teamslug</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetObjectViewContent(System.String,System.Collections.Generic.List{System.Guid},System.Collections.ObjectModel.ObservableCollection{System.String})">
+            <summary>
+            Get all elements for defined hierarchy object and Objectview target
+            </summary>
+            <param name="viewname">The name of specifies Objectview target</param>
+            <param name="elemid">All id for defined hierarchy object and Objectview target</param>
+            <param name="columnsFilter">Columns filter </param>
+            <returns>Table of all elements for defined hierarchy object and Objectview target</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetObjectViewContent(System.String,System.Collections.Generic.List{System.Guid},System.Collections.Generic.List{System.String})">
+            <summary>
+            Get elements from any database Table
+            </summary>
+            <param name="viewname">Database table name</param>
+            <param name="elemid">List of ObjectID for required elements (by empty list will be found all elements)</param>
+            <param name="columnsFilter">List of required columns names (by empty list will be found all columns) </param>
+            <returns>Table of all elements for defined hierarchy object and Objectview target</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetAllUserSettingsHierarchy_API(System.String,System.Guid,System.String)">
+            <summary>
+            Get table of all user settings hierarchy data
+            (DataContainer creating)
+            </summary>
+            <param name="moduleID">Specifies the ID of the module.</param>
+            <param name="userID">Specifies the current user.</param>
+            <param name="catname">Category name</param>
+            <returns>Table of all user settings hierarchy data</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.UpdateUserSettingsHierarchyList_API(BimPlus.Sdk.Data.TenantDto.DtoUserSettingsCompleteElementList)">
+            <summary>
+            Update list of objects in table of all user settings hierarchy data
+            (Changed will be all elements with status "Added" and "Modified")
+            </summary>
+            <param name="elementlist">List of all elements for update.</param>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.UpdateChangedValuesInDatabase_API(BimPlus.Sdk.Data.DbCore.DtObject)">
+            <summary>
+            Update one changed elements in database
+            </summary>
+            <param name="dtbobj">Object with values for element update.</param>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.CreateObjectView(BimPlus.Sdk.Data.TenantDto.DtoUserDefinedViewObject)">
+            <summary>
+            Create new user defined ObjectView in database
+            </summary>
+            <param name="objview">New ObjectView</param>
+            <returns>Information about created ObjectView</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.DeleteObjectViews(System.Collections.Generic.List{System.String})">
+            <summary>
+            Delete user defined ObjectViews from database
+            </summary>
+            <param name="objviews">New ObjectView</param>
+            <returns>ObjectView delete OK true else false</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.DeleteUserSettingsHierarchyList_API(BimPlus.Sdk.Data.TenantDto.DtoUserSettingsCompleteElementList)">
+            <summary>
+            Delete list of objects in table of all user settings hierarchy data
+            (Changed will be all elements with status "Deleted")
+            </summary>
+            <param name="elementlist">List of all elements for update.</param>
+            <returns>List of elements, which wasn't deleted (if null, than all elements from input list was deleted)</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetTeamMembers">
+            <summary>
+            Get all team members.
+            </summary>
+            <returns>List of DtoMember</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetSubscriptions">
+            <summary>
+            Get ShopSubscriptions from actual user.
+            </summary>
+            <returns>DtoShopSubscriptionResponse</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.ValidateSubscription(System.String)">
+            <summary>
+            Validate Subscription from actual user.
+            </summary>
+            <returns>HttpStatusCode.OK if succeed</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetAccountSettings">
+            <summary>
+            Get account settings.
+            </summary>
+            <returns>Newtonsoft.Json.Linq.JArray.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetAllplanId(System.Guid)">
+            <summary>
+            Get the Allplan ID by object ID (ONLY FOR ALLPLAN PROJECTS !!!).
+            </summary>
+            <param name="objectId"></param>
+            <returns>Guid</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetIfcId(System.Guid)">
+            <summary>
+            Get the Ifc ID by object ID  
+            </summary>
+            <param name="objectId"></param>
+            <returns>Guid.Empty if Ifc_Id is not available</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetBimPlusId(System.Guid,System.Guid)">
+            <summary>
+            Get the BimPusId from requested project and AllplanID.
+            </summary>
+            <param name="projectId"></param>
+            <param name="allplanId"></param>
+            <returns>Guid</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetBimPlusId(System.Guid,System.String)">
+            <summary>
+            Get the BimPusId from requested project and ifcId.
+            </summary>
+            <param name="projectId"></param>
+            <param name="ifcId"></param>
+            <returns>Guid</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetBimPlusId(System.Guid,System.Guid,System.String)">
+            <summary>
+            Search object by given Attribute and requested value.
+            </summary>
+            <param name="projectId"></param>
+            <param name="attributeId"></param>
+            <param name="value"></param>
+            <returns>Guid</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetTeams">
+            <summary>
+            Get all the Teams of the current session.
+            </summary>
+            <returns>List of DtoClientTeam</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.SetCurrentTeam(System.String)">
+            <summary>
+            Set current Teamslug by slugname.
+            </summary>
+            <param name="slugName"></param>
+            <returns>true, if call is successful</returns>
+        </member>
+        <member name="P:BimPlus.Sdk.Utilities.V2.TeamSession.Timeout">
+            <summary>
+            The Timeout (saved in m_Config).
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.ETag(System.String,BimPlus.Sdk.Utilities.V2.ETagDelegate)">
+            <summary>
+            Save a new ETag.
+            </summary>
+            <param name="eTag"></param>
+            <param name="func"></param>
+            <returns>ETag as string</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.ETag(BimPlus.Sdk.Utilities.V2.ETagDelegate)">
+            <summary>
+            Get an ETag.
+            </summary>
+            <param name="func"></param>
+            <returns>ETag as string</returns>
+        </member>
+        <member name="F:BimPlus.Sdk.Utilities.V2.TeamSession.m_ETag">
+            <summary>
+            Protected member m_ETag.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Utilities.V2.TeamSession.m_Config">
+            <summary>
+            Protected member m_Config.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Utilities.V2.TeamSession.m_TeamSlug">
+            <summary>
+            Protected member m_TeamSlug.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Utilities.V2.TeamSession.m_Host">
+            <summary>
+            Protected member m_Host.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Utilities.V2.TeamSession.m_Log">
+            <summary>
+            Protected member m_Log.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetDtoIssue(System.Guid)">
+            <summary>
+            Get one DtoIssue by Id.
+            </summary>
+            <param name="issueId"></param>
+            <returns>DtoIssue</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetIssueComments(System.Guid)">
+            <summary>
+            Get all issue comments.
+            </summary>
+            <param name="issueId"></param>
+            <returns>List of DtoComment</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.PostIssueComment(System.Guid,BimPlus.Sdk.Data.TenantDto.DtoComment)">
+            <summary>
+            Post one DtoComment to issue.
+            </summary>
+            <param name="issueId"></param>
+            <param name="comment"></param>
+            <returns>DtoComment</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetIssueAttachments(System.Guid)">
+            <summary>
+            Get all attachments from an issue.
+            </summary>
+            <param name="issueId"></param>
+            <returns>List of DtoAttachment</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.PostIssueAttachment(System.Guid,System.String,System.Byte[])">
+            <summary>
+            Post issue attachment.
+            </summary>
+            <param name="objectId"></param>
+            <param name="filename"></param>
+            <param name="data"></param>
+            <returns>DtoAttachment</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetIssueHyperlinks(System.Guid)">
+            <summary>
+            Get all hyperlinks from issue.
+            </summary>
+            <param name="issueId"></param>
+            <returns>List of DtoHyperlink</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.PostIssueHyperlink(System.Guid,BimPlus.Sdk.Data.TenantDto.DtoHyperlink)">
+            <summary>
+            Post issue hyperlink.
+            </summary>
+            <param name="issueId"></param>
+            <param name="attachment"></param>
+            <returns>DtoHyperlink</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetIssuePins(System.Guid)">
+            <summary>
+            Get all issue pins.
+            </summary>
+            <param name="issueId"></param>
+            <returns>List of DtoPin</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.PostIssuePin(System.Guid,BimPlus.Sdk.Data.TenantDto.DtoPin)">
+            <summary>
+            Post an issue pin.
+            </summary>
+            <param name="issueId"></param>
+            <param name="pin"></param>
+            <returns>DtoPin</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.DeletePin(System.Guid)">
+            <summary>
+            Delete an issue pin.
+            </summary>
+            <param name="id"></param>
+            <returns>true if deleted</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.PutIssue(BimPlus.Sdk.Data.TenantDto.DtoShortIssue)">
+            <summary>
+            Put a DtoShortIssue.
+            </summary>
+            <param name="issue"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.PutDtoIssue(BimPlus.Sdk.Data.TenantDto.DtoIssue)">
+            <summary>
+            Put a DtoIssue.
+            </summary>
+            <param name="issue"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.DeleteIssue(System.Guid)">
+            <summary>
+            Delete an issue.
+            </summary>
+            <param name="id"></param>
+            <returns>true if deleted</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetIssueEditablePropertiesObject(BimPlus.Sdk.Data.TenantDto.DtoIssue)">
+            <summary>
+            Get a JObject with editable properties.
+            </summary>
+            <param name="issue"></param>
+            <returns>JObject</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetIssueEditableProperties(BimPlus.Sdk.Data.TenantDto.DtoIssue)">
+            <summary>
+            Get a list of editable properties.
+            </summary>
+            <param name="issue"></param>
+            <returns>List of string</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.CreateConnection(System.Guid,BimPlus.Sdk.Data.TenantDto.DtoConnections)">
+            <summary>
+            Post a DtoConnections.
+            </summary>
+            <param name="projectGuid"></param>
+            <param name="connections"></param>
+            <returns>DtoConnections</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.DeleteConnections(System.Guid)">
+            <summary>
+            Delete a DtoConnections by Id.
+            </summary>
+            <param name="objectId"></param>
+            <returns>true if deleted</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetConnections(System.Guid)">
+            <summary>
+            Get a DtoConnections from Id.
+            </summary>
+            <param name="objectId"></param>
+            <returns>DtoConnections</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.PutConnections(BimPlus.Sdk.Data.TenantDto.DtoConnections)">
+            <summary>
+            Put a DtoConnections.
+            That doesn't work.
+            </summary>
+            <param name="dtoConnections"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetObject(System.Guid,BimPlus.Sdk.Utilities.V2.ObjectRequestProperties)">
+            <summary>
+            Get an DtObject with attributes by objectId.
+            </summary>
+            <param name="objectId"></param>
+            <param name="flags"></param>
+            <returns>DtObject</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetObjects``1(System.Guid,BimPlus.Sdk.Utilities.V2.ObjectRequestProperties)">
+            <summary>
+            GetObjects from requested ElementType (DtObject)
+            </summary>
+            <typeparam name="T">BimPlus.Sdk.Data.DbCore.DtObject</typeparam>
+            <param name="projectId">usually the projectId</param>
+            <param name="flags"></param>
+            <returns>List of DtObjects</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetObjects(System.Guid,System.Type,BimPlus.Sdk.Utilities.V2.ObjectRequestProperties)">
+            <summary>
+            GetObjects from requested ElementType type.
+            </summary>
+            <param name="projectId"></param>
+            <param name="type"></param>
+            <param name="flags"></param>
+            <returns>List of DtObjects</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetObjectInternal(System.Guid)">
+            <summary>
+            Get an internal DtObject by objectId.
+            </summary>
+            <param name="objectId"></param>
+            <returns>DtObject</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetLayoutStructure(System.Guid)">
+            <summary>
+            returns Plans (Layouts) Structure 
+            </summary>
+            <param name="divisionTopologyId">rootnode for LayoutStructure</param>
+            <returns>DtoTopology</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetObjectTree(System.Guid)">
+            <summary>
+            Get object tree.
+            </summary>
+            <param name="objectId"></param>
+            <returns>DtObject</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetObjectGeometry(System.Guid)">
+            <summary>
+            Get object geometry from DtObject objectId.
+            </summary>
+            <param name="objectId"></param>
+            <returns>DtoModel</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetObjectGeometry(System.Guid,System.Guid)">
+            <summary>
+            Get object geometry from DtObject objectId and layerId.
+            </summary>
+            <param name="objectId"></param>
+            <param name="layerId"></param>
+            <returns>DtoModel</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetObjectGeometryAsThreeJs(System.Guid)">
+            <summary>
+            Get threejs geometry from DtObject by objectId.
+            </summary>
+            <param name="objectId"></param>
+            <returns>DtoModel</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetObjectGeometryAsThreeJs(System.Guid,System.Guid)">
+            <summary>
+            Get threejs geometry from DtObject by objectId and layerId.
+            </summary>
+            <param name="objectId"></param>
+            <param name="layerId"></param>
+            <returns>DtoModel</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetObjectGeometryAsThreeJsMesh(System.Guid,System.Guid)">
+            <summary>
+            Get threejs mesh geometry from DtObject by objectId and layerId.
+            </summary>
+            <param name="objectId"></param>
+            <param name="layerId"></param>
+            <returns>DtoModel</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetObjectGeometryAsThreeJsMesh(System.Guid)">
+            <summary>
+            Get threejs mesh geometry from DtObject by objectId.
+            </summary>
+            <param name="objectId"></param>
+            <returns>DtoModel</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetObjectAsync(System.Guid,BimPlus.LightCaseClient.Support.RestCallBack{BimPlus.Sdk.Data.DbCore.DtObject})">
+            <summary>
+            Get an DtObject asynchronously by objectId.
+            </summary>
+            <param name="objectId"></param>
+            <param name="callback"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetObjectGeometryAsync(System.Guid,BimPlus.LightCaseClient.Support.RestCallBack{BimPlus.Sdk.Data.TenantDto.DtoModel})">
+            <summary>
+            Get object geometry asynchronously by objectId.
+            </summary>
+            <param name="objectId"></param>
+            <param name="callback"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetObjectGeometryAsync(System.Guid,System.Guid,BimPlus.LightCaseClient.Support.RestCallBack{BimPlus.Sdk.Data.TenantDto.DtoModel})">
+            <summary>
+            Get object geometry asynchronously by layerId and objectId.
+            </summary>
+            <param name="objectId"></param>
+            <param name="layerId"></param>
+            <param name="callback"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.ObjectExists(System.Guid)">
+            <summary>
+            Returns whether the object exists.
+            </summary>
+            <param name="objectId"></param>
+            <returns>true if object exist</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.PostObject(BimPlus.Sdk.Data.DbCore.DtObject)">
+            <summary>
+            Post a DtObject.
+            </summary>
+            <param name="obj"></param>
+            <returns>DtObject</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.PostObjectAsync(BimPlus.Sdk.Data.DbCore.DtObject,BimPlus.LightCaseClient.Support.RestCallBack{BimPlus.Sdk.Data.DbCore.DtObject})">
+            <summary>
+            Post a DtObject asynchronously.
+            </summary>
+            <param name="obj"></param>
+            <param name="callback"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.PutAlterObject(BimPlus.Sdk.Data.DbCore.DtObject)">
+            <summary>
+            Put alter object.
+            </summary>
+            <param name="obj"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.PutAlterObject(BimPlus.Sdk.Data.DbCore.DtObject,System.Boolean)">
+            <summary>
+            Put alter object.
+            </summary>
+            <param name="obj"></param>
+            <param name="convertGeometry"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.AlterObjectAsync(BimPlus.Sdk.Data.DbCore.DtObject,System.Boolean,BimPlus.LightCaseClient.Support.RestCallBackStatusCode)">
+            <summary>
+            Put a DtObject asynchronously.
+            </summary>
+            <param name="obj"></param>
+            <param name="convertGeometry"></param>
+            <param name="callback"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.PutObject(BimPlus.Sdk.Data.DbCore.DtObject)">
+            <summary>
+            Put a DtObject.
+            </summary>
+            <param name="obj"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.PutObjectAsync(BimPlus.Sdk.Data.DbCore.DtObject,BimPlus.LightCaseClient.Support.RestCallBackStatusCode)">
+            <summary>
+            Put a DtObject asynchronously.
+            </summary>
+            <param name="obj"></param>
+            <param name="callback"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.Validate(BimPlus.Sdk.Data.DbCore.DtObject)">
+            <summary>
+            Validate a DtObject.
+            </summary>
+            <param name="obj"></param>
+            <returns>True if object is valid.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.DeleteObject(System.Guid)">
+            <summary>
+            Delete a DtObject.
+            </summary>
+            <param name="objectId"></param>
+            <returns>bool id deleted</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetComment(System.Guid)">
+            <summary>
+            Get an comment from object.
+            </summary>
+            <param name="objectId"></param>
+            <returns>DtoComment</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetObjectComments(System.Guid)">
+            <summary>
+            Get comments from object.
+            </summary>
+            <param name="objectId"></param>
+            <returns>List of DtoComment</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.PostObjectComment(System.Guid,BimPlus.Sdk.Data.TenantDto.DtoComment)">
+            <summary>
+            Post a comment.
+            </summary>
+            <param name="objectId"></param>
+            <param name="comment"></param>
+            <returns>DtoComment</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.PutComment(BimPlus.Sdk.Data.TenantDto.DtoComment)">
+            <summary>
+            Put a comment.
+            </summary>
+            <param name="comment"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.DeleteComment(System.Guid)">
+            <summary>
+            Deletes a comment.
+            </summary>
+            <param name="id"></param>
+            <returns>true if deleted</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetObjectAttachment(System.Guid)">
+            <summary>
+            Get a attachment from object.
+            </summary>
+            <param name="objectId"></param>
+            <returns>DtoAttachment</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetObjectAttachments(System.Guid)">
+            <summary>
+            Get all attachments by issueId.
+            </summary>
+            <param name="objectId"></param>
+            <returns>List of DtoAttachment</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetObjectAttachments(System.Guid,System.String)">
+            <summary>
+             Get all attachments by projectId (or any other objectId).
+            </summary>
+            <param name="objectId"></param>
+            <param name="filter"></param>
+            <returns>List of DtoAttachment</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.PostObjectAttachment(System.Guid,System.String,System.Byte[])">
+            <summary>
+            Post attachment for a specific object.
+            </summary>
+            <param name="objectId">Object id.</param>
+            <param name="filename">File name.</param>
+            <param name="data">Data.</param>
+            <returns>DtoAttachment</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.PostObjectAttachment(System.Guid,System.String,System.String,System.Byte[])">
+            <summary>
+            Post attachment for a specific object.
+            </summary>
+            <param name="objectId"></param>
+            <param name="filename"></param>
+            <param name="name"></param>
+            <param name="data"></param>
+            <returns>DtoAttachment</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.PostAttachment(System.Guid,System.String,System.Byte[],BimPlus.Sdk.Data.AttachmentType)">
+            <summary>
+            Post internal attachment for a specific object.
+            </summary>
+            <param name="objectId"></param>
+            <param name="filename"></param>
+            <param name="data"></param>
+            <param name="type"></param>
+            <returns>DtoAttachment</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.UpdateAttachment(System.Guid,System.Byte[])">
+            <summary>
+            Update internal attachment for a specific object.
+            </summary>
+            <param name="attachmentId"></param>
+            <param name="data"></param>
+            <returns>DtoAttachment</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.DeleteAttachment(System.Guid)">
+            <summary>
+            Delete attachment by Id.
+            </summary>
+            <param name="id"></param>
+            <returns>true if attachment deleted</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetHyperlink(System.Guid)">
+            <summary>
+            Get hyperlink by Id.
+            </summary>
+            <param name="objectId"></param>
+            <returns>DtoHyperlink</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetObjectHyperlinks(System.Guid)">
+            <summary>
+            Get hyperlinks by Id.
+            </summary>
+            <param name="objectId"></param>
+            <returns>List of DtoHyperlink</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.PostObjectHyperlink(System.Guid,BimPlus.Sdk.Data.TenantDto.DtoHyperlink)">
+            <summary>
+            Post hyperlink by object Id.
+            </summary>
+            <param name="objectId"></param>
+            <param name="hyperlink"></param>
+            <returns>DtoHyperlink</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.DeleteChildObjects(BimPlus.Sdk.Data.DbCore.DtObject)">
+            <summary>
+            Delete child objects by object Id.
+            </summary>
+            <param name="obj"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.DeleteChildObjectsAsync(BimPlus.Sdk.Data.DbCore.DtObject,BimPlus.LightCaseClient.Support.RestCallBackStatusCode)">
+            <summary>
+            Delete child objects asynchronously by object Id.
+            </summary>
+            <param name="obj"></param>
+            <param name="callback"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.DeleteHyperlink(System.Guid)">
+            <summary>
+            Delete hyperlink by Id.
+            </summary>
+            <param name="id"></param>
+            <returns>true if deleted</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetPin(System.Guid)">
+            <summary>
+            Get DtoPin by Id.
+            </summary>
+            <param name="pinId"></param>
+            <returns>DtoPin</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.UploadIfcFile(System.Guid,System.Guid,System.String,System.String)">
+            <summary>
+            Upload an IFC file
+            </summary>
+            <param name="projectGuid"></param>
+            <param name="divisionGuid"></param>
+            <param name="fileName"></param>
+            <param name="filePath"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.DeleteDtoDivision(System.Guid)">
+            <summary>
+            Delete a division by Id.
+            </summary>
+            <param name="divisionId"></param>
+            <returns>true if deleted.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetPropertySets(System.Type)">
+            <summary>
+            returns default attribute PropertySet of requested object
+            </summary>
+            <param name="type">f.ex. Wall</param>
+            <returns>IEnumerable of DtoAttributeTemplate</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetPropertySets(System.Guid,System.Nullable{System.Guid})">
+            <summary>
+            returns default attribute PropertySet of requested object
+            </summary>
+            <param name="elementType">guid of requested object</param>
+            <param name="projectAttributeTemplate"></param>
+            <returns>IEnumerable of DtoAttributeTemplate</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.IsPropertySetUptodate(System.String,System.Guid,System.Nullable{System.Guid})">
+            <summary>
+            Check recentEtag with ServerEtag
+            </summary>
+            <param name="recentEtag"></param>
+            <param name="elementType"></param>
+            <param name="projectAttributeTemplate"></param>
+            <returns>true if not modified</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetAttribute(System.Guid,System.Guid)">
+            <summary>
+            Evaluate one Attribute from one object.
+            </summary>
+            <param name="objectId"></param>
+            <param name="attributeId"></param>
+            <returns>DtoAttributDefinition</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetAttributeValues(System.Guid,System.Guid)">
+            <summary>
+            Get attribute values from an project by attributeId.
+            </summary>
+            <param name="projectId"></param>
+            <param name="attributeId"></param>
+            <returns>Dictionary of Guid and object</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetTAttributeValues``1(System.Guid,System.Guid)">
+            <summary>
+            Searches in Project (or any other node) all objects wich have requested attribute .
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="projectId"></param>
+            <param name="attributeId"></param>
+            <returns>Dictionary of Guid and T</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.UpdateAttributeValues(System.Guid,System.Guid,System.Collections.Generic.Dictionary{System.Guid,System.Object})">
+            <summary>
+            Update AttributeValues for a list of objects.
+            </summary>
+            <param name="projectId"></param>
+            <param name="attributeId"></param>
+            <param name="values"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.SetLock(System.Guid,System.Boolean,System.Boolean)">
+            <summary>
+            Set lock.
+            </summary>
+            <param name="objectId"></param>
+            <param name="withChildren"></param>
+            <param name="asAdmin"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.DeleteLock(System.Guid,System.Boolean,System.Boolean)">
+            <summary>
+            Delete lock.
+            </summary>
+            <param name="objectId"></param>
+            <param name="withChildren"></param>
+            <param name="asAdmin"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetLocks(System.Guid)">
+            <summary>
+            Get all Locks.
+            </summary>
+            <param name="objectId">use projectId to get all locks of project</param>
+            <returns>List of DtoUserLocks</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetProjects">
+            <summary>
+            Get a list of DtoShortProject.
+            </summary>
+            <returns>list of DtoShortProject</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetProjectProperties(System.Guid)">
+            <summary>
+            Get project properties.
+            </summary>
+            <param name="projectId"></param>
+            <returns>DtoProject</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetProjectThumbnail(System.Guid)">
+            <summary>
+            Get project thumnail.
+            </summary>
+            <param name="projectId"></param>
+            <returns>Image</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetProjectTopology(System.Guid)">
+            <summary>
+            Get DtoTopology from projrct.
+            </summary>
+            <param name="projectId"></param>
+            <returns>DtoTopology</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetProjectLayers(System.Guid)">
+            <summary>
+            Get project layers.
+            </summary>
+            <param name="projectId"></param>
+            <returns>List of DtoProjectDiscipline</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetProjectDivisions(System.Guid)">
+            <summary>
+            Get procject divisions.
+            </summary>
+            <param name="projectId"></param>
+            <returns>List of DtoDivision</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetDivision(System.Guid)">
+            <summary>
+            Get DtoDivision by Id.
+            </summary>
+            <param name="divisionId"></param>
+            <returns>DtoDivision</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.PutDivision(BimPlus.Sdk.Data.TenantDto.DtoDivision)">
+            <summary>
+            Put DtoDivision.
+            </summary>
+            <param name="division"></param>
+            <returns>DtoDivision</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetRevisions(System.Guid)">
+            <summary>
+            Get DtoRevisions by divisionId.
+            </summary>
+            <param name="divisionId"></param>
+            <returns>List of DtoRevision</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.CreateProject(BimPlus.Sdk.Data.TenantDto.DtoProject)">
+            <summary>
+            Create DtoProject.
+            </summary>
+            <param name="project"></param>
+            <returns>DtoProject</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.PostProjectDivision(System.Guid,BimPlus.Sdk.Data.TenantDto.DtoDivision)">
+            <summary>
+            Post DtoDivision to a project.
+            </summary>
+            <param name="projectId"></param>
+            <param name="division"></param>
+            <returns>DtoDivision</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.PostRevision(System.Guid,BimPlus.Sdk.Data.TenantDto.DtoRevision)">
+            <summary>
+            Post a revision to a division.
+            </summary>
+            <param name="divisionId"></param>
+            <param name="revision"></param>
+            <returns>DtoRevision</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetProjectIssues(System.Guid)">
+            <summary>
+            Get all DtoShortIssues from project projectId.
+            </summary>
+            <param name="projectId"></param>
+            <returns>List of DtoShortIssue</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetProjectDtoIssues(System.Guid)">
+            <summary>
+            GGet all DtoIssues from project projectId.
+            </summary>
+            <param name="projectId"></param>
+            <returns>List of DtoIssue</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetProjectIssuesWithRights(System.Guid)">
+            <summary>
+            Get project issues with rights.
+            </summary>
+            <param name="projectId"></param>
+            <returns>List of DtoIssue</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.PostProjectIssue(System.Guid,BimPlus.Sdk.Data.TenantDto.DtoShortIssue)">
+            <summary>
+            Post a project DtoShortIssue.
+            </summary>
+            <param name="projectId"></param>
+            <param name="issue"></param>
+            <returns>DtoShortIssue</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.PostProjectDtoIssue(System.Guid,BimPlus.Sdk.Data.TenantDto.DtoIssue)">
+            <summary>
+            Post a project DtoIssue.
+            </summary>
+            <param name="projectId"></param>
+            <param name="issue"></param>
+            <returns>DtoIssue</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetProjectMembers(System.Guid)">
+            <summary>
+            Get project members.
+            </summary>
+            <param name="projectId"></param>
+            <returns>List of DtoProjectMember</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetProjectStructures(System.Guid,System.String)">
+            <summary>
+            Get project structures.
+            </summary>
+            <param name="projectId"></param>
+            <param name="structureType"></param>
+            <returns>List of DtoStructure</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.PostProjectStructure(System.Guid,BimPlus.Sdk.Data.TenantDto.DtoStructure)">
+            <summary>
+            Post a DtoStructure to a project
+            </summary>
+            <param name="projectId"></param>
+            <param name="structure"></param>
+            <returns>DtoStructure</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.UploadProjectThumbnail(System.Guid,System.String)">
+            <summary>
+            Upload project thumbnail.
+            </summary>
+            <param name="projectGuid"></param>
+            <param name="filePath"></param>
+            <returns>Length of thumbnail.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetProjectElementTypes(System.Guid)">
+            <summary>
+            Returns list of elementTypes, who are exist in requested project.
+            </summary>
+            <param name="projectId"></param>
+            <returns>List of DtoElementType</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetProjectMaterialSurfaces(System.Guid)">
+            <summary>
+            Get project material surfaces.
+            </summary>
+            <param name="projectId"></param>
+            <returns>List of DtoMaterialSurface</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.ConvertGeometry(System.Guid)">
+            <summary>
+            Convert geometries from a project.
+            </summary>
+            <param name="projectId"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.ExecuteService(System.String,System.String,BimPlus.Sdk.Data.TenantDto.DtoExternalService)">
+            <summary>
+            Execute an external service.
+            </summary>
+            <param name="assembly"></param>
+            <param name="service"></param>
+            <param name="inputData"></param>
+            <returns>DtoExternalService</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetStructureTopology(System.Guid,System.Boolean,System.Nullable{System.Guid})">
+            <summary>
+            Get DtoTopologyStructure by Id and optional with attributes.
+            </summary>
+            <param name="structureId"></param>
+            <param name="withAttributes"></param>
+            <param name="variantType"></param>
+            <returns>DtoTopologyStructure</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetStructureTopology(System.Guid)">
+            <summary>
+            Get DtoTopologyStructure by Id.
+            </summary>
+            <param name="structureId"></param>
+            <returns>DtoTopologyStructure</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetStructureByProjectId(System.Guid)">
+            <summary>
+            Get a List of DtoStructure by project Id.
+            </summary>
+            <param name="projectId"></param>
+            <returns>List of DtoStructure</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetStructure(System.Guid)">
+            <summary>
+            Get a DtoStructure by structure Id.
+            </summary>
+            <param name="structureId"></param>
+            <returns>DtoStructure</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.PostStructure(System.Guid,BimPlus.Sdk.Data.TenantDto.DtoTopologyStructure)">
+            <summary>
+            Post a DtoStructure to a project.
+            </summary>
+            <param name="projectId"></param>
+            <param name="structure"></param>
+            <returns>DtoStructure</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.CopyStructure(System.Guid,BimPlus.Sdk.Data.TenantDto.DtoStructure)">
+            <summary>
+            Make a copy of existing structure.
+            You can push this structure also to a different project. (DtoStructure.ProjectId)
+            </summary>
+            <param name="structureId"></param>
+            <param name="structure"></param>
+            <returns>DtoStructure</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.PostSubStructure(System.Guid,BimPlus.Sdk.Data.TenantDto.DtoStructure)">
+            <summary>
+            Post a sub structure.
+            </summary>
+            <param name="parentStructure"></param>
+            <param name="structure"></param>
+            <returns>DtoStructure</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.PostStructureElement(System.Guid,BimPlus.Sdk.Data.TenantDto.DtoStructureElement)">
+            <summary>
+            Post a structure element to a structure.
+            </summary>
+            <param name="structure"></param>
+            <param name="elementId"></param>
+            <returns>DtoStructureElement</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.PutStructure(BimPlus.Sdk.Data.TenantDto.DtoStructure)">
+            <summary>
+            Put DtoStructure.
+            </summary>
+            <param name="structure"></param>
+            <returns>DtoStructure</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.DeleteStructure(System.Guid)">
+            <summary>
+            Delete a structure.
+            </summary>
+            <param name="id"></param>
+            <returns>true if deleted</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.AssignStructureElement(System.Guid,System.Guid)">
+            <summary>
+            Assign a structure element elemenent Id.
+            </summary>
+            <param name="structureId"></param>
+            <param name="elementId"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.RemoveStructureElement(System.Guid,System.Guid)">
+            <summary>
+            Remove a structure element.
+            </summary>
+            <param name="structureId"></param>
+            <param name="elementId"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.ReorderStructure(System.Guid)">
+            <summary>
+            Reorder Structure (order number will start with 1).
+            </summary>
+            <param name="structureId"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetStructureTypes">
+            <summary>
+            Get List of available Structuretypes
+            </summary>
+            <returns>List of string</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.CreateTemplate(BimPlus.Sdk.Data.GeometryTemplates.DtoTemplateArticle)">
+            <summary>
+            Create a DtoTemplateArticle.
+            </summary>
+            <param name="obj"></param>
+            <returns>Guid</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetTemplate(System.Guid,System.String)">
+            <summary>
+            Get a DtoTemplateArticle by templateId and type.
+            </summary>
+            <param name="templateId"></param>
+            <param name="type"></param>
+            <returns>DtoTemplateArticle</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetObjectTopology(System.Guid)">
+            <summary>
+            GetObjectTopology 
+            </summary>
+            <param name="objectId"></param>
+            <returns>DtoTopology</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.MoveTopologyNode(BimPlus.Sdk.Data.TenantDto.DtoTopology)">
+            <summary>
+            Move or Rename Topology Nodes
+            use 'Parent' for moving one node to a new parent
+            use 'number' for moving current position 
+            hint: all other nodes will be automatically reorded, if you change 
+            the current position by using 'number' 
+            </summary>
+            <param name="node"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetCache``1(System.Guid,System.String)">
+            <summary>
+            Read ClientCacheData 
+            if it is still valid
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="objectId"></param>
+            <param name="filename"></param>
+            <returns>T</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.PostCache``1(System.Guid,System.String,``0)">
+            <summary>
+            Post some ClientCacheData.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="objectId"></param>
+            <param name="filename"></param>
+            <param name="data"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="T:BimPlus.Sdk.Utilities.WebExceptionExtensions">
+            <summary>
+            WebException extensions.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.WebExceptionExtensions.GetStatusCode(System.Net.WebException)">
+            <summary>
+            Get status code from WebException.
+            </summary>
+            <param name="ex"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,1699 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BimPlus.Sdk.Api</name>
+    </assembly>
+    <members>
+        <member name="T:BimPlus.Sdk.Api.Core">
+            <summary>
+            Wrapper for BimPlus.Sdk.Utilities.V2.TeamSession-methods.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Core.GetAttribute(System.Guid)">
+            <summary>
+            read Attributedefinition from requested Attribute
+            </summary>
+            <param name="attributeId"></param>
+            <returns>DtoFreeAttribute</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Core.GetAttributes(System.Boolean)">
+            <summary>
+            Read all Attributes
+            </summary>
+            <param name="tenant">true == read from currentTenantDatabase; default = Global ContentDatabase</param>
+            <returns>Attributes as Topology</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Core.#ctor(BimPlus.Sdk.Utilities.V2.Connection,System.String,System.IO.TextWriter,System.Boolean)">
+            <summary>
+            Create core with Connection and TeamSlug.
+            </summary>
+            <param name="connection"></param>
+            <param name="teamSlug"></param>
+            <param name="logger"></param>
+            <param name="throwExceptions"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Core.#ctor(BimPlus.Sdk.Utilities.V2.Connection,System.Boolean)">
+            <summary>
+            Create core with Connection.
+            </summary>
+            <param name="connection"></param>
+            <param name="throwExceptions"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Core.#ctor(System.Guid,System.IO.TextWriter,System.Boolean)">
+            <summary>
+            Create Core with Client Id.
+            </summary>
+            <param name="applicationId"></param>
+            <param name="logger"></param>
+            <param name="throwExceptions"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Core.#ctor(System.Guid,System.Guid,System.IO.TextWriter,System.Boolean)">
+            <summary>
+            Create Core with Client Id and Application Id.
+            </summary>
+            <param name="clientId"></param>
+            <param name="applicationId"></param>
+            <param name="logger"></param>
+            <param name="throwExceptions"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Core.#ctor(BimPlus.Sdk.Api.Core,System.IO.TextWriter,System.Boolean)">
+            <summary>
+            Create Core from other Core.
+            </summary>
+            <param name="core"></param>
+            <param name="logger"></param>
+            <param name="throwExceptions"></param>
+        </member>
+        <member name="P:BimPlus.Sdk.Api.Core.ExceptionList">
+            <summary>
+            List of exception messages.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Core.Connect(System.String,System.String,System.String,System.Int32,System.Nullable{System.Guid})">
+            <summary>
+            Connect with Servername, Username and Password.
+            </summary>
+            <param name="serverName"></param>
+            <param name="userName"></param>
+            <param name="passWord"></param>
+            <param name="checkAlive"></param>
+            <param name="clientId"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Core.Disconnect">
+            <summary>
+            Diconnect Connection.
+            </summary>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Core.RememberMe(System.String,System.String)">
+            <summary>
+            Connect with Rememberme token.
+            </summary>
+            <param name="rememberMeToken"></param>
+            <param name="serverName"></param>
+            <returns>DtoUserOverview</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Core.RememberMe(System.String,System.Guid,System.String)">
+            <summary>
+            Connect with Rememberme token, Client Id and server name.
+            </summary>
+            <param name="rememberMeToken"></param>
+            <param name="clientId"></param>
+            <param name="serverName"></param>
+            <returns>DtoUserOverview</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Core.ConnectByCrossToken(System.String,System.String)">
+            <summary>
+            ConnectByCrossToken
+            </summary>
+            <param name="crossToken"></param>
+            <param name="serverName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Core.ValidateToken(System.Guid,System.String)">
+            <summary>
+            Connect with access token and server name.
+            </summary>
+            <param name="accessToken"></param>
+            <param name="serverName"></param>
+            <returns>DtoUserOverview</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Core.GetTokenInfo">
+            <summary>
+            Get Connection TokenInfoResponse.
+            </summary>
+            <returns>TokenInfoResponse</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Core.AccessToken">
+            <summary>
+            Get Connection Accesstoken Guid.
+            </summary>
+            <returns>Guid</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Core.RememberMeToken">
+            <summary>
+            Get Rememberme token as string.
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Core.RequestCrossToken">
+            <summary>
+            Get Connctions RequestCrossToken as string.
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Core.GetUserInfo">
+            <summary>
+            Get user info.
+            </summary>
+            <returns>DtoUserOverview</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Core.GetSubscriptions">
+            <summary>
+            Get Shop subscriptions from actual user.
+            </summary>
+            <returns>DtoShopSubscriptionResponse</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Core.ValidateSubscription(System.String)">
+            <summary>
+            Validate Shop subscription against actual user.
+            </summary>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Core.GetAccountSettings">
+            <summary>
+            Get account settings.
+            </summary>
+            <returns>Newtonsoft.Json.Linq.JArray or null.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Core.GetTeams">
+            <summary>
+            Get teams.
+            </summary>
+            <returns>List of DtoClientTeam.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Core.GetTeam(System.String)">
+            <summary>
+            Get DtoClientTeam from Teamslug or Id.
+            </summary>
+            <param name="slugOrId"></param>
+            <returns>DtoClientTeam</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Core.SetTeam(System.Guid)">
+            <summary>
+            Set Teamslug with Id.
+            </summary>
+            <param name="id"></param>
+            <returns>True if team is set.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Core.SetTeam(System.String)">
+            <summary>
+            Set Teamslug with Id as string.
+            </summary>
+            <param name="teamSlug"></param>
+            <returns>True if team is set.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Core.SearchDivision(BimPlus.Sdk.Data.ImportType,System.String)">
+            <summary>
+            Search division in all available teams by inputType and identifier.
+            </summary>
+            <param name="inputType">can be Allplan, IFC, SKP</param>
+            <param name="identifier">Allplan ProjectId, IFC Filename, SKP Filename</param>
+            <returns>Null if not found, otherwise DtoDivision.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Core.SearchDivisions(BimPlus.Sdk.Data.ImportType,System.String)">
+            <summary>
+            Search divisions in all available teams by inputType and identifier.
+            </summary>
+            <param name="inputType">can be Allplan, IFC, SKP</param>
+            <param name="identifier">Allplan ProjectId, IFC Filename, SKP Filename</param>
+            <returns>List of DtoDivisions.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Core.GetDivisions">
+            <summary>
+            returns all divisions (models) in all teams, which are available by current user
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Core.GetProjects">
+            <summary>
+            Returns List of all Projects over all Teams.
+            </summary>
+            <returns>List of DtoShortProject.</returns>
+        </member>
+        <member name="P:BimPlus.Sdk.Api.Core.Issues">
+            <summary>
+                Wrap DtoIssues and DtoShortIssue.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Api.Core.DtObjects">
+            <summary>
+                Wrap DtObjects.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Api.Core.Projects">
+            <summary>
+                Wrap project methods.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Api.Core.Objects">
+            <summary>
+                Direct wrap several objects.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Api.Core.Divisions">
+            <summary>
+                Direct wrap several objects.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Api.Core.Structures">
+            <summary>
+                Direct wrap several objects.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Api.Core.Attachments">
+            <summary>
+                Direct wrap several objects.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Api.Core.Services">
+            <summary>
+                Direct wrap several objects.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Api.Core.DtoConnection">
+            <summary>
+                Wrap DtObjects.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Api.Core.GeometryTemplate">
+            <summary>
+                Wrap GeometryTemplates
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Api.Core.MachineId">
+            <summary>
+            Machine id.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Api.ExceptionMessage">
+            <summary>
+            Saves exceptions and the caller.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Api.ExceptionMessage.Exception">
+            <summary>
+            The Exception.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Api.ExceptionMessage.Caller">
+            <summary>
+            The caller of the exception.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Api.IntegrationBase">
+            <summary>
+            Base API.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.IntegrationBase.#ctor(System.Guid,System.IO.TextWriter,System.Boolean)">
+            <summary>
+            Create IntegrationBase with applicationId and logger.
+            </summary>
+            <param name="applicationId"></param>
+            <param name="logger"></param>
+            <param name="throwExceptions"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.IntegrationBase.#ctor(System.Guid,System.Guid,System.IO.TextWriter,System.Boolean)">
+            <summary>
+            Create IntegrationBase with client Id, application Id and logger.
+            </summary>
+            <param name="clientId"></param>
+            <param name="applicationId"></param>
+            <param name="logger"></param>
+            <param name="throwExceptions"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.IntegrationBase.#ctor(BimPlus.Sdk.Api.Core,System.IO.TextWriter,System.Boolean)">
+            <summary>
+            Create IntegrationBase with Core and logger.
+            </summary>
+            <param name="core"></param>
+            <param name="logger"></param>
+            <param name="throwExceptions"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.IntegrationBase.ConnectWithRememberMeToken(System.String,System.String)">
+            <summary>
+            Connect with rememberme token.
+            </summary>
+            <param name="rememberMeToken"></param>
+            <param name="serverName"></param>
+            <returns>True if remembered.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.IntegrationBase.ConnectWithRememberMeToken(System.String,System.Guid,System.String)">
+            <summary>
+            Connect with rememberme token, client Id and server name.
+            </summary>
+            <param name="rememberMeToken"></param>
+            <param name="clientId"></param>
+            <param name="serverName"></param>
+            <returns>True if remembered.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.IntegrationBase.ConnectWithAccessTokenAndServerName(System.Nullable{System.Guid},System.String)">
+            <summary>
+            Connect with access token and server name.
+            </summary>
+            <param name="accessToken"></param>
+            <param name="serverName"></param>
+            <returns>True if connected.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.IntegrationBase.ConnectWithCredentials(System.String,System.String,System.String)">
+            <summary>
+            Connect with user name, pass word and server name.
+            </summary>
+            <param name="userName"></param>
+            <param name="passWord"></param>
+            <param name="serverName"></param>
+            <returns>True if connected.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.IntegrationBase.ConnectWithCredentials(System.String,System.String,System.String,System.Nullable{System.Guid})">
+            <summary>
+            Connect with user name, pass word, server name and client Id.
+            </summary>
+            <param name="userName"></param>
+            <param name="passWord"></param>
+            <param name="serverName"></param>
+            <param name="clientId"></param>
+            <returns>True if connected.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.IntegrationBase.ConnectWithCrossToken(System.String,System.String)">
+            <summary>
+            Connect with crossToken.
+            </summary>
+            <param name="crossToken"></param>
+            <param name="serverName"></param>
+            <returns>True if connected.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.IntegrationBase.Disconnect">
+            <summary>
+            Diconnect Connection.
+            </summary>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="P:BimPlus.Sdk.Api.IntegrationBase.Logger">
+            <summary>
+            The logger.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Api.IntegrationBase.ApiCore">
+            <summary>
+            The API core.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Api.IntegrationBase.ServerName">
+            <summary>
+            The server name.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Api.IntegrationBase.UserName">
+            <summary>
+            The user name.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Api.IntegrationBase.DtoUser">
+            <summary>
+            The DtoUserOverview.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Api.IntegrationBase.TeamSlug">
+            <summary>
+            The team slug.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Api.IntegrationBase.ClientConfiguration">
+            <summary>
+            The ClientConfiguration.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.IntegrationBase.LogMessage(System.String)">
+            <summary>
+            Log a message.
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="T:BimPlus.Sdk.Api.Wrapper.Attachments">
+            <summary>
+            Wrap Attachments.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Attachments.#ctor(BimPlus.Sdk.Api.Core)">
+            <summary>
+            Create the Attachments wrapper.
+            </summary>
+            <param name="apiCore"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Attachments.GetAttachments(System.Guid)">
+            <summary>
+            Get all attachments by issueId.
+            </summary>
+            <param name="issueId"></param>
+            <returns>List of DtoAttachment.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Attachments.GetAttachments(System.Guid,System.Collections.Generic.List{BimPlus.Sdk.Data.AttachmentType},System.Boolean)">
+            <summary>
+            Get all attachments by projectId (or any other objectId).
+            </summary>
+            <param name="objectId">Usually the projectId, but you can use every object.</param>
+            <param name="types">List of requested attachment types.</param>
+            <param name="projectOnly">No query over all project subnodes.</param>
+            <returns>List of DtoAttachment.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Attachments.DownloadAttachment(System.Guid)">
+            <summary>
+            Download an Attachment.
+            </summary>
+            <param name="attachmentGuid"></param>
+            <returns>byte[]</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Attachments.UploadAttachment(System.Guid,System.String,System.Byte[],System.String)">
+            <summary>
+            Post attachment for a specific object.
+            </summary>
+            <param name="relatedObjectId"></param>
+            <param name="filename"></param>
+            <param name="data"></param>
+            <param name="name"></param>
+            <returns>DtoAttachment</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Attachments.UploadAttachment(System.Guid,System.String,System.Byte[],BimPlus.Sdk.Data.AttachmentType)">
+            <summary>
+            Post internal attachment for a specific object.
+            </summary>
+            <param name="relatedObjectId"></param>
+            <param name="filename"></param>
+            <param name="data"></param>
+            <param name="type"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Attachments.UpdateAttachment(System.Guid,System.Byte[])">
+            <summary>
+            Update internal attachment for a specific object.
+            </summary>
+            <param name="attachmentId"></param>
+            <param name="data"></param>
+            <returns>DtoAttachment</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Attachments.DeleteAttachment(System.Guid)">
+            <summary>
+            Delete an Attachment.
+            </summary>
+            <param name="attachmentGuid"></param>
+        </member>
+        <member name="T:BimPlus.Sdk.Api.Wrapper.BaseWrapper">
+            <summary>
+            Base wrapper.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.BaseWrapper.#ctor">
+            <summary>
+            Create the BaseWrapper.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.BaseWrapper.#ctor(BimPlus.Sdk.Api.Core)">
+            <summary>
+            Create the BaseWrapper with API core.
+            </summary>
+            <param name="apiCore"></param>
+        </member>
+        <member name="F:BimPlus.Sdk.Api.Wrapper.BaseWrapper.APICore">
+            <summary>
+            APICore property.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Api.Wrapper.BaseWrapper.TeamSession">
+            <summary>
+            TeamSession property.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Api.Wrapper.Divisions">
+            <summary>
+            Wrap DtoDivision.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Divisions.#ctor(BimPlus.Sdk.Api.Core)">
+            <summary>
+            Create the divisions wrapper.
+            </summary>
+            <param name="apiCore"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Divisions.UploadProjectDivision(System.Guid,BimPlus.Sdk.Data.TenantDto.DtoDivision)">
+            <summary>
+            Upload a project division.
+            </summary>
+            <param name="projectId"></param>
+            <param name="division"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Divisions.Get(System.Guid)">
+            <summary>
+            Get DtoDivision by Id.
+            </summary>
+            <param name="divisionId"></param>
+            <returns>DtoDivision</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Divisions.Update(BimPlus.Sdk.Data.TenantDto.DtoDivision)">
+            <summary>
+            Update the division.
+            </summary>
+            <param name="division"></param>
+            <returns>DtoDivision</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Divisions.GetProjectDivisions(System.Guid)">
+            <summary>
+            Get project divisions.
+            </summary>
+            <param name="projectId"></param>
+            <returns>List of DtoDivision.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Divisions.UploadIfcModel(System.Guid,System.Guid,System.String,System.String)">
+            <summary>
+            Upload an IFC Model to a specific division.
+            </summary>
+            <param name="projectGuid"></param>
+            <param name="divisionGuid"></param>
+            <param name="fileName"></param>
+            <param name="filePath"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Divisions.UplodRevitModel(System.Guid,System.Guid,System.String,System.String,System.String,System.String)">
+            <summary>
+            Uplod RevitModel to a specific division.
+            </summary>
+            <param name="projectId">Project Id</param>
+            <param name="divisionId">Division Id</param>
+            <param name="ifcFileName">Ifc Name</param>
+            <param name="ifcFile">Ifc file path</param>
+            <param name="revitFile">Revit file path</param>
+            <param name="revitProjectId">Unique identifier of revit project</param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Divisions.DownloadIfcModel(System.Guid)">
+            <summary>
+            Download an IFC Model from a specific division.
+            </summary>
+            <param name="divisionId"></param>
+            <returns>byte[]</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Divisions.GetRevisions(System.Guid)">
+            <summary>
+            Get DtoRevisions by divisionId.
+            </summary>
+            <param name="divisionId">Requested division Id</param>
+            <returns>List of DtoRevision.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Divisions.CreateRevision(System.Guid,System.String,System.String)">
+            <summary>
+            Post a revision to a division.
+            </summary>
+            <param name="divisionId"></param>
+            <param name="name"></param>
+            <param name="description"></param>
+            <returns>DtoRevision</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Divisions.CreateModel(System.Guid,BimPlus.Sdk.Data.TenantDto.DtoDivision)">
+            <summary>
+            Post DtoDivision to a project.
+            </summary>
+            <param name="projectId"></param>
+            <param name="model"></param>
+            <returns>DtoDivision</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Divisions.DeleteDtoDivision(System.Guid)">
+            <summary>
+            Delete a division by Id.
+            </summary>
+            <param name="divisionId"></param>
+            <returns>True if deleted otherwise false.</returns>
+        </member>
+        <member name="T:BimPlus.Sdk.Api.Wrapper.DtoConnection">
+            <summary>
+            Wrap DtoConnections.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtoConnection.#ctor(BimPlus.Sdk.Api.Core)">
+            <summary>
+            Create DtoConnections wrapper.
+            </summary>
+            <param name="apiCore"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtoConnection.CreateConnection(System.Guid,BimPlus.Sdk.Data.TenantDto.DtoConnections)">
+            <summary>
+            Create a DtoConnections.
+            </summary>
+            <param name="connection"></param>
+            <param name="projectGuid"></param>
+            <returns>DtoConnections</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtoConnection.DeleteConnections(System.Guid)">
+            <summary>
+            Delete a DtoConnections by object Id.
+            </summary>
+            <param name="objectId"></param>
+            <returns>True if deleted otherwise false.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtoConnection.GetConnections(System.Guid)">
+            <summary>
+            Get a DtoConnections by object Id.
+            </summary>
+            <param name="objectId"></param>
+            <returns>DtoConnections</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtoConnection.PutConnections(BimPlus.Sdk.Data.TenantDto.DtoConnections)">
+            <summary>
+            Put a DtoConnections.
+            That doesn't work.
+            </summary>
+            <param name="dtoConnections"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="T:BimPlus.Sdk.Api.Wrapper.DtObjects">
+            <summary>
+            Wrap DtObjects.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtObjects.#ctor(BimPlus.Sdk.Api.Core)">
+            <summary>
+            Create DtObjects wrapper.
+            </summary>
+            <param name="apiCore"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtObjects.GetObject(System.Guid,BimPlus.Sdk.Utilities.V2.ObjectRequestProperties)">
+            <summary>
+            Get an DtObject with attributes by objectId.
+            If withAttributDefinition is true and internalValues is true, an empty list is returned.
+            </summary>
+            <param name="objectId"></param>
+            <param name="flags">ObjectRequestProperties</param>
+            <returns>DtObject</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtObjects.GetObjectInternal(System.Guid)">
+            <summary>
+            Get an internal DtObject by objectId.
+            </summary>
+            <param name="objectId"></param>
+            <returns>DtObject</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtObjects.GetObjectTree(System.Guid)">
+            <summary>
+            Get object tree.
+            </summary>
+            <param name="objectId"></param>
+            <returns>DtObject</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtObjects.GetObjectGeometry(System.Guid)">
+            <summary>
+            Get object geometry from objectId.
+            </summary>
+            <param name="objectId"></param>
+            <returns>DtoModel</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtObjects.GetObjectGeometry(System.Guid,System.Guid)">
+            <summary>
+            Get object geometry from DtObject object Id and layer Id.
+            </summary>
+            <param name="objectId"></param>
+            <param name="layerId"></param>
+            <returns>DtoModel</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtObjects.GetObjectGeometryAsThreeJs(System.Guid)">
+            <summary>
+            Get threejs geometry from DtObject by objectId.
+            </summary>
+            <param name="objectId"></param>
+            <returns>DtoModel</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtObjects.GetObjectGeometryAsThreeJs(System.Guid,System.Guid)">
+            <summary>
+            Get threejs geometry from DtObject by object Id and layer Id.
+            </summary>
+            <param name="objectId"></param>
+            <param name="layerId"></param>
+            <returns>DtoModel</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtObjects.GetObjectGeometryAsThreeJsMesh(System.Guid)">
+            <summary>
+            Get threejs mesh geometry from DtObject by object Id.
+            </summary>
+            <param name="objectId"></param>
+            <returns>DtoModel</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtObjects.GetObjectGeometryAsThreeJsMesh(System.Guid,System.Guid)">
+            <summary>
+            Get threejs mesh geometry from DtObject by object Id and layer Id.
+            </summary>
+            <param name="objectId"></param>
+            <param name="layerId"></param>
+            <returns>DtoModel</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtObjects.GetLayerObjectGeometry(System.Guid,System.Guid)">
+            <summary>
+            Get object geometry by layer Id and object Id.
+            </summary>
+            <param name="objectId"></param>
+            <param name="layerId"></param>
+            <returns>DtoModel</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtObjects.GetObjectAsync(System.Guid,BimPlus.LightCaseClient.Support.RestCallBack{BimPlus.Sdk.Data.DbCore.DtObject})">
+            <summary>
+            Get an DtObject asynchronously by object Id.
+            </summary>
+            <param name="objectId"></param>
+            <param name="callBack"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtObjects.GetObjectGeometryAsync(System.Guid,BimPlus.LightCaseClient.Support.RestCallBack{BimPlus.Sdk.Data.TenantDto.DtoModel})">
+            <summary>
+            Get object geometry asynchronously by object Id.
+            </summary>
+            <param name="objectId"></param>
+            <param name="callBack"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtObjects.GetObjectGeometryAsync(System.Guid,System.Guid,BimPlus.LightCaseClient.Support.RestCallBack{BimPlus.Sdk.Data.TenantDto.DtoModel})">
+            <summary>
+            Get object geometry asynchronously by layer Id and object Id.
+            </summary>
+            <param name="objectId"></param>
+            <param name="layerId"></param>
+            <param name="callBack"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtObjects.GetElementTypes">
+            <summary>
+            Get DtoElementTypes from current team.
+            </summary>
+            <returns>List of DtoElementType</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtObjects.GetElementsByTypeId(System.Guid,System.Guid)">
+            <summary>
+            Get all elements from project by typeGuid.
+            </summary>
+            <param name="projectGuid"></param>
+            <param name="typeGuid"></param>
+            <returns>List of DtoOneElement</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtObjects.GetDtObjectsById(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            Get DtObjects by object Id.
+            </summary>
+            <param name="objectId"></param>
+            <returns>List of DtObject</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtObjects.GetDtObjectsWithPropertiesById(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            Get DtObjects by object Id with extended attribute properties.
+            </summary>
+            <param name="objectId"></param>
+            <returns>List of DtObject</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtObjects.GetAttachementData(System.Guid)">
+            <summary>
+            Get attachment data from objectId.
+            </summary>
+            <param name="objectId"></param>
+            <returns>byte[]</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtObjects.ObjectExists(System.Guid)">
+            <summary>
+            Returns whether the object exists.
+            </summary>
+            <param name="objectId"></param>
+            <returns>True if object exist otherwise false.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtObjects.PostObject(BimPlus.Sdk.Data.DbCore.DtObject)">
+            <summary>
+            Post a DtObject.
+            </summary>
+            <param name="objectId"></param>
+            <returns>DtObject</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtObjects.PostObjectAsync(BimPlus.Sdk.Data.DbCore.DtObject,BimPlus.LightCaseClient.Support.RestCallBack{BimPlus.Sdk.Data.DbCore.DtObject})">
+            <summary>
+            Post a DtObject asynchronously.
+            </summary>
+            <param name="objectId"></param>
+            <param name="callBack"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtObjects.PutAlterObject(BimPlus.Sdk.Data.DbCore.DtObject,System.Boolean)">
+            <summary>
+            Put alter object.
+            </summary>
+            <param name="dtObject"></param>
+            <param name="convertGeometry"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtObjects.PutObject(BimPlus.Sdk.Data.DbCore.DtObject)">
+            <summary>
+            Put a DtObject.
+            </summary>
+            <param name="objectId"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtObjects.PutObjectAsync(BimPlus.Sdk.Data.DbCore.DtObject,BimPlus.LightCaseClient.Support.RestCallBackStatusCode)">
+            <summary>
+            Put a DtObject asynchronously.
+            </summary>
+            <param name="objectId"></param>
+            <param name="callBack"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtObjects.AlterObjectAsync(BimPlus.Sdk.Data.DbCore.DtObject,System.Boolean,BimPlus.LightCaseClient.Support.RestCallBackStatusCode)">
+            <summary>
+            Put a DtObject asynchronously.
+            </summary>
+            <param name="obj"></param>
+            <param name="convertGeometry">Addition call of ConvertGeometry at the end of Update.</param>
+            <param name="callBack"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtObjects.ValidateObject(BimPlus.Sdk.Data.DbCore.DtObject)">
+            <summary>
+            Validate a DtObject.
+            </summary>
+            <param name="dtObject">DtObject</param>
+            <returns>True if object is valid otherwise false.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtObjects.DeleteObject(System.Guid)">
+            <summary>
+            Delete a DtObject.
+            </summary>
+            <param name="objectId"></param>
+            <returns>True if object is deleted otherwise false.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtObjects.GetObjects(System.Guid,System.Type,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Get objects with attributes.
+            If withAttributDefinition is true and internalValues is true, an empty list is returned.
+            </summary>
+            <param name="projectId"></param>
+            <param name="type"></param>
+            <param name="withAttributDefinition"></param>
+            <param name="pSetDefinition"></param>
+            <param name="internalValues"></param>
+            <returns>List of DtObject.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtObjects.GetObjects``1(System.Guid,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Get objects with attributes.
+            If withAttributDefinition is true and internalValues is true, an empty list is returned.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="projectId"></param>
+            <param name="withAttributDefinition"></param>
+            <param name="pSetDefinition"></param>
+            <param name="internalValues"></param>
+            <returns>List of T.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtObjects.GetObjects(System.Guid,System.Type,BimPlus.Sdk.Utilities.V2.ObjectRequestProperties)">
+            <summary>
+            Get objects with attributes.
+            If AttributDefinition and InternalValues is set, an empty list is returned.
+            </summary>
+            <param name="projectId"></param>
+            <param name="type"></param>
+            <param name="flags"></param>
+            <returns>List of DtObject.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtObjects.GetObjects``1(System.Guid,BimPlus.Sdk.Utilities.V2.ObjectRequestProperties)">
+            <summary>
+            Get objects with attributes.
+            If AttributDefinition and InternalValues is set, an empty list is returned.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="projectId"></param>
+            <param name="flags"></param>
+            <returns>List of T.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtObjects.GetObjects(System.Guid,BimPlus.Sdk.IfcData.DbLayer,System.Boolean)">
+            <summary>
+            Get objects with attributes.
+            If AttributDefinition and InternalValues is set, an empty list is returned.
+            </summary>
+            <param name="projectId"></param>
+            <param name="layer"></param>
+            <param name="internalValues">at the moment BimPlus supports only property ObjectRequestProperties.InternalValues</param>
+            <returns>List of DtObject.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtObjects.GetPropertySets(System.Guid,System.Nullable{System.Guid})">
+            <summary>
+            Get PropertySets of requested elementType with attributes.
+            </summary>
+            <param name="elementType">Guid of requested elementType</param>
+            <param name="projectAttributeTemplate"></param>
+            <returns>IEnumerable of DtoAttributeTemplate.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtObjects.IsPropertySetUpdtodate(System.String,System.Guid,System.Nullable{System.Guid})">
+            <summary>
+            Validate eTag with Bimplus Server Etag.
+            </summary>
+            <param name="eTag"></param>
+            <param name="elementType"></param>
+            <param name="projectAttributeTemplate"></param>
+            <returns>True if uptodate.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtObjects.GetAttribute(System.Guid,System.Guid)">
+            <summary>
+            Read one Property from Bimplus Object.
+            </summary>
+            <param name="objectId"></param>
+            <param name="attributeId"></param>
+            <returns>DtoAttributDefinition</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtObjects.GetAttributeValues(System.Guid,System.Guid)">
+            <summary>
+            Searches in Project (or any other node) all objects wich have requested attribute.
+            </summary>
+            <param name="projectId">root node</param>
+            <param name="attributeId">requested attribute</param>
+            <returns>Dictionary with objectId's and their attribute value.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtObjects.GetTAttributeValues``1(System.Guid,System.Guid)">
+            <summary>
+            Searches in Project (or any other node) all objects wich have requested attribute.
+            </summary>
+            <param name="projectId">root node</param>
+            <param name="attributeId">requested attribute</param>
+            <returns>Dictionary with objectId's and their attribute.Value.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtObjects.UpdateAttributeValues(System.Guid,System.Guid,System.Collections.Generic.Dictionary{System.Guid,System.Object})">
+            <summary>
+            Update AttributeValues for a list of objects.
+            </summary>
+            <param name="projectId"></param>
+            <param name="attributeId"></param>
+            <param name="values"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtObjects.Lock(System.Guid,System.Boolean,System.Boolean)">
+            <summary>
+            Lock one (optional with all childs) object.
+            </summary>
+            <param name="objectId"></param>
+            <param name="withChildren">all childs of objectId will be locked also</param>
+            <param name="asAdmin">Admin mode? true/false</param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtObjects.DeleteLock(System.Guid,System.Boolean,System.Boolean)">
+            <summary>
+            Delete lock.
+            </summary>
+            <param name="objectId"></param>
+            <param name="withChildren">Lock all the children? true/false.</param>
+            <param name="asAdmin">Admin mode? true/false.</param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtObjects.GetLocks(System.Guid)">
+            <summary>
+            Get List of all locks.
+            If you use the projectId, you will get all locks of complete project.
+            </summary>
+            <param name="objectId"></param>
+            <returns>List of DtoUserLocks.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtObjects.CreateConnection(System.Guid,BimPlus.Sdk.Data.TenantDto.DtoConnections)">
+            <summary>
+            Post a DtoConnections.
+            </summary>
+            <param name="connection"></param>
+            <param name="projectGuid"></param>
+            <returns>DtoConnections</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtObjects.DeleteConnections(System.Guid)">
+            <summary>
+            Delete a DtoConnections by Id.
+            </summary>
+            <param name="objectId"></param>
+            <returns>True if deleted otherwise false.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtObjects.GetConnections(System.Guid)">
+            <summary>
+            Get a DtoConnections from object Id.
+            </summary>
+            <param name="objectId"></param>
+            <returns>DtoConnections</returns>
+        </member>
+        <member name="T:BimPlus.Sdk.Api.Wrapper.Issues">
+            <summary>
+            Wrap DtoIssues and DtoShortIssue.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Issues.#ctor(BimPlus.Sdk.Api.Core)">
+            <summary>
+            Create Issues Wrapper.
+            </summary>
+            <param name="apiCore"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Issues.PutShortIssue(BimPlus.Sdk.Data.TenantDto.DtoShortIssue)">
+            <summary>
+            Put a DtoShortIssue.
+            </summary>
+            <param name="issue"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Issues.PutDtoIssue(BimPlus.Sdk.Data.TenantDto.DtoIssue)">
+            <summary>
+            Put a DtoIssue.
+            </summary>
+            <param name="issue"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Issues.GetShortIssues(System.Guid)">
+            <summary>
+            Get all DtoShortIssues from project with projectId.
+            </summary>
+            <param name="projectId"></param>
+            <returns>List of DtoShortIssue.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Issues.GetProjectDtoIssues(System.Guid)">
+            <summary>
+            Get all DtoIssues from project by projectId.
+            </summary>
+            <param name="projectId"></param>
+            <returns>List of DtoIssue.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Issues.GetDtoIssue(System.Guid)">
+            <summary>
+            Get one DtoIssue by issue Id.
+            </summary>
+            <param name="issueId"></param>
+            <returns>DtoIssue</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Issues.GetDtoIssuesById(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            Get DtoIssues by issue Ids.
+            </summary>
+            <param name="issueIds"></param>
+            <returns>List of DtoIssue.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Issues.PostProjectShortIssue(System.Guid,BimPlus.Sdk.Data.TenantDto.DtoShortIssue)">
+            <summary>
+            Post a DtoShortIssue by issue Id.
+            </summary>
+            <param name="projectId"></param>
+            <param name="issueId"></param>
+            <returns>DtoShortIssue</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Issues.DeleteIssue(System.Guid)">
+            <summary>
+            Delete an issue.
+            </summary>
+            <param name="issueId"></param>
+            <returns>True if deleted otherwise false.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Issues.GetIssueComments(System.Guid)">
+            <summary>
+            Get all issue comments by issue Id.
+            </summary>
+            <param name="issueId"></param>
+            <returns>List of DtoComment.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Issues.PostIssueComment(System.Guid,BimPlus.Sdk.Data.TenantDto.DtoComment)">
+            <summary>
+            Post one DtoComment to issue with issue Id.
+            </summary>
+            <param name="issueId"></param>
+            <param name="comment"></param>
+            <returns>DtoComment</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Issues.GetIssueAttachments(System.Guid)">
+            <summary>
+            Get all attachments by issueId.
+            </summary>
+            <param name="issueId"></param>
+            <returns>List of DtoAttachment.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Issues.PostIssueAttachment(System.Guid,System.String,System.Byte[])">
+            <summary>
+            Post a attachment.
+            </summary>
+            <param name="issueId"></param>
+            <param name="fileName"></param>
+            <param name="data"></param>
+            <returns>DtoAttachment</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Issues.GetIssuePins(System.Guid)">
+            <summary>
+            Get all pins by issue Id.
+            </summary>
+            <param name="issueId"></param>
+            <returns>List of DtoPin</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Issues.PostIssuePin(System.Guid,BimPlus.Sdk.Data.TenantDto.DtoPin)">
+            <summary>
+            Post an issue pin.
+            </summary>
+            <param name="issueId"></param>
+            <param name="pin"></param>
+            <returns>DtoPin</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Issues.PutIssue(BimPlus.Sdk.Data.TenantDto.DtoShortIssue)">
+            <summary>
+            Put a DtoShortIssue.
+            </summary>
+            <param name="issue"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Issues.GetIssueImage(System.Guid)">
+            <summary>
+            Read Image by issue Id.
+            </summary>
+            <param name="issueId"></param>
+            <returns>BitmapImage</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Issues.PutIssueImage(System.Guid,System.Byte[])">
+            <summary>
+            Update image on Issue with issue Id.
+            </summary>
+            <param name="issueId"></param>
+            <param name="image"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Issues.GetSelectedObjects(System.Guid)">
+            <summary>
+            Get a list of selected objects.
+            </summary>
+            <param name="issueId"></param>
+            <returns>List of Guid.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Issues.AddSelectedObject(System.Guid,System.Guid)">
+            <summary>
+            Update DtoScene in on issue by issue Id.
+            </summary>
+            <param name="issueId"></param>
+            <param name="objectId"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Issues.AddSelectedObjects(System.Guid,System.Collections.Generic.List{System.Guid})">
+            <summary>
+            Update DtoScene on Issue by issue Id.
+            </summary>
+            <param name="issueId"></param>
+            <param name="objectIds"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Issues.RemoveSelectedObject(System.Guid,System.Guid)">
+            <summary>
+            Remove object from DtoIssue.
+            </summary>
+            <param name="issueId"></param>
+            <param name="objectId"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Issues.GetPerspectiveCamera(System.Guid)">
+            <summary>
+            Read camera information from requested issue (topic... task).
+            </summary>
+            <param name="issueId"></param>
+            <returns>BimPlus.Sdk.Data.Bcf.PerspectiveCamera, otherwise null if not available.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Issues.SetPerspectiveCamera(System.Guid,BimPlus.Sdk.Data.Bcf.PerspectiveCamera)">
+            <summary>
+            Save new PerspectiveCameraInformation to an DtoIssue.
+            </summary>
+            <param name="issueId"></param>
+            <param name="camera"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Issues.GetIssueEditablePropertiesObject(BimPlus.Sdk.Data.TenantDto.DtoIssue)">
+            <summary>
+            Get a JObject with editable properties.
+            </summary>
+            <param name="issue"></param>
+            <returns>JObject</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Issues.GetIssueEditableProperties(BimPlus.Sdk.Data.TenantDto.DtoIssue)">
+            <summary>
+            Get a list of editable properties from issue.
+            </summary>
+            <param name="issue"></param>
+            <returns>List of string.</returns>
+        </member>
+        <member name="T:BimPlus.Sdk.Api.Wrapper.Objects">
+            <summary>
+            Direct wrap several objects.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Objects.#ctor(BimPlus.Sdk.Api.Core)">
+            <summary>
+            Create objects wrapper.
+            </summary>
+            <param name="apiCore"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Objects.GetPin(System.Guid)">
+            <summary>
+            Get DtoPin by pin Id.
+            </summary>
+            <param name="pinId"></param>
+            <returns>DtoPin</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Objects.DeletePin(System.Guid)">
+            <summary>
+            Delete an issue pin.
+            </summary>
+            <param name="pinId"></param>
+            <returns>True if deleted otherwise false.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Objects.GetHyperLinks(System.Guid)">
+            <summary>
+            Get all hyperlinks from issue by issue Id.
+            </summary>
+            <param name="issueId"></param>
+            <returns>List of DtoHyperlink</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Objects.PostIssueHyperlink(System.Guid,BimPlus.Sdk.Data.TenantDto.DtoHyperlink)">
+            <summary>
+            Post a hyperlink to an object.
+            </summary>
+            <param name="objectId"></param>
+            <param name="hyperLink"></param>
+            <returns>DtoHyperlink</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Objects.GetAllplanId(System.Guid)">
+            <summary>
+            Get the Allplan Id by object Id (ONLY FOR ALLPLAN PROJECTS).
+            </summary>
+            <param name="objectId"></param>
+            <returns>Guid</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Objects.GetIfcId(System.Guid)">
+            <summary>
+            Get the ifc Id by object Id.
+            </summary>
+            <param name="objectId"></param>
+            <returns>string</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Objects.GetTeams">
+            <summary>
+            Get all the Teams of the current session.
+            </summary>
+            <returns>List of DtoClientTeam.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Objects.SetCurrentTeam(System.String)">
+            <summary>
+            Set Slug by slugname.
+            </summary>
+            <param name="slugName"></param>
+            <returns>True if found otherwise false.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Objects.GetTopology(System.Guid)">
+            <summary>
+            Get a topology by object Id.
+            </summary>
+            <param name="objectId"></param>
+            <returns>DtoTopology</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Objects.PostCache``1(System.Guid,System.String,``0)">
+            <summary>
+            PostCache to any object.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="objectId">BimPlusObjectId</param>
+            <param name="cacheName">IdendificationString</param>
+            <param name="data">T</param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Objects.GetCache``1(System.Guid,System.String)">
+            <summary>
+            Read ClientCache from any object.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="objectId"></param>
+            <param name="cacheName"></param>
+            <returns>T</returns>
+        </member>
+        <member name="T:BimPlus.Sdk.Api.Wrapper.Projects">
+            <summary>
+                Wrap project methods.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Projects.#ctor(BimPlus.Sdk.Api.Core)">
+            <summary>
+            Create projects wrapper.
+            </summary>
+            <param name="apiCore"></param>
+        </member>
+        <member name="P:BimPlus.Sdk.Api.Wrapper.Projects.Get">
+            <summary>
+            Get all projects.
+            </summary>
+            <returns>List of DtoShortProject.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Projects.GetDtoIssues(System.Guid,System.Boolean)">
+            <summary>
+            Get all DtoIssue from project with projectId.
+            </summary>
+            <param name="projectId"></param>
+            <param name="withRights"></param>
+            <returns>List of DtoIssue.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Projects.GetShortProjects">
+            <summary>
+            Get all projects.
+            </summary>
+            <returns>List of DtoShortProject.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Projects.GetProject(System.Guid)">
+            <summary>
+            Get a project by projectId.
+            </summary>
+            <param name="projectId"></param>
+            <returns>DtoProject</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Projects.CreateProject(BimPlus.Sdk.Data.TenantDto.DtoProject)">
+            <summary>
+            Create a project from project.
+            </summary>
+            <param name="project"></param>
+            <returns>DtoProject</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Projects.GetThumbnail(System.Guid)">
+            <summary>
+            Get preview by projectId.
+            </summary>
+            <param name="projectId"></param>
+            <returns>Image</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Projects.GetTopology(System.Guid)">
+            <summary>
+            Get a topology by projectId.
+            </summary>
+            <param name="projectId"></param>
+            <returns>DtoTopology</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Projects.GetLayers(System.Guid)">
+            <summary>
+            Get project layers by projectId.
+            </summary>
+            <param name="projectId"></param>
+            <returns>List of DtoProjectDiscipline.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Projects.GetDivisions(System.Guid)">
+            <summary>
+            Get all models by projectId.
+            </summary>
+            <param name="projectId"></param>
+            <returns>List of DtoDivision.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Projects.PostDivision(System.Guid,BimPlus.Sdk.Data.TenantDto.DtoDivision)">
+            <summary>
+            Post DtoDivision to a project.
+            </summary>
+            <param name="projectId"></param>
+            <param name="division"></param>
+            <returns>DtoDivision</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Projects.PostShortIssue(System.Guid,BimPlus.Sdk.Data.TenantDto.DtoShortIssue)">
+            <summary>
+            Post a DtoShortIssue by project Id and issue Id.
+            </summary>
+            <param name="projectId"></param>
+            <param name="issueId"></param>
+            <returns>DtoShortIssue</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Projects.PostDtoIssue(System.Guid,BimPlus.Sdk.Data.TenantDto.DtoIssue)">
+            <summary>
+            Post a DtoIssue by projectId and issueId.
+            </summary>
+            <param name="projectId"></param>
+            <param name="issueId"></param>
+            <returns>DtoIssue</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Projects.GetMembers(System.Guid)">
+            <summary>
+            Get project members by project Id.
+            </summary>
+            <param name="projectId"></param>
+            <returns>List of DtoProjectMember</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Projects.GetProjectStructures(System.Guid,System.String)">
+            <summary>
+            Get structures by project Id.
+            </summary>
+            <param name="projectId"></param>
+            <param name="type">additional filter for Structuretype</param>
+            <returns>List of DtoStructure.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Projects.PostStructure(System.Guid,BimPlus.Sdk.Data.TenantDto.DtoStructure)">
+            <summary>
+            Post a structure to project Id.
+            </summary>
+            <param name="projectId"></param>
+            <param name="structureId"></param>
+            <returns>DtoStructure</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Projects.GetBimPlusId(System.Guid,System.Guid)">
+            <summary>
+            Get the BimplusId from requested project and AllplanId.
+            </summary>
+            <param name="projectId"></param>
+            <param name="allplanId"></param>
+            <returns>Guid</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Projects.GetBimPlusId(System.Guid,System.String)">
+            <summary>
+             Get the BimplusId from requested project and ifcId.
+            </summary>
+            <param name="projectId"></param>
+            <param name="ifcId"></param>
+            <returns>Guid</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Projects.GetBimPlusId(System.Guid,System.Guid,System.String)">
+            <summary>
+            Get BimPlusId by given attribute with requested value.
+            </summary>
+            <param name="projectId"></param>
+            <param name="attributeId"></param>
+            <param name="value"></param>
+            <returns>Guid</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Projects.UploadThumbnail(System.Guid,System.String)">
+            <summary>
+            Upload project thumbnail.
+            </summary>
+            <param name="projectGuid"></param>
+            <param name="filePath"></param>
+            <returns>Length of thumbnail.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Projects.GetDtoProject(System.Guid)">
+            <summary>
+            Get a DtoProject by project Id.
+            </summary>
+            <param name="projectId"></param>
+            <returns>DtoProject</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Projects.GetProjectElementTypes(System.Guid)">
+            <summary>
+            Get a list of elementTypes, who exist in requested project.
+            </summary>
+            <param name="projectId"></param>
+            <returns>List of DtoElementType</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Projects.GetProjectMaterialSurfaces(System.Guid)">
+            <summary>
+            Get a list of MaterialSurfaces, who exist in requested project.
+            </summary>
+            <param name="projectId"></param>
+            <returns>List of DtoMaterialSurface.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Projects.ConvertGeometry(System.Guid)">
+            <summary>
+            Convert geometries from a project.
+            </summary>
+            <param name="projectId"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="T:BimPlus.Sdk.Api.Wrapper.Services">
+            <summary>
+            Wrap services.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Services.#ctor(BimPlus.Sdk.Api.Core)">
+            <summary>
+            Create services wrapper.
+            </summary>
+            <param name="apiCore"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Services.ExecuteService(System.String,System.String,BimPlus.Sdk.Data.TenantDto.DtoExternalService)">
+            <summary>
+            Execute service.
+            </summary>
+            <param name="assembly">Name of the assembly (dll), who should be called.</param>
+            <param name="service">Name of the service must be derived from BimPlus.Sdk.Data.Interfaces.IService.</param>
+            <param name="inputData">inputdata</param>
+            <returns>DtoExternalService</returns>
+        </member>
+        <member name="T:BimPlus.Sdk.Api.Wrapper.Structures">
+            <summary>
+            Wrap structures.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Structures.#ctor(BimPlus.Sdk.Api.Core)">
+            <summary>
+            Create structures wrapper.
+            </summary>
+            <param name="apiCore"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Structures.GetTopology(System.Guid,System.Boolean,System.Nullable{System.Guid})">
+            <summary>
+            Get DtoTopologyStructure by topology Id and optional with attributes.
+            </summary>
+            <param name="topologyGuid"></param>
+            <param name="withAttributes">returns optional structure properties</param>
+            <param name="variantType">opional variantType</param>
+            <returns>DtoTopologyStructure</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Structures.GetStructure(System.Guid)">
+            <summary>
+            Get specific DtoStructure by structureGuid.
+            </summary>
+            <param name="structureGuid"></param>
+            <returns>DtoStructure</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Structures.PostStructure(System.Guid,BimPlus.Sdk.Data.TenantDto.DtoTopologyStructure)">
+            <summary>
+            Create complete structure by given topology.
+            </summary>
+            <param name="projectGuid"></param>
+            <param name="topology"></param>
+            <returns>DtoStructure</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Structures.PostStructure(System.Guid,BimPlus.Sdk.Data.TenantDto.DtoStructure)">
+            <summary>
+            Post a structure.
+            </summary>
+            <param name="projectGuid"></param>
+            <param name="structure"></param>
+            <returns>DtoStructure</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Structures.PostSubStructure(System.Guid,BimPlus.Sdk.Data.TenantDto.DtoStructure)">
+            <summary>
+            Post a sub structure.
+            </summary>
+            <param name="parentStructure"></param>
+            <param name="structure"></param>
+            <returns>DtoStructure</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Structures.PostStructureElement(System.Guid,BimPlus.Sdk.Data.TenantDto.DtoStructureElement)">
+            <summary>
+            Post DtoStructureElement to an specific structure.
+            (should be used if you are working with VariantTypes).
+            </summary>
+            <param name="structure"></param>
+            <param name="element"></param>
+            <returns>DtoStructureElement</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Structures.AddStructureElement(BimPlus.Sdk.Data.TenantDto.DtoStructureElement,System.Guid)">
+            <summary>
+            Append object to existing Structure by using DtoStructureElement.
+            Do not use anymore !!! 
+            </summary>
+            <param name="element"></param>
+            <param name="id"></param>
+            <returns>DtoStructureElement</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Structures.AssignElement(System.Guid,System.Guid)">
+            <summary>
+            Append object to existing Structure.
+            </summary>
+            <param name="structureId"></param>
+            <param name="id"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Structures.RemoveElement(System.Guid,System.Guid)">
+            <summary>
+            Remove object from existing Structure.
+            </summary>
+            <param name="structureId"></param>
+            <param name="id"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Structures.Reorder(System.Guid)">
+            <summary>
+            Reorder structure (order number will start with 1).
+            </summary>
+            <param name="structureId"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Structures.GetTypes">
+            <summary>
+            Get List of available Structuretypes
+            </summary>
+            <returns>List of string</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Structures.PutStructure(BimPlus.Sdk.Data.TenantDto.DtoStructure)">
+            <summary>
+            Put a DtoStructure.
+            </summary>
+            <param name="structure"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Structures.DeleteStructure(System.Guid)">
+            <summary>
+            Delete a structure.
+            </summary>
+            <param name="structureId"></param>
+            <returns>True if deleted.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Structures.CopyStructure(System.Guid,BimPlus.Sdk.Data.TenantDto.DtoStructure)">
+            <summary>
+            Make a copy of existing structure.
+            You can push this structure also to a different project. (DtoStructure.ProjectId)
+            </summary>
+            <param name="structureId"></param>
+            <param name="structure"></param>
+            <returns>DtoStructure</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Structures.GetStructuresByProjectId(System.Guid)">
+            <summary>
+            Get a List of DtoStructure by project Id.
+            </summary>
+            <param name="projectId"></param>
+            <returns>List of DtoStructure.</returns>
+        </member>
+        <member name="T:BimPlus.Sdk.Api.Wrapper.GeometryTemplate">
+            <summary>
+            Wrap geometries.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.GeometryTemplate.#ctor(BimPlus.Sdk.Api.Core)">
+            <summary>
+            Create geometry wrapper.
+            </summary>
+            <param name="apiCore"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.GeometryTemplate.Create(BimPlus.Sdk.Data.GeometryTemplates.DtoTemplateArticle)">
+            <summary>
+            Create a DtoTemplateArticle.
+            </summary>
+            <param name="template"></param>
+            <returns>Guid</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.GeometryTemplate.Get(System.Guid)">
+            <summary>
+            Get a DtoTemplateArticle by template Id and type.
+            </summary>
+            <param name="templateId"></param>
+            <returns>DtoTemplateArticle</returns>
+        </member>
+        <member name="T:BimPlus.Sdk.Api.BimPlusHost">
+            <summary>
+            Host the Bimplus environment.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Api.BimPlusHost.ServerName">
+            <summary>
+            Base BimPlus Url.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Api.BimPlusHost.BimPlusEnvironment">
+            <summary>
+            Save the short server name.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Api.BimPlusEnvironment">
+            <summary>
+            Save the short server name.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Api.BimPlusEnvironment.Prod">
+            <summary>
+            Production server.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Api.BimPlusEnvironment.Stage">
+            <summary>
+            Stage server.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Api.BimPlusEnvironment.Dev">
+            <summary>
+            Development server.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Api.BimPlusEnvironment.LocalHost">
+            <summary>
+            Local host server.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BimPlus.Client.Api</name>
+    </assembly>
+    <members>
+        <member name="T:BimPlus.Client.Api.Utilities.CameraHelper">
+            <summary>
+            Helper Class for the computation of the Euler angles for the different camera views.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.Api.Utilities.CameraHelper.LookAtMatrix(System.Double[],System.Double[],System.Double[]@)">
+            <summary>
+            Look at matrix.
+            </summary>
+            <param name="dir"></param>
+            <param name="up"></param>
+            <param name="te"></param>
+        </member>
+        <member name="M:BimPlus.Client.Api.Utilities.CameraHelper.MatrixFromEuler(System.Double,System.Double,System.Double,System.Double[]@)">
+            <summary>
+            Matrix fom Euler.
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="z"></param>
+            <param name="te"></param>
+        </member>
+        <member name="M:BimPlus.Client.Api.Utilities.CameraHelper.Clamp(System.Double)">
+            <summary>
+            Clamp.
+            </summary>
+            <param name="x"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BimPlus.Client.Api.Utilities.CameraHelper.EulerFromMatrix(System.Double[],System.Double@,System.Double@,System.Double@)">
+            <summary>
+            Euler from matrix.
+            </summary>
+            <param name="te"></param>
+            <param name="a"></param>
+            <param name="b"></param>
+            <param name="c"></param>
+        </member>
+        <member name="M:BimPlus.Client.Api.Utilities.CameraHelper.BasisFromMatrix(System.Double[],System.Double[]@,System.Double[]@,System.Double[]@)">
+            <summary>
+            Basis from matrix.
+            </summary>
+            <param name="mat"></param>
+            <param name="v1"></param>
+            <param name="v2"></param>
+            <param name="v3"></param>
+        </member>
+        <member name="M:BimPlus.Client.Api.Utilities.CameraHelper.CrossVectors(System.Double[],System.Double[],System.Double[]@)">
+            <summary>
+            Cross vectors.
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <param name="c"></param>
+        </member>
+        <member name="M:BimPlus.Client.Api.Utilities.CameraHelper.Convert(System.String,System.Double[],System.Double[])">
+            <summary>
+             Convert.
+            </summary>
+            <param name="str"></param>
+            <param name="dir"></param>
+            <param name="up"></param>
+        </member>
+    </members>
+</doc>

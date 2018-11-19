@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BimPlus.Sdk.Data.Definitions</name>
+    </assembly>
+    <members>
+        <member name="T:BimPlus.Sdk.Data.Definitions.CalculationMode">
+            <summary>
+            CalculationMode enumeration.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.Definitions.CalculationMode.View">
+            <summary>View.</summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.Definitions.CalculationMode.Section">
+            <summary>Section.</summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.Definitions.CalculationMode.SectionDetail">
+            <summary>SectionDetail.</summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.Definitions.FaceMode">
+            ResponseMode enumeration.
+        </member>
+        <member name="F:BimPlus.Sdk.Data.Definitions.FaceMode.Nothing">
+            <summary>Nothing.</summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.Definitions.FaceMode.Filling">
+            <summary>Filling.</summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.Definitions.FaceMode.Texture">
+            <summary>Texture.</summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.Definitions.ResponseMode">
+            ResponseMode enumeration.
+        </member>
+        <member name="F:BimPlus.Sdk.Data.Definitions.ResponseMode.Json">
+            <summary>Json.</summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.Definitions.ResponseMode.Svg">
+            <summary>Svg.</summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.Definitions.ResponseMode.SvgCoordinates">
+            <summary>SvgCoordinates.</summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.Definitions.ResponseMode.NOIXml">
+            <summary>NOIXml.</summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.Definitions.ResponseSettings">
+            <summary>
+            ResponseSettings class.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Definitions.ResponseSettings.mode">
+            <summary>Property mode.</summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Definitions.ResponseSettings.fileName">
+            
+            <summary>Property fileName.</summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Definitions.ResponseSettings.svgWidth">
+            .
+            <summary>Property svgWidth.</summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Definitions.ResponseSettings.svgHeight">
+            <summary>Property svgHeight.</summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.Definitions.ClippingRegion">
+            <summary>
+            ClippingRegion class.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Definitions.ClippingRegion.clipFace">
+            <summary>Property clipFace.</summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Definitions.ClippingRegion.top">
+            <summary>Property top.</summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Definitions.ClippingRegion.bottom">
+            <summary>Property bottom.</summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Definitions.ClippingRegion.left">
+            <summary>Property left.</summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Definitions.ClippingRegion.right">
+            <summary>Property right.</summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.Definitions.Light">
+            <summary>Light class.</summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Definitions.Light.useLight">
+            <summary>Property useLight.</summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Definitions.Light.elevationAngle">
+            <summary>Property elevationAngle.</summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Definitions.Light.sideAngle">
+            <summary>Property sideAngle.</summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Definitions.Light.lightIntensity">
+            <summary>Property lightIntensity.</summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Definitions.Light.ambientIntensity">
+            <summary>Property ambientIntensity.</summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Definitions.Light.useShadows">
+            <summary>Property useShadows.</summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.Definitions.View">
+            <summary>
+            View class.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.Definitions.View.bottomViewSection">
+            <summary>Member bottomViewSection.</summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.Definitions.View.perspectiveView">
+            <summary>Member perspectiveView.</summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.Definitions.View.distance">
+            <summary>Member distance.</summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.Definitions.View.viewMat">
+            <summary>Member viewMat.</summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.Definitions.PropertySettings">
+            <summary>
+            PropertySettings class.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Definitions.PropertySettings.faceMode">
+            <summary>Property faceMode.</summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Definitions.PropertySettings.calcLines">
+            <summary>Property calcLines.</summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Definitions.PropertySettings.returnViewEdges">
+            <summary>Property returnViewEdges.</summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Definitions.PropertySettings.returnHiddenLines">
+            <summary>Property returnHiddenLines.</summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Definitions.PropertySettings.faceTransparency">
+            <summary>Property faceTransparency.</summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Definitions.PropertySettings.edgeSmoothing">
+            <summary>Property edgeSmoothing.</summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Definitions.PropertySettings.cosSmooth">
+            <summary>Property cosSmooth.</summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Definitions.PropertySettings.onlyOuterEdgeThick">
+            <summary>Property onlyOuterEdgeThick.</summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.Definitions.SectionSettings">
+            <summary>
+            Empty class SectionSettings.
+            </summary>
+        </member>
+    </members>
+</doc>

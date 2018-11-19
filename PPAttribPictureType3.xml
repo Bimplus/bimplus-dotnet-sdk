@@ -1,0 +1,1378 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PPAttribPictureType3</name>
+    </assembly>
+    <members>
+        <member name="T:Nemetschek.NUtilLibrary.BaseMatrix">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.BaseMatrix.Multiply(System.Double[],System.Double[])">
+            <summary>
+            
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Nemetschek.NUtilLibrary.CountArray">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.CountArray.m_Counter">
+            <summary>
+            counter
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.CountArray.m_Values">
+            <summary>
+            values
+            </summary>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CountArray.#ctor">
+            <summary>
+            Construct
+            </summary>
+        </member>
+        <member name="P:Nemetschek.NUtilLibrary.CountArray.Counter">
+            <summary>
+            Counter[i] less then 0  special property  (==1  Color), muss by as first defined
+            Counter[i] ==  0  single value for all properties 
+            </summary>
+        </member>
+        <member name="P:Nemetschek.NUtilLibrary.CountArray.Values">
+            <summary>
+            list of single values
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.CountArray.isDisposed">
+            <summary>
+            Track whether Dispose has been called.
+            </summary>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CountArray.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CountArray.AddCountObject(System.Int32,System.Single)">
+            <summary>
+            
+            </summary>
+            <param name="count"></param>
+            <param name="single"></param>
+        </member>
+        <member name="P:Nemetschek.NUtilLibrary.CountArray.CountOfProperty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CountArray.AddCountObject(System.Single)">
+            <summary>
+            
+            </summary>
+            <param name="single"></param>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CountArray.GetObject(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CountArray.GetCounterObject(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CountArray.AllObjectAreEqual">
+            <summary>
+            information, if are all objects equal (m_Counter==0)
+            </summary>
+            <returns>all objects are equal true/false</returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CountArray.AddObjectList(Nemetschek.NUtilLibrary.CountArray)">
+            <summary>
+            add list of objects to list array (special objects will not be add)
+            </summary>
+            <param name="nl">list of objects to add</param>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CountArray.GetSpecialObject(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CountArray.IsSpecialObject(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CountArray.SetObject(System.Int32,System.Single)">
+            <summary>
+            Sets the object at the specified index.
+            </summary>
+            <param name="index">The index</param>
+            <param name="value">The object</param>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CountArray.Clone">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Nemetschek.NUtilLibrary.PolyederType">
+            <summary>
+            Involves all used polyhedron types
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.PolyederType.None">
+            <summary>Basic type</summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.PolyederType.Selectable">
+            <summary>Selectable type</summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.PolyederType.Transparent">
+            <summary>Transparent type</summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.PolyederType.ColorImmutable">
+            <summary>
+            The polyhedron with immutable color.
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.PolyederType.ColorBarReinforcement">
+            <summary>
+            The polyhedron with color defined for bar reinforcement.
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.PolyederType.ColorMeshReinforcement">
+            <summary>
+            The polyhedron with color defined for mesh reinforcement.
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.PolyederType.ColorFixture">
+            <summary>
+            The polyhedron with color defined for fixture.
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.PolyederType.ColorBoundingBox">
+            <summary>
+            The polyhedron with color defined for bounding box.
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.PolyederType.ColorRevisionCompare">
+            <summary>
+            The polyhedron with color by revision compare
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.PolyederType.Element">
+            <summary>Element</summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.PolyederType.SubElement">
+            <summary>SubElement</summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.PolyederType.Bedplate">
+            <summary>Bedplate</summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.PolyederType.Bubble">
+            <summary>Bubble</summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.PolyederType.Reinforcement">
+            <summary>Reinforcement</summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.PolyederType.Handle">
+            <summary>Handle</summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.PolyederType.HandleLine">
+            <summary>HandleLine</summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.PolyederType.Collision">
+            <summary>Collision</summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.PolyederType.UnchangedElem">
+            <summary>unchanged element (needed for revision compare)</summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.PolyederType.NewElem">
+            <summary>new element (needed for revision compare)</summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.PolyederType.DeletedElem">
+            <summary>deleted element (needed for revision compare)</summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.PolyederType.ModifiedElem">
+            <summary>modified element (needed for revision compare)</summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.PolyederType.ModifiedElem_NEWminusOLD">
+            <summary>modified element - new-old (needed for revision compare)</summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.PolyederType.ModifiedElem_OLDminusNEW">
+            <summary>modified element - old-new (needed for revision compare)</summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.PolyederType.ModifiedElem_NEWandOLD">
+            <summary>modified element - new AND old (needed for revision compare)</summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.PolyederType.ErrorByRevisionCompare">
+            <summary>this bit is active, if the function for geometry section Schneide2BelKoerper() ended uncorrect. This element will be than draw with fuchsia color</summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.PolyederType.BackfaceCulling">
+            <summary>back-face culling determines whether a polygon of a graphical object is visible</summary>
+        </member>
+        <member name="T:Nemetschek.NUtilLibrary.eCSGOperator">
+            <summary>
+            Defines the operations types in constructive solid geometry
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.eCSGOperator.Unknown">
+            <summary>
+            Unknown, not defined
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.eCSGOperator.Root">
+            <summary>
+            root Object, on top of hierarchy tree
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.eCSGOperator.First">
+            <summary>
+            First operand in boolean operation
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.eCSGOperator.Union">
+            <summary>
+            The merger of two objects into one.
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.eCSGOperator.Intersection">
+            <summary>
+            The portion common to both objects.
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.eCSGOperator.Difference">
+            <summary>
+            The subtraction of one object from another.
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.eCSGOperator.Adding">
+            <summary>
+            Complet add one polyeder to another
+            </summary>
+        </member>
+        <member name="T:Nemetschek.NUtilLibrary.eGeometryObjects">
+            <summary>
+            Defines the type of geometry (column GeomType in table "tabAttribCSGTreeDefinition")
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.eGeometryObjects.UnknownGeometry">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.eGeometryObjects.PolyederGeometry">
+            <summary>
+            Polyeder structure from Allplan
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.eGeometryObjects.CSGObjectGeometry">
+            <summary>
+            CSG geometry for objects
+            </summary>
+        </member>
+        <member name="T:Nemetschek.NUtilLibrary.CElementPoint">
+            <summary>
+            This class defines the x-, y- and z-coordinates of a point of polyhedron.
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.CElementPoint.precision">
+            <summary>
+            Precision.
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.CElementPoint.x">
+            <summary>
+            X coordinate.
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.CElementPoint.y">
+            <summary>
+            Y coordinate.
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.CElementPoint.z">
+            <summary>
+            Z coordinate.
+            </summary>
+        </member>
+        <member name="P:Nemetschek.NUtilLibrary.CElementPoint.X">
+            <summary>
+            Gets or sets the x-coordinate of this point.
+            </summary>
+        </member>
+        <member name="P:Nemetschek.NUtilLibrary.CElementPoint.Y">
+            <summary>
+            Gets or sets the y-coordinate of this point.
+            </summary>
+        </member>
+        <member name="P:Nemetschek.NUtilLibrary.CElementPoint.Z">
+            <summary>
+            Gets or sets the z-coordinate of this point.
+            </summary>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CElementPoint.#ctor(System.Double,System.Double,System.Double)">
+            <summary>
+            Initializes a new instance of the CBaseElementPoint class. 
+            </summary>
+            <param name="x0">The x value of the new CBaseElementPoint.</param>
+            <param name="y0">The y value of the new CBaseElementPoint.</param>
+            <param name="z0">The z value of the new CBaseElementPoint.</param>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CElementPoint.#ctor(Nemetschek.NUtilLibrary.CElementPoint)">
+            <summary>
+            default constructor
+            </summary>
+            <param name="x0"></param>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CElementPoint.#ctor">
+            <summary>
+            default constructor
+            </summary>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CElementPoint.System#ICloneable#Clone">
+            <summary>
+            Creates a new object that is a copy of the current instance.
+            </summary>
+            <returns>A new object that is a copy of this instance.</returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CElementPoint.Clone">
+            <summary>
+            Creates a new object that is a copy of the current instance.
+            </summary>
+            <returns>A new object that is a copy of this instance.</returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CElementPoint.GetHashCode">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CElementPoint.op_Equality(Nemetschek.NUtilLibrary.CElementPoint,Nemetschek.NUtilLibrary.CElementPoint)">
+            <summary>
+            This operator compares two CBaseElementPoint objects for equality.
+            </summary>
+            <param name="left">The first CBaseElementPoint object to compare.</param>
+            <param name="right">The second CBaseElementPoint object to compare.</param>
+            <returns>Returns true if the objects are equal, otherwise false.</returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CElementPoint.EqualVector(Nemetschek.NUtilLibrary.CElementPoint)">
+            <summary>
+            
+            </summary>
+            <param name="vector"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CElementPoint.GetLength(Nemetschek.NUtilLibrary.CElementPoint,Nemetschek.NUtilLibrary.CElementPoint)">
+            <summary>
+            Get length between two point
+            </summary>
+            <param name="p1">first point</param>
+            <param name="p2">second point</param>
+            <returns>length</returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CElementPoint.op_Inequality(Nemetschek.NUtilLibrary.CElementPoint,Nemetschek.NUtilLibrary.CElementPoint)">
+            <summary>
+            This operator compares two CBaseElementPoint objects for inequality.
+            </summary>
+            <param name="left">The first CBaseElementPoint object to compare.</param>
+            <param name="right">The second CBaseElementPoint object to compare.</param>
+            <returns>Returns true if the objects are not equal, otherwise false.</returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CElementPoint.Equals(System.Object)">
+            <summary>
+            Determines whether the specified Object is equal to the current Object.
+            </summary>
+            <param name="obj">The Object to compare with the current Object.</param>
+            <returns>true if the specified Object is equal to the current Object; otherwise, false.</returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CElementPoint.SetMinPoint(Nemetschek.NUtilLibrary.CElementPoint)">
+            <summary>
+            Sets the smallest values of coordinates of two CBaseElementPoint objects. 
+            </summary>
+            <param name="point">The CBaseElementPoint to compare with the current Object.</param>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CElementPoint.SetMaxPoint(Nemetschek.NUtilLibrary.CElementPoint)">
+            <summary>
+            Sets the biggest values of coordinates of two CBaseElementPoint objects. 
+            </summary>
+            <param name="point">The CBaseElementPoint to compare with the current Object.</param>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CElementPoint.MinPoint(System.Collections.Generic.List{Nemetschek.NUtilLibrary.CElementPoint})">
+            <summary>
+            
+            </summary>
+            <param name="points"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CElementPoint.MaxPoint(System.Collections.Generic.List{Nemetschek.NUtilLibrary.CElementPoint})">
+            <summary>
+            
+            </summary>
+            <param name="points"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CElementPoint.MultiplyWithMatrix(System.Double[])">
+            <summary>
+            MultiplyWithMatrix
+            </summary>
+            <param name="values"></param>
+        </member>
+        <member name="T:Nemetschek.NUtilLibrary.ListCElementPoint">
+            <summary>
+            Help class - because of creating documentation (Sandcastle documentation software)
+            </summary>
+        </member>
+        <member name="T:Nemetschek.NUtilLibrary.ListCElementPolygons">
+            <summary>
+            List of CPolygonWithInfo
+            </summary>
+        </member>
+        <member name="T:Nemetschek.NUtilLibrary.CElementPointDet">
+            <summary>
+            This class defines the x-, y- and z-coordinates of a point of polyhedron with better precision.
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.CElementPointDet.precisionDet">
+            <summary>
+            Precision of decimal places.
+            </summary>
+        </member>
+        <member name="P:Nemetschek.NUtilLibrary.CElementPointDet.X">
+            <summary>
+            Gets or sets the x-coordinate of this point.
+            </summary>
+        </member>
+        <member name="P:Nemetschek.NUtilLibrary.CElementPointDet.Y">
+            <summary>
+            Gets or sets the y-coordinate of this point.
+            </summary>
+        </member>
+        <member name="P:Nemetschek.NUtilLibrary.CElementPointDet.Z">
+            <summary>
+            Gets or sets the z-coordinate of this point.
+            </summary>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CElementPointDet.#ctor">
+            <summary>
+            default constructor
+            </summary>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CElementPointDet.#ctor(System.Double,System.Double,System.Double)">
+            <summary>
+            Initializes a new instance of the CBaseElementPoint class. 
+            </summary>
+            <param name="x0">The x value of the new CBaseElementPoint.</param>
+            <param name="y0">The y value of the new CBaseElementPoint.</param>
+            <param name="z0">The z value of the new CBaseElementPoint.</param>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CElementPointDet.#ctor(Nemetschek.NUtilLibrary.CElementPointDet)">
+            <summary>
+            default constructor
+            </summary>
+            <param name="x0"></param>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CElementPointDet.Clone">
+            <summary>
+            Creates a new object that is a copy of the current instance.
+            </summary>
+            <returns>A new object that is a copy of this instance.</returns>
+        </member>
+        <member name="T:Nemetschek.NUtilLibrary.CElementEdge">
+            <summary>
+            This class defines the begin- and end-indices of a edge of polyhedron.
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.CElementEdge.begin">
+            <summary>
+            Represents the begin index of this edge.
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.CElementEdge.end">
+            <summary>
+            Represents the end index of this edge.
+            </summary>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CElementEdge.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the CBaseElementEdge class. 
+            </summary>
+            <param name="b0">The begin index of the new CBaseElementEdge.</param>
+            <param name="e0">The end index of the new CBaseElementEdge.</param>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CElementEdge.#ctor">
+            <summary>
+            default constructor
+            </summary>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CElementEdge.Clone">
+            <summary>
+            Creates a new object that is a copy of the current instance.
+            </summary>
+            <returns>A new object that is a copy of this instance.</returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CElementEdge.GetHashCode">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CElementEdge.op_Equality(Nemetschek.NUtilLibrary.CElementEdge,Nemetschek.NUtilLibrary.CElementEdge)">
+            <summary>
+            This operator compares two CBaseElementEdge objects for equality.
+            </summary>
+            <param name="left">The first CBaseElementEdge object to compare.</param>
+            <param name="right">The second CBaseElementEdge object to compare.</param>
+            <returns>Returns true if the objects are equal, otherwise false.</returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CElementEdge.op_Inequality(Nemetschek.NUtilLibrary.CElementEdge,Nemetschek.NUtilLibrary.CElementEdge)">
+            <summary>
+            This operator compares two CBaseElementEdge objects for inequality.
+            </summary>
+            <param name="left">The first CBaseElementEdge object to compare.</param>
+            <param name="right">The second CBaseElementEdge object to compare.</param>
+            <returns>Returns true if the objects are not equal, otherwise false.</returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CElementEdge.Equals(System.Object)">
+            <summary>
+            Determines whether the specified Object is equal to the current Object.
+            </summary>
+            <param name="obj">The Object to compare with the current Object.</param>
+            <returns>Returns true if the specified Object is equal to the current Object; otherwise, false.</returns>
+        </member>
+        <member name="T:Nemetschek.NUtilLibrary.CElementFace">
+            <summary>
+            This class defines one face of polyhedron.
+            </summary>
+        </member>
+        <member name="P:Nemetschek.NUtilLibrary.CElementFace.Edges_L">
+            <summary>
+            list of edges (needed for serialization)
+            </summary>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CElementFace.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.CElementFace.isDisposed">
+            <summary>
+            Track whether Dispose has been called.
+            </summary>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CElementFace.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CElementFace.Add(System.Int32)">
+            <summary>
+            Add edge to face.
+            </summary>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CElementFace.Add(System.Object)">
+            <summary>
+            Add edge to face.
+            </summary>
+        </member>
+        <member name="P:Nemetschek.NUtilLibrary.CElementFace.Count">
+            <summary>
+            Get count of edges in face.
+            </summary>
+        </member>
+        <member name="P:Nemetschek.NUtilLibrary.CElementFace.Item(System.Int32)">
+            <summary>
+            Get and set edge at index.
+            </summary>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CElementFace.Clone">
+            <summary>
+            Creates a new object that is a copy of the current instance.
+            </summary>
+            <returns>A new object that is a copy of this instance.</returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CElementFace.GetEnumerator">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Nemetschek.NUtilLibrary.CBaseElementPolyeder">
+            <summary>
+            This class defines the polyhedron to create graphical objects in the scene.
+            </summary>
+        </member>
+        <member name="P:Nemetschek.NUtilLibrary.CBaseElementPolyeder.CompareKey">
+            <summary>
+            Compare key.
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.CBaseElementPolyeder.point">
+            <summary>
+            Represents array of points of this polyhedron.
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.CBaseElementPolyeder.edge">
+            <summary>
+            Represents array of edges of this polyhedron.
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.CBaseElementPolyeder.face">
+            <summary>
+            Represents array of faces of this polyhedron.
+            </summary>
+        </member>
+        <member name="P:Nemetschek.NUtilLibrary.CBaseElementPolyeder.Radius">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Nemetschek.NUtilLibrary.CBaseElementPolyeder.Bendingrolle">
+            <summary>
+            Radius of bendingrolle
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.CBaseElementPolyeder.MinPoint">
+            <summary>
+            Represents lower-left corner of the bounding box of this polyhedron.
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.CBaseElementPolyeder.MaxPoint">
+            <summary>
+            Represents upper-right corner of the bounding box of this polyhedron.
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.CBaseElementPolyeder.type">
+            <summary>
+            Represents type of this polyhedron.
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.CBaseElementPolyeder.ID">
+            <summary>
+            Represents globally unique identifier of this polyhedron.
+            </summary>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CBaseElementPolyeder.#ctor">
+            <summary>
+            Initializes a new instance of the CBaseElementPolyeder class. 
+            </summary>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CBaseElementPolyeder.IsRadius">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CBaseElementPolyeder.AllDiameterAreEqual">
+            <summary>
+            information, if are diameter for all bars equal
+            </summary>
+            <returns>all diameter are equal true/false</returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CBaseElementPolyeder.GetRadius(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CBaseElementPolyeder.SetRadius(System.Int32,System.Single)">
+            <summary>
+            Sets the radius at the specified index
+            </summary>
+            <param name="index"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CBaseElementPolyeder.AddRadius(System.Int32,System.Single)">
+            <summary>
+            
+            </summary>
+            <param name="count"></param>
+            <param name="radius"></param>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CBaseElementPolyeder.AddRadius(System.Single)">
+            <summary>
+            
+            </summary>
+            <param name="radius"></param>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CBaseElementPolyeder.AddRadius(Nemetschek.NUtilLibrary.CountArray)">
+            <summary>
+            add list of radius to list array
+            </summary>
+            <param name="bnrl">list of radius to add</param>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CBaseElementPolyeder.IsBendingrolle">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CBaseElementPolyeder.AllBendinrolleAreEqual">
+            <summary>
+            information, if are diameter for all bars equal
+            </summary>
+            <returns>all diameter are equal true/false</returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CBaseElementPolyeder.GetBendingrolle(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CBaseElementPolyeder.IsBendingRolleDefined">
+            <summary>
+            Information, if are bendingrolle defined 
+            (bendingrolle is defined, if minimal one bendingrolle is greater than 0.0)
+            </summary>
+            <returns>bendingrolle are defined  true/false</returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CBaseElementPolyeder.AddBendingrolle(System.Int32,System.Single)">
+            <summary>
+            
+            </summary>
+            <param name="count"></param>
+            <param name="radius"></param>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CBaseElementPolyeder.AddBendingrolle(System.Single)">
+            <summary>
+            
+            </summary>
+            <param name="radius"></param>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CBaseElementPolyeder.AddBendingrolle(Nemetschek.NUtilLibrary.CountArray)">
+            <summary>
+            add list of bending roller to list array
+            </summary>
+            <param name="bnrl">list of bending roller to add</param>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CBaseElementPolyeder.IsSpecialColorDefined">
+            <summary>
+            Is Color as special property defined
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CBaseElementPolyeder.GetSpecialColor">
+            <summary>
+            Get Color as special property
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CBaseElementPolyeder.SetSpecialColor(System.UInt32)">
+            <summary>
+            Set Color as special property
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CBaseElementPolyeder.CopySpecialColor(Nemetschek.NUtilLibrary.CountArray)">
+            <summary>
+            Set Color as special property
+            </summary>
+            <param name="rd">class CountArray for copying</param>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CBaseElementPolyeder.HalfSpecialColor">
+            <summary>
+            reduce special color to half intensity
+            </summary>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CBaseElementPolyeder.IsSmoothingDefined">
+            <summary>
+            Is Smoothing as special property defined
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CBaseElementPolyeder.GetSmoothing">
+            <summary>
+            Get Smoothing as special property
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CBaseElementPolyeder.SetSmoothing(System.Boolean)">
+            <summary>
+            Set Smoothing as special property
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CBaseElementPolyeder.Lerp(System.Single)">
+            <summary>
+            Lerp is a mathematical operation between two floats that changes the value of the first by a ratio of the difference between them.
+            </summary>
+            <param name="start">start value, end is 255, ratio is 75%</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CBaseElementPolyeder.MultiplyWithMatrix(System.Double[])">
+            <summary>
+            MultiplyWithMatrix
+            </summary>
+            <param name="values"></param>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CBaseElementPolyeder.BaseClone">
+            <summary>
+            Creates a new object that is a copy of the current instance.
+            </summary>
+            <returns>A new object that is a copy of this instance.</returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CBaseElementPolyeder.ShallowClone">
+            <summary>
+            Creates a new object that is a shallow copy of the current instance.
+            only for serialize 
+            </summary>
+            <returns>A new object that is a copy of this instance.</returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CBaseElementPolyeder.Clone">
+            <summary>
+            Creates a new object that is a copy of the current instance.
+            </summary>
+            <returns>A new object that is a copy of this instance.</returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CBaseElementPolyeder.GetHashCode">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CBaseElementPolyeder.SetMinMaxBox">
+            <summary>
+            Computes the bounding box of this polyhedron.
+            </summary>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CBaseElementPolyeder.op_Equality(Nemetschek.NUtilLibrary.CBaseElementPolyeder,Nemetschek.NUtilLibrary.CBaseElementPolyeder)">
+            <summary>
+            This operator compares two CBaseElementPolyeder objects for equality.
+            </summary>
+            <param name="left">The first CBaseElementPolyeder object to compare.</param>
+            <param name="right">The second CBaseElementPolyeder object to compare.</param>
+            <returns>Returns true if the objects are equal, otherwise false.</returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CBaseElementPolyeder.op_Inequality(Nemetschek.NUtilLibrary.CBaseElementPolyeder,Nemetschek.NUtilLibrary.CBaseElementPolyeder)">
+            <summary>
+            This operator compares two CBaseElementPolyeder objects for inequality.
+            </summary>
+            <param name="left">The first CBaseElementPolyeder object to compare.</param>
+            <param name="right">The second CBaseElementPolyeder object to compare.</param>
+            <returns>Returns true if the objects are not equal, otherwise false.</returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CBaseElementPolyeder.Equals(System.Object)">
+            <summary>
+            Determines whether the specified Object is equal to the current Object.
+            </summary>
+            <param name="obj">The Object to compare with the current Object.</param>
+            <returns>Returns true if the specified Object is equal to the current Object; otherwise, false.</returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CBaseElementPolyeder.AddBasePolyeder(Nemetschek.NUtilLibrary.CBaseElementPolyeder)">
+            <summary>
+            Temporary 
+            </summary>
+            <param name="polyeder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CBaseElementPolyeder.AppendEdge(System.Int32,System.Int32)">
+            <summary>
+            Appends a new Edge if not exist
+            othewise existing EdgeIndex [Base 1] will be returned
+            </summary>
+            <param name="b0">start index</param>
+            <param name="e0">ende index</param>
+            <returns>Edge index [Base 1]</returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CBaseElementPolyeder.IsEveryEdgeInTwoFaces">
+            <summary>
+            Check if every edge is minimal in two faces available
+            </summary>
+            <returns>true if every edge is minimal in two faces available, otherwise false</returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CBaseElementPolyeder.CheckPolyeder(System.Boolean)">
+            <summary>
+            Check polyeder out of range
+            </summary>
+            <returns>true if OK, otherwise false</returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CBaseElementPolyeder.SavePolyederToFile">
+            <summary>
+            SavePolyederToFile() - will save base polyeder to text file to view polyeder in helper application - "View3D.exe"
+            </summary>
+        </member>
+        <member name="T:Nemetschek.NUtilLibrary.CPolygonWithInfo">
+            <summary>
+            Polygon with additional informations
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.CPolygonWithInfo.polygonPoints">
+            <summary>
+            Represents array of points of this polygon.
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.CPolygonWithInfo.outerBoundFace">
+            <summary>
+            Information, if is polygon defined as outer bound face (outerBoundFace == true) or opening (outerBoundFace == false)
+            </summary>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CPolygonWithInfo.#ctor">
+            <summary>
+            Initializes a new instance of the CBaseElementPolyeder class. 
+            </summary>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CPolygonWithInfo.#ctor(System.Collections.Generic.List{Nemetschek.NUtilLibrary.CElementPoint},System.Boolean)">
+            <summary>
+            Initializes a new instance of the CBaseElementPolyeder class. 
+            </summary>
+            <param name="pnts">list of all poygon points</param>
+            <param name="bnd">Information about outer bound face</param>
+        </member>
+        <member name="T:Nemetschek.NUtilLibrary.CreateMatrix">
+            <summary>
+            Create matrix procedures
+            </summary>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CreateMatrix.DefineMatrixByTranslation(System.Data.SqlTypes.SqlDouble,System.Data.SqlTypes.SqlDouble,System.Data.SqlTypes.SqlDouble)">
+            <summary>
+            Define Matrix by Translation dx, dy, dz
+            </summary>
+            <param name="dx">Translation dx</param>
+            <param name="dy">Translation dy</param>
+            <param name="dz">Translation dz</param>
+            <returns>Serialized matrix in SqlBinary</returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CreateMatrix.GetMatrixValue(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlInt32)">
+            <summary>
+            Get matrix value at index index
+            </summary>
+            <param name="matrix">matrix</param>
+            <param name="index">index</param>
+            <returns>double value at index index </returns>
+        </member>
+        <member name="T:Nemetschek.NUtilLibrary.BinaryCompress">
+            <summary>
+            Define serialize and compress method to store binary BLOB
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.BinaryCompress.Default">
+            Serialize with BinaryFormatter
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.BinaryCompress.GZipStream">
+            Serialize with BinaryFormatter and compress with GZipStream
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.BinaryCompress.ProtoBuf">
+            Serialize with ProtoBuf
+        </member>
+        <member name="T:Nemetschek.NUtilLibrary.DeserializeVarbinaryMax">
+            <summary>
+            Class to (de)serialize, class to(from) byte array
+            </summary>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.DeserializeVarbinaryMax.#cctor">
+            <summary>
+            Provides ProtoBuf serialization support for a number of types that can be defined at runtime
+            </summary>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.DeserializeVarbinaryMax.DeserializePolyeder(System.Byte[],System.Byte)">
+            <summary>
+            Deserialize byte array to CBaseElementPolyeder class
+            </summary>
+            <param name="picture">byte array to deserialize</param>
+            <param name="bDecompress">serialize method see BinarýCompress</param>
+            <returns>if success CBaseElementPolyeder class otherwise null</returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.DeserializeVarbinaryMax.DeserializePolyeder(System.Byte[],Nemetschek.NUtilLibrary.BinaryCompress)">
+            <summary>
+            Deserialize byte array to CBaseElementPolyeder class
+            </summary>
+            <param name="picture">byte array to deserialize</param>
+            <param name="decompress">serialize method see BinarýCompress</param>
+            <returns>if success CBaseElementPolyeder class otherwise null</returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.DeserializeVarbinaryMax.DeserializePolyederColorDictionary(System.Byte[])">
+            <summary>
+            Deserialize polyeder color dictionary.
+            </summary>
+            <param name="polyedersWithColors"></param>
+            <returns>Dictionary of CBaseElementPolyeder and int</returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.DeserializeVarbinaryMax.SerializePolyederColorDictionary(System.Collections.Generic.Dictionary{Nemetschek.NUtilLibrary.CBaseElementPolyeder,System.Int32})">
+            <summary>
+            Serialize polyeder color dictionary.
+            </summary>
+            <param name="polyedersWithColors"></param>
+            <returns>byte[]</returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.DeserializeVarbinaryMax.SerializePolyeder(Nemetschek.NUtilLibrary.CBaseElementPolyeder,Nemetschek.NUtilLibrary.BinaryCompress)">
+            <summary>
+            Serialize CBaseElementPolyeder class to byte array 
+            </summary>
+            <param name="basepolyeder">CBaseElementPolyeder class to serialize</param>
+            <param name="compress">true, if serlialize compressed, otherwiese false</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.DeserializeVarbinaryMax.DeserializeMatrix(System.Byte[])">
+            <summary>
+            
+            </summary>
+            <param name="matrix"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.DeserializeVarbinaryMax.DeserializeDoubleArray(System.Byte[],System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="doubleArray"></param>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.DeserializeVarbinaryMax.SerializeMatrix(System.Double[])">
+            <summary>
+            Serialize matrix( double[16] )
+            </summary>
+            <param name="matrix">matrix to serialize</param>
+            <returns>serialized stream</returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.DeserializeVarbinaryMax.SerializeDoubleArray(System.Double[],System.Int32)">
+            <summary>
+            Serialize Double Array
+            </summary>
+            <param name="doubleArray">array to serialize</param>
+            <param name="count">count of doubles</param>
+            <returns>serialized stream</returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.DeserializeVarbinaryMax.DeserializeGuidArray(System.Byte[],System.Int32)">
+            <summary>
+            Deserialize byte array to array of guids
+            </summary>
+            <param name="guidArray">byte array to deserialize</param>
+            <param name="count">count of guids</param>
+            <returns>guids array</returns>
+        </member>
+        <member name="T:Nemetschek.NUtilLibrary.eElementReportErrorCode">
+            <summary>
+            error code  
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.eElementReportErrorCode.Status_NO_TROUBLE">
+            <summary>
+            NO_TROUBLE
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.eElementReportErrorCode.Status_TROUBLE_WITH_ELIMINATING_UNUSED_POINTS">
+            <summary>
+            TROUBLE_WITH_ELIMINATING_UNUSED_POINTS
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.eElementReportErrorCode.Status_TROUBLE_WITH_ELIMINATING_UNUSED_EDGES">
+            <summary>
+            TROUBLE_WITH_ELIMINATING_UNUSED_EDGES
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.eElementReportErrorCode.Status_TROUBLE_WITH_ELIMINATING_DOUBLE_EDGES">
+            <summary>
+            TROUBLE_WITH_ELIMINATING_DOUBLE_EDGES
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.eElementReportErrorCode.Status_TROUBLE_WITH_ELIMINATING_OVERLAPPING_EDGES">
+            <summary>
+            TROUBLE_WITH_ELIMINATING_OVERLAPPING_EDGES
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.eElementReportErrorCode.Status_TROUBLE_WITH_MERGEING_EDGES">
+            <summary>
+            TROUBLE_WITH_MERGEING_EDGES
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.eElementReportErrorCode.Status_TROUBLE_WITH_ELIMINATING_OPEN_FACES">
+            <summary>
+            TROUBLE_WITH_ELIMINATING_OPEN_FACES
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.eElementReportErrorCode.Status_TROUBLE_WITH_MERGEING_FACES">
+            <summary>
+            TROUBLE_WITH_MERGEING_FACES
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.eElementReportErrorCode.Status_TROUBLE_WITH_NORMAL_HEALING">
+            <summary>
+            TROUBLE_WITH_NORMAL_HEALING
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.eElementReportErrorCode.Status_TROUBLE_WITH_EXTRA_HEALING">
+            <summary>
+            TROUBLE_WITH_EXTRA_HEALING
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.eElementReportErrorCode.Status_TROUBLE_WITH_IDENTICAL_POINTS">
+            <summary>
+            TROUBLE_WITH_IDENTICAL_POINTS
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.eElementReportErrorCode.Status_TROUBLE_WITH_IDENTICAL_EDGES">
+            <summary>
+            TROUBLE_WITH_IDENTICAL_EDGES
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.eElementReportErrorCode.Status_TROUBLE_WITH_WARPED_FACE">
+            <summary>
+            TROUBLE_WITH_WARPED_FACE
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.eElementReportErrorCode.Status_TROUBLE_WITH_TOO_MANY_POINTS">
+            <summary>
+            TROUBLE_WITH_TOO_MANY_POINTS
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.eElementReportErrorCode.Status_TROUBLE_WITH_TOO_MANY_EDGES">
+            <summary>
+            TROUBLE_WITH_TOO_MANY_EDGES
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.eElementReportErrorCode.Status_TROUBLE_WITH_TOO_MANY_FACES">
+            <summary>
+            TROUBLE_WITH_TOO_MANY_FACES
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.eElementReportErrorCode.Status_UNKNOWN">
+            <summary>
+            unknown status
+            </summary>
+        </member>
+        <member name="T:Nemetschek.NUtilLibrary.CElementReport">
+            <summary>
+            similiar to structure NormReportStruct_t (file \NemAll_Utility\3dmodel\kdped1.cpp)
+            </summary>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CElementReport.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,Nemetschek.NUtilLibrary.eElementReportErrorCode)">
+            <summary>
+            class constructor
+            </summary>
+        </member>
+        <member name="P:Nemetschek.NUtilLibrary.CElementReport.Olddim">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Nemetschek.NUtilLibrary.CElementReport.Newdim">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Nemetschek.NUtilLibrary.CElementReport.Npointseliminated">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Nemetschek.NUtilLibrary.CElementReport.Nedgeseliminated">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Nemetschek.NUtilLibrary.CElementReport.Nopenfaceseliminated">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Nemetschek.NUtilLibrary.CElementReport.Nfacesmanipulated">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Nemetschek.NUtilLibrary.CElementReport.Nfacemergesperformed">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Nemetschek.NUtilLibrary.CElementReport.Ntriedhealer">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Nemetschek.NUtilLibrary.CElementReport.Ntriedhealer2">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Nemetschek.NUtilLibrary.CElementReport.First_identical_point_or_edge_or_warped_face_index">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Nemetschek.NUtilLibrary.CElementReport.Second_identical_point_or_edge_index">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Nemetschek.NUtilLibrary.CElementReport.Errorcode">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:Nemetschek.NUtilLibrary.PolyederBox">
+            <summary>
+            Calculate polyeder MinMaxBox difference
+            </summary>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.PolyederBox.X(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlByte,System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)">
+            <summary>
+            Calculate polyeder MinMaxBox difference X-coordinate from result polyeder*(matrix*matrixPU)
+            </summary>
+            <param name="picture">polyeder</param>
+            <param name="compress">true if polyeder is compressed</param>
+            <param name="matrix">base matrix</param>
+            <param name="matrixPU">lage matrix</param>
+            <returns>MinMaxBox difference X-coordinate</returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.PolyederBox.Y(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlByte,System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)">
+            <summary>
+            Calculate polyeder MinMaxBox difference Y-coordinate from result polyeder*(matrix*matrixPU)
+            </summary>
+            <param name="picture">polyeder</param>
+            <param name="compress">true if polyeder is compressed</param>
+            <param name="matrix">base matrix</param>
+            <param name="matrixPU">lage matrix</param>
+            <returns>MinMaxBox difference Y-coordinate</returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.PolyederBox.Z(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlByte,System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)">
+            <summary>
+            Calculate polyeder MinMaxBox difference Z-coordinate from result polyeder*(matrix*matrixPU)
+            </summary>
+            <param name="picture">polyeder</param>
+            <param name="compress">true if polyeder is compressed</param>
+            <param name="matrix">base matrix</param>
+            <param name="matrixPU">lage matrix</param>
+            <returns>MinMaxBox difference Z-coordinate</returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.PolyederBox.XYZ(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlByte,System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlDouble@,System.Data.SqlTypes.SqlDouble@,System.Data.SqlTypes.SqlDouble@)">
+            <summary>
+            Calculate polyeder MinMaxBox difference all-coordinate from result polyeder*(matrix*matrixPU)
+            </summary>
+            <param name="picture">polyeder</param>
+            <param name="compress">true if polyeder is compressed</param>
+            <param name="matrix">base matrix</param>
+            <param name="matrixPU">lage matrix</param>
+            <param name="x">output MinMaxBox difference X-coordinate</param>
+            <param name="y">output MinMaxBox difference Y-coordinate</param>
+            <param name="z">output MinMaxBox difference Z-coordinate</param>
+            <returns>0 if OK otherwise error number</returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.PolyederBox.GetLengthLinieFixture(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlByte,System.Data.SqlTypes.SqlGuid)">
+            <summary>
+            Calculate length of line fixture
+            </summary>
+            <param name="picture">polyeder</param>
+            <param name="compress">true if polyeder is compressed</param>
+            <param name="fixtureType">fixture type</param>
+            <returns>fixture length</returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.PolyederBox.GetAreaSurfaceFixture(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlByte,System.Data.SqlTypes.SqlGuid)">
+            <summary>
+            Calculate area of surface fixture
+            </summary>
+            <param name="picture">polyeder</param>
+            <param name="compress">true if polyeder is compressed</param>
+            <param name="fixtureType">fixture type</param>
+            <returns>fixture area</returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.PolyederBox.GetCountOfPolyederPoints(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlByte)">
+            <summary>
+            Get count of polyeder points
+            </summary>
+            <param name="picture">polyeder</param>
+            <param name="compress">true if polyeder is compressed</param>
+            <returns>count of polyeder points</returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.PolyederBox.GetGuidFromBinaryStream(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlInt32,System.Data.SqlTypes.SqlInt32)">
+            <summary>
+            Get guid from binary stream
+            </summary>
+            <param name="guidArray">binary stream</param>
+            <param name="count">count of serialized guids</param>
+            <param name="index">index of guid to return</param>
+            <returns>guid from binary stream with index index</returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.PolyederBox.GetDoubleFromBinaryStream(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlInt32,System.Data.SqlTypes.SqlInt32)">
+            <summary>
+            Get double from binary stream
+            </summary>
+            <param name="doubleArray">binary stream</param>
+            <param name="count">count of serialized doubles</param>
+            <param name="index">index of double to return</param>
+            <returns>double from binary stream with index index</returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.PolyederBox.GetDoubleFromBinaryStreamCat(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlInt32)">
+            <summary>
+            Get double from binary stream
+            </summary>
+            <param name="doubleArray">binary stream</param>
+            <param name="index">index of double to return</param>
+            <returns>double from binary stream with index index</returns>
+        </member>
+        <member name="T:Nemetschek.NUtilLibrary.PolyederFunction">
+            <summary>
+            Calculate polyeder MinMaxBox difference
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.PolyederFunction.multTessellationVertexCount">
+            <summary>
+            multiplicator for maximal count of vertexes for Tessellation
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.PolyederFunction.multTessellationIndexesCount">
+            <summary>
+            multiplicator for maximal count of indexes for Tessellation
+            </summary>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.PolyederFunction.TessellationArrayDimensions(System.Int32,System.Int32@,System.Int32@)">
+            <summary>
+            Calculate maximal array dimension for Tessellation
+            ( the reason for this function is task BIM-6064 - the OnenGL functions for Tessellation
+              indicate corrupt memory the reason was insufficient array dimension)
+            </summary>
+            <param name="faceCount">count of faces</param>
+            <param name="maxVertexCount">dimension of array for vertexes for Tessellation (out)</param>
+            <param name="maxIndexCount">dimension of array for vertexes for Tessellation (out)</param>
+            <returns>void</returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.PolyederFunction.PolyederAddition(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlByte,System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlByte,System.Data.SqlTypes.SqlBinary)">
+            <summary>
+            
+            </summary>
+            <param name="picture1"></param>
+            <param name="compress1"></param>
+            <param name="matrix1"></param>
+            <param name="picture2"></param>
+            <param name="compress2"></param>
+            <param name="matrix2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.PolyederFunction.CreatePicture(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="points"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.PolyederFunction.RemoveHoles1(Nemetschek.NUtilLibrary.CBaseElementPolyeder)">
+            <summary>
+            returns BasePolyeder without holes
+            </summary>
+            <param name="polyeder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.PolyederFunction.RemoveHoles(Nemetschek.NUtilLibrary.CBaseElementPolyeder)">
+            <summary>
+            returns BasePolyeder without holes
+            </summary>
+            <param name="polyeder"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

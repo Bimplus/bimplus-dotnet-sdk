@@ -1,0 +1,722 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BimPlus.LightCaseClient</name>
+    </assembly>
+    <members>
+        <member name="T:BimPlus.LightCaseClient.GenericProxies">
+            <summary>
+            Asynchronous proxy implementation. 
+            </summary>
+            <summary>
+            Proxy implementation.
+            </summary>
+            <summary>
+            Synchronous proxy implementation.
+            </summary>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestGetAsync``1(System.String,BimPlus.LightCaseClient.Support.RestCallBack{``0},BimPlus.LightCaseClient.Support.ClientConfiguration,System.String)">
+            <summary>
+            Asynchronous get method.
+            </summary>
+            <typeparam name="TR"></typeparam>
+            <param name="url"></param>
+            <param name="callback"></param>
+            <param name="configuration"></param>
+            <param name="etag"></param>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestGetAsync``1(System.String,BimPlus.LightCaseClient.Support.RestCallBack{``0})">
+            <summary>
+            Asynchronous get method with DefaultConfiguration.
+            </summary>
+            <typeparam name="TR"></typeparam>
+            <param name="url"></param>
+            <param name="callback"></param>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestGetAsync``1(System.String,BimPlus.LightCaseClient.Support.RestCallBack{``0},BimPlus.LightCaseClient.Support.ClientConfiguration)">
+            <summary>
+            Asynchronous get method with ClientConfiguration.
+            </summary>
+            <typeparam name="TR"></typeparam>
+            <param name="url"></param>
+            <param name="callback"></param>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestGetNonQueryAsync(System.String,BimPlus.LightCaseClient.Support.RestCallBackNonQuery,BimPlus.LightCaseClient.Support.ClientConfiguration,System.String)">
+            <summary>
+            Asynchronous get method. No response expected.
+            </summary>
+            <param name="url"></param>
+            <param name="callback"></param>
+            <param name="configuration"></param>
+            <param name="etag"></param>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestGetNonQueryAsync(System.String,BimPlus.LightCaseClient.Support.RestCallBackNonQuery,BimPlus.LightCaseClient.Support.ClientConfiguration)">
+            <summary>
+            Asynchronous get method. No response expected.
+            </summary>
+            <param name="url"></param>
+            <param name="callback"></param>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestGetNonQueryAsync(System.String,BimPlus.LightCaseClient.Support.RestCallBackNonQuery)">
+            <summary>
+            Asynchronous get method. No response expected.
+            </summary>
+            <param name="url"></param>
+            <param name="callback"></param>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestPostAsync``2(System.String,``1,BimPlus.LightCaseClient.Support.RestCallBack{``0},BimPlus.LightCaseClient.Support.ClientConfiguration,System.String)">
+            <summary>
+            Asynchronous post method.
+            </summary>
+            <typeparam name="TR"></typeparam>
+            <typeparam name="TI"></typeparam>
+            <param name="url"></param>
+            <param name="data"></param>
+            <param name="callback"></param>
+            <param name="configuration"></param>
+            <param name="etag"></param>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestPostAsync``2(System.String,``1,BimPlus.LightCaseClient.Support.RestCallBack{``0},BimPlus.LightCaseClient.Support.ClientConfiguration)">
+            <summary>
+            Asynchronous post method without etag.
+            </summary>
+            <typeparam name="TR"></typeparam>
+            <typeparam name="TI"></typeparam>
+            <param name="url"></param>
+            <param name="data"></param>
+            <param name="callback"></param>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestPostAsync``2(System.String,``1,BimPlus.LightCaseClient.Support.RestCallBack{``0})">
+            <summary>
+            Asynchronous post method with DefaultConfiguration.
+            </summary>
+            <typeparam name="TR"></typeparam>
+            <typeparam name="TI"></typeparam>
+            <param name="url"></param>
+            <param name="data"></param>
+            <param name="callback"></param>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestPostNonQueryAsync``1(System.String,``0,BimPlus.LightCaseClient.Support.RestCallBackNonQuery,BimPlus.LightCaseClient.Support.ClientConfiguration,System.String)">
+            <summary>
+            Asynchronous post method. No response expected.
+            </summary>
+            <typeparam name="TI"></typeparam>
+            <param name="url"></param>
+            <param name="data"></param>
+            <param name="callback"></param>
+            <param name="configuration"></param>
+            <param name="etag"></param>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestPostNonQueryAsync``1(System.String,``0,BimPlus.LightCaseClient.Support.RestCallBackNonQuery,BimPlus.LightCaseClient.Support.ClientConfiguration)">
+            <summary>
+            Asynchronous post method. No response expected.
+            </summary>
+            <typeparam name="TI"></typeparam>
+            <param name="url"></param>
+            <param name="data"></param>
+            <param name="callback"></param>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestPostNonQueryAsync``1(System.String,``0,BimPlus.LightCaseClient.Support.RestCallBackNonQuery)">
+            <summary>
+            Asynchronous post method with DefaultConfiguration.
+            </summary>
+            <typeparam name="TI"></typeparam>
+            <param name="url"></param>
+            <param name="data"></param>
+            <param name="callback"></param>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestPutAsync``2(System.String,``1,BimPlus.LightCaseClient.Support.RestCallBack{``0},BimPlus.LightCaseClient.Support.ClientConfiguration,System.String)">
+            <summary>
+            Asynchronous put method with etag.
+            </summary>
+            <typeparam name="TR"></typeparam>
+            <typeparam name="TI"></typeparam>
+            <param name="url"></param>
+            <param name="data"></param>
+            <param name="callback"></param>
+            <param name="configuration"></param>
+            <param name="etag"></param>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestPutAsync``2(System.String,``1,BimPlus.LightCaseClient.Support.RestCallBack{``0},BimPlus.LightCaseClient.Support.ClientConfiguration)">
+            <summary>
+            Asynchronous put method.
+            </summary>
+            <typeparam name="TR"></typeparam>
+            <typeparam name="TI"></typeparam>
+            <param name="url"></param>
+            <param name="data"></param>
+            <param name="callback"></param>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestPutAsync``2(System.String,``1,BimPlus.LightCaseClient.Support.RestCallBack{``0})">
+            <summary>
+            Asynchronous put method with DefaultConfiguration.
+            </summary>
+            <typeparam name="TR"></typeparam>
+            <typeparam name="TI"></typeparam>
+            <param name="url"></param>
+            <param name="data"></param>
+            <param name="callback"></param>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestPutAsync``1(System.String,``0,BimPlus.LightCaseClient.Support.RestCallBackStatusCode,BimPlus.LightCaseClient.Support.ClientConfiguration,System.String)">
+            <summary>
+            Asynchronous put method with etag.
+            </summary>
+            <typeparam name="TI"></typeparam>
+            <param name="url"></param>
+            <param name="data"></param>
+            <param name="callback"></param>
+            <param name="configuration"></param>
+            <param name="etag"></param>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestPutAsync``1(System.String,``0,BimPlus.LightCaseClient.Support.RestCallBackStatusCode,BimPlus.LightCaseClient.Support.ClientConfiguration)">
+            <summary>
+            Asynchronous put method with ClientConfiguration.
+            </summary>
+            <typeparam name="TI"></typeparam>
+            <param name="url"></param>
+            <param name="data"></param>
+            <param name="callback"></param>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestPutNonQueryAsync``1(System.String,``0,BimPlus.LightCaseClient.Support.RestCallBackNonQuery,BimPlus.LightCaseClient.Support.ClientConfiguration,System.String)">
+            <summary>
+            Asynchronous put method with ClientConfiguration and etag. No response expected.
+            </summary>
+            <typeparam name="TI"></typeparam>
+            <param name="url"></param>
+            <param name="data"></param>
+            <param name="callback"></param>
+            <param name="configuration"></param>
+            <param name="etag"></param>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestPutNonQueryAsync``1(System.String,``0,BimPlus.LightCaseClient.Support.RestCallBackNonQuery,BimPlus.LightCaseClient.Support.ClientConfiguration)">
+            <summary>
+            Asynchronous put method with ClientConfiguration. No response expected.
+            </summary>
+            <typeparam name="TI"></typeparam>
+            <param name="url"></param>
+            <param name="data"></param>
+            <param name="callback"></param>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestPutonQueryAsync``1(System.String,``0,BimPlus.LightCaseClient.Support.RestCallBackNonQuery)">
+            <summary>
+            Asynchronous put method with DefaultConfiguration. No response expected.
+            </summary>
+            <typeparam name="TI"></typeparam>
+            <param name="url"></param>
+            <param name="data"></param>
+            <param name="callback"></param>
+        </member>
+        <member name="P:BimPlus.LightCaseClient.GenericProxies.DefaultConfiguration">
+            <summary>
+            Default ClientConfiguration.
+            </summary>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.#cctor">
+            <summary>
+            The static constructor.
+            </summary>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.CreateDefaultConfiguration">
+            <summary>
+            Create ClientConfiguration instance and initialize witch default values. 
+            </summary>
+            <returns>ClientConfiguration</returns>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.CreateRequest(System.String,BimPlus.LightCaseClient.Support.ClientConfiguration)">
+            <summary>
+            Create a request object according to the configuration. 
+            </summary>
+            <param name="url"></param>
+            <param name="clientConfig"></param>
+            <returns>HttpWebRequest</returns>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestGet``1(System.String,BimPlus.LightCaseClient.Support.ClientConfiguration,System.String)">
+            <summary>
+            Synchronous get method with ClientConfiguration and etag.
+            </summary>
+            <typeparam name="TR"></typeparam>
+            <param name="url"></param>
+            <param name="configuration"></param>
+            <param name="etag"></param>
+            <returns>TR</returns>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestGet``1(System.String,BimPlus.LightCaseClient.Support.ClientConfiguration)">
+            <summary>
+            Synchronous get method with ClientConfiguration.
+            </summary>
+            <typeparam name="TR"></typeparam>
+            <param name="url"></param>
+            <param name="configuration"></param>
+            <returns>TR</returns>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestGet``1(System.String)">
+            <summary>
+            Synchronous get method with DefaultConfiguration.
+            </summary>
+            <typeparam name="TR"></typeparam>
+            <param name="url"></param>
+            <returns>TR</returns>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestGet(System.String,BimPlus.LightCaseClient.Support.ClientConfiguration)">
+            <summary>
+            Synchronous get method with ClientConfiguration.
+            </summary>
+            <param name="url"></param>
+            <param name="configuration"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestGet(System.String,BimPlus.LightCaseClient.Support.ClientConfiguration,System.String)">
+            <summary>
+            Synchronous get method with ClientConfiguration and etag.
+            </summary>
+            <param name="url"></param>
+            <param name="configuration"></param>
+            <param name="etag"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestGetNonQuery(System.String,BimPlus.LightCaseClient.Support.ClientConfiguration)">
+            <summary>
+            Synchronous get method with ClientConfiguration. No response expected.
+            </summary>
+            <param name="url"></param>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestGetNonQuery(System.String,BimPlus.LightCaseClient.Support.ClientConfiguration,System.String)">
+            <summary>
+            Synchronous get method with ClientConfiguration and etag. No response expected.
+            </summary>
+            <param name="url"></param>
+            <param name="configuration"></param>
+            <param name="etag"></param>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestGetNonQuery(System.String)">
+            <summary>
+            Synchronous get method with ClientConfiguration. No response expected.
+            </summary>
+            <param name="url"></param>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestPost``2(System.String,``1,BimPlus.LightCaseClient.Support.ClientConfiguration)">
+            <summary>
+            Synchronous post method with ClientConfiguration.
+            </summary>
+            <typeparam name="TR"></typeparam>
+            <typeparam name="TI"></typeparam>
+            <param name="url"></param>
+            <param name="data"></param>
+            <param name="configuration"></param>
+            <returns>TR</returns>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestPost``2(System.String,``1,BimPlus.LightCaseClient.Support.ClientConfiguration,System.String)">
+            <summary>
+            Synchronous post method with ClientConfiguration and etag.
+            </summary>
+            <typeparam name="TR"></typeparam>
+            <typeparam name="TI"></typeparam>
+            <param name="url"></param>
+            <param name="data"></param>
+            <param name="configuration"></param>
+            <param name="etag"></param>
+            <returns>TR</returns>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestPost``2(System.String,``1)">
+            <summary>
+            Synchronous post method.
+            </summary>
+            <typeparam name="TR"></typeparam>
+            <typeparam name="TI"></typeparam>
+            <param name="url"></param>
+            <param name="data"></param>
+            <returns>TR</returns>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestPost``1(System.String,``0,BimPlus.LightCaseClient.Support.ClientConfiguration)">
+            <summary>
+            Synchronous post method with ClientConfiguration.
+            </summary>
+            <typeparam name="TI"></typeparam>
+            <param name="url"></param>
+            <param name="data"></param>
+            <param name="configuration"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestPost``1(System.String,``0,BimPlus.LightCaseClient.Support.ClientConfiguration,System.String)">
+            <summary>
+            Synchronous post method with ClientConfiguration and etag.
+            </summary>
+            <typeparam name="TI"></typeparam>
+            <param name="url"></param>
+            <param name="data"></param>
+            <param name="configuration"></param>
+            <param name="etag"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestPostNonQuery``1(System.String,``0,BimPlus.LightCaseClient.Support.ClientConfiguration,System.String)">
+            <summary>
+            Synchronous post method with ClientConfiguration and etag. No respons expected.
+            </summary>
+            <typeparam name="TI"></typeparam>
+            <param name="url"></param>
+            <param name="data"></param>
+            <param name="configuration"></param>
+            <param name="etag"></param>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestPostNonQuery``1(System.String,``0,BimPlus.LightCaseClient.Support.ClientConfiguration)">
+            <summary>
+            Synchronous post method with ClientConfiguration. No respons expected.
+            </summary>
+            <typeparam name="TI"></typeparam>
+            <param name="url"></param>
+            <param name="data"></param>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestPostNonQuery``1(System.String,``0)">
+            <summary>
+            Synchronous post method. No respons expected.
+            </summary>
+            <typeparam name="TI"></typeparam>
+            <param name="url"></param>
+            <param name="data"></param>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestPut(System.String,BimPlus.LightCaseClient.Support.ClientConfiguration,System.String)">
+            <summary>
+            Synchronous put method with ClientConfiguration and etag.
+            </summary>
+            <param name="url">url address</param>
+            <param name="configuration">configuration</param>
+            <param name="etag">etag ( can be also null) </param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestPut``2(System.String,``1,BimPlus.LightCaseClient.Support.ClientConfiguration,System.String)">
+            <summary>
+            Synchronous put method with ClientConfiguration and etag.
+            </summary>
+            <typeparam name="TR"></typeparam>
+            <typeparam name="TI"></typeparam>
+            <param name="url"></param>
+            <param name="data"></param>
+            <param name="configuration"></param>
+            <param name="etag"></param>
+            <returns>TR</returns>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestPut``2(System.String,``1,BimPlus.LightCaseClient.Support.ClientConfiguration)">
+            <summary>
+            Synchronous put method with ClientConfiguration.
+            </summary>
+            <typeparam name="TR"></typeparam>
+            <typeparam name="TI"></typeparam>
+            <param name="url"></param>
+            <param name="data"></param>
+            <param name="configuration"></param>
+            <returns>TR</returns>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestPut``2(System.String,``1)">
+            <summary>
+            Synchronous put method with DefaultConfiguration.
+            </summary>
+            <typeparam name="TR"></typeparam>
+            <typeparam name="TI"></typeparam>
+            <param name="url"></param>
+            <param name="data"></param>
+            <returns>TR</returns>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestPut``1(System.String,``0,BimPlus.LightCaseClient.Support.ClientConfiguration,System.String)">
+            <summary>
+            Synchronous put method with ClientConfiguration and etag.
+            </summary>
+            <typeparam name="TI"></typeparam>
+            <param name="url"></param>
+            <param name="data"></param>
+            <param name="configuration"></param>
+            <param name="etag"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestPut``1(System.String,``0,BimPlus.LightCaseClient.Support.ClientConfiguration)">
+            <summary>
+            Synchronous put method with ClientConfiguration.
+            </summary>
+            <typeparam name="TI"></typeparam>
+            <param name="url"></param>
+            <param name="data"></param>
+            <param name="configuration"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestPutNonQuery``1(System.String,``0,BimPlus.LightCaseClient.Support.ClientConfiguration,System.String)">
+            <summary>
+            Synchronous put method with ClientConfiguration and etag. No respons expected.
+            </summary>
+            <typeparam name="TI"></typeparam>
+            <param name="url"></param>
+            <param name="data"></param>
+            <param name="configuration"></param>
+            <param name="etag"></param>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestPutNonQuery``1(System.String,``0,BimPlus.LightCaseClient.Support.ClientConfiguration)">
+            <summary>
+            Synchronous put method with ClientConfiguration. No respons expected.
+            </summary>
+            <typeparam name="TI"></typeparam>
+            <param name="url"></param>
+            <param name="data"></param>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestPutNonQuery``1(System.String,``0)">
+            <summary>
+            Synchronous put method. No respons expected.
+            </summary>
+            <typeparam name="TI"></typeparam>
+            <param name="url"></param>
+            <param name="data"></param>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestDelete``1(System.String,BimPlus.LightCaseClient.Support.ClientConfiguration)">
+            <summary>
+            Synchronous delete method with ClientConfiguration.
+            </summary>
+            <typeparam name="TR"></typeparam>
+            <param name="url"></param>
+            <param name="configuration"></param>
+            <returns>TR</returns>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestDelete``1(System.String)">
+            <summary>
+            Synchronous delete method.
+            </summary>
+            <typeparam name="TR"></typeparam>
+            <param name="url"></param>
+            <returns>TR</returns>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestDelete``2(System.String,``1,BimPlus.LightCaseClient.Support.ClientConfiguration)">
+            <summary>
+            Synchronous delete method with ClientConfiguration.
+            </summary>
+            <typeparam name="TR"></typeparam>
+            <typeparam name="TI"></typeparam>
+            <param name="url"></param>
+            <param name="data"></param>
+            <param name="configuration"></param>
+            <returns>TR</returns>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestDelete(System.String,BimPlus.LightCaseClient.Support.ClientConfiguration)">
+            <summary>
+            Synchronous delete method with ClientConfiguration.
+            </summary>
+            <param name="url"></param>
+            <param name="configuration"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestHead(System.String,BimPlus.LightCaseClient.Support.ClientConfiguration,System.String)">
+            <summary>
+            Synchronous head method.
+            </summary>
+            <param name="url"></param>
+            <param name="configuration"></param>
+            <param name="etag"></param>
+            <returns>HttpStatusCode</returns>
+        </member>
+        <member name="T:BimPlus.LightCaseClient.Support.CookiedHttpWebRequestFactory">
+            <summary>
+            The CookiedHttpWebRequestFactory.
+            </summary>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.Support.CookiedHttpWebRequestFactory.Create(System.String)">
+            <summary>
+            Create request.
+            </summary>
+            <param name="url"></param>
+            <returns>HttpWebRequest</returns>
+        </member>
+        <member name="T:BimPlus.LightCaseClient.Support.ISerializerAdapter">
+            <summary>
+            Defines an adapter interface for the serializers.
+            </summary>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.Support.ISerializerAdapter.Serialize(System.Object)">
+            <summary>
+            Serialize an object.
+            </summary>
+            <param name="obj"></param>
+            <returns>string</returns>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.Support.ISerializerAdapter.Deserialize``1(System.String)">
+            <summary>
+            Deserialize string input.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="input"></param>
+            <returns>T</returns>
+        </member>
+        <member name="T:BimPlus.LightCaseClient.Support.JavaScriptSerializerAdapter">
+            <summary>
+            An implementation of ISerializerAdapter based on the JavaScriptSerializer.
+            </summary>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.Support.JavaScriptSerializerAdapter.#ctor">
+            <summary>
+            Contructor of JavaScriptSerializerAdapter.
+            </summary>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.Support.JavaScriptSerializerAdapter.Serialize(System.Object)">
+            <summary>
+            Serialize an object.
+            </summary>
+            <param name="obj"></param>
+            <returns>string</returns>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.Support.JavaScriptSerializerAdapter.Deserialize``1(System.String)">
+            <summary>
+            Deserialize string input.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="input"></param>
+            <returns>T</returns>
+        </member>
+        <member name="T:BimPlus.LightCaseClient.Support.NewtonSoftAdditionalSerializeAdapter">
+            <summary>
+            An implementation of ISerializerAdapter based on the NewtonSoft JsonConvert.
+            </summary>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.Support.NewtonSoftAdditionalSerializeAdapter.Serialize(System.Object)">
+            <summary>
+            Serialize an object.
+            </summary>
+            <param name="obj"></param>
+            <returns>string</returns>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.Support.NewtonSoftAdditionalSerializeAdapter.Deserialize``1(System.String)">
+            <summary>
+            Deserialize string input.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="input"></param>
+            <returns>T</returns>
+        </member>
+        <member name="T:BimPlus.LightCaseClient.Support.NewtonSoftSerializeAdapter">
+            <summary>
+            An implementation of ISerializerAdapter based on the NewtonSoft JsonConvert.
+            </summary>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.Support.NewtonSoftSerializeAdapter.Serialize(System.Object)">
+            <summary>
+            Serialize an object.
+            </summary>
+            <param name="obj"></param>
+            <returns>string</returns>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.Support.NewtonSoftSerializeAdapter.Deserialize``1(System.String)">
+            <summary>
+            Deserialize string input.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="input"></param>
+            <returns>T</returns>
+        </member>
+        <member name="T:BimPlus.LightCaseClient.Support.ClientConfiguration">
+            <summary>
+            The configuration class defines how the rest call is made. 
+            </summary>
+        </member>
+        <member name="P:BimPlus.LightCaseClient.Support.ClientConfiguration.ContentType">
+            <summary>
+            ContentType e.g. "application/json".
+            </summary>
+        </member>
+        <member name="P:BimPlus.LightCaseClient.Support.ClientConfiguration.Accept">
+            <summary>
+            Accept string e.g. "application/json".
+            </summary>
+        </member>
+        <member name="P:BimPlus.LightCaseClient.Support.ClientConfiguration.RequrieSession">
+            <summary>
+            RequrieSession.
+            </summary>
+        </member>
+        <member name="P:BimPlus.LightCaseClient.Support.ClientConfiguration.Timeout">
+            <summary>
+            Timeout.
+            </summary>
+        </member>
+        <member name="P:BimPlus.LightCaseClient.Support.ClientConfiguration.OutBoundSerializerAdapter">
+            <summary>
+            OutBoundSerializerAdapter e.g. NewtonSoftSerializeAdapter.
+            </summary>
+        </member>
+        <member name="P:BimPlus.LightCaseClient.Support.ClientConfiguration.InBoundSerializerAdapter">
+            <summary>
+            InBoundSerializerAdapter e.g. NewtonSoftSerializeAdapter.
+            </summary>
+        </member>
+        <member name="P:BimPlus.LightCaseClient.Support.ClientConfiguration.AuthorizationTokenType">
+            <summary>
+            AuthorizationTokenType.
+            </summary>
+        </member>
+        <member name="P:BimPlus.LightCaseClient.Support.ClientConfiguration.AuthorizationAccessToken">
+            <summary>
+            AuthorizationAccessToken.
+            </summary>
+        </member>
+        <member name="P:BimPlus.LightCaseClient.Support.ClientConfiguration.CacheLevel">
+            <summary>
+            CacheLevel.
+            </summary>
+        </member>
+        <member name="P:BimPlus.LightCaseClient.Support.ClientConfiguration.ConnectionGroup">
+            <summary>
+            ConnectionGroup.
+            </summary>
+        </member>
+        <member name="P:BimPlus.LightCaseClient.Support.ClientConfiguration.Etag">
+            <summary>
+            Etag.
+            </summary>
+        </member>
+        <member name="P:BimPlus.LightCaseClient.Support.ClientConfiguration.AuthorizationRememberMe">
+            <summary>
+            AuthorizationRememberMe.
+            </summary>
+        </member>
+        <member name="P:BimPlus.LightCaseClient.Support.ClientConfiguration.AuthorizationRememberMeToken">
+            <summary>
+            AuthorizationRememberMeToken.
+            </summary>
+        </member>
+        <member name="P:BimPlus.LightCaseClient.Support.ClientConfiguration.AuthorizationClientId">
+            <summary>
+            AuthorizationClientId.
+            </summary>
+        </member>
+        <member name="M:BimPlus.LightCaseClient.Support.ClientConfiguration.Clone">
+            <summary>
+            Clone the ClientConfiguration.
+            </summary>
+            <returns>object</returns>
+        </member>
+        <member name="T:BimPlus.LightCaseClient.Support.RestCallBack`1">
+            <summary>
+            Delegate RestCallBack.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="ex"></param>
+            <param name="result"></param>
+        </member>
+        <member name="T:BimPlus.LightCaseClient.Support.RestCallBackNonQuery">
+            <summary>
+            Delegate RestCallBackNonQuery.
+            </summary>
+            <param name="ex"></param>
+        </member>
+        <member name="T:BimPlus.LightCaseClient.Support.RestCallBackStatusCode">
+            <summary>
+            Delegate RestCallBackStatusCode.
+            </summary>
+            <param name="ex"></param>
+            <param name="result"></param>
+            <param name="eTag"></param>
+        </member>
+    </members>
+</doc>

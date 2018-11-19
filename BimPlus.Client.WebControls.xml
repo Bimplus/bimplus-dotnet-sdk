@@ -1,0 +1,610 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BimPlus.Client.WebControls</name>
+    </assembly>
+    <members>
+        <member name="T:BimPlus.Client.WebControls.WPF.BimPlusUserControl">
+            <summary>
+            Base class for WPF-UserControls.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.BimPlusUserControl.#ctor">
+            <summary>
+            Create the BimPlusUserControl.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.BimPlusUserControl.#ctor(BimPlus.Client.Integration.IntegrationBase)">
+            <summary>
+            Create the BimPlusUserControl.
+            </summary>
+            <param name="intBase"></param>
+        </member>
+        <member name="E:BimPlus.Client.WebControls.WPF.BimPlusUserControl.LoadCompleted">
+            <summary>
+            Raised if loading is completed.
+            </summary>
+        </member>
+        <member name="E:BimPlus.Client.WebControls.WPF.BimPlusUserControl.WebViewRecreated">
+            <summary>
+            Raised after recreate WebView.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.WebControls.WPF.BimPlusUserControl.EnableCache">
+            <summary>
+            Enable web engine cache.
+            Default value: false.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.WebControls.WPF.BimPlusUserControl.IgnoreCertificateError">
+            <summary>
+            Ignore certificate error. Do not set this property in the production branch!
+            Default value: false.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Client.WebControls.WPF.BimPlusUserControl._integrationBase">
+            <summary>
+            The IntegrationBase.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Client.WebControls.WPF.BimPlusUserControl._keyBoardHandler">
+            <summary>
+            The KeyBoardHandler.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Client.WebControls.WPF.BimPlusUserControl._subscribeNewWindowEvent">
+            <summary>
+            Subscribe new window event.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Client.WebControls.WPF.BimPlusUserControl._webControl">
+            <summary>
+            The WebControl.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Client.WebControls.WPF.BimPlusUserControl._cachePath">
+            <summary>
+            Path to cache folder.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.BimPlusUserControl.EvalScript(System.String,System.Boolean)">
+            <summary>
+            Execute JavaScript code.
+            </summary>
+            <param name="code">The JavaScript code to be executed.</param>
+            <param name="throwOnError">Set to true if to throw an EO.WebBrowser.JSException when an exception occurred while executing the JavaScript code.</param>
+            <returns>The result value of the JavaScript code</returns>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.BimPlusUserControl.SetWebBrowserRuntimeUILanguage(System.Globalization.CultureInfo)">
+            <summary>
+            Set the language for value 
+            </summary>
+            <param name="currentUICulture"></param>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.BimPlusUserControl.DestroyWebView">
+            <summary>
+            Destroy the WebView.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.BimPlusUserControl.CloseWebView">
+            <summary>
+            Close the WebView.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.BimPlusUserControl.Dispose">
+            <summary>
+            Abstract  Dispose method. 
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.BimPlusUserControl.InitializeWebControl(EO.WebBrowser.Wpf.WebControl,System.Boolean)">
+            <summary>
+            Initialize events.
+            </summary>
+            <param name="webControl"></param>
+            <param name="subscribeNewWindowEvent"></param>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.BimPlusUserControl.GetPortalAdress">
+            <summary>
+            Get the portal adress.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.BimPlusUserControl.ProcessJsMessage(System.String,System.String)">
+            <summary>
+             Process JavaScript messages.
+            </summary>
+            <param name="message"></param>
+            <param name="data"></param>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.BimPlusUserControl.GetIdFromJObject(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            Get Id from JObject.
+            </summary>
+            <param name="jObject"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.BimPlusUserControl.WebView_LoadCompleted(System.Object,EO.WebBrowser.LoadCompletedEventArgs)">
+            <summary>
+            Load complete action.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.BimPlusUserControl.GetWebView">
+            <summary>
+            Get the WebView.
+            </summary>
+            <returns>WebView</returns>
+        </member>
+        <member name="T:BimPlus.Client.WebControls.WPF.BimPlusUserControl.DevPortalSettings">
+            <summary>
+            Portal adress for the development branch.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.WebControls.WPF.BimPlusUserControl.DevPortalSettings.PortalAdress">
+            <summary>
+            development branch string.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Client.WebControls.WPF.WebViewRecreatedArgs">
+            <summary>
+            Args for WebViewRecreatedEventHandler
+            </summary>
+        </member>
+        <member name="T:BimPlus.Client.WebControls.WPF.WebViewRecreatedEventHandler">
+            <summary>
+            Raised after recreate WebView.
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+        </member>
+        <member name="T:BimPlus.Client.WebControls.WPF.ExportManager">
+            <summary>
+            Interaction logic for ExportManager.xaml
+            </summary>
+            <summary>
+            ExportManager
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.ExportManager.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:BimPlus.Client.WebControls.WPF.IssueDetailsControl">
+            <summary>
+            Interaction logic for IssueDetailsControl.xaml
+            </summary>
+            <summary>
+            IssueDetailsControl
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.IssueDetailsControl.#ctor(BimPlus.Client.Integration.IntegrationBase)">
+            <summary>
+            Create the IssueDetailsControl.
+            </summary>
+            <param name="intBase"></param>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.IssueDetailsControl.NavigateToIssue(System.Guid)">
+            <summary>
+            Select the issue with issueId.
+            </summary>
+            <param name="issueId"></param>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.IssueDetailsControl.Reload(System.Boolean)">
+            <summary>
+            Reloads the current page.
+            </summary>
+            <param name="ignoreCache"></param>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.IssueDetailsControl.Dispose">
+            <summary>
+            Releases all resources.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.IssueDetailsControl.GetWebView">
+            <summary>
+            Get the WebView.
+            </summary>
+            <returns>WebView</returns>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.IssueDetailsControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:BimPlus.Client.WebControls.WPF.IssueListControl">
+            <summary>
+            Interaction logic for IssueListControl.xaml
+            </summary>
+            <summary>
+            IssueListControl
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.IssueListControl.#ctor(BimPlus.Client.Integration.IntegrationBase)">
+            <summary>
+            Create the IssueListControl.
+            </summary>
+            <param name="intBase"></param>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.IssueListControl.NavigateToControl(System.Guid)">
+            <summary>
+            Load issues from project.
+            </summary>
+            <param name="projectId"></param>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.IssueListControl.SetCurrentIssue(System.String)">
+            <summary>
+            Set the current issue.
+            That does not work.
+            </summary>
+            <param name="issueId"></param>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.IssueListControl.Reload(System.Boolean)">
+            <summary>
+            Reloads the current page.
+            </summary>
+            <param name="ignoreCache"></param>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.IssueListControl.Dispose">
+            <summary>
+            Releases all resources.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.IssueListControl.GetWebView">
+            <summary>
+            Get the WebView.
+            </summary>
+            <returns>WebView</returns>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.IssueListControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:BimPlus.Client.WebControls.WPF.KeyBoardHandler">
+            <summary>
+            Keybordhandler for EO WebView.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.KeyBoardHandler.#ctor(BimPlus.Client.EventHandlerCore,EO.WebBrowser.Wpf.WebControl)">
+            <summary>
+            Create the src/BimPlus.ClientIntegration/BimPlus.Client.Integration/BimPlus.Client.Integration.csproj.
+            </summary>
+            <param name="eventHandlerCore"></param>
+            <param name="webControl"></param>
+        </member>
+        <member name="F:BimPlus.Client.WebControls.WPF.KeyBoardHandler.ExtendedKeyBoardEventHandling">
+            <summary>
+            ExtendedKeyBoardEventHandling can raise JavaScript events to the c# clients.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Client.WebControls.WPF.LeftNavigationBar">
+            <summary>
+            Interaction logic for LeftNavigationBar.xaml
+            </summary>
+            <summary>
+            LeftNavigationBar
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.LeftNavigationBar.#ctor(BimPlus.Client.Integration.IntegrationBase)">
+            <summary>
+            Create the LeftNavigationBar.
+            </summary>
+            <param name="integrationBase"></param>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.LeftNavigationBar.SelectModule(System.String,System.Boolean)">
+            <summary>
+            SelectModule
+            </summary>
+            <param name="module">projectDetails | objectNavigator | clashDetection | projectSlideShows | structureManager | essApplication</param>
+            <param name="throwOnError"></param>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.LeftNavigationBar.ToggleModel(System.Guid,System.Nullable{System.Boolean},System.Boolean)">
+            <summary>
+            ToggleModel 
+            </summary>
+            <param name="modelId">modelId</param>
+            <param name="selected">'null' causes inversion of current selection</param>
+            <param name="throwOnError"></param>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.LeftNavigationBar.ToggleTopologyNode(System.Guid,System.Nullable{System.Boolean},System.Boolean)">
+            <summary>
+            ToggleTopologyNode 
+            </summary>
+            <param name="topologyNodeId">topologyNodeId</param>
+            <param name="selected">'null' causes inversion of current selection</param>
+            <param name="throwOnError"></param>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.LeftNavigationBar.ToggleModelLayer(System.Guid,System.Guid,System.Nullable{System.Boolean},System.Boolean)">
+            <summary>
+            ToggleModelLayer 
+            </summary>
+            <param name="modelId">BimPlus Model</param>
+            <param name="modelLayerId">Building|Room|Window,Door|Reinforcement...</param>
+            <param name="selected">'null' causes inversion of current selection</param>
+            <param name="throwOnError"></param>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.LeftNavigationBar.SelectStructure(System.Guid,System.Boolean)">
+            <summary>
+            Select Structure node
+            </summary>
+            <param name="structureId">structure node</param>
+            <param name="throwOnError"></param>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.LeftNavigationBar.SelectStructureNode(System.Guid,System.Boolean)">
+            <summary>
+            Select Structure node
+            </summary>
+            <param name="structureNodeId">structure node</param>
+            <param name="throwOnError"></param>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.LeftNavigationBar.ToggleStructureNode(System.Guid,System.Nullable{System.Boolean},System.Boolean)">
+            <summary>
+            Toggle Structure Node 
+            </summary>
+            <param name="structureNodeId">Building|Room|Window,Door|Reinforcement...</param>
+            <param name="selected">'null' causes inversion of current selection</param>
+            <param name="throwOnError"></param>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.LeftNavigationBar.SelectFilter(System.Guid,System.Boolean)">
+            <summary>
+            Select Structure node
+            </summary>
+            <param name="filterId">structure node</param>
+            <param name="throwOnError"></param>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.LeftNavigationBar.SelectFilterNode(System.Guid,System.Boolean)">
+            <summary>
+            Select Filter node
+            </summary>
+            <param name="filterNodeId">structure node</param>
+            <param name="throwOnError"></param>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.LeftNavigationBar.ToggleFilterNode(System.Guid,System.Nullable{System.Boolean},System.Boolean)">
+            <summary>
+            Toggle Filter Node 
+            </summary>
+            <param name="filterNodeId"></param>
+            <param name="selected">'null' causes inversion of current selection</param>
+            <param name="throwOnError"></param>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.LeftNavigationBar.ShowNavigationBar">
+            <summary>
+            Show the navigation bar.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.LeftNavigationBar.Reload(System.Boolean)">
+            <summary>
+            Reloads the current page.
+            </summary>
+            <param name="ignoreCache"></param>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.LeftNavigationBar.Dispose">
+            <summary>
+            Dispose WebView.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.LeftNavigationBar.GetWebView">
+            <summary>
+            Get the WebView.
+            </summary>
+            <returns>WebView</returns>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.LeftNavigationBar.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:BimPlus.Client.WebControls.WPF.ObjectPropertiesControl">
+            <summary>
+            Interaction logic for ObjectPropertiesControl.xaml
+            </summary>
+            <summary>
+            ObjectPropertiesControl
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.ObjectPropertiesControl.#ctor(BimPlus.Client.Integration.IntegrationBase)">
+            <summary>
+            Create the ObjectPropertiesControl.
+            </summary>
+            <param name="integrationBase"></param>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.ObjectPropertiesControl.ShowObjectProperties(System.Guid)">
+            <summary>
+            Show object properties.
+            </summary>
+            <param name="objectId"></param>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.ObjectPropertiesControl.Reload(System.Boolean)">
+            <summary>
+            Reloads the current page.
+            </summary>
+            <param name="ignoreCache"></param>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.ObjectPropertiesControl.Dispose">
+            <summary>
+            Dispose WebView.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.ObjectPropertiesControl.GetWebView">
+            <summary>
+            Get the WebView.
+            </summary>
+            <returns>WebView</returns>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.ObjectPropertiesControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:BimPlus.Client.WebControls.WPF.ProjectSelection">
+            <summary>
+            Interaction logic for ProjectSelection.xaml
+            </summary>
+            <summary>
+            ProjectSelection
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.ProjectSelection.#ctor(BimPlus.Client.Integration.IntegrationBase)">
+            <summary>
+            Create the ProjectSelection class.
+            </summary>
+            <param name="intBase"></param>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.ProjectSelection.NavigateToControl">
+            <summary>
+            Load the control control content.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.ProjectSelection.SetCurrentTeamInWebControl(System.String)">
+            <summary>
+            Navigate to a team.
+            </summary>
+            <param name="teamId"></param>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.ProjectSelection.Reload(System.Boolean)">
+            <summary>
+            Reloads the current page.
+            </summary>
+            <param name="ignoreCache"></param>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.ProjectSelection.Dispose">
+            <summary>
+            Releases all resources.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.ProjectSelection.WebView_LoadCompleted(System.Object,EO.WebBrowser.LoadCompletedEventArgs)">
+            <summary>
+            Load complete action.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.ProjectSelection.GetWebView">
+            <summary>
+            Get the WebView.
+            </summary>
+            <returns>WebView</returns>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.ProjectSelection.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:BimPlus.Client.WebControls.WPF.WebViewer">
+            <summary>
+            Interaction logic for WebViewer.xaml
+            </summary>
+            <summary>
+            WebViewer
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.WebViewer.#ctor(BimPlus.Client.Integration.IntegrationBase)">
+            <summary>
+            Create the WebViewer class.
+            </summary>
+            <param name="intBase"></param>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.WebViewer.HighlightObjectByID(System.Guid,System.Boolean,System.Boolean)">
+            <summary>
+            Select one object.
+            </summary>
+            <param name="objectID"></param>
+            <param name="throwOnError">default false</param>
+            <param name="isolate">default true</param>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.WebViewer.HighlightObjectsByID(System.Collections.Generic.List{System.Guid},System.Boolean,System.Boolean)">
+            <summary>
+            Select objects.
+            </summary>
+            <param name="objectIDs"></param>
+            <param name="throwOnError">default false</param>
+            <param name="isolate">default true</param>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.WebViewer.FlyToObject(System.Guid,System.Boolean,System.Boolean)">
+            <summary>
+            Center object.
+            </summary>
+            <param name="objectID"></param>
+            <param name="flyTo"></param>
+            <param name="throwOnError"></param>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.WebViewer.SelectPin(System.Guid,System.Boolean)">
+            <summary>
+            Select a Pin.
+            
+            That does not work.
+            
+            </summary>
+            <param name="objectID"></param>
+            <param name="throwOnError"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.WebViewer.ObjectZoomToFit(System.Guid,System.Boolean)">
+            <summary>
+            Zoom to fit.
+            </summary>
+            <param name="objectID"></param>
+            <param name="throwOnError"></param>
+            <returns>object</returns>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.WebViewer.ObjectsZoomToFit(System.Collections.Generic.List{System.Guid},System.Boolean)">
+            <summary>
+            Zoom objects to fit.
+            </summary>
+            <param name="objectIDs"></param>
+            <param name="throwOnError"></param>
+            <returns>object</returns>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.WebViewer.ObjectIsolated(System.Guid,System.Boolean)">
+            <summary>
+            Isolate one object.
+            </summary>
+            <param name="objectID"></param>
+            <param name="throwOnError"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.WebViewer.NavigateToControl(System.Guid)">
+            <summary>
+            Navigate to the project.
+            </summary>
+            <param name="projectId"></param>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.WebViewer.NavigateToTimeLine(System.Guid)">
+            <summary>
+            Navigate to timeline control.
+            </summary>
+            <param name="projectId"></param>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.WebViewer.NavigateToControl(System.Guid,System.Guid)">
+            <summary>
+            That does not work.
+            </summary>
+            <param name="projectId"></param>
+            <param name="objectId"></param>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.WebViewer.Reload(System.Boolean)">
+            <summary>
+            Reloads the current page.
+            </summary>
+            <param name="ignoreCache"></param>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.WebViewer.Dispose">
+            <summary>
+            Releases all resources.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.WebViewer.GetWebView">
+            <summary>
+            Get the WebView.
+            </summary>
+            <returns>WebView</returns>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.WebViewer.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+    </members>
+</doc>

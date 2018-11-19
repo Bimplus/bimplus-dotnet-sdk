@@ -1,0 +1,607 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BimPlus.Client.Integration</name>
+    </assembly>
+    <members>
+        <member name="T:BimPlus.Client.Integration.IntegrationBase">
+            <summary>
+            Integrate API and Login.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.Integration.IntegrationBase.#ctor(System.Guid,System.IO.TextWriter,System.Boolean)">
+            <summary>
+            Create IntegrationBase with applicationId and logger.
+            </summary>
+            <param name="applicationId"></param>
+            <param name="logger"></param>
+            <param name="throwExceptions"></param>
+        </member>
+        <member name="M:BimPlus.Client.Integration.IntegrationBase.#ctor(System.Guid,System.Guid,System.IO.TextWriter,System.Boolean)">
+            <summary>
+            Create IntegrationBase with application Id, client Id and logger.
+            </summary>
+            <param name="clientId"></param>
+            <param name="applicationId"></param>
+            <param name="logger"></param>
+            <param name="throwExceptions"></param>
+        </member>
+        <member name="P:BimPlus.Client.Integration.IntegrationBase.SignalRCore">
+            <summary>
+            Property SignalRCore.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.Integration.IntegrationBase.UseSignalRCore">
+            <summary>
+            Use SignalR core.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.Integration.IntegrationBase.SignalRAppCode">
+            <summary>
+            SignalR app code.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.Integration.IntegrationBase.SignalRLogFileName">
+            <summary>
+            SignalR logfile name.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.Integration.IntegrationBase.SignalREnableUIMessages">
+            <summary>
+            Enable UI messages.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.Integration.IntegrationBase.ConnectWithRememberMe">
+            <summary>
+            Connect with rememberme token.
+            </summary>
+            <returns>True, if connected</returns>
+        </member>
+        <member name="M:BimPlus.Client.Integration.IntegrationBase.ConnectWithRememberMeAndClientId">
+            <summary>
+            Connect with rememberme token, client Id and server name.
+            </summary>
+            <returns>True, if connected</returns>
+        </member>
+        <member name="M:BimPlus.Client.Integration.IntegrationBase.ConnectWithLoginDialog(BimPlus.Client.Integration.Login.ILoginWindow)">
+            <summary>
+            Connect with login dialog.
+            </summary>
+            <param name="loginWindow"></param>
+            <returns>True, if connected</returns>
+        </member>
+        <member name="M:BimPlus.Client.Integration.IntegrationBase.ConnectWithAccessToken(System.Nullable{System.Guid})">
+            <summary>
+            Connect with access token or login dialog.
+            </summary>
+            <param name="accessToken"></param>
+            <returns>True, if connected</returns>
+        </member>
+        <member name="M:BimPlus.Client.Integration.IntegrationBase.ConnectWithAccessTokenAndServerName(System.Nullable{System.Guid},System.String)">
+            <summary>
+            Connect with access token and server name.
+            </summary>
+            <param name="accessToken"></param>
+            <param name="serverName"></param>
+            <returns>True, if connected</returns>
+        </member>
+        <member name="M:BimPlus.Client.Integration.IntegrationBase.ConnectWithCredentials(System.String,System.String,System.String)">
+            <summary>
+            Connect with user name, pass word and server name.
+            </summary>
+            <param name="userName"></param>
+            <param name="passWord"></param>
+            <param name="serverName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BimPlus.Client.Integration.IntegrationBase.ReLogin(BimPlus.Client.Integration.Login.ILoginWindow)">
+            <summary>
+            Relogin with AccessToken or default login window.
+            </summary>
+            <param name="loginWindow"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BimPlus.Client.Integration.IntegrationBase.Disconnect">
+            <summary>
+            Disconnect SignalR hubs and ApiCore.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BimPlus.Client.Integration.IntegrationBase.SetTeam(System.String)">
+            <summary>
+            Raise the TeamChanged event.
+            </summary>
+            <param name="slugOrId"></param>
+        </member>
+        <member name="M:BimPlus.Client.Integration.IntegrationBase.SetFirstCurrentTeam">
+            <summary>
+            Set the first team with IsMyTeam is true or the first team.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.Integration.IntegrationBase.CurrentTeam">
+            <summary>
+            The current team.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.Integration.IntegrationBase.CurrentProject">
+            <summary>
+            The current project.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.Integration.IntegrationBase.EventHandlerCore">
+            <summary>
+            The eventhandler core.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.Integration.IntegrationBase.OwnerWindowHandle">
+            <summary>
+            The parent Window for the LoginWindow.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.Integration.IntegrationBase.TranslationCultureInfo">
+            <summary>
+            CultureInfo for translating the UI string.
+            "de-DE" and "en-GB" are supported for the login.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.Integration.IntegrationBase.ExceptionList">
+            <summary>
+            List of ExceptionMessages.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.Integration.IntegrationBase.AreTeamsEqual(BimPlus.Sdk.Data.UserAdministration.DtoClientTeam,BimPlus.Sdk.Data.UserAdministration.DtoClientTeam)">
+            <summary>
+            Are the teams the same?
+            </summary>
+            <param name="t1"></param>
+            <param name="t2"></param>
+            <returns>true, if equal.</returns>
+        </member>
+        <member name="M:BimPlus.Client.Integration.IntegrationBase.AddExceptionMessage(System.Exception,System.String)">
+            <summary>
+            Add an exception message.
+            </summary>
+            <param name="ex"></param>
+            <param name="caller"></param>
+        </member>
+        <member name="E:BimPlus.Client.Integration.IntegrationBase.PropertyChanged">
+            <summary>
+            The PropertyChanged event.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.Integration.IntegrationBase.NotifyPropertyChanged(System.String)">
+            <summary>
+            Raise the PropertyChanged event.
+            </summary>
+            <param name="propertyName"></param>
+        </member>
+        <member name="T:BimPlus.Client.Integration.Login.DefaultValueTextBox">
+            <summary>
+            TextBox with DefaultText.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.Integration.Login.DefaultValueTextBox.#ctor">
+            <summary>
+            Create the DefaultValueTextBox.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Client.Integration.Login.DefaultValueTextBox.DefaultTextProperty">
+            <summary>
+            Dependency property DefaultTextProperty.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Client.Integration.Login.DefaultValueTextBox.DefaultForegroundProperty">
+            <summary>
+            Dependency property DefaultForegroundProperty.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.Integration.Login.DefaultValueTextBox.DefaultText">
+            <summary>
+            DefaultText.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.Integration.Login.DefaultValueTextBox.DefaultForeground">
+            <summary>
+            The Brush for the DefaultText.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.Integration.Login.DefaultValueTextBox.OnTextChanged(System.Windows.Controls.TextChangedEventArgs)">
+            <summary>
+            Override base OnTextChanged. 
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:BimPlus.Client.Integration.Login.DefaultValueTextBox.OnGotFocus(System.Windows.RoutedEventArgs)">
+            <summary>
+            Select all an got focus.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="T:BimPlus.Client.Integration.Login.BaseDefaultTextAdorner">
+            <summary>
+            Base Adorner.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.Integration.Login.BaseDefaultTextAdorner.#ctor(System.Windows.UIElement)">
+            <summary>
+            Create the BaseDefaultTextAdorner.
+            </summary>
+            <param name="adornedElement"></param>
+        </member>
+        <member name="T:BimPlus.Client.Integration.Login.DefaultTextAdorner">
+            <summary>
+            Adorner for the DefaultText.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.Integration.Login.DefaultTextAdorner.#ctor(BimPlus.Client.Integration.Login.DefaultValueTextBox)">
+            <summary>
+            Create the DefaultTextAdorner.
+            </summary>
+            <param name="textBox"></param>
+        </member>
+        <member name="M:BimPlus.Client.Integration.Login.DefaultTextAdorner.OnRender(System.Windows.Media.DrawingContext)">
+            <summary>
+            Draw the DefaultText. 
+            </summary>
+            <param name="drawingContext"></param>
+        </member>
+        <member name="T:BimPlus.Client.Integration.Login.PasswordBoxDefaultTextAdorner">
+            <summary>
+            Adorner for the DefaultText.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.Integration.Login.PasswordBoxDefaultTextAdorner.#ctor(System.Windows.Controls.PasswordBox,System.String,System.Windows.Media.FontFamily)">
+            <summary>
+            Create the password adorner.
+            </summary>
+            <param name="passwordBox"></param>
+            <param name="defaultText"></param>
+            <param name="fontFamily"></param>
+        </member>
+        <member name="M:BimPlus.Client.Integration.Login.PasswordBoxDefaultTextAdorner.OnRender(System.Windows.Media.DrawingContext)">
+            <summary>
+            Draw the DefaultText
+            </summary>
+            <param name="drawingContext"></param>
+        </member>
+        <member name="T:BimPlus.Client.Integration.Login.LoginSettings">
+            <summary>
+            Login settings class.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.Integration.Login.LoginSettings.#ctor">
+            <summary>
+            Create the LoginSettings.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.Integration.Login.LoginSettings.#ctor(System.IO.TextWriter)">
+            <summary>
+            Create the LoginSettings.
+            </summary>
+            <param name="logger"></param>
+        </member>
+        <member name="P:BimPlus.Client.Integration.Login.LoginSettings.ServerName">
+            <summary>
+            Base BimPlus Url.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.Integration.Login.LoginSettings.ForgotPasswordLink">
+            <summary>
+            Forgot Password Link Url.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.Integration.Login.LoginSettings.NotRegisteredLink">
+            <summary>
+            Not Registered Link Url.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.Integration.Login.LoginSettings.GetBimplusTeamLink">
+            <summary>
+            Get Bim+ Team Link Url.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.Integration.Login.LoginSettings.BimPlusEnvironment">
+            <summary>
+            Save the short server name.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.Integration.Login.LoginSettings.UserName">
+            <summary>
+            Username.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.Integration.Login.LoginSettings.Password">
+            <summary>
+            Password.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.Integration.Login.LoginSettings.Container">
+            <summary>
+            Container for password decryption and encryption.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.Integration.Login.LoginSettings.SavePassword">
+            <summary>
+            Save the password.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.Integration.Login.LoginSettings.RememberMe">
+            <summary>
+            Use remember me.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.Integration.Login.LoginSettings.Remember">
+            <summary>
+            Remember me string.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.Integration.Login.LoginSettings.ClientId">
+            <summary>
+            Client id for remember me.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.Integration.Login.LoginSettings.LoadSettings">
+            <summary>
+            Load the login settings.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.Integration.Login.LoginSettings.SaveSettings(System.Boolean,System.String)">
+            <summary>
+            Save the login settings.
+            </summary>
+            <param name="savePassword"></param>
+            <param name="rememberMe"></param>
+        </member>
+        <member name="M:BimPlus.Client.Integration.Login.LoginSettings.GetClientId">
+            <summary>
+            Get client Id from the login settings.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BimPlus.Client.Integration.Login.LoginSettings.EncryptStringToBytes_Aes(System.String,System.Byte[],System.Byte[])">
+            <summary>
+            Encrypt string (from MSDN).
+            </summary>
+            <param name="plainText"></param>
+            <param name="Key"></param>
+            <param name="IV"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BimPlus.Client.Integration.Login.LoginSettings.DecryptStringFromBytes_Aes(System.Byte[],System.Byte[],System.Byte[])">
+            <summary>
+            Decrypt string (from MSDN).
+            </summary>
+            <param name="cipherText"></param>
+            <param name="Key"></param>
+            <param name="IV"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BimPlus.Client.Integration.Login.LoginUserControl">
+            <summary>
+            Login user control.
+            </summary>
+            <summary>
+            LoginUserControl
+            </summary>
+        </member>
+        <member name="F:BimPlus.Client.Integration.Login.LoginUserControl.LoginResult">
+            <summary>
+            The login result.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.Integration.Login.LoginUserControl.#ctor(BimPlus.Client.Integration.Login.LoginWindow,BimPlus.Client.Integration.IntegrationBase)">
+            <summary>
+            Create the login usercontrol.
+            </summary>
+            <param name="loginWindow"></param>
+            <param name="intbase"></param>
+        </member>
+        <member name="P:BimPlus.Client.Integration.Login.LoginUserControl.EmptyEMail">
+            <summary>
+            Empty EMail string.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.Integration.Login.LoginUserControl.EmptyPassword">
+            <summary>
+            Empty password string.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.Integration.Login.LoginUserControl.SetDefaultHostName(System.String)">
+            <summary>
+            Set default host name.
+            </summary>
+            <param name="serverName"></param>
+        </member>
+        <member name="M:BimPlus.Client.Integration.Login.LoginUserControl.AuthorizedUserHasTeamCreated">
+            <summary>
+            Verify if connected user has already created team to work with
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BimPlus.Client.Integration.Login.LoginUserControl.LoginButton_OnClick(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Login by login button.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:BimPlus.Client.Integration.Login.LoginUserControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:BimPlus.Client.Integration.Login.LoginWindow">
+            <summary>
+            Login window.
+            </summary>
+            <summary>
+            LoginWindow
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.Integration.Login.LoginWindow.#ctor(BimPlus.Client.Integration.Login.LoginSettings,BimPlus.Client.Integration.IntegrationBase)">
+            <summary>
+            Create LoginWindow.
+            </summary>
+            <param name="settings"></param>
+            <param name="intBase"></param>
+        </member>
+        <member name="P:BimPlus.Client.Integration.Login.LoginWindow.LoginSettings">
+            <summary>
+            The login settings.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.Integration.Login.LoginWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:BimPlus.Client.Integration.Login.DefaultLogin">
+            <summary>
+            Default login with internal class LoginWindow.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.Integration.Login.DefaultLogin.ShowLoginDialog(BimPlus.Client.Integration.Login.LoginSettings,BimPlus.Client.Integration.IntegrationBase)">
+            <summary>
+            Show the login dialog.
+            </summary>
+            <param name="loginSettings"></param>
+            <param name="integrationBase"></param>
+            <returns></returns>
+        </member>
+        <member name="P:BimPlus.Client.Integration.Login.DefaultLogin.LoginSettings">
+            <summary>
+            The login settings.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Client.Integration.Login.ILoginWindow">
+            <summary>
+            Interface for external login window.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.Integration.Login.ILoginWindow.ShowLoginDialog(BimPlus.Client.Integration.Login.LoginSettings,BimPlus.Client.Integration.IntegrationBase)">
+            <summary>
+            Show the login dialog.
+            </summary>
+            <param name="loginSettings"></param>
+            <param name="integrationBase"></param>
+            <returns>True, if connected</returns>
+        </member>
+        <member name="P:BimPlus.Client.Integration.Login.ILoginWindow.LoginSettings">
+            <summary>
+            The login settings.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Client.Integration.StringResources.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.Integration.StringResources.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.Integration.StringResources.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.Integration.StringResources.Resources.CancelLogin">
+            <summary>
+              Looks up a localized string similar to Cancel.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.Integration.StringResources.Resources.CreateAccount">
+            <summary>
+              Looks up a localized string similar to Not registered?.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.Integration.StringResources.Resources.EmptyEMail">
+            <summary>
+              Looks up a localized string similar to E-mail.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.Integration.StringResources.Resources.EmptyPassword">
+            <summary>
+              Looks up a localized string similar to Password.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.Integration.StringResources.Resources.ForgotPassword">
+            <summary>
+              Looks up a localized string similar to Forgot your password?.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.Integration.StringResources.Resources.GetFreeTrialTeamLink">
+            <summary>
+              Looks up a localized string similar to Click here to get assigned to a free trial team..
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.Integration.StringResources.Resources.Login">
+            <summary>
+              Looks up a localized string similar to Login.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.Integration.StringResources.Resources.LoginAccountMessage">
+            <summary>
+              Looks up a localized string similar to You can use also your Allplan Connect account..
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.Integration.StringResources.Resources.LoginFailed">
+             <summary>
+               Looks up a localized string similar to Login failed
+            Please try again..
+             </summary>
+        </member>
+        <member name="P:BimPlus.Client.Integration.StringResources.Resources.MissingTeamMessage">
+            <summary>
+              Looks up a localized string similar to No team found you are assigned to..
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.Integration.StringResources.Resources.RememberMe">
+            <summary>
+              Looks up a localized string similar to Keep me logged in.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.Integration.StringResources.Resources.RememberMeAllplan">
+            <summary>
+              Looks up a localized string similar to Keep me logged in.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.Integration.StringResources.Resources.SavePassword">
+            <summary>
+              Looks up a localized string similar to Save password.
+            </summary>
+        </member>
+        <member name="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper">
+            <summary>
+            GeneratedInternalTypeHelper
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateInstance(System.Type,System.Globalization.CultureInfo)">
+            <summary>
+            CreateInstance
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.GetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            GetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            SetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateDelegate(System.Type,System.Object,System.String)">
+            <summary>
+            CreateDelegate
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.AddEventHandler(System.Reflection.EventInfo,System.Object,System.Delegate)">
+            <summary>
+            AddEventHandler
+            </summary>
+        </member>
+    </members>
+</doc>
