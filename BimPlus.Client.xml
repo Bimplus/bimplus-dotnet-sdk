@@ -192,6 +192,11 @@
             Filter node toggled event.
             </summary>
         </member>
+        <member name="E:BimPlus.Client.EventHandlerCore.ExportStarted">
+            <summary>
+            Export started event.
+            </summary>
+        </member>
         <member name="E:BimPlus.Client.EventHandlerCore.KeyBoardEventRaised">
             <summary>
             Key event raised.
@@ -453,6 +458,13 @@
         <member name="M:BimPlus.Client.EventHandlerCore.OnDataLoaded(System.Object,BimPlus.Client.BimPlusEventArgs)">
             <summary>
             Event handler for DataLoaded event.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:BimPlus.Client.EventHandlerCore.OnExportStarted(System.Object,BimPlus.Client.BimPlusEventArgs)">
+            <summary>
+            Event handler for ExportStarted event.
             </summary>
             <param name="sender"></param>
             <param name="e"></param>

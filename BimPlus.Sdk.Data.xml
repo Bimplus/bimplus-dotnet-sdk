@@ -10768,6 +10768,61 @@
             Property ObjectID (Parent's derived unit object ID. For internal purposes only).
             </summary>
         </member>
+        <member name="T:BimPlus.Sdk.Data.Content.DtoCatalog">
+            <summary>
+            DtoCatalog class.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Content.DtoCatalog.Norms">
+            <summary>
+            Property Norms.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Content.DtoCatalog.Countries">
+            <summary>
+            Property Countries.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Content.DtoCatalog.CatalogType">
+            <summary>
+            Property CatalogType.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.Data.Content.DtoCatalog.#ctor">
+            <summary>
+            DtoCatalog constructor.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.Content.DtoCatalogItemProperties">
+            <summary>
+            DtoCatalogItemProperties class.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Content.DtoCatalogItemProperties.FreeAttributeId">
+            <summary>
+            Property FreeAttributeId.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Content.DtoCatalogItemProperties.FreeAttributeValue">
+            <summary>
+            Property FreeAttributeValue.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.Content.DtoCatalogItem">
+            <summary>
+            DtoCatalogItem class.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Content.DtoCatalogItem.CatalogId">
+            <summary>
+            Property CatalogId.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Content.DtoCatalogItem.CatalogItemProperties">
+            <summary>
+            Property CatalogItemProperties.
+            </summary>
+        </member>
         <member name="T:BimPlus.Sdk.Data.CSG.CsgGeoType">
             <summary>
             CsgGeoType enum.
@@ -13712,6 +13767,11 @@
             Property add.
             </summary>
         </member>
+        <member name="T:BimPlus.Sdk.Data.TenantDto.ObjectType">
+            <summary>
+            ObjectType enum.
+            </summary>
+        </member>
         <member name="F:BimPlus.Sdk.Data.TenantDto.ObjectType.ModelType">
             <summary>
             Model type.
@@ -15847,6 +15907,11 @@
             Property Rights.
             </summary>
         </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoAttachment.Thumbnail">
+            <summary>
+            Property Thumbnail.
+            </summary>
+        </member>
         <member name="M:BimPlus.Sdk.Data.TenantDto.DtoAttachment.#ctor">
             <summary>
             Constructor.
@@ -16129,6 +16194,11 @@
         <member name="P:BimPlus.Sdk.Data.TenantDto.DtoDivision.ModelType">
             <summary>
             Model Type.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoDivision.Thumbnail">
+            <summary>
+            Property Thumbnail.
             </summary>
         </member>
         <member name="T:BimPlus.Sdk.Data.TenantDto.DtoDivisionMove">
@@ -17099,7 +17169,11 @@
             Property ClippingPlane. Specifies scene clipping plane.
             </summary>
         </member>
-        <!-- Ungültiger XML-Kommentar wurde für den Member "P:BimPlus.Sdk.Data.TenantDto.DtoScene.ClippingPlanes" ignoriert -->
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoScene.ClippingPlanes">
+            <summary>
+            Property ClippingPlanes. Specifies scene clipping planes.
+            </summary>
+        </member>
         <member name="P:BimPlus.Sdk.Data.TenantDto.DtoScene.RotationCenter">
             <summary>
             Property RotationCenter. (x,y,z coordinate)

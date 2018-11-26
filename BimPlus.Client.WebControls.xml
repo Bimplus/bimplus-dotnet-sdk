@@ -166,6 +166,18 @@
             ExportManager
             </summary>
         </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.ExportManager.#ctor(BimPlus.Client.Integration.IntegrationBase)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="intBase"></param>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.ExportManager.NavigateToControl(System.Guid)">
+            <summary>
+            Show ExportManager view.
+            </summary>
+            <param name="projectId"></param>
+        </member>
         <member name="M:BimPlus.Client.WebControls.WPF.ExportManager.InitializeComponent">
             <summary>
             InitializeComponent
