@@ -524,6 +524,13 @@
             <param name="id">Id for actual IFC element</param>
             <returns>IFC element from element list</returns>
         </member>
+        <member name="M:BimPlus.Sdk.IfcData.IfcStaticData.GetIfcElementRepresentation(System.Guid)">
+            <summary>
+            Get IFC element from element list for RepresentIfcId
+            </summary>
+            <param name="reprid">RepresentIfcId for actual IFC element</param>
+            <returns>IFC element from element list</returns>
+        </member>
         <member name="M:BimPlus.Sdk.IfcData.IfcStaticData.GetIfcElement(System.String)">
             <summary>
             Get IFC element from element list by known element name 
