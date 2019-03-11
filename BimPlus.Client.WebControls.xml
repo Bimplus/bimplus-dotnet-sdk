@@ -30,6 +30,11 @@
             Raised after recreate WebView.
             </summary>
         </member>
+        <member name="E:BimPlus.Client.WebControls.WPF.BimPlusUserControl.ProcessJsMessageHandler">
+            <summary>
+            Process external event handler.
+            </summary>
+        </member>
         <member name="P:BimPlus.Client.WebControls.WPF.BimPlusUserControl.EnableCache">
             <summary>
             Enable web engine cache.
@@ -96,7 +101,7 @@
             Abstract  Dispose method. 
             </summary>
         </member>
-        <member name="M:BimPlus.Client.WebControls.WPF.BimPlusUserControl.InitializeWebControl(EO.WebBrowser.Wpf.WebControl,System.Boolean)">
+        <member name="M:BimPlus.Client.WebControls.WPF.BimPlusUserControl.InitializeWebControl(EO.Wpf.WebControl,System.Boolean)">
             <summary>
             Initialize events.
             </summary>
@@ -279,7 +284,7 @@
             Keybordhandler for EO WebView.
             </summary>
         </member>
-        <member name="M:BimPlus.Client.WebControls.WPF.KeyBoardHandler.#ctor(BimPlus.Client.EventHandlerCore,EO.WebBrowser.Wpf.WebControl)">
+        <member name="M:BimPlus.Client.WebControls.WPF.KeyBoardHandler.#ctor(BimPlus.Client.EventHandlerCore,EO.Wpf.WebControl)">
             <summary>
             Create the src/BimPlus.ClientIntegration/BimPlus.Client.Integration/BimPlus.Client.Integration.csproj.
             </summary>

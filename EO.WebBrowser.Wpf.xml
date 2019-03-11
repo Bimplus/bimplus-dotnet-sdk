@@ -4,22 +4,17 @@
     <name>EO.WebBrowser.Wpf</name>
   </assembly>
   <members>
-    <member name="T:EO.WebBrowser.Wpf.WebView">
+    <member name="T:EO.Wpf.WebViewHost">
       <summary>
-            An alias for <see cref="T:EO.WebBrowser.WebView">EO.WebBrowser.WebView</see>.
+            Provides the base class for a control that hosts a <see cref="T:EO.Wpf.WebView" />.
             </summary>
     </member>
-    <member name="T:EO.WebBrowser.Wpf.WebControl">
+    <member name="F:EO.Wpf.WebViewHost.AutoProcessCmdKeysProperty">
       <summary>
-            A WPF control that provides a thin wrapper to the <see cref="T:EO.WebBrowser.WebView" /> class.
+            Identifies the <see cref="P:EO.Wpf.WebViewHost.AutoProcessCmdKeys" /> dependency property.
             </summary>
     </member>
-    <member name="F:EO.WebBrowser.Wpf.WebControl.AutoProcessCmdKeysProperty">
-      <summary>
-            Identifies the <see cref="P:EO.WebBrowser.Wpf.WebControl.AutoProcessCmdKeys" /> dependency property.
-            </summary>
-    </member>
-    <member name="P:EO.WebBrowser.Wpf.WebControl.AutoProcessCmdKeys">
+    <member name="P:EO.Wpf.WebViewHost.AutoProcessCmdKeys">
       <summary>
             Gets or sets whether to automatically process shortcut keys.
             </summary>
@@ -30,9 +25,34 @@
             wish to handle certain shortcut keys).
             </remarks>
     </member>
-    <member name="P:EO.WebBrowser.Wpf.WebControl.WebView">
+    <member name="P:EO.Wpf.WebViewHost.IsReady">
       <summary>
-            Gets or sets the associated <see cref="P:EO.WebBrowser.Wpf.WebControl.WebView" /> object.
+            Gets a value indicating whether the underlying <see cref="T:EO.WebBrowser.WebView" /> is ready.
+            </summary>
+    </member>
+    <member name="E:EO.Wpf.WebViewHost.IsReadyChanged">
+      <summary>
+            Occurs when <see cref="P:EO.Wpf.WebViewHost.IsReady" /> is changed.
+            </summary>
+    </member>
+    <member name="M:EO.Wpf.WebViewHost.Dispose">
+      <summary>
+            Destroy the <see cref="T:EO.Wpf.WebControl" /> and freeup resources used by it.
+            </summary>
+    </member>
+    <member name="T:EO.Wpf.WebView">
+      <summary>
+            An alias for <see cref="T:EO.WebBrowser.WebView">EO.WebBrowser.WebView</see>.
+            </summary>
+    </member>
+    <member name="T:EO.Wpf.WebControl">
+      <summary>
+            A WPF control that provides a thin wrapper to the <see cref="T:EO.WebBrowser.WebView" /> class.
+            </summary>
+    </member>
+    <member name="P:EO.Wpf.WebControl.WebView">
+      <summary>
+            Gets or sets the associated <see cref="T:EO.WebBrowser.WebView" /> object.
             </summary>
     </member>
     <member name="T:EO.WebBrowser.Wpf.Properties.Resources">

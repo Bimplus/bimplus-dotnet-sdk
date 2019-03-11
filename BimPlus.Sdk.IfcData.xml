@@ -4,24 +4,6 @@
         <name>BimPlus.Sdk.IfcData</name>
     </assembly>
     <members>
-        <member name="T:BimPlus.Sdk.IfcData.DbRightsAndRolePropertyAttribute">
-            <summary>
-            DbPropertyAttribute class.
-            Custom Attribute to mark Properties, how to handle this property in client.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.IfcData.DbRightsAndRolePropertyAttribute.NameRights">
-            Property NameRightsandRoles.
-        </member>
-        <member name="M:BimPlus.Sdk.IfcData.DbRightsAndRolePropertyAttribute.#ctor">
-            Standard constructor.
-        </member>
-        <member name="M:BimPlus.Sdk.IfcData.DbRightsAndRolePropertyAttribute.#ctor(System.String,System.String)">
-            Constructor with parameter freeAttribId.
-        </member>
-        <member name="M:BimPlus.Sdk.IfcData.DbRightsAndRolePropertyAttribute.Id">
-            Return FreeAttribId as Guid.
-        </member>
         <member name="T:BimPlus.Sdk.IfcData.DbLayer">
             <summary>
             DbLayer should be identical to /v2/element-types/disciplines

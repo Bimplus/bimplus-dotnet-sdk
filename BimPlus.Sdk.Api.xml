@@ -4,6 +4,31 @@
         <name>BimPlus.Sdk.Api</name>
     </assembly>
     <members>
+        <member name="T:BimPlus.Sdk.Api.Catalogs">
+            <summary>
+            Content Catalogs Controller
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Api.Catalogs.BaseContentType">
+            <summary>
+            BaseContentType
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Api.Catalogs.BaseContentType.Norm">
+            Norm
+        </member>
+        <member name="F:BimPlus.Sdk.Api.Catalogs.BaseContentType.Country">
+            Country
+        </member>
+        <member name="F:BimPlus.Sdk.Api.Catalogs.BaseContentType.Type">
+            CatalogType
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Catalogs.#ctor(BimPlus.Sdk.Api.Core)">
+            <summary>
+            Catalogs
+            </summary>
+            <param name="apiCore"></param>
+        </member>
         <member name="M:BimPlus.Sdk.Api.Catalogs.GetContent(BimPlus.Sdk.Api.Catalogs.BaseContentType)">
             <summary>
             read all existing BaseContentTypes
@@ -30,7 +55,10 @@
         <member name="M:BimPlus.Sdk.Api.Catalogs.GetAll(System.String)">
             <summary>
             Get all Content Catalogs
+            Example for filters
+            Type=Material
             </summary>
+            <param name="filter">valid filter items are BaseContentTypes 'Type', 'Norm' and 'Country' /n</param>
             <returns></returns>
         </member>
         <member name="M:BimPlus.Sdk.Api.Catalogs.Get(System.Guid)">
@@ -347,6 +375,11 @@
         <member name="P:BimPlus.Sdk.Api.Core.GeometryTemplate">
             <summary>
                 Wrap GeometryTemplates
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Api.Core.Catalogs">
+            <summary>
+            Get catalogs.
             </summary>
         </member>
         <member name="P:BimPlus.Sdk.Api.Core.MachineId">
@@ -1422,6 +1455,23 @@
             <param name="selectionId"></param>
             <returns></returns>
         </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Objects.CreateSelection``1(System.Guid,``0)">
+            <summary>
+            Create SelectionObject
+            'SelectionId' can now used for further DtObjects calls.
+            If it's no longer used by client it should be deleted with function 'DeleteSelection'
+            </summary>
+            <param name="projectId"></param>
+            <param name="objects">can be List of Guids or List of RevisionElement</param>
+            <returns>SelectionId</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Objects.DeleteSelection(System.Guid)">
+            <summary>
+            Delete Selection
+            </summary>
+            <param name="selectionId"></param>
+            <returns></returns>
+        </member>
         <member name="M:BimPlus.Sdk.Api.Wrapper.Objects.GetExportedObjects(System.Guid)">
             <summary>
             Get selected Objects from ExportObjectsProvider
@@ -1733,6 +1783,12 @@
             Put a DtoStructure.
             </summary>
             <param name="structure"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Structures.TriggerNotification(System.Guid)">
+            <summary>
+            Trigger Notification
+            </summary>
+            <param name="structureId"></param>
         </member>
         <member name="M:BimPlus.Sdk.Api.Wrapper.Structures.DeleteStructure(System.Guid)">
             <summary>

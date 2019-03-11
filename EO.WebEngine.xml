@@ -9,11 +9,6 @@
             Contains options for a WebView instance.
             </summary>
     </member>
-    <member name="M:EO.WebEngine.BrowserOptions.Clone">
-      <summary>
-            To create a copy of this <see cref="T:EO.WebEngine.BrowserOptions" /> class.
-            </summary>
-    </member>
     <member name="P:EO.WebEngine.BrowserOptions.DefaultEncoding">
       <summary>
             Gets or sets the default page encoding.
@@ -43,14 +38,6 @@
             If you do not set this property, default value <b>true</b> is used.
             </remarks>
     </member>
-    <member name="P:EO.WebEngine.BrowserOptions.AllowJavaScriptOpenWindow">
-      <summary>
-            Gets or sets a value indicating whether opening a new window from JavaScript should be allowed.
-            </summary>
-      <remarks>
-            If you do not set this property, the default value <b>true</b> is used.
-            </remarks>
-    </member>
     <member name="P:EO.WebEngine.BrowserOptions.AllowJavaScriptCloseWindow">
       <summary>
             Gets or sets a value indicating whether using JavaScript to close a window that was not opened with JavaScript should be allowed.
@@ -71,6 +58,16 @@
             </summary>
       <remarks>
             If you do not set this property, the default value <b>false</b> is used.
+            </remarks>
+    </member>
+    <member name="P:EO.WebEngine.BrowserOptions.AllowJavaScriptDOMPaste">
+      <summary>
+            Gets or sets a value indicating whether pasting from clipboard is allowed.
+            </summary>
+      <remarks>
+            If you do not set this property, the default value <b>false</b> is used. In order to use DOM
+            paste, you must set both this property and <see cref="P:EO.WebEngine.BrowserOptions.AllowJavaScriptAccessClipboard" /> to
+            true.
             </remarks>
     </member>
     <member name="P:EO.WebEngine.BrowserOptions.AllowPlugins">
@@ -128,6 +125,203 @@
       <remarks>
             If you do not set this value, default value <b>true</b> is used.
             </remarks>
+    </member>
+    <member name="M:EO.WebEngine.BrowserOptions.Clone">
+      <summary>
+            To create a copy of this <see cref="T:EO.WebEngine.BrowserOptions" /> class.
+            </summary>
+    </member>
+    <member name="T:EO.WebEngine.Cookie">
+      <summary>
+            Represents a HTTP cookie.
+            </summary>
+    </member>
+    <member name="M:EO.WebEngine.Cookie.#ctor(System.String)">
+      <summary>
+            Initializes a new instance of the <see cref="T:EO.WebEngine.Cookie" /> class.
+            </summary>
+      <param name="name">The name of the cookie.</param>
+    </member>
+    <member name="M:EO.WebEngine.Cookie.#ctor(System.String,System.String)">
+      <summary>
+            Initializes a new instance of the <see cref="T:EO.WebEngine.Cookie" /> class.
+            </summary>
+      <param name="name">The name of the cookie.</param>
+      <param name="value">The value of the cookie.</param>
+    </member>
+    <member name="P:EO.WebEngine.Cookie.Domain">
+      <summary>
+            Gets or sets the domain of the cookie.
+            </summary>
+    </member>
+    <member name="P:EO.WebEngine.Cookie.Expires">
+      <summary>
+            Gets or sets the expiration date of the cookie.
+            </summary>
+    </member>
+    <member name="P:EO.WebEngine.Cookie.HasKeys">
+      <summary>
+            Gets a value indicating whether a cookie has subkeys.
+            </summary>
+    </member>
+    <member name="P:EO.WebEngine.Cookie.HttpOnly">
+      <summary>
+            Gets or sets a value that specifies whether a cookie is accessible by client-side script.
+            </summary>
+      <remarks>
+        <b>true</b> if the cookie has the HttpOnly attribute and cannot be accessed through a client-side script; otherwise, <b>false</b>. The default is <b>false</b>.
+            </remarks>
+    </member>
+    <member name="P:EO.WebEngine.Cookie.Item(System.String)">
+      <summary>
+            Gets a shortcut to the HttpCookie.Values property.
+            </summary>
+      <param name="key">The key of the value.</param>
+    </member>
+    <member name="P:EO.WebEngine.Cookie.Name">
+      <summary>
+            Gets or sets the name of a cookie.
+            </summary>
+    </member>
+    <member name="P:EO.WebEngine.Cookie.Path">
+      <summary>
+            Gets or sets the virtual path to transmit with the current cookie.
+            </summary>
+    </member>
+    <member name="P:EO.WebEngine.Cookie.Secure">
+      <summary>
+            Gets or sets a value indicating whether to transmit the cookie using Secure Sockets Layer (SSL)--that is, over HTTPS only.
+            </summary>
+    </member>
+    <member name="P:EO.WebEngine.Cookie.Value">
+      <summary>
+            Gets or sets an individual cookie value.
+            </summary>
+    </member>
+    <member name="P:EO.WebEngine.Cookie.Values">
+      <summary>
+            Gets a collection of key/value pairs that are contained within a single cookie object.
+            </summary>
+    </member>
+    <member name="T:EO.WebEngine.CookieCollection">
+      <summary>
+            Represents a collection of <see cref="T:EO.WebEngine.Cookie" /> objects.
+            </summary>
+    </member>
+    <member name="M:EO.WebEngine.CookieCollection.Add(EO.WebEngine.Cookie)">
+      <summary>
+            Adds a cookie into the collection.
+            </summary>
+      <param name="cookie">The cookie to be added to the collection.</param>
+    </member>
+    <member name="M:EO.WebEngine.CookieCollection.Clear">
+      <summary>
+            Clears the collection.
+            </summary>
+    </member>
+    <member name="M:EO.WebEngine.CookieCollection.CopyTo(System.Array,System.Int32)">
+      <summary>
+            Copies members of the cookie collection to an Array beginning at the specified index of the array.
+            </summary>
+      <param name="array">The destination array.</param>
+      <param name="index">The index of the destination array where copying starts.</param>
+    </member>
+    <member name="M:EO.WebEngine.CookieCollection.Get(System.Int32)">
+      <summary>
+            Returns the HttpCookie item with the specified index from the cookie collection.
+            </summary>
+      <param name="index">The index of the cookie to return from the collection.</param>
+    </member>
+    <member name="M:EO.WebEngine.CookieCollection.Get(System.String)">
+      <summary>
+            Returns the cookie with the specified name from the cookie collection.
+            </summary>
+      <param name="name">The name of the cookie to retrieve from the collection.</param>
+    </member>
+    <member name="M:EO.WebEngine.CookieCollection.Remove(System.String)">
+      <summary>
+            Removes the cookie with the specified name from the collection.
+            </summary>
+      <param name="name">he name of the cookie to remove from the collection.</param>
+    </member>
+    <member name="P:EO.WebEngine.CookieCollection.AllKeys">
+      <summary>
+            Gets a string array containing all the keys (cookie names) in the cookie collection.
+            </summary>
+    </member>
+    <member name="P:EO.WebEngine.CookieCollection.Item(System.String)">
+      <summary>
+            Gets the cookie with the specified name from the cookie collection.
+            </summary>
+      <param name="name">Name of cookie to retrieve.</param>
+    </member>
+    <member name="P:EO.WebEngine.CookieCollection.Item(System.Int32)">
+      <summary>
+            Gets the cookie with the specified numerical index from the cookie collection.
+            </summary>
+      <param name="index">The index of the cookie to retrieve from the collection.</param>
+    </member>
+    <member name="T:EO.WebEngine.CookieManager">
+      <summary>
+            Provides interface to manage cookies.
+            </summary>
+      <remarks>
+        <para>
+            The following code demonstrates how to set a new cookie for "www.google.com":
+            </para>
+        <code lang="C#">
+            //Create a new cookie
+            EO.WebEngine.Cookie cookie = new EO.WebEngine.Cookie("test", "value");
+            
+            //Add the new cookie for www.google.com
+            webView.Engine.CookieManager.SetCookie("http://www.google.com", cookie);
+            </code>
+        <code lang="VB">
+            'Create a new cookie
+            Dim cookie As EO.WebEngine.Cookie = New EO.WebEngine.Cookie("test", "value")
+            
+            'Add the new cookie for www.google.com
+            webView.Engine.CookieManager.SetCookie("http://www.google.com", cookie)
+            </code>
+        <para>
+            The <i>webView</i> variable in the above is a <b>WebView</b> object that has
+            already been created (otherwise its Engine property may not be valid).
+            </para>
+      </remarks>
+    </member>
+    <member name="M:EO.WebEngine.CookieManager.GetCookies(System.String,System.Boolean)">
+      <summary>
+            Get all cookies that matches a given Url.
+            </summary>
+      <param name="url">The Url that is used to filter the cookie. Use <i>null</i> to return all cookies.</param>
+      <param name="includeHttpOnly">Whether to include HTTP only cookies.</param>
+    </member>
+    <member name="M:EO.WebEngine.CookieManager.SetCookie(System.String,EO.WebEngine.Cookie)">
+      <summary>
+            Adds a new cookie to the cookie store.
+            </summary>
+      <param name="url">The Url the cookie is associated with. The value of the <i>url</i>
+            is used to derive the cookie's <see cref="P:EO.WebEngine.Cookie.Domain" /> and <see cref="P:EO.WebEngine.Cookie.Path" />
+            if they are not specified in the <see cref="T:EO.WebEngine.Cookie" /> object.
+            </param>
+      <param name="cookie">The cookie to be added.</param>
+    </member>
+    <member name="M:EO.WebEngine.CookieManager.DeleteCookies(System.String,System.String)">
+      <summary>
+            Deletes a cookie from the cookie store.
+            </summary>
+      <param name="url">The Url that is used to filter the cookies.</param>
+      <param name="name">The name of the cookie to be deleted.</param>
+      <remarks>
+            Both <i>url</i> and <i>name</i> can be null. If <i>name</i>
+            is null, then all cookies that matches the domain and path of the <i>url</i>
+            argument will be deleted. If both are null, then all cookies will be deleted.
+            </remarks>
+    </member>
+    <member name="M:EO.WebEngine.CookieManager.FlushCookieStore">
+      <summary>
+            Flush the in memory cache of the cookie store.
+            </summary>
     </member>
     <member name="T:EO.WebEngine.CursorType">
       <summary>
@@ -357,9 +551,97 @@
       <param name="sender">The source of the event.</param>
       <param name="e">Additional event data.</param>
     </member>
+    <member name="T:EO.WebEngine.CacheFolderCleanUpPolicy">
+      <summary>
+            Specifies the policy for cleaning up cache folder.
+            </summary>
+    </member>
+    <member name="F:EO.WebEngine.CacheFolderCleanUpPolicy.OlderVersionOnly">
+      <summary>
+            Only delete cache folders created by a version older than the current version.
+            </summary>
+    </member>
+    <member name="F:EO.WebEngine.CacheFolderCleanUpPolicy.OlderAndCurrentVersion">
+      <summary>
+            Only delete cache folders created by the same version or a version older than the current version.
+            </summary>
+    </member>
+    <member name="F:EO.WebEngine.CacheFolderCleanUpPolicy.AllVersions">
+      <summary>
+            Delete cache folder created by any version of EO.WebEngine.
+            </summary>
+    </member>
     <member name="T:EO.WebEngine.Engine">
       <summary>
             Represents a browser engine.
+            </summary>
+    </member>
+    <member name="M:EO.WebEngine.Engine.GetAll">
+      <summary>
+            Get all <see cref="T:EO.WebEngine.Engine" /> objects in the current process.
+            </summary>
+    </member>
+    <member name="P:EO.WebEngine.Engine.Default">
+      <summary>
+            Gets the default engine.
+            </summary>
+    </member>
+    <member name="P:EO.WebEngine.Engine.IsDefault">
+      <summary>
+            Gets a value indicating whether this <see cref="T:EO.WebEngine.Engine" /> is the default engine.
+            </summary>
+    </member>
+    <member name="P:EO.WebEngine.Engine.AllowRestart">
+      <summary>
+            Gets or sets a value specifying whether the engine can be restarted.
+            </summary>
+    </member>
+    <member name="P:EO.WebEngine.Engine.ID">
+      <summary>
+            Gets the unique engine ID.
+            </summary>
+    </member>
+    <member name="P:EO.WebEngine.Engine.Name">
+      <summary>
+            Gets the engine name.
+            </summary>
+    </member>
+    <member name="P:EO.WebEngine.Engine.Options">
+      <summary>
+            Gets the options for this engine.
+            </summary>
+    </member>
+    <member name="P:EO.WebEngine.Engine.State">
+      <summary>
+            Gets the engine state.
+            </summary>
+    </member>
+    <member name="P:EO.WebEngine.Engine.Version">
+      <summary>
+            Gets the version of the Chromium browser engine.
+            </summary>
+    </member>
+    <member name="P:EO.WebEngine.Engine.CachePath">
+      <summary>
+            Gets the engine cache path.
+            </summary>
+    </member>
+    <member name="P:EO.WebEngine.Engine.Data">
+      <summary>
+            Gets or sets custom engine data.
+            </summary>
+      <remarks>
+            This property corresponds to <see cref="P:EO.WebEngine.EngineEventArgs.Data">EngineEventArgs.Data</see>.
+            </remarks>
+    </member>
+    <member name="E:EO.WebEngine.Engine.Started">
+      <summary>
+            Occurs when the engine has been started.
+            </summary>
+    </member>
+    <member name="E:EO.WebEngine.Engine.Stopped">
+      <summary>
+            Occurs when the engine has been stopped.
             </summary>
     </member>
     <member name="M:EO.WebEngine.Engine.Create(System.String)">
@@ -396,9 +678,19 @@
             </summary>
       <param name="id">The unique engine ID.</param>
     </member>
+    <member name="M:EO.WebEngine.Engine.Start(System.Security.Principal.WindowsIdentity)">
+      <summary>
+            Starts the engine using a specific user for Windows authentication.
+            </summary>
+      <param name="user">The specific user the engine should use to authenticate with the server.</param>
+      <remarks>
+            The vast majority of the engine code will always run under the process user account. The user provided
+            here is only used for Windows authentication purpose.
+            </remarks>
+    </member>
     <member name="M:EO.WebEngine.Engine.Start">
       <summary>
-            Starts the engine.
+            Starts the engine using the user context of the current process.
             </summary>
     </member>
     <member name="M:EO.WebEngine.Engine.Stop(System.Boolean)">
@@ -428,52 +720,35 @@
             </para>
       </remarks>
     </member>
-    <member name="P:EO.WebEngine.Engine.Default">
+    <member name="M:EO.WebEngine.Engine.CleanUpCacheFolders(System.String,EO.WebEngine.CacheFolderCleanUpPolicy)">
       <summary>
-            Gets the default engine.
+            Clean up cache folders.
             </summary>
-    </member>
-    <member name="P:EO.WebEngine.Engine.AllowRestart">
-      <summary>
-            Gets or sets a value specifying whether the engine can be restarted.
-            </summary>
-    </member>
-    <member name="P:EO.WebEngine.Engine.ID">
-      <summary>
-            Gets the unique engine ID.
-            </summary>
-    </member>
-    <member name="P:EO.WebEngine.Engine.Name">
-      <summary>
-            Gets the engine name.
-            </summary>
-    </member>
-    <member name="P:EO.WebEngine.Engine.Options">
-      <summary>
-            Gets the options for this engine.
-            </summary>
-    </member>
-    <member name="P:EO.WebEngine.Engine.State">
-      <summary>
-            Gets the engine state.
-            </summary>
-    </member>
-    <member name="P:EO.WebEngine.Engine.Data">
-      <summary>
-            Gets or sets custom engine data.
-            </summary>
+      <param name="cacheFolder">The cache folder to be cleaned up. Use <i>null</i>
+            to specify the default location.</param>
+      <param name="policy">Clean up policy.</param>
       <remarks>
-            This property corresponds to <see cref="P:EO.WebEngine.EngineEventArgs.Data">EngineEventArgs.Data</see>.
+            The browser engine will automatically create a cache folder if 
+            <see cref="P:EO.WebEngine.EngineOptions.CachePath" /> is not set. Because the 
+            automatically created cache folder include version number, multiple
+            cache folders can accumulate and consume extra disk space
+            unnecessarily. Call this method during application start up
+            to automatically delete those folders.
             </remarks>
     </member>
-    <member name="E:EO.WebEngine.Engine.Started">
+    <member name="M:EO.WebEngine.Engine.CleanUpCacheFolders(EO.WebEngine.CacheFolderCleanUpPolicy)">
       <summary>
-            Occurs when the engine has been started.
+            Clean up cache folders.
             </summary>
+      <param name="policy">Clean up policy.</param>
+      <remarks>
+            This method calls <see cref="M:EO.WebEngine.Engine.CleanUpCacheFolders(System.String,EO.WebEngine.CacheFolderCleanUpPolicy)" />
+            with <i>cacheFolder</i> as <i>null</i>. 
+            </remarks>
     </member>
-    <member name="E:EO.WebEngine.Engine.Stopped">
+    <member name="P:EO.WebEngine.Engine.CookieManager">
       <summary>
-            Occurs when the engine has been stopped.
+            Gets the <see cref="T:EO.WebEngine.CookieManager" /> for this <see cref="T:EO.WebEngine.Engine" />.
             </summary>
     </member>
     <member name="T:EO.WebEngine.EngineOptions">
@@ -481,51 +756,14 @@
             Contains options for a browser engine.
             </summary>
     </member>
-    <member name="M:EO.WebEngine.EngineOptions.#ctor">
-      <summary>
-            Creates a new instance of the <see cref="T:EO.WebEngine.EngineOptions" /> object.
-            </summary>
-    </member>
-    <member name="M:EO.WebEngine.EngineOptions.RegisterCustomSchemes(System.String[])">
-      <summary>
-            Registers one or more protocoal schemes.
-            </summary>
-      <param name="schemes">One or more custom protocol schemes.</param>
-      <remarks>
-            See <a href="WebBrowser/Advanced/resource_handler.html">custom resource handler</a> for more information on how to use this method.
-            </remarks>
-    </member>
-    <member name="M:EO.WebEngine.EngineOptions.SetDefaultBrowserOptions(EO.WebEngine.BrowserOptions)">
-      <summary>
-            Sets the default options for all WebView objects created after this call.
-            </summary>
-      <param name="options">The <see cref="T:EO.WebEngine.BrowserOptions" /> object.</param>
-      <remarks>
-            This function does not affect WebView objects created before this function is called.
-            </remarks>
-    </member>
-    <member name="M:EO.WebEngine.EngineOptions.AllowProprietaryMediaFormats">
-      <summary>
-            Enable proprietary media formats support.
-            </summary>
-      <remarks>
-            By default supports for certain media formats (particularly MP4 video
-            and MP3 audio) are disabled because these formats are covered by patents. 
-            If you wish to use these formats, you must check whether you are in
-            compliance with the license terms of the specific patent owners.
-            See <a href="WebBrowser/advanced/html5.html#codecs">here</a> for more details.
-            Once you are in compliance, you can call this method to enable supports
-            to those media formats.
-            </remarks>
-    </member>
-    <member name="M:EO.WebEngine.EngineOptions.Clone">
-      <summary>
-            Make a copy of this <see cref="T:EO.WebEngine.EngineOptions" /> class.
-            </summary>
-    </member>
     <member name="P:EO.WebEngine.EngineOptions.Default">
       <summary>
             Gets the default engine options.
+            </summary>
+    </member>
+    <member name="M:EO.WebEngine.EngineOptions.#ctor">
+      <summary>
+            Creates a new instance of the <see cref="T:EO.WebEngine.EngineOptions" /> object.
             </summary>
     </member>
     <member name="P:EO.WebEngine.EngineOptions.CachePath">
@@ -533,13 +771,30 @@
             Gets or sets the cache path.
             </summary>
       <remarks>
+        <para>
             This path is also used to store cookies.
-            </remarks>
+            </para>
+        <para>
+            If this property is terminated with "/" or "\", then this property is treated as
+            a folder. In that case a child folder will be automatically created in this folder
+            to store cache data. This is useful if you use multiple <see cref="T:EO.WebEngine.Engine" />
+            objects and do not wish to explicitly specify a different <see cref="P:EO.WebEngine.EngineOptions.CachePath" />
+            for each <see cref="T:EO.WebEngine.Engine" /> object.
+            </para>
+      </remarks>
     </member>
     <member name="P:EO.WebEngine.EngineOptions.RemoteDebugPort">
       <summary>
             Gets or sets the remote debug port.
             </summary>
+    </member>
+    <member name="P:EO.WebEngine.EngineOptions.RemoteDebugAnyAddress">
+      <summary>
+            Gets or sets whether the remote debug server should accept connection from any address.
+            </summary>
+      <remarks>
+            By default this property is false, which means only connection from localhost is accepted.
+            </remarks>
     </member>
     <member name="P:EO.WebEngine.EngineOptions.DisableGPU">
       <summary>
@@ -550,22 +805,6 @@
       <summary>
             Gets or sets a value indicating whether to automatically scan commonly used plugins.
             </summary>
-      <remarks>
-        <para>
-            By default, the browser engine automatically scans and loads plugins from
-            the following directories:
-            </para>
-        <list type="bullet">
-          <item>The same directory where EO.WebBrowser.dll is located;</item>
-          <item>If FireFox is installed, then scans FireFox's plugin directory;</item>
-          <item>Acrobat or Acrobat reader browser plugin directory;</item>
-          <item>QuickTime plugin directory;</item>
-          <item>Windows Media player plugin directory;</item>
-        </list>
-        <para>
-            Set this property to false to skip scaning these directories.
-            </para>
-      </remarks>
     </member>
     <member name="P:EO.WebEngine.EngineOptions.AdditionalPluginsDirs">
       <summary>
@@ -630,13 +869,105 @@
             Note that not all switches supported by Google Chrome browser are interpreted by the core
             browser engine. For example, switch "--enable-cloud-devices" enable cloud device for Google
             Chrome browser, however cloud device support is a part of Google Chrome browser, but not
-            a part of the core browser engine. As such this switch has no effect on EO.WebBrowser.
+            a part of the core browser engine. As such this switch has no effect on EO.WebEngine.
             </para>
       </remarks>
+    </member>
+    <member name="P:EO.WebEngine.EngineOptions.SpellCheckLanguages">
+      <summary>
+            Gets or sets languages used by the built-in spell checker.
+            </summary>
+      <remarks>
+            By default, the built-in spellchecker uses the system language. You can override
+            the language using this property. Multiple languages can be separated
+            by ",". For example, the following code enables spellchecking on English (U.S.) and
+            Spanish (Spain):
+            </remarks>
+      <code lang="C#">
+            EO.WebEngine.Engine.Default.Options.SpellCheckLanguages = "en-US,es-ES";
+            </code>
+      <code lang="VB">
+            EO.WebEngine.Engine.Default.Options.SpellCheckLanguages = "en-US,es-ES"
+            </code>
     </member>
     <member name="P:EO.WebEngine.EngineOptions.DisableSpellChecker">
       <summary>
             Gets or sets a value to whether disable the built-in spell checker.
+            </summary>
+    </member>
+    <member name="P:EO.WebEngine.EngineOptions.AlwaysShowOnScreenKeyboardOnTouch">
+      <summary>
+            Gets or sets a value indicating whether to always display on screen keyboard when an
+            editable field is touched regardless whether a physical keyboard is present.
+            </summary>
+      <remarks>
+            When an editable field is touched, the browser engine by default will check
+            if a physical keyboard or stylus device is present. It will display the on screen
+            keyboard only if such device does not exist. Setting this property to true to always
+            display the on screen keyboard even if such device exists.
+            </remarks>
+    </member>
+    <member name="P:EO.WebEngine.EngineOptions.BypassUserGestureCheck">
+      <summary>
+            Gets or sets a value indicating whether to bypass user gesture check.
+            </summary>
+      <remarks>
+            Certain HTML elements checks whether an "user gesture" is present before proceeding
+            on some actions. For example, a file input element would not display the file browsing
+            dialog unless it is triggered by a mouse click from the user. As such trying to
+            trigger the file browsing dialog programmatically (for example, by calling the file
+            input element's click event) would fail due to this check. Setting this property to
+            true to bypass this check.
+            </remarks>
+    </member>
+    <member name="P:EO.WebEngine.EngineOptions.SkipWaitForLayerActivation">
+      <summary>
+            Gets or sets a value indicating whether the render's main UI thread should wait
+            for the GPU layer tree to finish rasterizing the updated area when screen update 
+            occurs.
+            </summary>
+    </member>
+    <member name="P:EO.WebEngine.EngineOptions.DisableWMPointer">
+      <summary>
+            Gets or sets a value indicating whether to disable Windows WM_POINTERxxxx family
+            message processing on Windows 8 and newer.
+            </summary>
+    </member>
+    <member name="M:EO.WebEngine.EngineOptions.RegisterCustomSchemes(System.String[])">
+      <summary>
+            Registers one or more protocoal schemes.
+            </summary>
+      <param name="schemes">One or more custom protocol schemes.</param>
+      <remarks>
+            See <a href="WebBrowser/Advanced/resource_handler.html">custom resource handler</a> for more information on how to use this method.
+            </remarks>
+    </member>
+    <member name="M:EO.WebEngine.EngineOptions.SetDefaultBrowserOptions(EO.WebEngine.BrowserOptions)">
+      <summary>
+            Sets the default options for all WebView objects created after this call.
+            </summary>
+      <param name="options">The <see cref="T:EO.WebEngine.BrowserOptions" /> object.</param>
+      <remarks>
+            This function does not affect WebView objects created before this function is called.
+            </remarks>
+    </member>
+    <member name="M:EO.WebEngine.EngineOptions.AllowProprietaryMediaFormats">
+      <summary>
+            Enable proprietary media formats support.
+            </summary>
+      <remarks>
+            By default supports for certain media formats (particularly MP4 video
+            and MP3 audio) are disabled because these formats are covered by patents. 
+            If you wish to use these formats, you must check whether you are in
+            compliance with the license terms of the specific patent owners.
+            See <a href="WebBrowser/advanced/html5.html#codecs">here</a> for more details.
+            Once you are in compliance, you can call this method to enable supports
+            to those media formats.
+            </remarks>
+    </member>
+    <member name="M:EO.WebEngine.EngineOptions.Clone">
+      <summary>
+            Make a copy of this <see cref="T:EO.WebEngine.EngineOptions" /> class.
             </summary>
     </member>
   </members>

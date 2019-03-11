@@ -5895,6 +5895,11 @@
             Property ImportType.
             </summary>
         </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Revision.Revision.Release">
+            <summary>
+            Property Release.
+            </summary>
+        </member>
         <member name="T:BimPlus.Sdk.Data.DbCore.Road.CentralReserve">
             <summary>
             CentralReserve class.
@@ -6357,6 +6362,21 @@
             </summary>
         </member>
         <member name="P:BimPlus.Sdk.Data.DbCore.Structure.TopologyStructure.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Structure.TopologyItemFilterResult">
+            <summary>
+            TopologyItemFilterResult (topology structure node) class.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.TopologyItemFilterResult.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.TopologyItemFilterResult.Elementtyp">
             <summary>
             Returns Elementtyp.
             </summary>
@@ -7041,7 +7061,8 @@
         </member>
         <member name="T:BimPlus.Sdk.Data.DbCore.Terrain.TerrainElement">
             <summary>
-            TerrainElement class.
+            TerrainElement class. 
+            (For this element is also IFC element  "IfcGeographicElement" used)
                 Terrain element
                 Type_Id = /16/10/
             </summary>
@@ -7438,6 +7459,11 @@
             <summary>
             Complex property
             </summary>.
+        </member>
+        <member name="F:BimPlus.Sdk.Data.DbCore.DbObjectType.Catalog">
+            <summary>
+            Catalog.
+            </summary>
         </member>
         <member name="T:BimPlus.Sdk.Data.DbCore.DbObjectHandler">
             <summary>
@@ -8011,6 +8037,11 @@
             </summary>
         </member>
         <member name="F:BimPlus.Sdk.Data.DbCore.TableNames.tabAttribProjectProperties">
+            <summary>
+            Public member tabAttribProjectProperties.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.DbCore.TableNames.tabAttribDivisionProperties">
             <summary>
             Public member tabAttribProjectProperties.
             </summary>
@@ -9217,6 +9248,11 @@
         <member name="F:BimPlus.Sdk.Data.Notification.ProjectItemChangeType.PROJECT_STRUCTURES_DELETED">
             <summary>
             PROJECT_STRUCTURES_DELETED.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.Notification.ProjectItemChangeType.STRUCTURE_TRIGGERED">
+            <summary>
+            STRUCTURE_TRIGGERED.
             </summary>
         </member>
         <member name="F:BimPlus.Sdk.Data.Notification.ProjectItemChangeType.TOPOLOGY_ITEM_CREATED">
@@ -10550,6 +10586,11 @@
         <member name="P:BimPlus.Sdk.Data.Content.BaseContentDto.Description">
             <summary>
             Property Description.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Content.BaseContentDto.Localization">
+            <summary>
+            Property Localization.
             </summary>
         </member>
         <member name="T:BimPlus.Sdk.Data.Content.ContextUnitTypes">
@@ -12208,6 +12249,9 @@
         <member name="F:BimPlus.Sdk.Data.ExportReturnCode.ERROR_SHARE_CREATING">
             <summary>ERROR_SHARE_CREATING.</summary>
         </member>
+        <member name="F:BimPlus.Sdk.Data.ExportReturnCode.ERROR_ATTACHMENT_TOO_BIG">
+            <summary>ERROR_ATTACHMENT_TOO_BIG - exported IFC file is too big</summary>
+        </member>
         <member name="T:BimPlus.Sdk.Data.WorkerType">
             <summary>
             WorkerType enum.
@@ -12465,21 +12509,6 @@
         <member name="F:BimPlus.Sdk.Data.CacheType.ElementPsetCache">
             <summary>
             ElementPsetCache.
-            </summary>
-        </member>
-        <member name="T:BimPlus.Sdk.Data.LocalisationType">
-            <summary>
-            LocalisationType enum.
-            </summary>
-        </member>
-        <member name="F:BimPlus.Sdk.Data.LocalisationType.Content">
-            <summary>
-            Content.
-            </summary>
-        </member>
-        <member name="F:BimPlus.Sdk.Data.LocalisationType.ElementType">
-            <summary>
-            ElementType.
             </summary>
         </member>
         <member name="T:BimPlus.Sdk.Data.ExternalServices.DtoExternalServiceInput">
@@ -14759,6 +14788,16 @@
             Norms for profile
             </summary>
         </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoCrossSection.GroupName">
+            <summary>
+             GroupName of CrossSectionDefinition will be returned by filter query i.ex. 'filter=I200'
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoCrossSection.CrossSectionDefinitionId">
+            <summary>
+            CrossSectionDefinition will be returned by filter query i.ex. 'filter=I200'
+            </summary>
+        </member>
         <member name="M:BimPlus.Sdk.Data.TenantDto.DtoCrossSection.GetHashCode">
             <summary>
             Get hash code.
@@ -15076,6 +15115,36 @@
             Specifies list of issue id's, which should be exported into Excel file.
             </summary>
         </member>
+        <member name="T:BimPlus.Sdk.Data.TenantDto.DtoExcelCustomTableExport">
+            <summary>
+            DtoExcelIssuesExport class.
+            Class, where are all informations for export issues into Excel file.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoExcelCustomTableExport.Columns">
+            <summary>
+            Property columns.
+            Specifies list of column names, which should be exported into Excel file.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoExcelCustomTableExport.RangeColumn">
+            <summary>
+            Property columns.
+            Specifies column name for witch is defined range for output
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoExcelCustomTableExport.MinValue">
+            <summary>
+            Property MinValue.
+            Specifies min value for rangeColumn
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoExcelCustomTableExport.MaxValue">
+            <summary>
+            Property MaxValue.
+            Specifies max value for rangeColumn
+            </summary>
+        </member>
         <member name="T:BimPlus.Sdk.Data.TenantDto.DtoExportObject">
             <summary>
             DtoExportObject class.
@@ -15151,6 +15220,11 @@
             Structure type.
             </summary>
         </member>
+        <member name="F:BimPlus.Sdk.Data.TenantDto.DtoExportObjectSelection.SelectionType.TopologyStructure">
+            <summary>
+            TopologyStructure type.
+            </summary>
+        </member>
         <member name="M:BimPlus.Sdk.Data.TenantDto.DtoExportObjectSelection.#ctor(BimPlus.Sdk.Data.TenantDto.DtoExportObjectSelection.SelectionType)">
             <summary>
             Constructor.
@@ -15202,6 +15276,11 @@
             Property Structure.
             </summary>
         </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoExportObjectSelection.TopologyStructure">
+            <summary>
+            Property TopologyStructure.
+            </summary>
+        </member>
         <member name="T:BimPlus.Sdk.Data.TenantDto.DtoFilterElements">
             <summary>
             DtoFilterElements class.
@@ -15235,6 +15314,26 @@
         <member name="P:BimPlus.Sdk.Data.TenantDto.DtoFilterSelection.NodeInfoList">
             <summary>
             Property NodeInfoList.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.TenantDto.DtoTopologyStructureSelection">
+            <summary>
+            DtoTopologyStructureSelection class.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.Data.TenantDto.DtoTopologyStructureSelection.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoTopologyStructureSelection.Layers">
+            <summary>
+            Property Layers. Specifies layers objects for scene.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoTopologyStructureSelection.Structures">
+            <summary>
+            Property Structures.
             </summary>
         </member>
         <member name="T:BimPlus.Sdk.Data.TenantDto.DtoStructureSelection">
@@ -16154,6 +16253,11 @@
             Property ProjectId.
             </summary>
         </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoDivision.UserGroupId">
+            <summary>
+            Property UserGroupId.
+            </summary>
+        </member>
         <member name="P:BimPlus.Sdk.Data.TenantDto.DtoDivision.TopologyDivisionId">
             <summary>
             Property TopologyDivisionId.
@@ -16879,6 +16983,16 @@
             Property InputType (type of imported model (Allplan, IFC, SketchUp, ...)).
             </summary>
         </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoRevision.Release">
+            <summary>
+            Property Release
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoRevision.ReleaseLastVersion">
+            <summary>
+            Property release Last Version
+            </summary>
+        </member>
         <member name="P:BimPlus.Sdk.Data.TenantDto.DtoRevision.CreatedByUserId">
             <summary>
             Property CreatedByUserId.
@@ -17136,6 +17250,11 @@
         <member name="P:BimPlus.Sdk.Data.TenantDto.DtoSceneObjects.HighlightedSelected">
             <summary>
             Property HighlightedSelected (List of Guid's of highlighted selected objects).
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoSceneObjects.Coloring">
+            <summary>
+            Property Coloring (List of Guid's of defined color).
             </summary>
         </member>
         <member name="M:BimPlus.Sdk.Data.TenantDto.DtoSceneObjects.InitializeEmptyField">
@@ -17986,6 +18105,11 @@
         <member name="P:BimPlus.Sdk.Data.TenantDto.DtoElementTypeStructure.IfcType">
             <summary>
             Property IfcType.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoElementTypeStructure.OrderNumber">
+            <summary>
+            Property OrderNr ( internally for sorting).
             </summary>
         </member>
         <member name="T:BimPlus.Sdk.Data.TenantDto.TopologyInputData">
@@ -18943,9 +19067,19 @@
             Property Description.
             </summary>
         </member>
+        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoUserGroup.CustomGroup">
+            <summary>
+            Property customGroup.
+            </summary>
+        </member>
         <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoUserGroup.Users">
             <summary>
             Property Users.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoUserGroup.Rights">
+            <summary>
+            Property Rights.
             </summary>
         </member>
         <member name="T:BimPlus.Sdk.Data.UserAdministration.UserGroup">
@@ -18963,16 +19097,47 @@
             Id of group role
             </summary>
         </member>
-        <member name="T:BimPlus.Sdk.Data.UserAdministration.UserGroupId">
+        <member name="T:BimPlus.Sdk.Data.UserAdministration.UserGroupRoleId">
             <summary>
             Id of default an only roles of group
             </summary>
         </member>
-        <member name="F:BimPlus.Sdk.Data.UserAdministration.UserGroupId.GroupAdmin">
+        <member name="F:BimPlus.Sdk.Data.UserAdministration.UserGroupRoleId.GroupAdmin">
             role of group  Group Admin
         </member>
-        <member name="F:BimPlus.Sdk.Data.UserAdministration.UserGroupId.GroupMember">
+        <member name="F:BimPlus.Sdk.Data.UserAdministration.UserGroupRoleId.GroupMember">
             role of group  Group  Member
+        </member>
+        <member name="T:BimPlus.Sdk.Data.UserAdministration.UserGroupRoleName">
+            <summary>
+            Name of default an only roles of group
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.UserAdministration.UserGroupRoleName.GroupAdmin">
+            role of group  Group Admin
+        </member>
+        <member name="F:BimPlus.Sdk.Data.UserAdministration.UserGroupRoleName.GroupMember">
+            role of group  Group  Member
+        </member>
+        <member name="T:BimPlus.Sdk.Data.UserAdministration.DtoGroupUserRights">
+            <summary>
+            DtoGroupUserRights class.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoGroupUserRights.GroupAdmin">
+            <summary>
+            Property groupAdmin
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoGroupUserRights.GroupMember">
+            <summary>
+            Property groupMember.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.Data.UserAdministration.DtoGroupUserRights.#ctor">
+            <summary>
+            DtoGroupUser rights.
+            </summary>
         </member>
         <member name="T:BimPlus.Sdk.Data.UserAdministration.DtoRole">
             <summary>
@@ -18995,6 +19160,16 @@
             Property Name.
             </summary>
         </member>
+        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoRole.Type">
+            <summary>
+            Property type (project/group/team).
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoRole.Rank">
+            <summary>
+            Property rank (priority of roles).
+            </summary>
+        </member>
         <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoRole.CustomRole">
             <summary>
             Property CustomRole.
@@ -19010,29 +19185,24 @@
             Property Children.
             </summary>
         </member>
-        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoRole.ProjectRightsRolesTemplate">
+        <member name="T:BimPlus.Sdk.Data.UserAdministration.RoleTypes">
             <summary>
-            Property ProjectRightsRolesTemplate.
+            Types of role.
             </summary>
         </member>
-        <member name="T:BimPlus.Sdk.Data.UserAdministration.DtoProjectRightsRolesTemplate">
+        <member name="F:BimPlus.Sdk.Data.UserAdministration.RoleTypes.Project">
             <summary>
-            DtoProjectRightsRolesTemplate class.
+            Project type.
             </summary>
         </member>
-        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoProjectRightsRolesTemplate.Id">
+        <member name="F:BimPlus.Sdk.Data.UserAdministration.RoleTypes.Team">
             <summary>
-            Property Id.
+            Team type.
             </summary>
         </member>
-        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoProjectRightsRolesTemplate.Name">
+        <member name="F:BimPlus.Sdk.Data.UserAdministration.RoleTypes.Group">
             <summary>
-            Property Name.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoProjectRightsRolesTemplate.Description">
-            <summary>
-            Property Description.
+            Group type.
             </summary>
         </member>
         <member name="T:BimPlus.Sdk.Data.UserAdministration.DtoRoleInfo">
@@ -19086,8 +19256,14 @@
         <member name="F:BimPlus.Sdk.Data.UserAdministration.UserRoleID.TeamMember">
             Public static member TeamMember.
         </member>
-        <member name="F:BimPlus.Sdk.Data.UserAdministration.UserRoleID.EmptyRole">
-            Public static member EmptyRole.
+        <member name="F:BimPlus.Sdk.Data.UserAdministration.UserRoleID.ProjectAdmin">
+            Public static member ProjectAdmin.
+        </member>
+        <member name="F:BimPlus.Sdk.Data.UserAdministration.UserRoleID.ProjectEditor">
+            Public static member ProjectEditor.
+        </member>
+        <member name="F:BimPlus.Sdk.Data.UserAdministration.UserRoleID.ProjectViewer">
+            Public static member ProjectViewer.
         </member>
         <member name="F:BimPlus.Sdk.Data.UserAdministration.UserRoleID.DocumentAdmin">
             Public static member DocumentAdmin.
@@ -19393,6 +19569,9 @@
         </member>
         <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoUserAddition.Roles">
             <summary>User role.</summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoUserAddition.UserGroup">
+            <summary>Group to which the user is invited.</summary>
         </member>
         <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoUserAddition.AdditionText">
             <summary>Addition text.</summary>

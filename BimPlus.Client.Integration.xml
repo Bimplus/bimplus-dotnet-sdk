@@ -74,7 +74,6 @@
             <summary>
             Connect with access token or login dialog.
             </summary>
-            <param name="accessToken"></param>
             <returns>True, if connected</returns>
         </member>
         <member name="M:BimPlus.Client.Integration.IntegrationBase.ConnectWithAccessTokenAndServerName(System.Nullable{System.Guid},System.String)">
@@ -92,7 +91,7 @@
             <param name="userName"></param>
             <param name="passWord"></param>
             <param name="serverName"></param>
-            <returns></returns>
+            <returns>True, if connected</returns>
         </member>
         <member name="M:BimPlus.Client.Integration.IntegrationBase.ReLogin(BimPlus.Client.Integration.Login.ILoginWindow)">
             <summary>
@@ -274,11 +273,12 @@
             Create the LoginSettings.
             </summary>
         </member>
-        <member name="M:BimPlus.Client.Integration.Login.LoginSettings.#ctor(System.IO.TextWriter)">
+        <member name="M:BimPlus.Client.Integration.Login.LoginSettings.#ctor(System.IO.TextWriter,System.Guid)">
             <summary>
             Create the LoginSettings.
             </summary>
             <param name="logger"></param>
+            <param name="applicationId"></param>
         </member>
         <member name="P:BimPlus.Client.Integration.Login.LoginSettings.ServerName">
             <summary>
@@ -320,6 +320,21 @@
             Container for password decryption and encryption.
             </summary>
         </member>
+        <member name="P:BimPlus.Client.Integration.Login.LoginSettings.RememberMeToken">
+            <summary>
+            Byte array of RememberMeToken.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.Integration.Login.LoginSettings.CheckSum">
+            <summary>
+            CheckSum of multiple parameters.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Client.Integration.Login.LoginSettings.CheckSumArray">
+            <summary>
+            CheckSum of multiple parameters.
+            </summary>
+        </member>
         <member name="P:BimPlus.Client.Integration.Login.LoginSettings.SavePassword">
             <summary>
             Save the password.
@@ -340,7 +355,12 @@
             Client id for remember me.
             </summary>
         </member>
-        <member name="M:BimPlus.Client.Integration.Login.LoginSettings.LoadSettings">
+        <member name="P:BimPlus.Client.Integration.Login.LoginSettings.ClientIdArray">
+            <summary>
+            Byte array from ClientId.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.Integration.Login.LoginSettings.LoadSettings(System.Guid)">
             <summary>
             Load the login settings.
             </summary>
