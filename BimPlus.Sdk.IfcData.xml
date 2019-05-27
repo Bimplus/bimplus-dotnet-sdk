@@ -169,6 +169,16 @@
             Project Connection /27/
              </summary>
         </member>
+        <member name="F:BimPlus.Sdk.IfcData.DbLayer.FireRating">
+            <summary>
+            FireRating /256/
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.IfcData.LayersDisciplinesGroupAccess">
+            <summary>
+            Fill Disciplines Access Layers to Guid
+            </summary>
+        </member>
         <member name="T:BimPlus.Sdk.IfcData.DbLayerHandler">
             <summary>
             Converter Class for DbLayer to Guid
@@ -327,8 +337,20 @@
             Class for definition base functionality for IFC elements
             </summary>        
         </member>
-        <!-- Ungültiger XML-Kommentar wurde für den Member "M:BimPlus.Sdk.IfcData.IfcGeneralData.HelperFunctions.FindLayerNameForIfcObject(System.String)" ignoriert -->
-        <!-- Ungültiger XML-Kommentar wurde für den Member "M:BimPlus.Sdk.IfcData.IfcGeneralData.HelperFunctions.ContainsArchitecturalOrDomainElement(System.String)" ignoriert -->
+        <member name="M:BimPlus.Sdk.IfcData.IfcGeneralData.HelperFunctions.FindLayerNameForIfcObject(System.String)">
+            <summary>
+            Find layer name (as enum) of IFC object by known object name 
+            </summary>
+            <param name="objName">Element name</param>
+            <returns>Layer name (as enum)</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.IfcGeneralData.HelperFunctions.ContainsArchitecturalOrDomainElement(System.String)">
+            <summary>
+            Is defined Architectural or Domain element? 1/0
+            </summary>
+            <param name="objName">Element name</param>
+            <returns>Architectural or Domain element? 1/0</returns>
+        </member>
         <member name="M:BimPlus.Sdk.IfcData.IfcGeneralData.HelperFunctions.ContainsInventoryElement(System.String)">
             <summary>
             Is defined Inventory element for IFC V4? 1/0
@@ -336,14 +358,62 @@
             <param name="objName">Inventory element name</param>
             <returns>Inventory element for IFC V4? 1/0</returns>
         </member>
-        <!-- Ungültiger XML-Kommentar wurde für den Member "M:BimPlus.Sdk.IfcData.IfcGeneralData.HelperFunctions.ContainsSpecialArchitecturalElement(System.String)" ignoriert -->
-        <!-- Ungültiger XML-Kommentar wurde für den Member "M:BimPlus.Sdk.IfcData.IfcGeneralData.HelperFunctions.ContainsSpecialArchitecturalBuildingElement(System.String)" ignoriert -->
-        <!-- Ungültiger XML-Kommentar wurde für den Member "M:BimPlus.Sdk.IfcData.IfcGeneralData.HelperFunctions.ContainsSpecialArchitecturalRoomElement(System.String)" ignoriert -->
-        <!-- Ungültiger XML-Kommentar wurde für den Member "M:BimPlus.Sdk.IfcData.IfcGeneralData.HelperFunctions.ContainsSpecialArchitecturalFinishingElement(System.String)" ignoriert -->
-        <!-- Ungültiger XML-Kommentar wurde für den Member "M:BimPlus.Sdk.IfcData.IfcGeneralData.HelperFunctions.ContainsCommonArchitecturalElement(System.String)" ignoriert -->
-        <!-- Ungültiger XML-Kommentar wurde für den Member "M:BimPlus.Sdk.IfcData.IfcGeneralData.HelperFunctions.ContainsCommonArchitecturalFinishingElement(System.String)" ignoriert -->
-        <!-- Ungültiger XML-Kommentar wurde für den Member "M:BimPlus.Sdk.IfcData.IfcGeneralData.HelperFunctions.ContainsCommonArchitecturalBuildingElement(System.String)" ignoriert -->
-        <!-- Ungültiger XML-Kommentar wurde für den Member "M:BimPlus.Sdk.IfcData.IfcGeneralData.HelperFunctions.ContainsDomainElement(System.String)" ignoriert -->
+        <member name="M:BimPlus.Sdk.IfcData.IfcGeneralData.HelperFunctions.ContainsSpecialArchitecturalElement(System.String)">
+            <summary>
+            Is defined special Architectural element? 1/0
+            </summary>
+            <param name="objName">Element name</param>
+            <returns>special Architectural element? 1/0</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.IfcGeneralData.HelperFunctions.ContainsSpecialArchitecturalBuildingElement(System.String)">
+            <summary>
+             Is defined special Architectural building element? 1/0
+            </summary>
+            <param name="objName">Element name</param>
+            <returns>special Architectural building element? 1/0</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.IfcGeneralData.HelperFunctions.ContainsSpecialArchitecturalRoomElement(System.String)">
+            <summary>
+             Is defined special Architectural room element? 1/0
+            </summary>
+            <param name="objName">Element name</param>
+            <returns>special Architectural room element? 1/0</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.IfcGeneralData.HelperFunctions.ContainsSpecialArchitecturalFinishingElement(System.String)">
+            <summary>
+             Is defined special Architectural finishing element? 1/0
+            </summary>
+            <param name="objName">Element name</param>
+            <returns>special Architectural finishing element? 1/0</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.IfcGeneralData.HelperFunctions.ContainsCommonArchitecturalElement(System.String)">
+            <summary>
+            Is defined common Architectural element? 1/0
+            </summary>
+            <param name="objName">Element name</param>
+            <returns>common Architectural element? 1/0</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.IfcGeneralData.HelperFunctions.ContainsCommonArchitecturalFinishingElement(System.String)">
+            <summary>
+            Is defined common Architectural finishing element? 1/0
+            </summary>
+            <param name="objName">Element name</param>
+            <returns>common Architectural finishing element? 1/0</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.IfcGeneralData.HelperFunctions.ContainsCommonArchitecturalBuildingElement(System.String)">
+            <summary>
+            Is defined common Architectural building element? 1/0
+            </summary>
+            <param name="objName">Element name</param>
+            <returns>common Architectural building element? 1/0</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.IfcGeneralData.HelperFunctions.ContainsDomainElement(System.String)">
+            <summary>
+            Is defined Domain element? 1/0
+            </summary>
+            <param name="objName">Element name</param>
+            <returns>Domain element? 1/0</returns>
+        </member>
         <member name="M:BimPlus.Sdk.IfcData.IfcGeneralData.HelperFunctions.ContainsHeatingElement(System.String)">
             <summary>
             Is defined HVAC element for IFC V2x3? 1/0
@@ -378,6 +448,48 @@
             </summary>
             <param name="objName">Plumbing fire protection domain element name</param>
             <returns>Plumbing fire protection domain element for IFC V4? 1/0</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.IfcGeneralData.HelperFunctions.IsStructuralMember(System.String)">
+            <summary>
+            http://www.buildingsmart-tech.org/ifc/IFC2x4/rc4/html/schema/ifcstructuralanalysisdomain/lexical/ifcstructuralmember.htm
+            </summary>
+            <param name="objName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.IfcGeneralData.HelperFunctions.IsStructuralConnection(System.String)">
+            <summary>
+            http://www.buildingsmart-tech.org/ifc/IFC2x4/rc4/html/schema/ifcstructuralanalysisdomain/lexical/ifcstructuralconnection.htm
+            </summary>
+            <param name="objName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.IfcGeneralData.HelperFunctions.IsStructuralAction(System.String)">
+            <summary>
+            http://www.buildingsmart-tech.org/ifc/IFC2x4/rc4/html/schema/ifcstructuralanalysisdomain/lexical/ifcstructuralaction.htm
+            </summary>
+            <param name="objName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.IfcGeneralData.HelperFunctions.IsStructuralReaction(System.String)">
+            <summary>
+            http://www.buildingsmart-tech.org/ifc/IFC2x4/rc4/html/schema/ifcstructuralanalysisdomain/lexical/ifcstructuralreaction.htm
+            </summary>
+            <param name="objName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.IfcGeneralData.HelperFunctions.IsStructuralActivity(System.String)">
+            <summary>
+            http://www.buildingsmart-tech.org/ifc/IFC2x4/rc4/html/schema/ifcstructuralanalysisdomain/lexical/ifcstructuralactivity.htm
+            </summary>
+            <param name="objName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.IfcGeneralData.HelperFunctions.IsIfcGroup(System.String)">
+            <summary>
+            http://www.buildingsmart-tech.org/ifc/IFC2x4/rc4/html/schema/ifckernel/lexical/ifcgroup.htm
+            </summary>
+            <param name="objName"></param>
+            <returns></returns>
         </member>
         <member name="M:BimPlus.Sdk.IfcData.IfcGeneralData.HelperFunctions.ContainsElectricalElement(System.String)">
             <summary>
@@ -594,6 +706,13 @@
             </summary>
         </member>
         <member name="M:BimPlus.Sdk.IfcData.IfcStaticData.GetDtbClashElement(System.Guid)">
+            <summary>
+            Get Dtb clash element from element list by known Guid
+            </summary>
+            <param name="id">Id for actual Dtb clash element</param>
+            <returns>IFC element from element list</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.IfcStaticData.GetRelConnectsElement(System.Guid)">
             <summary>
             Get Dtb clash element from element list by known Guid
             </summary>

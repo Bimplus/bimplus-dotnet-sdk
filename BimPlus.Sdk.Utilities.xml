@@ -600,11 +600,12 @@
             <param name="layerId"></param>
             <param name="callback"></param>
         </member>
-        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetObjectTopology(System.Guid)">
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetObjectTopology(System.Guid,System.Boolean)">
             <summary>
             GetObjectTopology 
             </summary>
             <param name="objectId"></param>
+            <param name="hideElements"></param>
             <returns>DtoTopology</returns>
         </member>
         <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetLayoutStructure(System.Guid)">
@@ -2870,11 +2871,12 @@
             <param name="type"></param>
             <returns>DtoTemplateArticle</returns>
         </member>
-        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetObjectTopology(System.Guid)">
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetObjectTopology(System.Guid,System.Boolean)">
             <summary>
             GetObjectTopology 
             </summary>
             <param name="objectId"></param>
+            <param name="hideElements"></param>
             <returns>DtoTopology</returns>
         </member>
         <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.MoveTopologyNode(BimPlus.Sdk.Data.TenantDto.DtoTopology)">

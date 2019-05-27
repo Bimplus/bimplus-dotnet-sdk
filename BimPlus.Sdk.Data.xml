@@ -2213,6 +2213,358 @@
             <param name="value"></param>
             <param name="serializer"></param>
         </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.AdditionalStructuralAnalysisDomain">
+            <summary>
+            AdditionalStructuralAnalysisDomain class.  
+            Model data elements of SCIA SEN Structural Analysis objects.
+            Type_Id = /21/774/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.AdditionalStructuralAnalysisDomain.ObjectName">
+            Returns ObjectName.
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.AdditionalStructuralAnalysisDomain.Elementtyp">
+            Returns Elementtyp.
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.AdditionalStructuralAnalysisMember">
+            <summary>
+            AdditionalStructuralAnalysisMember class.
+            Member elements of Additional Structural Analysis objects.
+            Type_Id = /21/774/1/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.AdditionalStructuralAnalysisMember.ObjectName">
+            Returns ObjectName.
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.AdditionalStructuralAnalysisMember.Elementtyp">
+            Returns Elementtyp.
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.RelConnectsStructuralCurveMember">
+            <summary>
+            RelConnectsStructuralCurveMember class.
+            Relation element of Additional Structural Analysis objects.
+            Type_Id = /21/774/1/1/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.RelConnectsStructuralCurveMember.ObjectName">
+            Returns ObjectName.
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.RelConnectsStructuralCurveMember.Elementtyp">
+            Returns Elementtyp.
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.StructuralCurveMemberRib">
+            <summary>
+            StructuralCurveMemberRib class.
+            Scia member of Additional Structural Analysis objects.
+            Type_Id = /21/774/1/2/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralCurveMemberRib.ObjectName">
+            Returns ObjectName.
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralCurveMemberRib.Elementtyp">
+            Returns Elementtyp.
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.StructuralCurveEdge">
+            <summary>
+            StructuralCurveEdge class.
+            Scia member of Additional Structural Analysis objects.
+            Type_Id = /21/774/1/3/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralCurveEdge.ObjectName">
+            Returns ObjectName.
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralCurveEdge.Elementtyp">
+            Returns Elementtyp.
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.RelConnectsRigidLink">
+            <summary>
+            RelConnectsRigidLink class.
+            Scia member of Additional Structural Analysis objects.
+            Type_Id = /21/774/1/4/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.RelConnectsRigidLink.ObjectName">
+            Returns ObjectName.
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.RelConnectsRigidLink.Elementtyp">
+            Returns Elementtyp.
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.StructuralPointSupport">
+            <summary>
+            StructuralPointSupport class.
+            Scia member of Additional Structural Analysis objects.
+            Type_Id = /21/774/1/5/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralPointSupport.ObjectName">
+            Returns ObjectName.
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralPointSupport.Elementtyp">
+            Returns Elementtyp.
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.StructuralEdgeConnection">
+            <summary>
+            StructuralEdgeConnection class.
+            Scia member of Additional Structural Analysis objects.
+            Type_Id = /21/774/1/6/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralEdgeConnection.ObjectName">
+            Returns ObjectName.
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralEdgeConnection.Elementtyp">
+            Returns Elementtyp.
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.StructuralMaterial">
+            <summary>
+            StructuralMaterial class.
+            Scia member of Additional Structural Analysis objects.
+            Type_Id = /21/774/1/7/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralMaterial.ObjectName">
+            Returns ObjectName.
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralMaterial.Elementtyp">
+            Returns Elementtyp.
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.StructuralCrossSection">
+            <summary>
+            StructuralCrossSection class.
+            Scia member of Additional Structural Analysis objects.
+            Type_Id = /21/774/1/8/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralCrossSection.ObjectName">
+            Returns ObjectName.
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralCrossSection.Elementtyp">
+            Returns Elementtyp.
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.AdditionalStructuralAnalysisSurfaceMember">
+            <summary>
+            AdditionalStructuralAnalysisSurfaceMember class.
+            Surface Member elements of Additional SCIA SEN Structural Analysis objects.
+                Type_Id = /21/774/2/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.AdditionalStructuralAnalysisSurfaceMember.ObjectName">
+            Returns ObjectName.
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.AdditionalStructuralAnalysisSurfaceMember.Elementtyp">
+            Returns Elementtyp.
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.StructuralSurfaceMemberOpening">
+            <summary>
+            StructuralSurfaceMemberOpening class.
+            Surface Member elements of Additional SCIA SEN Structural Analysis objects.
+                Type_Id = /21/774/2/1/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralSurfaceMemberOpening.ObjectName">
+            Returns ObjectName.
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralSurfaceMemberOpening.Elementtyp">
+            Returns Elementtyp.
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.StructuralSurfaceMemberRegion">
+            <summary>
+            StructuralSurfaceMemberRegion class.
+            Surface Member elements of Additional SCIA SEN Structural Analysis objects.
+                Type_Id = /21/774/2/2/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralSurfaceMemberRegion.ObjectName">
+            Returns ObjectName.
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralSurfaceMemberRegion.Elementtyp">
+            Returns Elementtyp.
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.RelConnectsSurfaceEdge">
+            <summary>
+            RelConnectsSurfaceEdge class.
+            Surface Member elements of Additional SCIA SEN Structural Analysis objects.
+                Type_Id = /21/774/2/3/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.RelConnectsSurfaceEdge.ObjectName">
+            Returns ObjectName.
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.RelConnectsSurfaceEdge.Elementtyp">
+            Returns Elementtyp.
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.AdditionalStructuralLoadDomain">
+            <summary>
+            AdditionalStructuralLoadDomain class.
+            Additional Scia Structural Analysis Load objects.
+            Type_Id = /210/20/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.AdditionalStructuralLoadDomain.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.AdditionalStructuralLoadDomain.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.StructuralPointMoment">
+            <summary>
+            StructuralPointMoment class.
+            Additional Scia Structural Analysis Load objects.
+            Type_Id = /210/20/1/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralPointMoment.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralPointMoment.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.StructuralLineMoment">
+            <summary>
+            StructuralLineMoment class.
+            Additional Scia Structural Analysis Load objects.
+            Type_Id = /210/20/2/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralLineMoment.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralLineMoment.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.StructuralEdgeMoment">
+            <summary>
+            StructuralEdgeMoment class.
+            Additional Scia Structural Analysis Load objects.
+            Type_Id = /210/20/3/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralEdgeMoment.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralEdgeMoment.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.StructuralCurveActionFree">
+            <summary>
+            StructuralCurveActionFree class.
+            Additional Scia Structural Analysis Load objects.
+            Type_Id = /210/20/4/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralCurveActionFree.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralCurveActionFree.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.StructuralSurfaceActionFree">
+            <summary>
+            StructuralSurfaceActionFree class.
+            Additional Scia Structural Analysis Load objects.
+            Type_Id = /210/20/5/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralSurfaceActionFree.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralSurfaceActionFree.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.StructuralPointActionFree">
+            <summary>
+            StructuralPointActionFree class.
+            Additional Scia Structural Analysis Load objects.
+            Type_Id = /210/20/6/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralPointActionFree.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralPointActionFree.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.StructuralCurveMoment">
+            <summary>
+            StructuralCurveMoment class.
+            Additional Scia Structural Analysis Load objects.
+            Type_Id = /210/20/7/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralCurveMoment.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralCurveMoment.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.StructuralCurveActionThermal">
+            <summary>
+            StructuralCurveActionThermal class.
+            Additional Scia Structural Analysis Load objects.
+            Type_Id = /210/20/8/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralCurveActionThermal.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralCurveActionThermal.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.StructuralLoadCombination">
+            <summary>
+            StructuralLoadCombination class.
+            Additional Scia Structural Analysis Load objects.
+            Type_Id = /210/20/9/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralLoadCombination.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralLoadCombination.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
         <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.RelConnectsStructuralActivity">
             <summary>
             RelConnectsStructuralActivity class.
@@ -2397,6 +2749,53 @@
         <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralLoadGroup.IsGroupedBy">
             <summary>
             Connection to LoadCase
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.StructuralSurfaceAction">
+            <summary>
+            http://www.buildingsmart-tech.org/ifc/IFC4/Add2/html/schema/ifcstructuralanalysisdomain/lexical/ifcstructuralsurfaceaction.htm
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralSurfaceAction.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralSurfaceAction.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.StructuralPlanarAction">
+            <summary>
+            http://www.buildingsmart-tech.org/ifc/IFC4/Add2/html/schema/ifcstructuralanalysisdomain/lexical/ifcstructuralplanaraction.htm
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralPlanarAction.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralPlanarAction.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.StructuralSurfaceConnection">
+            <summary>
+            StructuralSurfaceConnection class.
+            http://www.buildingsmart-tech.org/ifc/IFC4/Add2/html/schema/ifcstructuralanalysisdomain/lexical/ifcstructuralsurfaceconnection.htm
+                Type_Id = /21/773/2/1/3/.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralSurfaceConnection.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralSurfaceConnection.Elementtyp">
+            <summary>
+            Returns Elementtyp.
             </summary>
         </member>
         <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.StructuralActivity">
@@ -3110,6 +3509,21 @@
             Returns Elementtyp.
             </summary>
         </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.FireRating.FireRatingObject">
+            <summary>
+            GIS class.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.FireRating.FireRatingObject.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.FireRating.FireRatingObject.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
         <member name="T:BimPlus.Sdk.Data.DbCore.GIS.GIS">
             <summary>
             GIS class.
@@ -3373,11 +3787,505 @@
             Returns Elementtyp.
             </summary>
         </member>
-        <member name="T:BimPlus.Sdk.Data.DbCore.Precast.PrecastLayerSubArea">
+        <member name="T:BimPlus.Sdk.Data.DbCore.Precast.PrecastOtherTypes">
             <summary>
-            PrecastLayerSubArea class.
+            PrecastOtherTypes class.
+                Precast element
+                Type_Id = /13/10/40/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastOtherTypes.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastOtherTypes.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Precast.PrecastOtherElementType">
+            <summary>
+            PrecastOtherElementType class.
+                Precast element
+                Type_Id = /13/10/40/10/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastOtherElementType.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastOtherElementType.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Precast.PrecastStructuralElement">
+            <summary>
+            PrecastStructuralElement class.
+                Precast element
+                Type_Id = /13/10/30/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastStructuralElement.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastStructuralElement.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Precast.PrecastGeneralStructuralElement">
+            <summary>
+            PrecastGeneralStructuralElement class.
+                Precast element
+                Type_Id = /13/10/30/60/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastGeneralStructuralElement.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastGeneralStructuralElement.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Precast.PrecastFoundation">
+            <summary>
+            PrecastFoundation class.
+                Precast element
+                Type_Id = /13/10/30/50/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastFoundation.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastFoundation.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Precast.PrecastStair">
+            <summary>
+            PrecastStair class.
+                Precast element
+                Type_Id = /13/10/30/40/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastStair.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastStair.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Precast.PrecastBinder">
+            <summary>
+            PrecastBinder class.
+                Precast element
+                Type_Id = /13/10/30/30/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastBinder.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastBinder.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Precast.PrecastBeam">
+            <summary>
+            PrecastBeam class.
+                Precast element
+                Type_Id = /13/10/30/20/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastBeam.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastBeam.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Precast.PrecastColumn">
+            <summary>
+            PrecastColumn class.
+                Precast element
+                Type_Id = /13/10/30/10/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastColumn.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastColumn.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Precast.PrecastFloor">
+            <summary>
+            PrecastFloor class.
+                Precast element
+                Type_Id = /13/10/20/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastFloor.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastFloor.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Precast.PrecastGeneralFloor">
+            <summary>
+            PrecastGeneralFloor class.
+                Precast element
+                Type_Id = /13/10/20/110/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastGeneralFloor.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastGeneralFloor.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Precast.PrecastSuspendedBrickFloor">
+            <summary>
+            PrecastSuspendedBrickFloor class.
+                Precast element
+                Type_Id = /13/10/20/100/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastSuspendedBrickFloor.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastSuspendedBrickFloor.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Precast.PrecastSolidBrickFloor">
+            <summary>
+            PrecastSolidBrickFloor class.
+                Precast element
+                Type_Id = /13/10/20/90
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastSolidBrickFloor.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastSolidBrickFloor.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Precast.PrecastHalfBrickFloor">
+            <summary>
+            PrecastHalfBrickFloor class.
+                Precast element
+                Type_Id = /13/10/20/80/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastHalfBrickFloor.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastHalfBrickFloor.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Precast.PrecastCobiaxFloor">
+            <summary>
+            PrecastCobiaxFloor class.
+                Precast element
+                Type_Id = /13/10/20/70/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastCobiaxFloor.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastCobiaxFloor.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Precast.PrecastBubbleFloor">
+            <summary>
+            PrecastBubbleFloor class.
+                Precast element
+                Type_Id = /13/10/20/60/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastBubbleFloor.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastBubbleFloor.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Precast.PrecastRibbedFloor">
+            <summary>
+            PrecastRibbedFloor class.
+                Precast element
+                Type_Id = /13/10/20/50/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastRibbedFloor.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastRibbedFloor.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Precast.PrecastPrestressedHollowFloor">
+            <summary>
+            PrecastPrestressedHollowFloor class.
+                Precast element
+                Type_Id = /13/10/20/40/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastPrestressedHollowFloor.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastPrestressedHollowFloor.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Precast.PrecastHollowFloor">
+            <summary>
+            PrecastHollowFloor class.
+                Precast element
+                Type_Id = /13/10/20/30/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastHollowFloor.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastHollowFloor.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Precast.PrecastSolidFloor">
+            <summary>
+            PrecastSolidFloor class.
+                Precast element
+                Type_Id = /13/10/20/20/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastSolidFloor.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastSolidFloor.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Precast.PrecastHalfFloor">
+            <summary>
+            PrecastHalfFloor class.
+                Precast element
+                Type_Id = /13/10/20/10/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastHalfFloor.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastHalfFloor.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Precast.PrecastWall">
+            <summary>
+            PrecastOtherElementType class.
+                Precast element
+                Type_Id = /13/10/10/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastWall.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastWall.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Precast.PrecastGeneralWall">
+            <summary>
+            PrecastGeneralWall class.
+                Precast element
+                Type_Id = /13/10/10/70/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastGeneralWall.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastGeneralWall.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Precast.PrecastCompositeFormworkWall">
+            <summary>
+            PrecastCompositeFormworkWall class.
+                Precast element
+                Type_Id = /13/10/10/60/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastCompositeFormworkWall.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastCompositeFormworkWall.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Precast.PrecastBrickWall">
+            <summary>
+            PrecastBrickWall class.
+                Precast element
+                Type_Id = /13/10/10/50/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastBrickWall.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastBrickWall.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Precast.PrecastThermoWall">
+            <summary>
+            PrecastThermoWall class.
+                Precast element
+                Type_Id = /13/10/10/40/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastThermoWall.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastThermoWall.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Precast.PrecastSandwichWall">
+            <summary>
+            PrecastSandwichWall class.
+                Precast element
+                Type_Id = /13/10/10/30/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastSandwichWall.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastSandwichWall.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Precast.PrecastDoubleWall">
+            <summary>
+            PrecastDoubleWall class.
+                Precast element
+                Type_Id = /13/10/10/20/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastDoubleWall.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastDoubleWall.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Precast.PrecastSolidWall">
+            <summary>
+            PrecastSolidWall class.
+                Precast element
+                Type_Id = /13/10/10/10
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastSolidWall.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastSolidWall.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Precast.PrecastLayerSubArea">
+            PrecastLayerSubArea
+            <summary>
+            PrecastLayerSubAreaOtherType class.
                 PrecastLayerSubArea
-                Type_Id = /13/30/
+                Type_Id = /13/30
             </summary>
         </member>
         <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastLayerSubArea.ObjectName">
@@ -3386,6 +4294,74 @@
             </summary>
         </member>
         <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastLayerSubArea.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Precast.PrecastLayerSubAreaOtherType">
+            <summary>
+            PrecastLayerSubAreaOtherType class.
+                PrecastLayerSubArea
+                Type_Id = /13/30/40/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastLayerSubAreaOtherType.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastLayerSubAreaOtherType.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Precast.PrecastLayerSubAreaConcrete">
+            <summary>
+            PrecastLayerSubAreaConcrete class.
+                PrecastLayerSubAreaConcrete
+                Type_Id = /13/30/10/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastLayerSubAreaConcrete.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastLayerSubAreaConcrete.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Precast.PrecastLayerSubAreaInsulation">
+            <summary>
+            PrecastLayerSubAreaInsulation class.
+                PrecastLayerSubArea
+                Type_Id = /13/30/20/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastLayerSubAreaInsulation.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastLayerSubAreaInsulation.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Precast.PrecastLayerSubAreaTile">
+            <summary>
+            PrecastLayerSubAreaTile class.
+                PrecastLayerSubArea
+                Type_Id = /13/30/30/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastLayerSubAreaTile.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastLayerSubAreaTile.Elementtyp">
             <summary>
             Returns Elementtyp.
             </summary>
@@ -3420,6 +4396,91 @@
             </summary>
         </member>
         <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastLayer.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Precast.PrecastLayerOtherType">
+            <summary>
+            PrecastLayer class.
+                Precast Layer
+                Type_Id = /13/20/50/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastLayerOtherType.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastLayerOtherType.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Precast.PrecastLayerInSitu">
+            <summary>
+            PrecastLayerInSitu class.
+                Precast Layer
+                Type_Id = /13/20/40/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastLayerInSitu.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastLayerInSitu.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Precast.PrecastLayerTile">
+            <summary>
+            PrecastLayerTile class.
+                Precast Layer
+                Type_Id = /13/20/30/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastLayerTile.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastLayerTile.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Precast.PrecastLayerInsulation">
+            <summary>
+            PrecastLayerInsulation class.
+                Precast Layer
+                Type_Id = /13/20/20/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastLayerInsulation.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastLayerInsulation.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Precast.PrecastLayerConcrete">
+            <summary>
+            PrecastLayerConcrete class.
+                Precast Layer
+                Type_Id = /13/20/10/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastLayerConcrete.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastLayerConcrete.Elementtyp">
             <summary>
             Returns Elementtyp.
             </summary>
@@ -3647,6 +4708,450 @@
         <member name="P:BimPlus.Sdk.Data.DbCore.Reinforcement.ReinforcingMesh.Elementtyp">
             <summary>
             Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Structure.RoomTemplate">
+            <summary>
+            RoomTemplate (structure node) class.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.RoomTemplate.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.RoomTemplate.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Structure.WindowTemplate">
+            <summary>
+            WindowTemplate (structure node) class.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.WindowTemplate.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.WindowTemplate.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Structure.DoorTemplate">
+            <summary>
+            DoorTemplate (structure node) class.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.DoorTemplate.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.DoorTemplate.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Structure.Layout">
+            <summary>
+            Layout class.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Layout.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Layout.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Structure.AllplanLayout">
+            <summary>
+            AllplanLayout class.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.AllplanLayout.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.AllplanLayout.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Structure.Site">
+            <summary>
+            Site class (topology node).
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Site.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Site.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Structure.Zone">
+            <summary>
+            Zone class (site topology node).
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Zone.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Zone.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Structure.Structure">
+            <summary>
+            Structure class.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Structure.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Structure.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Structure.StructureType">
+            <summary>
+            Property StructureType == ElementType.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.Data.DbCore.Structure.Structure.AddProperty(System.Guid,System.Object)">
+            <summary>
+            Add date properties.
+            </summary>
+            <param name="attributId"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Structure.Nr">
+            <summary>
+            Property Nr.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Structure.StartDate">
+            <summary>
+            Property StartDate.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Structure.EndDate">
+            <summary>
+            Property EndDate.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Structure.Color">
+            <summary>
+            Property Color.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Structure.Apartment">
+            <summary>
+            Apartment (appartment structure node) class.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Apartment.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Apartment.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Structure.Activity">
+            <summary>
+            Activity (activity structure node) class.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Activity.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Activity.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Structure.Energy">
+            <summary>
+            Energy (energy structure node) class.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Energy.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Energy.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Structure.Schedule">
+            <summary>
+            Schedule (schedule structure node) class.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Schedule.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Schedule.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Structure.ScheduleManual">
+            <summary>
+            ScheduleManual (schedule structure node) class.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.ScheduleManual.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.ScheduleManual.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Structure.Worksheet">
+            <summary>
+            Worksheet (worksheet structure node) class.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Worksheet.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Worksheet.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Structure.TopologyStructure">
+            <summary>
+            Topology (topology structure node) class.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.TopologyStructure.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.TopologyStructure.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Structure.TopologyItemFilterResult">
+            <summary>
+            TopologyItemFilterResult (topology structure node) class.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.TopologyItemFilterResult.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.TopologyItemFilterResult.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Structure.AllplanShare">
+            <summary>
+            AllplanShare Structure Node ( internal usage for AllplanShare ProjectStructures )
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.AllplanShare.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.AllplanShare.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Structure.StructureElement">
+            <summary>
+            StructureElement class.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.StructureElement.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.StructureElement.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.StructureElement.VariantType">
+            <summary>
+            Property VariantType.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.StructureElement.Nr">
+            <summary>
+            Property Nr.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.StructureElement.Color">
+            <summary>
+            Property Color.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.StructureElement.Date">
+            <summary>
+            Property Date.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.StructureElement.Progress">
+            <summary>
+            Property Progress.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.StructureElement.ConnectedElement">
+            <summary>
+            Property ConnectedElement.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Structure.TopologyDivision">
+            <summary>
+            TopologyDivision class.
+            Topology division node.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.TopologyDivision.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.TopologyDivision.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Structure.Topology">
+            <summary>
+            Topology class.
+            General Topology Node.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Topology.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Topology.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Topology.Number">
+            <summary>
+            Property Number.
+            Number will be used as Ordernumber for sorting.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Topology.TbNr">
+            <summary>
+            Property TbNr.
+            TbNr is reference to Allplan ndw-file.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Topology.Thumbnail">
+            <summary>
+            Property Thumbnail.
+            Properties from tabAttribPicture.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Topology.Allplan_GUID">
+            <summary>
+            Property Allplan_GUID.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Structure.TopologyItem">
+            <summary>
+            TopologyItem class.
+            Teilbild seems to be the Node for Allplan Teilbilder.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.TopologyItem.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.TopologyItem.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Structure.Project">
+            <summary>
+            Project class.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Project.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Project.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Project.shortDescr">
+            <summary>
+            Property shortDescr.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Project.Created">
+            <summary>
+            Property Created.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Project.Changed">
+            <summary>
+            Property Changed.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Project.Latitude">
+            <summary>
+            Property Latitude.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Project.Longitude">
+            <summary>
+            Property Longitude.
             </summary>
         </member>
         <member name="T:BimPlus.Sdk.Data.DbCore.Building.BuildingElementPart">
@@ -6153,405 +7658,6 @@
             Returns Elementtyp.
             </summary>
         </member>
-        <member name="T:BimPlus.Sdk.Data.DbCore.Structure.Layout">
-            <summary>
-            Layout class.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Layout.Elementtyp">
-            <summary>
-            Returns Elementtyp.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Layout.ObjectName">
-            <summary>
-            Returns ObjectName.
-            </summary>
-        </member>
-        <member name="T:BimPlus.Sdk.Data.DbCore.Structure.AllplanLayout">
-            <summary>
-            AllplanLayout class.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.AllplanLayout.Elementtyp">
-            <summary>
-            Returns Elementtyp.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.AllplanLayout.ObjectName">
-            <summary>
-            Returns ObjectName.
-            </summary>
-        </member>
-        <member name="T:BimPlus.Sdk.Data.DbCore.Structure.Site">
-            <summary>
-            Site class (topology node).
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Site.ObjectName">
-            <summary>
-            Returns ObjectName.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Site.Elementtyp">
-            <summary>
-            Returns Elementtyp.
-            </summary>
-        </member>
-        <member name="T:BimPlus.Sdk.Data.DbCore.Structure.Zone">
-            <summary>
-            Zone class (site topology node).
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Zone.ObjectName">
-            <summary>
-            Returns ObjectName.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Zone.Elementtyp">
-            <summary>
-            Returns Elementtyp.
-            </summary>
-        </member>
-        <member name="T:BimPlus.Sdk.Data.DbCore.Structure.Structure">
-            <summary>
-            Structure class.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Structure.ObjectName">
-            <summary>
-            Returns ObjectName.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Structure.Elementtyp">
-            <summary>
-            Returns Elementtyp.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Structure.StructureType">
-            <summary>
-            Property StructureType == ElementType.
-            </summary>
-        </member>
-        <member name="M:BimPlus.Sdk.Data.DbCore.Structure.Structure.AddProperty(System.Guid,System.Object)">
-            <summary>
-            Add date properties.
-            </summary>
-            <param name="attributId"></param>
-            <param name="value"></param>
-            <returns></returns>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Structure.Nr">
-            <summary>
-            Property Nr.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Structure.StartDate">
-            <summary>
-            Property StartDate.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Structure.EndDate">
-            <summary>
-            Property EndDate.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Structure.Color">
-            <summary>
-            Property Color.
-            </summary>
-        </member>
-        <member name="T:BimPlus.Sdk.Data.DbCore.Structure.Apartment">
-            <summary>
-            Apartment (appartment structure node) class.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Apartment.ObjectName">
-            <summary>
-            Returns ObjectName.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Apartment.Elementtyp">
-            <summary>
-            Returns Elementtyp.
-            </summary>
-        </member>
-        <member name="T:BimPlus.Sdk.Data.DbCore.Structure.Activity">
-            <summary>
-            Activity (activity structure node) class.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Activity.ObjectName">
-            <summary>
-            Returns ObjectName.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Activity.Elementtyp">
-            <summary>
-            Returns Elementtyp.
-            </summary>
-        </member>
-        <member name="T:BimPlus.Sdk.Data.DbCore.Structure.Energy">
-            <summary>
-            Energy (energy structure node) class.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Energy.ObjectName">
-            <summary>
-            Returns ObjectName.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Energy.Elementtyp">
-            <summary>
-            Returns Elementtyp.
-            </summary>
-        </member>
-        <member name="T:BimPlus.Sdk.Data.DbCore.Structure.Schedule">
-            <summary>
-            Schedule (schedule structure node) class.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Schedule.ObjectName">
-            <summary>
-            Returns ObjectName.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Schedule.Elementtyp">
-            <summary>
-            Returns Elementtyp.
-            </summary>
-        </member>
-        <member name="T:BimPlus.Sdk.Data.DbCore.Structure.ScheduleManual">
-            <summary>
-            ScheduleManual (schedule structure node) class.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.ScheduleManual.ObjectName">
-            <summary>
-            Returns ObjectName.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.ScheduleManual.Elementtyp">
-            <summary>
-            Returns Elementtyp.
-            </summary>
-        </member>
-        <member name="T:BimPlus.Sdk.Data.DbCore.Structure.Worksheet">
-            <summary>
-            Worksheet (worksheet structure node) class.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Worksheet.ObjectName">
-            <summary>
-            Returns ObjectName.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Worksheet.Elementtyp">
-            <summary>
-            Returns Elementtyp.
-            </summary>
-        </member>
-        <member name="T:BimPlus.Sdk.Data.DbCore.Structure.TopologyStructure">
-            <summary>
-            Topology (topology structure node) class.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.TopologyStructure.ObjectName">
-            <summary>
-            Returns ObjectName.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.TopologyStructure.Elementtyp">
-            <summary>
-            Returns Elementtyp.
-            </summary>
-        </member>
-        <member name="T:BimPlus.Sdk.Data.DbCore.Structure.TopologyItemFilterResult">
-            <summary>
-            TopologyItemFilterResult (topology structure node) class.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.TopologyItemFilterResult.ObjectName">
-            <summary>
-            Returns ObjectName.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.TopologyItemFilterResult.Elementtyp">
-            <summary>
-            Returns Elementtyp.
-            </summary>
-        </member>
-        <member name="T:BimPlus.Sdk.Data.DbCore.Structure.AllplanShare">
-            <summary>
-            AllplanShare Structure Node ( internal usage for AllplanShare ProjectStructures )
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.AllplanShare.ObjectName">
-            <summary>
-            Returns ObjectName.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.AllplanShare.Elementtyp">
-            <summary>
-            Returns Elementtyp.
-            </summary>
-        </member>
-        <member name="T:BimPlus.Sdk.Data.DbCore.Structure.StructureElement">
-            <summary>
-            StructureElement class.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.StructureElement.ObjectName">
-            <summary>
-            Returns ObjectName.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.StructureElement.Elementtyp">
-            <summary>
-            Returns Elementtyp.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.StructureElement.VariantType">
-            <summary>
-            Property VariantType.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.StructureElement.Nr">
-            <summary>
-            Property Nr.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.StructureElement.Color">
-            <summary>
-            Property Color.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.StructureElement.Date">
-            <summary>
-            Property Date.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.StructureElement.Progress">
-            <summary>
-            Property Progress.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.StructureElement.ConnectedElement">
-            <summary>
-            Property ConnectedElement.
-            </summary>
-        </member>
-        <member name="T:BimPlus.Sdk.Data.DbCore.Structure.TopologyDivision">
-            <summary>
-            TopologyDivision class.
-            Topology division node.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.TopologyDivision.ObjectName">
-            <summary>
-            Returns ObjectName.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.TopologyDivision.Elementtyp">
-            <summary>
-            Returns Elementtyp.
-            </summary>
-        </member>
-        <member name="T:BimPlus.Sdk.Data.DbCore.Structure.Topology">
-            <summary>
-            Topology class.
-            General Topology Node.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Topology.ObjectName">
-            <summary>
-            Returns ObjectName.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Topology.Elementtyp">
-            <summary>
-            Returns Elementtyp.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Topology.Number">
-            <summary>
-            Property Number.
-            Number will be used as Ordernumber for sorting.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Topology.TbNr">
-            <summary>
-            Property TbNr.
-            TbNr is reference to Allplan ndw-file.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Topology.Thumbnail">
-            <summary>
-            Property Thumbnail.
-            Properties from tabAttribPicture.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Topology.Allplan_GUID">
-            <summary>
-            Property Allplan_GUID.
-            </summary>
-        </member>
-        <member name="T:BimPlus.Sdk.Data.DbCore.Structure.TopologyItem">
-            <summary>
-            TopologyItem class.
-            Teilbild seems to be the Node for Allplan Teilbilder.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.TopologyItem.Elementtyp">
-            <summary>
-            Returns Elementtyp.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.TopologyItem.ObjectName">
-            <summary>
-            Returns ObjectName.
-            </summary>
-        </member>
-        <member name="T:BimPlus.Sdk.Data.DbCore.Structure.Project">
-            <summary>
-            Project class.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Project.ObjectName">
-            <summary>
-            Returns ObjectName.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Project.Elementtyp">
-            <summary>
-            Returns Elementtyp.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Project.shortDescr">
-            <summary>
-            Property shortDescr.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Project.Created">
-            <summary>
-            Property Created.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Project.Changed">
-            <summary>
-            Property Changed.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Project.Latitude">
-            <summary>
-            Property Latitude.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Project.Longitude">
-            <summary>
-            Property Longitude.
-            </summary>
-        </member>
         <member name="T:BimPlus.Sdk.Data.DbCore.SnapShot.Slide">
             <summary>
             Slide class.
@@ -6595,278 +7701,6 @@
         <member name="P:BimPlus.Sdk.Data.DbCore.SnapShot.Slide.ObjectName">
             <summary>
             Returns ObjectName.
-            </summary>
-        </member>
-        <member name="T:BimPlus.Sdk.Data.DbCore.StructuralAnalysisElements.StructuralAnalysis1DMember">
-            <summary>
-            StructuralAnalysis1DMember class.
-                1D Member elements of Structural Analysis objects.
-                Type_Id = /21/1/
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.StructuralAnalysisElements.StructuralAnalysis1DMember.ObjectName">
-            <summary>
-            Returns ObjectName.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.StructuralAnalysisElements.StructuralAnalysis1DMember.Elementtyp">
-            <summary>
-            Returns Elementtyp.
-            </summary>
-        </member>
-        <member name="T:BimPlus.Sdk.Data.DbCore.StructuralAnalysisElements.StructuralAnalysisMember">
-            <summary>
-            StructuralAnalysisMember class.
-                Member of 1D Member elements of Structural Analysis objects.
-                Type_Id = /21/1/1/
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.StructuralAnalysisElements.StructuralAnalysisMember.ObjectName">
-            <summary>
-            Returns ObjectName.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.StructuralAnalysisElements.StructuralAnalysisMember.Elementtyp">
-            <summary>
-            Returns Elementtyp.
-            </summary>
-        </member>
-        <member name="T:BimPlus.Sdk.Data.DbCore.StructuralAnalysisElements.StructuralAnalysisBeam">
-            <summary>
-            StructuralAnalysisBeam class.
-                Beam of 1D Member elements of Structural Analysis objects.
-                Type_Id = /21/1/2/
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.StructuralAnalysisElements.StructuralAnalysisBeam.ObjectName">
-            <summary>
-            Returns ObjectName.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.StructuralAnalysisElements.StructuralAnalysisBeam.Elementtyp">
-            <summary>
-            Returns Elementtyp.
-            </summary>
-        </member>
-        <member name="T:BimPlus.Sdk.Data.DbCore.StructuralAnalysisElements.StructuralAnalysisColumn">
-            <summary>
-            StructuralAnalysisColumn class.
-                Column of 1D Member elements of Structural Analysis objects.
-                Type_Id = /21/1/3/
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.StructuralAnalysisElements.StructuralAnalysisColumn.ObjectName">
-            <summary>
-            Returns ObjectName.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.StructuralAnalysisElements.StructuralAnalysisColumn.Elementtyp">
-            <summary>
-            Returns Elementtyp.
-            </summary>
-        </member>
-        <member name="T:BimPlus.Sdk.Data.DbCore.StructuralAnalysisElements.StructuralAnalysis2DMember">
-            <summary>
-            StructuralAnalysis2DMember class.
-                2D Member elements of Structural Analysis objects.
-                Type_Id = /21/2/
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.StructuralAnalysisElements.StructuralAnalysis2DMember.ObjectName">
-            <summary>
-            Returns ObjectName.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.StructuralAnalysisElements.StructuralAnalysis2DMember.Elementtyp">
-            <summary>
-            Returns Elementtyp.
-            </summary>
-        </member>
-        <member name="T:BimPlus.Sdk.Data.DbCore.StructuralAnalysisElements.StructuralAnalysisPlatte">
-            <summary>
-            StructuralAnalysisPlatte.
-                Platte of 2D Member elements of Structural Analysis objects.
-                Type_Id = /21/2/1/
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.StructuralAnalysisElements.StructuralAnalysisPlatte.ObjectName">
-            <summary>
-            Returns ObjectName.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.StructuralAnalysisElements.StructuralAnalysisPlatte.Elementtyp">
-            <summary>
-            Returns Elementtyp.
-            </summary>
-        </member>
-        <member name="T:BimPlus.Sdk.Data.DbCore.StructuralAnalysisElements.StructuralAnalysisWall">
-            <summary>
-            StructuralAnalysisWall class.
-                Wall of 2D Member elements of Structural Analysis objects.
-                Type_Id = /21/2/2/
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.StructuralAnalysisElements.StructuralAnalysisWall.ObjectName">
-            <summary>
-            Returns ObjectName.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.StructuralAnalysisElements.StructuralAnalysisWall.Elementtyp">
-            <summary>
-            Returns Elementtyp.
-            </summary>
-        </member>
-        <member name="T:BimPlus.Sdk.Data.DbCore.StructuralAnalysisElements.StructuralAnalysisShell">
-            <summary>
-            StructuralAnalysisShell class.
-                Wall of 2D Member elements of Structural Analysis objects.
-                Type_Id = /21/2/3/
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.StructuralAnalysisElements.StructuralAnalysisShell.ObjectName">
-            <summary>
-            Returns ObjectName.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.StructuralAnalysisElements.StructuralAnalysisShell.Elementtyp">
-            <summary>
-            Returns Elementtyp.
-            </summary>
-        </member>
-        <member name="T:BimPlus.Sdk.Data.DbCore.StructuralAnalysisElements.StructuralAnalysis2DMemberComponents">
-            <summary>
-            StructuralAnalysis2DMemberComponents class.
-                2D Member components of 2D Member elements of Structural Analysis objects.
-                Type_Id = /21/2/4/
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.StructuralAnalysisElements.StructuralAnalysis2DMemberComponents.ObjectName">
-            <summary>
-            Returns ObjectName.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.StructuralAnalysisElements.StructuralAnalysis2DMemberComponents.Elementtyp">
-            <summary>
-            Returns Elementtyp.
-            </summary>
-        </member>
-        <member name="T:BimPlus.Sdk.Data.DbCore.StructuralAnalysisElements.StructuralAnalysisOpening">
-            <summary>
-            StructuralAnalysisOpening class.
-                2D Member components of 2D Member elements of Structural Analysis objects.
-                Type_Id = /21/2/4/1/
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.StructuralAnalysisElements.StructuralAnalysisOpening.ObjectName">
-            <summary>
-            Returns ObjectName.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.StructuralAnalysisElements.StructuralAnalysisOpening.Elementtyp">
-            <summary>
-            Returns Elementtyp.
-            </summary>
-        </member>
-        <member name="T:BimPlus.Sdk.Data.DbCore.StructuralAnalysisElements.StructuralAnalysisModelData">
-            <summary>
-            StructuralAnalysisModelData class.
-                Model data elements of Structural Analysis objects.
-                Type_Id = /21/3/
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.StructuralAnalysisElements.StructuralAnalysisModelData.ObjectName">
-            <summary>
-            Returns ObjectName.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.StructuralAnalysisElements.StructuralAnalysisModelData.Elementtyp">
-            <summary>
-            Returns Elementtyp.
-            </summary>
-        </member>
-        <member name="T:BimPlus.Sdk.Data.DbCore.StructuralAnalysisElements.StructuralAnalysisSupport">
-            <summary>
-            StructuralAnalysisSupport class.
-                Support of Model data elements of Structural Analysis objects.
-                Type_Id = /21/3/1/
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.StructuralAnalysisElements.StructuralAnalysisSupport.ObjectName">
-            <summary>
-            Returns ObjectName.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.StructuralAnalysisElements.StructuralAnalysisSupport.Elementtyp">
-            <summary>
-            Returns Elementtyp.
-            </summary>
-        </member>
-        <member name="T:BimPlus.Sdk.Data.DbCore.StructuralAnalysisElements.StructuralAnalysisInNodeSupport">
-            <summary>
-            StructuralAnalysisInNodeSupport class.
-                Support "in node" of Model data elements of Structural Analysis objects.
-                Type_Id = /21/3/1/1/
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.StructuralAnalysisElements.StructuralAnalysisInNodeSupport.ObjectName">
-            <summary>
-            Returns ObjectName.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.StructuralAnalysisElements.StructuralAnalysisInNodeSupport.Elementtyp">
-            <summary>
-            Returns Elementtyp.
-            </summary>
-        </member>
-        <member name="T:BimPlus.Sdk.Data.DbCore.StructuralAnalysisElements.StructuralAnalysisPointOnBeamSupport">
-            <summary>
-            StructuralAnalysisPointOnBeamSupport class.
-                Support "point on beam" of Model data elements of Structural Analysis objects.
-                Type_Id = /21/3/1/2/
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.StructuralAnalysisElements.StructuralAnalysisPointOnBeamSupport.ObjectName">
-            <summary>
-            Returns ObjectName.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.StructuralAnalysisElements.StructuralAnalysisPointOnBeamSupport.Elementtyp">
-            <summary>
-            Returns Elementtyp.
-            </summary>
-        </member>
-        <member name="T:BimPlus.Sdk.Data.DbCore.StructuralAnalysisElements.StructuralAnalysisLineOnBeamSupport">
-            <summary>
-            StructuralAnalysisLineOnBeamSupport class.
-                Support "line on beam" of Model data elements of Structural Analysis objects.
-                Type_Id = /21/3/1/3/
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.StructuralAnalysisElements.StructuralAnalysisLineOnBeamSupport.ObjectName">
-            <summary>
-            Returns ObjectName.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.StructuralAnalysisElements.StructuralAnalysisLineOnBeamSupport.Elementtyp">
-            <summary>
-            Returns Elementtyp.
-            </summary>
-        </member>
-        <member name="T:BimPlus.Sdk.Data.DbCore.StructuralAnalysisElements.StructuralAnalysisLineOn2DMemberEdgeSupport">
-            <summary>
-            StructuralAnalysisLineOn2DMemberEdgeSupport class.
-                Support "Line on 2D member edge" of Model data elements of Structural Analysis objects.
-                Type_Id = /21/3/1/4/
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.StructuralAnalysisElements.StructuralAnalysisLineOn2DMemberEdgeSupport.ObjectName">
-            <summary>
-            Returns ObjectName.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.StructuralAnalysisElements.StructuralAnalysisLineOn2DMemberEdgeSupport.Elementtyp">
-            <summary>
-            Returns Elementtyp.
             </summary>
         </member>
         <member name="T:BimPlus.Sdk.Data.DbCore.CSG.GeometryTypes">
@@ -8681,6 +9515,11 @@
             Property CrossToken.
             </summary>
         </member>
+        <member name="P:BimPlus.Sdk.Data.Job.DtoLandXmlJobData.CrossTokenLandXml">
+            <summary>
+            Property CrossTokenLandXml.
+            </summary>
+        </member>
         <member name="T:BimPlus.Sdk.Data.Job.DtoExportJobData">
             <summary>
             DtoExportJobData class.
@@ -8760,6 +9599,12 @@
             <summary>
             Property UserId.
             Id of user that started the export.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Job.DtoExportJobData.Revision">
+            <summary>
+            Property revision
+            Revision version - if isn't definet i will be taken the last revision automatically
             </summary>
         </member>
         <member name="T:BimPlus.Sdk.Data.Job.DtoImportJob">
@@ -11044,7 +11889,7 @@
             Property AttribUnitNameId.
             </summary>
         </member>
-        <member name="P:BimPlus.Sdk.Data.Content.DtoFreeAttribute.Symbol">
+        <member name="P:BimPlus.Sdk.Data.Content.DtoFreeAttribute.Unit">
             <summary>
             Property Symbol.
             Symbol/ unit of assigned unit.
@@ -11052,7 +11897,7 @@
         </member>
         <member name="P:BimPlus.Sdk.Data.Content.DtoFreeAttribute.OptionalSymbol">
             <summary>
-            Property OptionalSymbol (Optional symbol ( e.g.'Σ' )).
+            Property OptionalSymbol (Optional symbol ( e.g.'Î£' )).
             </summary>
         </member>
         <member name="P:BimPlus.Sdk.Data.Content.DtoFreeAttribute.Visible">
@@ -11288,6 +12133,11 @@
             Properties
             </summary>
         </member>
+        <member name="P:BimPlus.Sdk.Data.Content.DtoCatalogItem.DataTable">
+            <summary>
+            Property DataTable.
+            </summary>
+        </member>
         <member name="T:BimPlus.Sdk.Data.CSG.CsgGeoType">
             <summary>
             CsgGeoType enum.
@@ -11458,6 +12308,24 @@
             Returns CsgType.
             </summary>
         </member>
+        <member name="T:BimPlus.Sdk.Data.CSG.ParametricCrossSection">
+            <summary>
+            ParametricCrossSection class
+            contains parametric cross section definition of Path geometry type in CSG geometry definition.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.CSG.ParametricCrossSection.Name">
+            <summary>
+            Name - represent cross section type definition
+                   can contains type definition name or id when is available
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.CSG.ParametricCrossSection.CrossSectionParameters">
+            <summary>
+            CrossSectionParameters - represent collection of all cross section type definition parameters,
+                                     when one parameter for crossSection type is missing api function will fail (BadRequest as exception)
+            </summary>
+        </member>
         <member name="T:BimPlus.Sdk.Data.CSG.Path">
             <summary>
             Path for CSG Object definition.
@@ -11469,7 +12337,10 @@
             </summary>
         </member>
         <member name="P:BimPlus.Sdk.Data.CSG.Path.CrossSection">
-            Property CrossSection.
+            Property CrossSection. (properties CrossSection and ParametricCrossSection are exclusive, only one can be defined)
+        </member>
+        <member name="P:BimPlus.Sdk.Data.CSG.Path.ParametricCrossSection">
+            Property ParametricCrossSection. (properties CrossSection and ParametricCrossSection are exclusive, only one can be defined)
         </member>
         <member name="T:BimPlus.Sdk.Data.CSG.DtoCsgTree">
             <summary>
@@ -11932,6 +12803,9 @@
         <member name="F:BimPlus.Sdk.Data.Controltype.Calendar">
             <summary>Calendar.</summary>
         </member>
+        <member name="F:BimPlus.Sdk.Data.Controltype.Link">
+            <summary>Linkobject.</summary>
+        </member>
         <member name="T:BimPlus.Sdk.Data.ActiveStatus">
             <summary>
             ActiveStatus enum.
@@ -12121,6 +12995,11 @@
         <member name="F:BimPlus.Sdk.Data.AttachmentType.LandXML">
             <summary>/2/9/ LandXML file.</summary>
         </member>
+        <member name="T:BimPlus.Sdk.Data.ModelAccess">
+            <summary>
+            ModelAccess enum 
+            </summary>
+        </member>
         <member name="T:BimPlus.Sdk.Data.AttachmentClassification">
             <summary>
             AttachmentClassification enum.
@@ -12193,6 +13072,9 @@
         </member>
         <member name="F:BimPlus.Sdk.Data.ImportType.REVIT_IMPORT">
             <summary>REVIT_IMPORT.</summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.ImportType.LANDXML_IMPORT">
+            <summary>LANDXML_IMPORT.</summary>
         </member>
         <member name="T:BimPlus.Sdk.Data.ImportReturnCode">
             <summary>
@@ -13801,6 +14683,11 @@
             Property EnumDefinition.
             </summary>
         </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoAttributDefinition.LinkedObjectId">
+            <summary>
+            Property LinkedObjectId. (used for DataType == Link)
+            </summary>
+        </member>
         <member name="P:BimPlus.Sdk.Data.TenantDto.DtoAttributDefinition.OriginalEnumDefinitionSelectString">
             <summary>
             Property OriginalEnumDefinitionSelectString.
@@ -15391,9 +16278,9 @@
             Property View.
             </summary>
         </member>
-        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoHiddenCalculation.ClippRegion">
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoHiddenCalculation.ClipRegion">
             <summary>
-            Property ClippRegion.
+            Property ClipRegion.
             </summary>
         </member>
         <member name="P:BimPlus.Sdk.Data.TenantDto.DtoHiddenCalculation.Light">
@@ -16251,6 +17138,11 @@
         <member name="P:BimPlus.Sdk.Data.TenantDto.DtoDivision.ProjectId">
             <summary>
             Property ProjectId.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoDivision.UserGroupName">
+            <summary>
+            Property UserGroupId.
             </summary>
         </member>
         <member name="P:BimPlus.Sdk.Data.TenantDto.DtoDivision.UserGroupId">
@@ -17992,6 +18884,31 @@
             Property Number.
             </summary>
         </member>
+        <member name="T:BimPlus.Sdk.Data.TenantDto.DtoTopologyShort">
+            <summary>
+            DtoTopologyShort class
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoTopologyShort.Children">
+            <summary>
+            Property Children.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoTopologyShort.Name">
+            <summary>
+            Property Name.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoTopologyShort.Type">
+            <summary>
+            Property Type.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoTopologyShort.Layerid">
+            <summary>
+            Property Layerid.
+            </summary>
+        </member>
         <member name="T:BimPlus.Sdk.Data.TenantDto.DtoTopology">
             <summary>
             DtoTopology class.
@@ -18025,6 +18942,11 @@
         <member name="P:BimPlus.Sdk.Data.TenantDto.DtoTopology.EmptyNode">
             <summary>
             Property EmptyNode (Information, if topology nodes contains some child elements (EmptyNode = true, if is no child element defined)).
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoTopology.ElementTypeId">
+            <summary>
+            Property Type.
             </summary>
         </member>
         <member name="T:BimPlus.Sdk.Data.TenantDto.DtoTopologyStructure">
@@ -19082,6 +20004,11 @@
             Property Rights.
             </summary>
         </member>
+        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoUserGroup.DisciplinesAccess">
+            <summary>
+            Property Disciplines Access.
+            </summary>
+        </member>
         <member name="T:BimPlus.Sdk.Data.UserAdministration.UserGroup">
             <summary>
             UserGroup class.
@@ -19107,6 +20034,11 @@
         </member>
         <member name="F:BimPlus.Sdk.Data.UserAdministration.UserGroupRoleId.GroupMember">
             role of group  Group  Member
+        </member>
+        <member name="T:BimPlus.Sdk.Data.UserAdministration.UserGroupRoleRatePriority">
+            <summary>
+            Rate of class userGroupRole Id higher have default value bigger 
+            </summary>
         </member>
         <member name="T:BimPlus.Sdk.Data.UserAdministration.UserGroupRoleName">
             <summary>
@@ -19137,6 +20069,31 @@
         <member name="M:BimPlus.Sdk.Data.UserAdministration.DtoGroupUserRights.#ctor">
             <summary>
             DtoGroupUser rights.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.UserAdministration.DtoDisciplineAccess">
+            <summary>
+            DtoDisciplineAccess class.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoDisciplineAccess.Id">
+            <summary>
+            Property Id.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoDisciplineAccess.Name">
+            <summary>
+            Property Name.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoDisciplineAccess.Share">
+            <summary>
+            Property Share.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoDisciplineAccess.WIP">
+            <summary>
+            Property wip.
             </summary>
         </member>
         <member name="T:BimPlus.Sdk.Data.UserAdministration.DtoRole">
@@ -19330,21 +20287,6 @@
         <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoStorageStatistics.NumberOfMembers">
             <summary>
             Property NumberOfMembers.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoStorageStatistics.TotalSpace">
-            <summary>
-            Property TotalSpace.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoStorageStatistics.TotalNumberOfProjects">
-            <summary>
-            Property TotalNumberOfProjects.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoStorageStatistics.TotalNumberOfMembers">
-            <summary>
-            Property TotalNumberOfMembers.
             </summary>
         </member>
         <member name="T:BimPlus.Sdk.Data.UserAdministration.DtoClientTeam">

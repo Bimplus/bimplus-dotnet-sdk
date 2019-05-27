@@ -1374,5 +1374,245 @@
             <param name="polyeder"></param>
             <returns></returns>
         </member>
+        <member name="T:Nemetschek.NBase.Objects.CBase">
+            <summary>
+               Summary description for Base.
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NBase.Objects.CBase.FT_NONE">
+            
+        </member>
+        <member name="F:Nemetschek.NBase.Objects.CBase.FT_SELECTABLE">
+            
+        </member>
+        <member name="F:Nemetschek.NBase.Objects.CBase.m_Color">
+            
+        </member>
+        <member name="F:Nemetschek.NBase.Objects.CBase.m_SelColor">
+            
+        </member>
+        <member name="F:Nemetschek.NBase.Objects.CBase.m_BGColor">
+            
+        </member>
+        <member name="F:Nemetschek.NBase.Objects.CBase.m_FGColor">
+            
+        </member>
+        <member name="F:Nemetschek.NBase.Objects.CBase.m_Flags">
+            
+        </member>
+        <member name="F:Nemetschek.NBase.Objects.CBase.m_Selected">
+            
+        </member>
+        <member name="F:Nemetschek.NBase.Objects.CBase.m_sIDstring">
+            
+        </member>
+        <member name="F:Nemetschek.NBase.Objects.CBase.m_sID_Object">
+            
+        </member>
+        <member name="F:Nemetschek.NBase.Objects.CBase.m_ElementID">
+            
+        </member>
+        <member name="M:Nemetschek.NBase.Objects.CBase.#ctor(System.Drawing.Color,System.Drawing.Color,System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="Color"></param>
+            <param name="SelColor"></param>
+            <param name="Flags"></param>
+            <param name="strID"></param>
+        </member>
+        <member name="M:Nemetschek.NBase.Objects.CBase.#ctor(System.Drawing.Color,System.Drawing.Color,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Color"></param>
+            <param name="SelColor"></param>
+            <param name="Flags"></param>
+        </member>
+        <member name="M:Nemetschek.NBase.Objects.CBase.#ctor(System.Drawing.Color,System.Drawing.Color)">
+            <summary>
+            
+            </summary>
+            <param name="Color"></param>
+            <param name="SelColor"></param>
+        </member>
+        <member name="M:Nemetschek.NBase.Objects.CBase.#ctor(Nemetschek.NBase.Objects.CBase)">
+            <summary>
+            
+            </summary>
+            <param name="Base"></param>
+        </member>
+        <member name="M:Nemetschek.NBase.Objects.CBase.CreateCopy">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Nemetschek.NBase.Objects.CBase.Color">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Nemetschek.NBase.Objects.CBase.SelColor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Nemetschek.NBase.Objects.CBase.Flags">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Nemetschek.NBase.Objects.CBase.Selected">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Nemetschek.NBase.Objects.CBase.IDstring">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Nemetschek.NBase.Objects.CBase.ID_Object">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Nemetschek.NBase.Objects.CBase.ElementID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nemetschek.NBase.Objects.CBase.GetSelected(System.Drawing.Point,System.Int32,System.Int32,Nemetschek.NBase.Objects.CBase@)">
+            <summary>
+            
+            </summary>
+            <param name="point"></param>
+            <param name="Tol"></param>
+            <param name="Flags"></param>
+            <param name="Base"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nemetschek.NBase.Objects.CBase.GetBoundingRect(System.Drawing.Rectangle@)">
+            <summary>
+            
+            </summary>
+            <param name="rect"></param>
+        </member>
+        <member name="M:Nemetschek.NBase.Objects.CBase.Draw(System.Drawing.Graphics,System.Single)">
+            <summary>
+            
+            </summary>
+            <param name="Graphics"></param>
+            <param name="fZoom"></param>
+        </member>
+        <member name="M:Nemetschek.NBase.Objects.CBase.DrawFilling(System.Drawing.Graphics,System.Single)">
+            <summary>
+            
+            </summary>
+            <param name="Graphics"></param>
+            <param name="fZoom"></param>
+        </member>
+        <member name="T:Nemetschek.NBase.Objects.BaseArray">
+            <summary>
+               Summary description for BaseArray.
+            </summary>
+        </member>
+        <member name="M:Nemetschek.NBase.Objects.BaseArray.GetSelected(System.Drawing.Point,System.Int32,System.Int32,Nemetschek.NBase.Objects.CBase@)">
+            <summary>
+            
+            </summary>
+            <param name="point"></param>
+            <param name="Tol"></param>
+            <param name="Flags"></param>
+            <param name="Base"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nemetschek.NBase.Objects.BaseArray.Draw(System.Drawing.Graphics,System.Single)">
+            <summary>
+            
+            </summary>
+            <param name="Graphics"></param>
+            <param name="fZoom"></param>
+        </member>
+        <member name="M:Nemetschek.NBase.Objects.BaseArray.DrawFilling(System.Drawing.Graphics,System.Single)">
+            <summary>
+            
+            </summary>
+            <param name="Graphics"></param>
+            <param name="fZoom"></param>
+        </member>
+        <member name="M:Nemetschek.NBase.Objects.BaseArray.ObjectsWithID(System.String)">
+            <summary>
+            Get objects with given element ID.
+            </summary>
+            <param name="stringID">Element ID.</param>
+            <returns>Objects with given element ID.</returns>
+        </member>
+        <member name="T:Nemetschek.NBase.Objects.GeometryPolyedersDifferenceException">
+            <summary>
+            Class for exception definition - exception is used in geometry function for polyeder difference calculation
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NBase.Objects.GeometryPolyedersDifferenceException.m_nErrorNr">
+            <summary>Error number</summary>
+        </member>
+        <member name="M:Nemetschek.NBase.Objects.GeometryPolyedersDifferenceException.#ctor(System.Int32)">
+            <summary>
+            class constructor
+            </summary>
+            <param name="errnr">Error number</param>
+        </member>
+        <member name="M:Nemetschek.NBase.Objects.GeometryPolyedersDifferenceException.#ctor(System.String,System.Int32)">
+            <summary>
+            class constructor
+            </summary>
+            <param name="message">message string</param>
+            <param name="errnr">Error number</param>
+        </member>
+        <member name="M:Nemetschek.NBase.Objects.GeometryPolyedersDifferenceException.GetErrorNr">
+            <summary>
+            Get error number
+            </summary>
+            <returns>actual error number</returns>
+        </member>
+        <member name="T:Nemetschek.NBase.CollisionLogHelperClass">
+            <summary>
+            Main purpose of this class is to access log4net logging functionality 
+            to mixed dll NUtilLibrary where is calculation core for collision functionality.
+            This is facade of interface ILog from log4net.
+            </summary>
+        </member>
+        <member name="T:Nemetschek.NBase.Geometry2D.LKPoint">
+            <summary>
+             Abstand des Punktes [XN,YN] von Linie [XA,YA];[XB,YB]
+             Ueberprueft ob ein Punkt innerhalb,ausserhalb oder auf dem Rand eines geschlossenen Polygonzugs liegt.
+            </summary>
+        </member>
+        <member name="M:Nemetschek.NBase.Geometry2D.LKPoint.IsPointInPolygon(System.Double[],System.Int32,System.Double,System.Double,System.Double)">
+            <summary>
+            Ueberprueft ob ein Punkt innerhalb,ausserhalb oder auf dem 
+            Rand eines geschlossenen Polygonzugs liegt.
+            </summary>
+            <param name="punkte">punkte des pgz (X,Y,X,Y,...)</param>
+            <param name="ianz">dimension von punkte</param>
+            <param name="x">punkt der getestet wird</param>
+            <param name="y">punkt der getestet wird</param>
+            <param name="tol">halbeRandbreite</param>
+            <returns>0 - aussen; 1 - innen; 2 - auf einer Kante; 3 - auf einem Punkt</returns>
+        </member>
+        <member name="M:Nemetschek.NBase.Geometry2D.LKPoint.AbstandPunktvonLinie(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Abstand des Punktes [XN,YN] von Linie [XA,YA];[XB,YB]
+            </summary>
+            <param name="XA">anfangspunkt der linie</param>
+            <param name="YA">anfangspunkt der linie</param>
+            <param name="XB">endpunkt der linie</param>
+            <param name="YB">endpunkt der linie</param>
+            <param name="XN">punkt der getestet wird</param>
+            <param name="YN">punkt der getestet wird</param>
+            <param name="toleranz">Toleranz</param>
+            <returns>Abstand des Punktes von Linie </returns>
+        </member>
     </members>
 </doc>
