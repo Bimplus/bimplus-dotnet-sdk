@@ -30,6 +30,44 @@
         <member name="F:BimPlus.Sdk.Data.Definitions.FaceMode.Texture">
             <summary>Texture.</summary>
         </member>
+        <member name="T:BimPlus.Sdk.Data.Definitions.MaterialsVisualization">
+            <summary>
+            MaterialsVisualization enumeration.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.Definitions.MaterialsVisualization.Hatch0">
+            masonry / Mauerwerk.
+        </member>
+        <member name="F:BimPlus.Sdk.Data.Definitions.MaterialsVisualization.Hatch1">
+            unreinforced concrete / Beton unbewert.
+        </member>
+        <member name="F:BimPlus.Sdk.Data.Definitions.MaterialsVisualization.Hatch2">
+            reinforced concrete / Beton bewehrt
+        </member>
+        <member name="F:BimPlus.Sdk.Data.Definitions.MaterialsVisualization.Hatch3">
+            sealant / Dichtstoff
+        </member>
+        <member name="F:BimPlus.Sdk.Data.Definitions.MaterialsVisualization.Hatch4">
+            finished part / Fertigteil
+        </member>
+        <member name="F:BimPlus.Sdk.Data.Definitions.MaterialsVisualization.Hatch5">
+            light concrete / Leichtbeton
+        </member>
+        <member name="F:BimPlus.Sdk.Data.Definitions.MaterialsVisualization.Hatch6">
+            glass / Glas
+        </member>
+        <member name="F:BimPlus.Sdk.Data.Definitions.MaterialsVisualization.Hatch7">
+            insulation / Daemstoff
+        </member>
+        <member name="F:BimPlus.Sdk.Data.Definitions.MaterialsVisualization.Hatch8">
+            composite wood / Holzwerkstoff
+        </member>
+        <member name="F:BimPlus.Sdk.Data.Definitions.MaterialsVisualization.Hatch9">
+            solid wood / Vollholz
+        </member>
+        <member name="F:BimPlus.Sdk.Data.Definitions.MaterialsVisualization.Hatch10">
+            concrete insulation / Daemstoff fest
+        </member>
         <member name="T:BimPlus.Sdk.Data.Definitions.ResponseMode">
             ResponseMode enumeration.
         </member>
@@ -116,11 +154,17 @@
         <member name="F:BimPlus.Sdk.Data.Definitions.View.perspectiveView">
             <summary>Member perspectiveView.</summary>
         </member>
-        <member name="F:BimPlus.Sdk.Data.Definitions.View.distance">
-            <summary>Member distance.</summary>
+        <member name="F:BimPlus.Sdk.Data.Definitions.View.eyePoint">
+            <summary>Member eyePoint.</summary>
         </member>
-        <member name="F:BimPlus.Sdk.Data.Definitions.View.viewMat">
-            <summary>Member viewMat.</summary>
+        <member name="F:BimPlus.Sdk.Data.Definitions.View.targetPoint">
+            <summary>Member targetPoint.</summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.Definitions.View.directionUnitVector">
+            <summary>Member directionUnitVector.</summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.Definitions.View.angle">
+            <summary>Member angle.</summary>
         </member>
         <member name="T:BimPlus.Sdk.Data.Definitions.PropertySettings">
             <summary>
@@ -150,11 +194,6 @@
         </member>
         <member name="P:BimPlus.Sdk.Data.Definitions.PropertySettings.onlyOuterEdgeThick">
             <summary>Property onlyOuterEdgeThick.</summary>
-        </member>
-        <member name="T:BimPlus.Sdk.Data.Definitions.SectionSettings">
-            <summary>
-            Empty class SectionSettings.
-            </summary>
         </member>
     </members>
 </doc>

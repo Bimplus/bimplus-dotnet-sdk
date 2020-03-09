@@ -146,12 +146,17 @@
         </member>
         <member name="F:BimPlus.Sdk.IfcData.DbLayer.StructuralAnalysisModel">
             <summary>
-            StructuralAnalysis  /21/
+            StructuralAnalysis (items, member) /21/
             </summary>
         </member>
         <member name="F:BimPlus.Sdk.IfcData.DbLayer.StructuralAnalysisLoadModel">
             <summary>
-            StructuralAnalysis  /210/
+            StructuralAnalysis loads  /210/
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.DbLayer.StructuralAnalysisReactionModel">
+            <summary>
+            StructuralAnalysis reactions  /211/
             </summary>
         </member>
         <member name="F:BimPlus.Sdk.IfcData.DbLayer.StructureElementModel">
@@ -174,11 +179,6 @@
             FireRating /256/
             </summary>
         </member>
-        <member name="T:BimPlus.Sdk.IfcData.LayersDisciplinesGroupAccess">
-            <summary>
-            Fill Disciplines Access Layers to Guid
-            </summary>
-        </member>
         <member name="T:BimPlus.Sdk.IfcData.DbLayerHandler">
             <summary>
             Converter Class for DbLayer to Guid
@@ -189,31 +189,148 @@
         </member>
         <member name="M:BimPlus.Sdk.IfcData.DbLayerHandler.GetDiscipline(BimPlus.Sdk.IfcData.DbLayer)">
             <summary>
-            GetDiscipline
+            GetDiscipline from DbLayer.
             </summary>
             <param name="value"></param>
             <returns></returns>
         </member>
         <member name="M:BimPlus.Sdk.IfcData.DbLayerHandler.GetLayer(System.Guid)">
             <summary>
-            GetLayer
+            GetLayer from discipline.
             </summary>
             <param name="discipline"></param>
-            <returns></returns>
+            <returns>DbLayer</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.DbLayerHandler.IsStructuralAnalysisDomain(BimPlus.Sdk.IfcData.DbLayer)">
+            <summary>
+            Get IsStructuralAnalysisDomain.
+            </summary>
+            <param name="layer"></param>
+            <returns>True if IsStructuralAnalysisDomain() otherwise false.</returns>
         </member>
         <member name="T:BimPlus.Sdk.IfcData.IfcImportReportType">
             <summary>
-            Enum for definition report type by IFC import
+            Enum for definition report type by IFC import.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcImportReportType.imporReport_Undefined">
+            <summary>
+            Undefined import report type.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcImportReportType.imporReport_Error">
+            <summary>
+            Import report type "Error".
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcImportReportType.imporReport_Info">
+            <summary>
+            Import report type "Info".
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcImportReportType.imporReport_Warning">
+            <summary>
+            Import report type "Warning".
             </summary>
         </member>
         <member name="T:BimPlus.Sdk.IfcData.IfcImportInfoType">
             <summary>
-            Enum for definition main report types by IFC import 
+            Enum for definition main report types by IFC import.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcImportInfoType.importError_Undefined">
+            <summary>
+            Undefined import error type.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcImportInfoType.importError_LineParsing">
+            <summary>
+            Import error by reading and parsing lines from IFC file.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcImportInfoType.importError_MissingGeometry">
+            <summary>
+            Missing geometry by IFC element import.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcImportInfoType.importError_CSCGeometry">
+            <summary>
+            Error by CSG geometry handling.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcImportInfoType.importWarning_Undefined">
+            <summary>
+            Undefined import warning type.
             </summary>
         </member>
         <member name="T:BimPlus.Sdk.IfcData.IfcImportDetailedInfoTypes">
             <summary>
-            Enum for definition detailed report types by IFC import
+            Enum for definition detailed report types by IFC import.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcImportDetailedInfoTypes.info_000">
+            <summary>
+            Info_000.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcImportDetailedInfoTypes.error_000">
+            <summary>
+            Error_000
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcImportDetailedInfoTypes.error_001">
+            <summary>
+            Error_001
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcImportDetailedInfoTypes.error_002">
+            <summary>
+            Error_002
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcImportDetailedInfoTypes.error_003">
+            <summary>
+            Error_003
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcImportDetailedInfoTypes.error_004">
+            <summary>
+            Error_004
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcImportDetailedInfoTypes.error_005">
+            <summary>
+            Eor_005
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcImportDetailedInfoTypes.error_006">
+            <summary>
+            Error_006
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcImportDetailedInfoTypes.error_007">
+            <summary>
+            Error_007
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcImportDetailedInfoTypes.error_008">
+            <summary>
+            Error_008.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcImportDetailedInfoTypes.error_009">
+            <summary>
+            Error_009
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcImportDetailedInfoTypes.error_010">
+            <summary>
+            Error_010
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcImportDetailedInfoTypes.warning_000">
+            <summary>
+            Warning_000
             </summary>
         </member>
         <member name="T:BimPlus.Sdk.IfcData.IfcGeneralData">
@@ -257,14 +374,567 @@
             bim+ attributes definitions  
             </summary>
         </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.BimPlusAttributes.BimPlusPropertySetName">
+            <summary>
+            BimPlusPropertySetName.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.BimPlusAttributes.IfcType">
+            <summary>
+            IfcType.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.BimPlusAttributes.IfcTypeId">
+            <summary>
+            IfcTypeId.
+            </summary>
+        </member>
         <member name="T:BimPlus.Sdk.IfcData.IfcGeneralData.IFC">
             <summary>
             Class for definition base data for IFC elements
             </summary>        
         </member>
+        <member name="T:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.BaseProfiledef">
+            <summary>
+            Class BaseProfiledef.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.BaseProfiledef.ContainsKey(System.String)">
+            <summary>
+            ContainsKey.
+            </summary>
+            <param name="key"></param>
+            <returns>True if contains key.</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.BaseProfiledef.#ctor(System.Type)">
+            <summary>
+            BaseProfiledef.
+            </summary>
+            <param name="names"></param>
+        </member>
+        <member name="T:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcParametrizedProfileDef">
+            <summary>
+            Class IfcParametrizedProfileDef.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcParametrizedProfileDef.ExtrudeProfileType">
+            <summary>
+            Get ExtrudeProfileType.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcParametrizedProfileDef.ExtrudeProfileName">
+            <summary>
+            Get ExtrudeProfileName.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcParametrizedProfileDef.#ctor">
+            <summary>
+            Get IfcParametrizedProfileDef.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcLShapeProfileDef">
+            <summary>
+            Class IfcLShapeProfileDef.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcLShapeProfileDef.Depth">
+            <summary>
+            Get Depth string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcLShapeProfileDef.Width">
+            <summary>
+            Get Width string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcLShapeProfileDef.Thickness">
+            <summary>
+            Get Thickness string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcLShapeProfileDef.FilletRadius">
+            <summary>
+            Get FilletRadius string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcLShapeProfileDef.EdgeRadius">
+            <summary>
+            Get EdgeRadius string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcLShapeProfileDef.LegSlope">
+            <summary>
+             Get LegSlope string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcLShapeProfileDef.CentreOfGravityInX">
+            <summary>
+            Get CentreOfGravityInX string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcLShapeProfileDef.CentreOfGravityInY">
+            <summary>
+            Get CentreOfGravityInY string.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcIShapeProfileDef">
+            <summary>
+            Class IfcIShapeProfileDef.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcIShapeProfileDef.OverallWidth">
+            <summary>
+            Get OverallWidth string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcIShapeProfileDef.OverallDepth">
+            <summary>
+            Get OverallDepth string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcIShapeProfileDef.WebThickness">
+            <summary>
+            Get WebThickness string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcIShapeProfileDef.FlangeThickness">
+            <summary>
+            Get FlangeThickness string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcIShapeProfileDef.FilletRadius">
+            <summary>
+            Get FilletRadius string.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcCircleProfileDef">
+            <summary>
+            Class IfcCircleProfileDef.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcCircleProfileDef.Radius">
+            <summary>
+            Get Radius string.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcCircleHollowProfileDef">
+            <summary>
+            Class IfcCircleHollowProfileDef.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcCircleHollowProfileDef.WallThickness">
+            <summary>
+            Get WallThickness string.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcEllipseProfileDef">
+            <summary>
+            Class IfcEllipseProfileDef.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcEllipseProfileDef.SemiAxis1">
+            <summary>
+            Get SemiAxis1 string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcEllipseProfileDef.SemiAxis2">
+            <summary>
+            Get SemiAxis2 string.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcRectangleProfileDef">
+            <summary>
+            Class IfcRectangleProfileDef.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcRectangleProfileDef.XDim">
+            <summary>
+            Get XDim string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcRectangleProfileDef.YDim">
+            <summary>
+            Get YDim string.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcRectangleHollowProfileDef">
+            <summary>
+            Class IfcRectangleHollowProfileDef.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcRectangleHollowProfileDef.WallThickness">
+            <summary>
+            Get WallThickness string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcRectangleHollowProfileDef.InnerFilletRadius">
+            <summary>
+            Get InnerFilletRadius string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcRectangleHollowProfileDef.OuterFilletRadius">
+            <summary>
+            Get OuterFilletRadius string.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcTrapeziumProfileDef">
+            <summary>
+            Class IfcTrapeziumProfileDef.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcTrapeziumProfileDef.BottomXDim">
+            <summary>
+            Get BottomXDim string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcTrapeziumProfileDef.TopXDim">
+            <summary>
+            Get TopXDim string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcTrapeziumProfileDef.YDim">
+            <summary>
+            Get YDim string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcTrapeziumProfileDef.TopXOffset">
+            <summary>
+            Get TopXOffset string.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcUShapeProfileDef">
+            <summary>
+            Class IfcUShapeProfileDef.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcUShapeProfileDef.Depth">
+            <summary>
+            Get Depth string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcUShapeProfileDef.FlangeWidth">
+            <summary>
+            Get FlangeWidth string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcUShapeProfileDef.WebThickness">
+            <summary>
+            Get WebThickness string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcUShapeProfileDef.FlangeThickness">
+            <summary>
+            Get FlangeThickness string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcUShapeProfileDef.FilletRadius">
+            <summary>
+            Get FilletRadius string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcUShapeProfileDef.EdgeRadius">
+            <summary>
+            Get EdgeRadius string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcUShapeProfileDef.FlangeSlope">
+            <summary>
+            Get FlangeSlope string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcUShapeProfileDef.CentreOfGravityInX">
+            <summary>
+            Get CentreOfGravityInX string.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcTShapeProfileDef">
+            <summary>
+            Class IfcTShapeProfileDef.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcTShapeProfileDef.Depth">
+            <summary>
+            Get Depth string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcTShapeProfileDef.FlangeWidth">
+            <summary>
+            Get FlangeWidth string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcTShapeProfileDef.WebThickness">
+            <summary>
+            Get WebThickness string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcTShapeProfileDef.FlangeThickness">
+            <summary>
+            Get FlangeThickness string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcTShapeProfileDef.FilletRadius">
+            <summary>
+            Get FilletRadius string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcTShapeProfileDef.FlangeEdgeRadius">
+            <summary>
+            Get FlangeEdgeRadius string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcTShapeProfileDef.WebEdgeRadius">
+            <summary>
+            Get WebEdgeRadius string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcTShapeProfileDef.WebSlope">
+            <summary>
+            Get WebSlope string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcTShapeProfileDef.FlangeSlope">
+            <summary>
+            Get FlangeSlope string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcTShapeProfileDef.CentreOfGravityInY">
+            <summary>
+            Get CentreOfGravityInY string.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcCShapeProfileDef">
+            <summary>
+            Class IfcCShapeProfileDef.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcCShapeProfileDef.Depth">
+            <summary>
+            Get Depth string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcCShapeProfileDef.Width">
+            <summary>
+            Get Width string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcCShapeProfileDef.WallThickness">
+            <summary>
+            Get WallThickness string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcCShapeProfileDef.Girth">
+            <summary>
+            Get Girth string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcCShapeProfileDef.InternalFilletRadius">
+            <summary>
+            Get InternalFilletRadius string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcCShapeProfileDef.CentreOfGravityInX">
+            <summary>
+            Get CentreOfGravityInX.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcZShapeProfileDef">
+            <summary>
+            Class IfcZShapeProfileDef.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcZShapeProfileDef.Depth">
+            <summary>
+            Get Depth string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcZShapeProfileDef.FlangeWidth">
+            <summary>
+            Get FlangeWidth string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcZShapeProfileDef.WebThickness">
+            <summary>
+            Get WebThickness string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcZShapeProfileDef.FlangeThickness">
+            <summary>
+            Get FlangeThickness string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcZShapeProfileDef.FilletRadius">
+            <summary>
+            Get FilletRadius string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcZShapeProfileDef.EdgeRadius">
+            <summary>
+            Get EdgeRadius string.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcCraneRailFShapeProfileDef">
+            <summary>
+            Class IfcCraneRailFShapeProfileDef.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcCraneRailFShapeProfileDef.OverallHeight">
+            <summary>
+            Get OverallHeight string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcCraneRailFShapeProfileDef.HeadWidth">
+            <summary>
+            Get HeadWidth string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcCraneRailFShapeProfileDef.Radius">
+            <summary>
+            Get Radius string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcCraneRailFShapeProfileDef.HeadDepth2">
+            <summary>
+            Get HeadDepth2 string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcCraneRailFShapeProfileDef.HeadDepth3">
+            <summary>
+            Get HeadDepth3 string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcCraneRailFShapeProfileDef.WebThickness">
+            <summary>
+            Get WebThickness string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcCraneRailFShapeProfileDef.BaseDepth1">
+            <summary>
+            Get BaseDepth1 string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcCraneRailFShapeProfileDef.BaseDepth2">
+            <summary>
+            Get BaseDepth2 string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcCraneRailFShapeProfileDef.CentreOfGravityInY">
+            <summary>
+            Get CentreOfGravityInY string.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcCraneRailAShapeProfileDef">
+            <summary>
+            Class IfcCraneRailAShapeProfileDef.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcCraneRailAShapeProfileDef.OverallHeight">
+            <summary>
+            Get OverallHeight string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcCraneRailAShapeProfileDef.BaseWidth2">
+            <summary>
+            Get BaseWidth2 string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcCraneRailAShapeProfileDef.Radius">
+            <summary>
+            Get 
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcCraneRailAShapeProfileDef.HeadWidth">
+            <summary>
+            Get HeadWidth string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcCraneRailAShapeProfileDef.HeadDepth2">
+            <summary>
+            Get HeadDepth2 string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcCraneRailAShapeProfileDef.HeadDepth3">
+            <summary>
+            Get HeadDepth3 string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcCraneRailAShapeProfileDef.WebThickness">
+            <summary>
+            Get WebThickness string
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcCraneRailAShapeProfileDef.BaseWidth4">
+            <summary>
+            Get BaseWidth4 string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcCraneRailAShapeProfileDef.BaseDepth1">
+            <summary>
+            Get BaseDepth1 string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcCraneRailAShapeProfileDef.BaseDepth2">
+            <summary>
+            Get BaseDepth2 string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcCraneRailAShapeProfileDef.BaseDepth3">
+            <summary>
+            Get BaseDepth3 string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.IfcCraneRailAShapeProfileDef.CentreOfGravityInY">
+            <summary>
+            Get CentreOfGravityInY string.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CTopologyElementNames">
+            <summary>
+            Class CTopologyElementNames.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CTopologyElementNames.IfcProject">
+            <summary>
+            Get IfcProject string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CTopologyElementNames.IfcSite">
+            <summary>
+            Get IfcSite string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CTopologyElementNames.IfcBuilding">
+            <summary>
+            Get IfcBuilding string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CTopologyElementNames.IfcBuildingStorey">
+            <summary>
+            Get IfcBuildingStorey string.
+            </summary>
+        </member>
         <member name="T:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonArchitecturalFinishElementNames">
             <summary>
             All finish architectonic elements, which don't need own class
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonArchitecturalFinishElementNames.IfcWindow">
+            <summary>
+            Get IfcWindow string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonArchitecturalFinishElementNames.IfcDoor">
+            <summary>
+            Get IfcDoor string
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonArchitecturalFinishElementNames.IfcFurnishingElement">
+            <summary>
+            Get IfcFurnishingElement string
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonArchitecturalFinishElementNames.#ctor">
+            <summary>
+            Class CCommonArchitecturalFinishElementNames.
             </summary>
         </member>
         <member name="T:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonArchitecturalElementNames">
@@ -272,9 +942,214 @@
             All building architectonic elements, which don't need own class
             </summary>
         </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonArchitecturalElementNames.IfcWall">
+            <summary>
+            Get IfcWall string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonArchitecturalElementNames.IfcRailing">
+            <summary>
+            Get IfcRailing string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonArchitecturalElementNames.IfcMember">
+            <summary>
+            Get IfcMember string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonArchitecturalElementNames.IfcWallStandardCase">
+            <summary>
+            Get IfcWallStandardCase string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonArchitecturalElementNames.IfcProjectionElement">
+            <summary>
+            Get IfcProjectionElement string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonArchitecturalElementNames.IfcSlab">
+            <summary>
+            Get IfcSlab string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonArchitecturalElementNames.IfcPlate">
+            <summary>
+            Get IfcPlate string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonArchitecturalElementNames.IfcBeam">
+            <summary>
+            Get IfcBeam string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonArchitecturalElementNames.IfcColumn">
+            <summary>
+            Get IfcColumnstring
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonArchitecturalElementNames.IfcRoof">
+            <summary>
+            Get IfcRoof string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonArchitecturalElementNames.IfcFooting">
+            <summary>
+            Get IfcFooting string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonArchitecturalElementNames.IfcFastener">
+            <summary>
+            Get IfcFastener string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonArchitecturalElementNames.IfcTendonAnchor">
+            <summary>
+            Get IfcTendonAnchor string
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonArchitecturalElementNames.IfcTendon">
+            <summary>
+            Get IfcTendon string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonArchitecturalElementNames.IfcStair">
+            <summary>
+            Get IfcStair string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonArchitecturalElementNames.IfcStairFlight">
+            <summary>
+            Get IfcStairFlight string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonArchitecturalElementNames.IfcRamp">
+            <summary>
+            Get IfcRamp string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonArchitecturalElementNames.IfcRampFlight">
+            <summary>
+            Get IfcRampFlight string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonArchitecturalElementNames.IfcPile">
+            <summary>
+            Get IfcPile string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonArchitecturalElementNames.IfcMechanicalFastener">
+            <summary>
+            Get IfcMechanicalFastener string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonArchitecturalElementNames.IfcCurtainWall">
+            <summary>
+            Get IfcCurtainWall string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonArchitecturalElementNames.IfcDiscreteAccessory">
+            <summary>
+            Get IfcDiscreteAccessory string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonArchitecturalElementNames.IfcBuildingElementPart">
+            <summary>
+            Get IfcBuildingElementPart string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonArchitecturalElementNames.IfcBuildingElementComponent">
+            <summary>
+            Get IfcBuildingElementComponent string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonArchitecturalElementNames.IfcSlabStandardCase">
+            <summary>
+            Get IfcSlabStandardCase string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonArchitecturalElementNames.IfcBeamStandardCase">
+            <summary>
+            Get IfcBeamStandardCase string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonArchitecturalElementNames.IfcColumnStandardCase">
+            <summary>
+            Get IfcColumnStandardCase string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonArchitecturalElementNames.IfcPlateStandardCase">
+            <summary>
+            Get IfcPlateStandardCase string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonArchitecturalElementNames.IfcDoorStandardCase">
+            <summary>
+            Get IfcDoorStandardCase string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonArchitecturalElementNames.IfcWindowStandardCase">
+            <summary>
+            Get IfcWindowStandardCase string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonArchitecturalElementNames.IfcBuildingSystem">
+            <summary>
+            Get IfcBuildingSystem string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonArchitecturalElementNames.IfcChimney">
+            <summary>
+            Get IfcChimney string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonArchitecturalElementNames.IfcMemberStandardCase">
+            <summary>
+            Get IfcMemberStandardCase string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonArchitecturalElementNames.IfcShadingDevice">
+            <summary>
+            Get IfcShadingDevice string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonArchitecturalElementNames.IfcSlabElementedCase">
+            <summary>
+            Get IfcSlabElementedCase string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonArchitecturalElementNames.IfcWallElementedCase">
+            <summary>
+            Get IfcWallElementedCase string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonArchitecturalElementNames.IfcSurfaceFeature">
+            <summary>
+            Get IfcSurfaceFeature string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonArchitecturalElementNames.IfcVoidingFeature">
+            <summary>
+            Get IfcVoidingFeature string.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonArchitecturalElementNames.#ctor">
+            <summary>
+            Class CCommonArchitecturalElementNames.
+            </summary>
+        </member>
         <member name="T:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CArchitecturalFinishElementNames">
             <summary>
             All architectonic finish elements, which need own class - there are used some spacial functions
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CArchitecturalFinishElementNames.IfcCovering">
+            <summary>
+            Get IfcCovering string.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CArchitecturalFinishElementNames.#ctor">
+            <summary>
+            Class CArchitecturalFinishElementNames.
             </summary>
         </member>
         <member name="T:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CArchitecturalRoomElementNames">
@@ -282,29 +1157,244 @@
             All architectonic room elements, which need own class - there are used some spacial functions
             </summary>
         </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CArchitecturalRoomElementNames.IfcSpace">
+            <summary>
+            Get IfcSpace string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CArchitecturalRoomElementNames.IfcZone">
+            <summary>
+            Get IfcZone string.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CArchitecturalRoomElementNames.#ctor">
+            <summary>
+            Class CArchitecturalRoomElementNames.
+            </summary>
+        </member>
         <member name="T:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CArchitecturalElementNames">
             <summary>
             All architectonic elements, which need own class - there are used some spacial functions
             </summary>
         </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CArchitecturalElementNames.IfcProxy">
+            <summary>
+            Get IfcProxy string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CArchitecturalElementNames.IfcGrid">
+            <summary>
+            Get IfcGrid string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CArchitecturalElementNames.IfcElementAssembly">
+            <summary>
+            Get IfcElementAssembly string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CArchitecturalElementNames.IfcBuildingElement">
+            <summary>
+            Get IfcBuildingElement string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CArchitecturalElementNames.IfcOpeningElement">
+            <summary>
+            Get IfcOpeningElement string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CArchitecturalElementNames.IfcReinforcingBar">
+            <summary>
+            Get IfcReinforcingBar string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CArchitecturalElementNames.IfcReinforcingMesh">
+            <summary>
+            Get IfcReinforcingMesh string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CArchitecturalElementNames.IfcBuildingElementProxy">
+            <summary>
+            Get IfcBuildingElementProxy string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CArchitecturalElementNames.IfcRoot">
+            <summary>
+            Get IfcRoot string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CArchitecturalElementNames.IfcMaterialLayer">
+            <summary>
+            Get IfcMaterialLayer string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CArchitecturalElementNames.IfcGeographicElement">
+            <summary>
+            Get IfcGeographicElement string.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CArchitecturalElementNames.#ctor">
+            <summary>
+            Class CArchitecturalElementNames.
+            </summary>
+        </member>
         <member name="T:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CHeatingElementNames">
             <summary>
-            All Heating elements, which are defined in BIM-6190 
+            All Heating elements, which are defined in BIM-6190.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CHeatingElementNames.IfcBoiler">
+            <summary>
+            Get IfcBoiler string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CHeatingElementNames.IfcBurner">
+            <summary>
+            Get IfcBurner string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CHeatingElementNames.IfcHeatExchanger">
+            <summary>
+            Get IfcHeatExchanger string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CHeatingElementNames.IfcSpaceHeater">
+            <summary>
+            Get IfcSpaceHeater string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CHeatingElementNames.IfcTank">
+            <summary>
+            Get IfcTank string.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CHeatingElementNames.#ctor">
+            <summary>
+            Class CHeatingElementNames.
             </summary>
         </member>
         <member name="T:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CSprinklerElementNames">
             <summary>
-            All Sprinkler elements, which are defined in BIM-6190 
+            All Sprinkler elements, which are defined in BIM-6190.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CSprinklerElementNames.IfcFireSuppressionTerminal">
+            <summary>
+            Get IfcFireSuppressionTerminal string.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CSprinklerElementNames.#ctor">
+            <summary>
+            Class CSprinklerElementNames.
             </summary>
         </member>
         <member name="T:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CVentilationElementNames">
             <summary>
-            All Ventilation elements, which are defined in BIM-6190 
+            All Ventilation elements, which are defined in BIM-6190.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CVentilationElementNames.IfcAirTerminal">
+            <summary>
+            Get IfcAirTerminal string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CVentilationElementNames.IfcAirTerminalBox">
+            <summary>
+            Get IfcAirTerminalBox string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CVentilationElementNames.IfcAirToAirHeatRecovery">
+            <summary>
+            Get 
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CVentilationElementNames.IfcCoil">
+            <summary>
+            Get IfcAirToAirHeatRecovery string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CVentilationElementNames.IfcDamper">
+            <summary>
+            Get IfcDamper string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CVentilationElementNames.IfcDuctFitting">
+            <summary>
+            Get IfcDuctFitting string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CVentilationElementNames.IfcDuctSegment">
+            <summary>
+            Get IfcDuctSegment string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CVentilationElementNames.IfcDuctSilencer">
+            <summary>
+            Get IfcDuctSilencer string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CVentilationElementNames.IfcFan">
+            <summary>
+            Get IfcFan string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CVentilationElementNames.IfcHumidifier">
+            <summary>
+            Get IfcHumidifier string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CVentilationElementNames.IfcVibrationIsolator">
+            <summary>
+            Get IfcVibrationIsolator string.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CVentilationElementNames.#ctor">
+            <summary>
+            Class CVentilationElementNames.
             </summary>
         </member>
         <member name="T:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCoolingElementNames">
             <summary>
-            All Cooling elements, which are defined in BIM-6190 
+            All Cooling elements, which are defined in BIM-6190.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCoolingElementNames.IfcChiller">
+            <summary>
+            Get IfcChiller string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCoolingElementNames.IfcCompressor">
+            <summary>
+            Get IfcCompressor string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCoolingElementNames.IfcCondenser">
+            <summary>
+            Get IfcCondenser string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCoolingElementNames.IfcCooledBeam">
+            <summary>
+            Get IfcCooledBeam string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCoolingElementNames.IfcCoolingTower">
+            <summary>
+            Get IfcCoolingTower string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCoolingElementNames.IfcEvaporativeCooler">
+            <summary>
+            Get IfcEvaporativeCooler string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCoolingElementNames.IfcEvaporator">
+            <summary>
+            Get IfcEvaporator string.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCoolingElementNames.#ctor">
+            <summary>
+            Class CCoolingElementNames.
             </summary>
         </member>
         <member name="T:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CPlumbingElementNames">
@@ -312,24 +1402,484 @@
             All Plumbing  elements, which are defined in BIM-6190 
             </summary>
         </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CPlumbingElementNames.IfcPipeFitting">
+            <summary>
+            Get IfcPipeFitting string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CPlumbingElementNames.IfcPipeSegment">
+            <summary>
+            Get IfcPipeSegment string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CPlumbingElementNames.IfcPump">
+            <summary>
+            Get 
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CPlumbingElementNames.IfcTubeBundle">
+            <summary>
+            Get IfcTubeBundle string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CPlumbingElementNames.IfcInterceptor">
+            <summary>
+            Get IfcInterceptor string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CPlumbingElementNames.IfcSanitaryTerminal">
+            <summary>
+            Get IfcSanitaryTerminal string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CPlumbingElementNames.IfcStackTerminal">
+            <summary>
+            Get IfcStackTerminal string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CPlumbingElementNames.IfcWasteTerminal">
+            <summary>
+            Get IfcWasteTerminal string.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CPlumbingElementNames.#ctor">
+            <summary>
+            Class CPlumbingElementNames.
+            </summary>
+        </member>
         <member name="T:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonMEPElementNames">
             <summary>
-             All CommonMEP elements, which are defined in BIM-6190 
+             All CommonMEP elements, which are defined in BIM-6190.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonMEPElementNames.IfcDistributionElement">
+            <summary>
+            Get IfcDistributionElement string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonMEPElementNames.IfcTransportElement">
+            <summary>
+            Get IfcTransportElement string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonMEPElementNames.IfcDistributionChamberElement">
+            <summary>
+            Get IfcDistributionChamberElement string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonMEPElementNames.IfcDistributionControlElement">
+            <summary>
+            Get IfcDistributionControlElement string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonMEPElementNames.IfcDistributionFlowElement">
+            <summary>
+            Get IfcDistributionFlowElement string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonMEPElementNames.IfcDistributionSystem">
+            <summary>
+            Get IfcDistributionSystem string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonMEPElementNames.IfcEnergyConversionDevice">
+            <summary>
+            Get IfcEnergyConversionDevice string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonMEPElementNames.IfcFlowController">
+            <summary>
+            Get IfcFlowController string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonMEPElementNames.IfcFlowFitting">
+            <summary>
+            Get IfcFlowFitting string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonMEPElementNames.IfcFlowMovingDevice">
+            <summary>
+            Get IfcFlowMovingDevice string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonMEPElementNames.IfcFlowSegment">
+            <summary>
+            Get IfcFlowSegment string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonMEPElementNames.IfcFlowStorageDevice">
+            <summary>
+            Get IfcFlowStorageDevice string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonMEPElementNames.IfcFlowTerminal">
+            <summary>
+            Get IfcFlowTerminal string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonMEPElementNames.IfcFlowTreatmentDevice">
+            <summary>
+            Get 
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonMEPElementNames.IfcActuator">
+            <summary>
+            Get IfcFlowTreatmentDevice string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonMEPElementNames.IfcAlarm">
+            <summary>
+            Get IfcAlarm string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonMEPElementNames.IfcController">
+            <summary>
+            Get 
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonMEPElementNames.IfcFlowInstrument">
+            <summary>
+            Get IfcController string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonMEPElementNames.IfcSensor">
+            <summary>
+            Get IfcSensor string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonMEPElementNames.IfcUnitaryControlElement">
+            <summary>
+            Get IfcUnitaryControlElement string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonMEPElementNames.IfcEngine">
+            <summary>
+            Get IfcEngine string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonMEPElementNames.IfcFilter">
+            <summary>
+            Get IfcFilter string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonMEPElementNames.IfcFlowMeter">
+            <summary>
+            Get IfcFlowMeter string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonMEPElementNames.IfcMedicalDevice">
+            <summary>
+            Get IfcMedicalDevice string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonMEPElementNames.IfcUnitaryEquipment">
+            <summary>
+            Get IfcUnitaryEquipment string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonMEPElementNames.IfcValve">
+            <summary>
+            Get IfcValve string.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CCommonMEPElementNames.#ctor">
+            <summary>
+            Class CCommonMEPElementNames.
             </summary>
         </member>
         <member name="T:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CV4_IfcInventoryElementNames">
             <summary>
-            All Inventory elements, which are defined in IFC V4
+            All Inventory elements, which are defined in IFC V4.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CV4_IfcInventoryElementNames.IfcFurniture">
+            <summary>
+            Get IfcFurniture string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CV4_IfcInventoryElementNames.IfcSystemFurnitureElement">
+            <summary>
+            Get IfcSystemFurnitureElement string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CV4_IfcInventoryElementNames.IfcFurnishingElement">
+            <summary>
+            Get IfcFurnishingElement string.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CV4_IfcInventoryElementNames.#ctor">
+            <summary>
+            Class CV4_IfcInventoryElementNames.
             </summary>
         </member>
         <member name="T:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CV4_IfcStructuralAnalysisDomainElementNames">
             <summary>
-            All Structural analysis domain elements, which are defined in IFC V4
+            All Structural analysis domain elements, which are defined in IFC V4.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CV4_IfcStructuralAnalysisDomainElementNames.IfcStructuralAction">
+            <summary>
+            Get IfcStructuralAction string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CV4_IfcStructuralAnalysisDomainElementNames.IfcStructuralActivity">
+            <summary>
+            Get IfcStructuralActivity string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CV4_IfcStructuralAnalysisDomainElementNames.IfcStructuralAnalysisModel">
+            <summary>
+            Get IfcStructuralAnalysisModel string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CV4_IfcStructuralAnalysisDomainElementNames.IfcStructuralConnection">
+            <summary>
+            Get IfcStructuralConnection string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CV4_IfcStructuralAnalysisDomainElementNames.IfcStructuralCurveAction">
+            <summary>
+            Get IfcStructuralCurveAction string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CV4_IfcStructuralAnalysisDomainElementNames.IfcStructuralCurveConnection">
+            <summary>
+            Get IfcStructuralCurveConnection string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CV4_IfcStructuralAnalysisDomainElementNames.IfcStructuralCurveMember">
+            <summary>
+            Get IfcStructuralCurveMember string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CV4_IfcStructuralAnalysisDomainElementNames.IfcStructuralCurveMemberVarying">
+            <summary>
+            Get IfcStructuralCurveMemberVarying string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CV4_IfcStructuralAnalysisDomainElementNames.IfcStructuralCurveReaction">
+            <summary>
+            Get IfcStructuralCurveReaction string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CV4_IfcStructuralAnalysisDomainElementNames.IfcStructuralItem">
+            <summary>
+            Get 
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CV4_IfcStructuralAnalysisDomainElementNames.IfcStructuralLinearAction">
+            <summary>
+            Get IfcStructuralLinearAction string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CV4_IfcStructuralAnalysisDomainElementNames.IfcStructuralLoadCase">
+            <summary>
+            Get IfcStructuralLoadCase string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CV4_IfcStructuralAnalysisDomainElementNames.IfcStructuralLoadGroup">
+            <summary>
+            Get IfcStructuralLoadGroup string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CV4_IfcStructuralAnalysisDomainElementNames.IfcStructuralMember">
+            <summary>
+            Get IfcStructuralMember string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CV4_IfcStructuralAnalysisDomainElementNames.IfcStructuralPlanarAction">
+            <summary>
+            Get IfcStructuralPlanarAction string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CV4_IfcStructuralAnalysisDomainElementNames.IfcStructuralPointAction">
+            <summary>
+            Get IfcStructuralPointAction string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CV4_IfcStructuralAnalysisDomainElementNames.IfcStructuralPointConnection">
+            <summary>
+            Get IfcStructuralPointConnection string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CV4_IfcStructuralAnalysisDomainElementNames.IfcStructuralPointReaction">
+            <summary>
+            Get IfcStructuralPointReaction string-
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CV4_IfcStructuralAnalysisDomainElementNames.IfcStructuralReaction">
+            <summary>
+            Get IfcStructuralReaction string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CV4_IfcStructuralAnalysisDomainElementNames.IfcStructuralResultGroup">
+            <summary>
+            Get IfcStructuralResultGroup string
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CV4_IfcStructuralAnalysisDomainElementNames.IfcStructuralSurfaceAction">
+            <summary>
+            Get IfcStructuralSurfaceAction string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CV4_IfcStructuralAnalysisDomainElementNames.IfcStructuralSurfaceConnection">
+            <summary>
+            Get IfcStructuralSurfaceConnection string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CV4_IfcStructuralAnalysisDomainElementNames.IfcStructuralSurfaceMember">
+            <summary>
+            Get IfcStructuralSurfaceMember string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CV4_IfcStructuralAnalysisDomainElementNames.IfcStructuralSurfaceMemberVarying">
+            <summary>
+            Get IfcStructuralSurfaceMemberVarying string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CV4_IfcStructuralAnalysisDomainElementNames.IfcStructuralSurfaceReaction">
+            <summary>
+            Get IfcStructuralSurfaceReaction string.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CV4_IfcStructuralAnalysisDomainElementNames.#ctor">
+            <summary>
+            Class CV4_IfcStructuralAnalysisDomainElementNames.
             </summary>
         </member>
         <member name="T:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CElectricalElementNames">
             <summary>
-            All Electrical elements, which are defined in BIM-6190 
+            All Electrical elements, which are defined in BIM-6190.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CElectricalElementNames.IfcDistributionCircuit">
+            <summary>
+            Get IfcDistributionCircuit string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CElectricalElementNames.IfcDistributionPort">
+            <summary>
+            Get IfcDistributionPort string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CElectricalElementNames.IfcAudioVisualAppliance">
+            <summary>
+            Get IfcAudioVisualAppliance string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CElectricalElementNames.IfcCableCarrierFitting">
+            <summary>
+            Get IfcCableCarrierFitting string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CElectricalElementNames.IfcCableCarrierSegment">
+            <summary>
+            Get IfcCableCarrierSegment string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CElectricalElementNames.IfcCableFitting">
+            <summary>
+            Get IfcCableFitting string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CElectricalElementNames.IfcCableSegment">
+            <summary>
+            Get IfcCableSegment string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CElectricalElementNames.IfcCommunicationsAppliance">
+            <summary>
+            Get IfcCommunicationsAppliance string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CElectricalElementNames.IfcElectricAppliance">
+            <summary>
+            Get IfcElectricAppliance string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CElectricalElementNames.IfcElectricDistributionBoard">
+            <summary>
+            Get IfcElectricDistributionBoard string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CElectricalElementNames.IfcElectricFlowStorageDevice">
+            <summary>
+            Get IfcElectricFlowStorageDevice string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CElectricalElementNames.IfcElectricGenerator">
+            <summary>
+            Get IfcElectricGenerator string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CElectricalElementNames.IfcElectricMotor">
+            <summary>
+            Get IfcElectricMotor string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CElectricalElementNames.IfcElectricTimeControl">
+            <summary>
+            Get IfcElectricTimeControl string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CElectricalElementNames.IfcJunctionBox">
+            <summary>
+            Get IfcJunctionBox string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CElectricalElementNames.IfcLamp">
+            <summary>
+            Get IfcLamp string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CElectricalElementNames.IfcLightFixture">
+            <summary>
+            Get IfcLightFixture string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CElectricalElementNames.IfcMotorConnection">
+            <summary>
+            Get IfcMotorConnection string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CElectricalElementNames.IfcOutlet">
+            <summary>
+            Get 
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CElectricalElementNames.IfcProtectiveDevice">
+            <summary>
+            Get IfcProtectiveDevice string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CElectricalElementNames.IfcProtectiveDeviceTrippingUnit">
+            <summary>
+            Get IfcProtectiveDeviceTrippingUnit string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CElectricalElementNames.IfcSolarDevice">
+            <summary>
+            Get IfcSolarDevice string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CElectricalElementNames.IfcSwitchingDevice">
+            <summary>
+            Get IfcSwitchingDevice string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CElectricalElementNames.IfcTransformer">
+            <summary>
+            Get IfcTransformer string.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CElectricalElementNames.IfcElectricDistributionPoint">
+            <summary>
+            Get IfcElectricDistributionPoint string.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CElectricalElementNames.#ctor">
+            <summary>
+            Class CElectricalElementNames.
             </summary>
         </member>
         <member name="T:BimPlus.Sdk.IfcData.IfcGeneralData.HelperFunctions">
@@ -522,6 +2072,9 @@
         <member name="F:BimPlus.Sdk.IfcData.IfcStaticData.generalStringDefinition">
             <summary> Initialize all general strings defined in log report </summary>
         </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcStaticData.exludedPropertyIdExport">
+            <summary> List, where are defined all properties from CONTENT database, which shouldn't be exported in IFC file</summary>
+        </member>
         <member name="F:BimPlus.Sdk.IfcData.IfcStaticData.reportStringDefinition">
             <summary> Initialize all strings defined in log report</summary> IfcImportDetailedInfoTypes.
         </member>
@@ -568,6 +2121,36 @@
             Order of attribute "PredefinedType" of actual IFC element (from 1, if isn't defined there will be set value "-1")
             </summary>
         </member>
+        <member name="T:BimPlus.Sdk.IfcData.IfcStaticData.IfcParameterCountIfc4Add2">
+            <summary>
+            Definition exception by parameter count for IFC4 Add2 elements
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcStaticData.IfcParameterCountIfc4Add2.Ifc4NameStr">
+            <summary>
+            Name of actual IFC4 Add2 element for  (as string value)
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcStaticData.IfcParameterCountIfc4Add2.Ifc4Name">
+            <summary>
+            Name of actual IFC4 Add2 element for  (as enum value)
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcStaticData.IfcParameterCountIfc4Add2.Ifc4SubtypeNameStr">
+            <summary>
+            Subtype name of actual IFC4 Add2 element for  (as string)
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcStaticData.IfcParameterCountIfc4Add2.Ifc4SubtypeName">
+            <summary>
+            Subtype name of actual IFC4 Add2 element for  (as enum value)
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcStaticData.IfcParameterCountIfc4Add2.Ifc4ParamCount">
+            <summary>
+            Count of parameter of actual IFC4 Add2 element
+            </summary>
+        </member>
         <member name="F:BimPlus.Sdk.IfcData.IfcStaticData.IfcObjects">
             <summary>
             List of all defined IFC elements
@@ -581,6 +2164,11 @@
         <member name="F:BimPlus.Sdk.IfcData.IfcStaticData.DtbClashObjects">
             <summary>
             List of all clash elements, which can exit in database, but have no direct representation as IFC object
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcStaticData.Ifc4Add2Objects">
+            <summary>
+            List of exception by parameter count for IFC4 Add2 elements
             </summary>
         </member>
         <member name="M:BimPlus.Sdk.IfcData.IfcStaticData.#cctor">
@@ -605,6 +2193,17 @@
             <param name="paramcount">Count of parameter of actual IFC element</param>
             <param name="typeorder">Order of attribute "PredefinedType" of actual IFC element</param>
             <returns>new IFC element</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.IfcStaticData.CreateParameterCountIfc4Add2(System.String,BimPlus.Sdk.IfcData.EXPRESS.IfcTypes.EIfcName,System.String,BimPlus.Sdk.IfcData.EXPRESS.IfcTypes.EIfcName,System.Int32)">
+            <summary>
+            Create new structure for IFC element
+            </summary>
+            <param name="namstr">name for actual IFC element (as string)</param>
+            <param name="ename">name for actual IFC element (as EIfcName)</param>
+            <param name="subnamstr">Name of actual IFC element  (as string)</param>
+            <param name="esubtname">Name of actual IFC element  (as EIfcName)</param>
+            <param name="parcount">Count of parameter of actual IFC element</param>
+            <returns>new IfcParameterCountIfc4Add2 element</returns>
         </member>
         <member name="M:BimPlus.Sdk.IfcData.IfcStaticData.InitialiseIfcElements">
             <summary>
@@ -671,7 +2270,7 @@
             <summary>
             Get count of parameter of actual IFC element by known name
             </summary>
-            <param name="ename">Name of actual IFC element</param>
+            <param name="name">Name of actual IFC element</param>
             <returns> Count of parameter of actual IFC element</returns>
         </member>
         <member name="M:BimPlus.Sdk.IfcData.IfcStaticData.GetIfcElementPredefTypeOrder(BimPlus.Sdk.IfcData.EXPRESS.IfcTypes.EIfcName)">
@@ -685,7 +2284,7 @@
             <summary>
             Get order of attribute "PredefinedType" of actual IFC element by known name
             </summary>
-            <param name="ename">Name of actual IFC element</param>
+            <param name="name">Name of actual IFC element</param>
             <returns> Count of parameter of actual IFC element</returns>
         </member>
         <member name="M:BimPlus.Sdk.IfcData.IfcStaticData.InitialiseDtbElements">
@@ -718,6 +2317,32 @@
             </summary>
             <param name="id">Id for actual Dtb clash element</param>
             <returns>IFC element from element list</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.IfcStaticData.InitialiseIfc4Add2Elements">
+            <summary>
+            Initialization IFC elements for IFC4 Add2
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.IfcStaticData.GetIfc4Add2Element(BimPlus.Sdk.IfcData.EXPRESS.IfcTypes.EIfcName)">
+            <summary>
+            Get IfcParameterCountIfc4Add2 of actual IFC4 Add2 element by known name (as enum value)
+            </summary>
+            <param name="ename">Name of actual IFC element (as enum value)</param>
+            <returns> IfcParameterCountIfc4Add2 object </returns>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.IfcStaticData.ExistIfc4Add2Element(System.String)">
+            <summary>
+            Get information, if IfcParameterCountIfc4Add2 of actual IFC4 Add2 element exist
+            </summary>
+            <param name="enamestr">Name of actual IFC element (as String value)</param>
+            <returns> IfcParameterCountIfc4Add2 of actual IFC4 Add2 element exist (1/0) </returns>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.IfcStaticData.GetIfc4Add2Element(System.String)">
+            <summary>
+            Get IfcParameterCountIfc4Add2 of actual IFC4 Add2 element by known name (as enum value)
+            </summary>
+            <param name="enamestr">Name of actual IFC element (as String value)</param>
+            <returns> IfcParameterCountIfc4Add2 object </returns>
         </member>
         <member name="F:BimPlus.Sdk.IfcData.IfcStaticData.base64Chars">
             <summary>

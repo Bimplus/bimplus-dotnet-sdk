@@ -4,6 +4,11 @@
         <name>BimPlus.Sdk.Api</name>
     </assembly>
     <members>
+        <member name="T:BimPlus.Sdk.Api.Attributes">
+            <summary>
+            Attributes
+            </summary>
+        </member>
         <member name="M:BimPlus.Sdk.Api.Attributes.#ctor(BimPlus.Sdk.Api.Core)">
             <summary>
             Attributes
@@ -127,7 +132,7 @@
             <param name="catalogId"></param>
             <returns></returns>
         </member>
-        <!-- Ungültiger XML-Kommentar wurde für den Member "M:BimPlus.Sdk.Api.Catalogs.GetAllCatalogItems(System.Guid,System.String)" ignoriert -->
+        <!-- Badly formed XML comment ignored for member "M:BimPlus.Sdk.Api.Catalogs.GetAllCatalogItems(System.Guid,System.String)" -->
         <member name="M:BimPlus.Sdk.Api.Catalogs.GetCatalogItem(System.Guid)">
             <summary>
             Get CatalogItem

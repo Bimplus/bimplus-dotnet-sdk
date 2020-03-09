@@ -616,6 +616,29 @@
             list of Polyeder subobjects (needed for serialization)
             </summary>
         </member>
+        <member name="M:Nemetschek.BimPlus.CSG.CBaseCSG_Union_Object.CreatePolyederFromCSG_Union_Object(Nemetschek.BimPlus.CSG.CBaseCSG_Union_Object)">
+            <summary>
+            Create CBaseElementPolyeder geometry (defined via axis) for reinforcement (or tube) from known CBaseCSG_Union_Object 
+            </summary>
+            <param name="csgUnionObject"></param>
+            <returns>CBaseElementPolyeder</returns>
+        </member>
+        <member name="M:Nemetschek.BimPlus.CSG.CBaseCSG_Union_Object.CreatePolyederFromCsgUnionObject(System.Byte[],System.Byte)">
+            <summary>
+            Create Element polyeder defined with axis from CSG Union object (defined as binary array)
+            </summary>
+            <param name="picture">CSG Union object (as binary array)</param>
+            <param name="compress">type of compression</param>
+            <returns>Element Polyeder - defined with axis</returns>
+        </member>
+        <member name="M:Nemetschek.BimPlus.CSG.CBaseCSG_Union_Object.CreatePolyederFromCSG_Geometry(Nemetschek.BimPlus.CSG.CCSG_Geometry)">
+            <summary>
+            Create CBaseElementPolyeder geometry (defined via axis) for reinforcement (or tube) 
+            from known CCSG_Geometry 
+            </summary>
+            <param name="csgGeometry"></param>
+            <returns>CBaseElementPolyeder</returns>
+        </member>
         <member name="T:Nemetschek.BimPlus.CSG.CSGObjectElement">
             <summary>
             Class where is solid geometry as CSG object stored 

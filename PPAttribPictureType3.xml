@@ -70,11 +70,24 @@
             
             </summary>
         </member>
+        <member name="M:Nemetschek.NUtilLibrary.CountArray.GetListOfAllValues">
+            <summary>
+            Create list of all values from CountArray
+            </summary>
+            <returns>List of all values</returns>
+        </member>
         <member name="M:Nemetschek.NUtilLibrary.CountArray.AddCountObject(System.Single)">
+            <summary>
+            AddCountObject
+            </summary>
+            <param name="single"></param>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CountArray.AddCountObject(System.Single,System.Boolean)">
             <summary>
             
             </summary>
             <param name="single"></param>
+            <param name="alwaysnew"></param>
         </member>
         <member name="M:Nemetschek.NUtilLibrary.CountArray.GetObject(System.Int32)">
             <summary>
@@ -705,9 +718,16 @@
         </member>
         <member name="M:Nemetschek.NUtilLibrary.CBaseElementPolyeder.AddRadius(System.Single)">
             <summary>
+            AddRadius
+            </summary>
+            <param name="radius"></param>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CBaseElementPolyeder.AddRadius(System.Single,System.Boolean)">
+            <summary>
             
             </summary>
             <param name="radius"></param>
+            <param name="alwaysnew"></param>
         </member>
         <member name="M:Nemetschek.NUtilLibrary.CBaseElementPolyeder.AddRadius(Nemetschek.NUtilLibrary.CountArray)">
             <summary>
@@ -750,9 +770,16 @@
         </member>
         <member name="M:Nemetschek.NUtilLibrary.CBaseElementPolyeder.AddBendingrolle(System.Single)">
             <summary>
+            AddBendingrolle
+            </summary>
+            <param name="radius"></param>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CBaseElementPolyeder.AddBendingrolle(System.Single,System.Boolean)">
+            <summary>
             
             </summary>
             <param name="radius"></param>
+            <param name="alwaysnew"></param>
         </member>
         <member name="M:Nemetschek.NUtilLibrary.CBaseElementPolyeder.AddBendingrolle(Nemetschek.NUtilLibrary.CountArray)">
             <summary>
@@ -845,6 +872,12 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:Nemetschek.NUtilLibrary.CBaseElementPolyeder.SetMinMaxBox(System.Boolean)">
+            <summary>
+            Computes the bounding box of this polyhedron.
+            </summary>
+            <param name="withReset"></param>
+        </member>
         <member name="M:Nemetschek.NUtilLibrary.CBaseElementPolyeder.SetMinMaxBox">
             <summary>
             Computes the bounding box of this polyhedron.
@@ -879,6 +912,13 @@
             </summary>
             <param name="polyeder"></param>
             <returns></returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CBaseElementPolyeder.CreateListOfBarsFromPolyeder">
+            <summary>
+            Create list of CBaseElementPolyeder - each polyeder is defined as one bar from defined placement
+            (only for Reinforcement-polyeder)
+            </summary>
+            <returns>List of </returns>
         </member>
         <member name="M:Nemetschek.NUtilLibrary.CBaseElementPolyeder.AppendEdge(System.Int32,System.Int32)">
             <summary>
@@ -1582,6 +1622,123 @@
             to mixed dll NUtilLibrary where is calculation core for collision functionality.
             This is facade of interface ILog from log4net.
             </summary>
+        </member>
+        <member name="M:Nemetschek.NBase.CollisionLogHelperClass.Debug(System.Object)">
+            Debug.
+        </member>
+        <member name="M:Nemetschek.NBase.CollisionLogHelperClass.DebugFormat(System.String,System.Object[])">
+            DebugFormat.
+        </member>
+        <member name="M:Nemetschek.NBase.CollisionLogHelperClass.DebugFormat(System.String,System.Object)">
+            DebugFormat.
+        </member>
+        <member name="M:Nemetschek.NBase.CollisionLogHelperClass.DebugFormat(System.IFormatProvider,System.String,System.Object[])">
+            DebugFormat.
+        </member>
+        <member name="M:Nemetschek.NBase.CollisionLogHelperClass.DebugFormat(System.String,System.Object,System.Object)">
+            DebugFormat.
+        </member>
+        <member name="M:Nemetschek.NBase.CollisionLogHelperClass.DebugFormat(System.String,System.Object,System.Object,System.Object)">
+            DebugFormat.
+        </member>
+        <member name="M:Nemetschek.NBase.CollisionLogHelperClass.Error(System.Object)">
+            Error.
+        </member>
+        <member name="M:Nemetschek.NBase.CollisionLogHelperClass.Error(System.Object,System.Exception)">
+            Error.
+        </member>
+        <member name="M:Nemetschek.NBase.CollisionLogHelperClass.ErrorFormat(System.String,System.Object[])">
+            ErrorFormat.
+        </member>
+        <member name="M:Nemetschek.NBase.CollisionLogHelperClass.ErrorFormat(System.String,System.Object)">
+            ErrorFormat.
+        </member>
+        <member name="M:Nemetschek.NBase.CollisionLogHelperClass.ErrorFormat(System.IFormatProvider,System.String,System.Object[])">
+            ErrorFormat.
+        </member>
+        <member name="M:Nemetschek.NBase.CollisionLogHelperClass.ErrorFormat(System.String,System.Object,System.Object)">
+            ErrorFormat.
+        </member>
+        <member name="M:Nemetschek.NBase.CollisionLogHelperClass.ErrorFormat(System.String,System.Object,System.Object,System.Object)">
+            ErrorFormat.
+        </member>
+        <member name="M:Nemetschek.NBase.CollisionLogHelperClass.Fatal(System.Object)">
+            Fatal.
+        </member>
+        <member name="M:Nemetschek.NBase.CollisionLogHelperClass.Fatal(System.Object,System.Exception)">
+            Fatal.
+        </member>
+        <member name="M:Nemetschek.NBase.CollisionLogHelperClass.FatalFormat(System.String,System.Object[])">
+            DebFatalFormatug.
+        </member>
+        <member name="M:Nemetschek.NBase.CollisionLogHelperClass.FatalFormat(System.String,System.Object)">
+            FatalFormat.
+        </member>
+        <member name="M:Nemetschek.NBase.CollisionLogHelperClass.FatalFormat(System.IFormatProvider,System.String,System.Object[])">
+            FatalFormat.
+        </member>
+        <member name="M:Nemetschek.NBase.CollisionLogHelperClass.FatalFormat(System.String,System.Object,System.Object)">
+            FatalFormat.
+        </member>
+        <member name="M:Nemetschek.NBase.CollisionLogHelperClass.FatalFormat(System.String,System.Object,System.Object,System.Object)">
+            FatalFormat.
+        </member>
+        <member name="M:Nemetschek.NBase.CollisionLogHelperClass.Info(System.Object)">
+            Info.
+        </member>
+        <member name="M:Nemetschek.NBase.CollisionLogHelperClass.Info(System.Object,System.Exception)">
+            Info.
+        </member>
+        <member name="M:Nemetschek.NBase.CollisionLogHelperClass.InfoFormat(System.String,System.Object[])">
+            InfoFormat.
+        </member>
+        <member name="M:Nemetschek.NBase.CollisionLogHelperClass.InfoFormat(System.String,System.Object)">
+            InfoFormat.
+        </member>
+        <member name="M:Nemetschek.NBase.CollisionLogHelperClass.InfoFormat(System.IFormatProvider,System.String,System.Object[])">
+            InfoFormat.
+        </member>
+        <member name="M:Nemetschek.NBase.CollisionLogHelperClass.InfoFormat(System.String,System.Object,System.Object)">
+            InfoFormat.
+        </member>
+        <member name="M:Nemetschek.NBase.CollisionLogHelperClass.InfoFormat(System.String,System.Object,System.Object,System.Object)">
+            InfoFormat.
+        </member>
+        <member name="M:Nemetschek.NBase.CollisionLogHelperClass.Warn(System.Object)">
+            Warn.
+        </member>
+        <member name="M:Nemetschek.NBase.CollisionLogHelperClass.Warn(System.Object,System.Exception)">
+            Warn.
+        </member>
+        <member name="M:Nemetschek.NBase.CollisionLogHelperClass.WarnFormat(System.String,System.Object[])">
+            WarnFormat.
+        </member>
+        <member name="M:Nemetschek.NBase.CollisionLogHelperClass.WarnFormat(System.String,System.Object)">
+            WarnFormat.
+        </member>
+        <member name="M:Nemetschek.NBase.CollisionLogHelperClass.WarnFormat(System.IFormatProvider,System.String,System.Object[])">
+            WarnFormat.
+        </member>
+        <member name="M:Nemetschek.NBase.CollisionLogHelperClass.WarnFormat(System.String,System.Object,System.Object)">
+            WarnFormat.
+        </member>
+        <member name="M:Nemetschek.NBase.CollisionLogHelperClass.WarnFormat(System.String,System.Object,System.Object,System.Object)">
+            WarnFormat.
+        </member>
+        <member name="M:Nemetschek.NBase.CollisionLogHelperClass.IsDebugEnabled">
+            IsDebugEnabled.
+        </member>
+        <member name="M:Nemetschek.NBase.CollisionLogHelperClass.IsErrorEnabled">
+            IsErrorEnabled.
+        </member>
+        <member name="M:Nemetschek.NBase.CollisionLogHelperClass.IsFatalEnabled">
+            IsFatalEnabled.
+        </member>
+        <member name="M:Nemetschek.NBase.CollisionLogHelperClass.IsInfoEnabled">
+            IsWarnEnabled.
+        </member>
+        <member name="M:Nemetschek.NBase.CollisionLogHelperClass.IsWarnEnabled">
+            IsWarnEnabled.
         </member>
         <member name="T:Nemetschek.NBase.Geometry2D.LKPoint">
             <summary>

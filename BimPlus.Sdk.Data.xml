@@ -116,7 +116,7 @@
         </member>
         <member name="P:BimPlus.Sdk.Data.Administration.DtoAdministrationTeamShortResponse.Id">
             <summary>
-            Property Id (The unique identifier of the user).
+            Property Id (The unique identifier of the team).
             </summary>
         </member>
         <member name="P:BimPlus.Sdk.Data.Administration.DtoAdministrationTeamShortResponse.Slug">
@@ -191,7 +191,7 @@
         </member>
         <member name="P:BimPlus.Sdk.Data.Administration.DtoAdministrationTeamDetailResponse.PublicWrite">
             <summary>
-            Property PublicWrite (Public read flag of that company).
+            Property PublicWrite (Public write flag of that company).
             </summary>
         </member>
         <member name="P:BimPlus.Sdk.Data.Administration.DtoAdministrationTeamDetailResponse.TeamDbName">
@@ -202,16 +202,6 @@
         <member name="P:BimPlus.Sdk.Data.Administration.DtoAdministrationTeamDetailResponse.Payment">
             <summary>
             Property Payment (Payment info about that team).
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.Administration.DtoAdministrationTeamDetailResponse.LastLogin">
-            <summary>
-            Property LastLogin.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.Administration.DtoAdministrationTeamDetailResponse.FailedLogins">
-            <summary>
-            Property FailedLogins.
             </summary>
         </member>
         <member name="P:BimPlus.Sdk.Data.Administration.DtoAdministrationTeamDetailResponse.Owner">
@@ -933,7 +923,7 @@
         </member>
         <member name="P:BimPlus.Sdk.Data.Administration.DtoAdministrationDatabaseServerResponse.DbSpaceRemaining">
             <summary>
-            Property DbSpaceRemaining (Space remainiung for database in gigabyte).
+            Property DbSpaceRemaining (Space remaining for database in gigabyte).
             </summary>
         </member>
         <member name="P:BimPlus.Sdk.Data.Administration.DtoAdministrationDatabaseServerResponse.DbSpaceRemainingPercentage">
@@ -1056,32 +1046,22 @@
             Property Users.
             </summary>
         </member>
-        <member name="T:BimPlus.Sdk.Data.AllplanShop.DtoShopUserABOResponse">
-            <summary>
-            Response to ABO calls in allplan shop.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.AllplanShop.DtoShopUserABOResponse.ABOs">
-            <summary>
-            Property ABOs.
-            </summary>
-        </member>
-        <member name="T:BimPlus.Sdk.Data.AllplanShop.DtoShopStorageResponse">
-            <summary>
-            Response to storage calls in allplan shop.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.AllplanShop.DtoShopStorageResponse.Data">
-            <summary>
-            Property Data.
-            </summary>
-        </member>
         <member name="T:BimPlus.Sdk.Data.AllplanShop.DtoShopSubscriptionResponse">
             <summary>
             Response to subscription calls in allplan shop.
             </summary>
         </member>
         <member name="P:BimPlus.Sdk.Data.AllplanShop.DtoShopSubscriptionResponse.Data">
+            <summary>
+            Property Data.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.AllplanShop.DtoShopRestrictionResponse">
+            <summary>
+            Response to restriction calls in allplan shop.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.AllplanShop.DtoShopRestrictionResponse.Data">
             <summary>
             Property Data.
             </summary>
@@ -1356,106 +1336,6 @@
             Property Slug.
             </summary>
         </member>
-        <member name="T:BimPlus.Sdk.Data.AllplanShop.DtoAllplanShopUserABO">
-            <summary>
-            Class DtoAllplanShopUserABO (Representation of Allplan Shop user's ( team's ) ABO).
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.AllplanShop.DtoAllplanShopUserABO.Id">
-            <summary>
-            Property Id.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.AllplanShop.DtoAllplanShopUserABO.Email">
-            <summary>
-            Property Email.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.AllplanShop.DtoAllplanShopUserABO.TeamSlug">
-            <summary>
-            Property TeamSlug.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.AllplanShop.DtoAllplanShopUserABO.AccountTitle">
-            <summary>
-            Property AccountTitle.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.AllplanShop.DtoAllplanShopUserABO.PaidDate">
-            <summary>
-            Property PaidDate.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.AllplanShop.DtoAllplanShopUserABO.ServiceTypeId">
-            <summary>
-            Property ServiceTypeId.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.AllplanShop.DtoAllplanShopUserABO.ServiceTypeData">
-            <summary>
-            Property ServiceTypeData (Shop representation of bim+ Account Settings).
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.AllplanShop.DtoAllplanShopUserABO.SubscriptionPeriod">
-            <summary>
-            Property SubscriptionPeriod.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.AllplanShop.DtoAllplanShopUserABO.PayInterval">
-            <summary>
-            Property PayInterval.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.AllplanShop.DtoAllplanShopUserABO.SubscriptionUntil">
-            <summary>
-            Property SubscriptionUntil.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.AllplanShop.DtoAllplanShopUserABO.AboStatus">
-            <summary>
-            Property AboStatus.
-            </summary>
-        </member>
-        <member name="T:BimPlus.Sdk.Data.AllplanShop.DtoAllplanShopServiceTypeData">
-            <summary>
-            Class DtoAllplanShopServiceTypeData (Allplan shop representation of bim+ Account Settings).
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.AllplanShop.DtoAllplanShopServiceTypeData.Storage">
-            <summary>
-            Property Storage (Max storage).
-            </summary>
-        </member>
-        <member name="T:BimPlus.Sdk.Data.AllplanShop.DtoAllplanShopStorage">
-            <summary>
-            Class DtoAllplanShopStorage (Allplan shop storage).
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.AllplanShop.DtoAllplanShopStorage.Storage">
-            <summary>
-            Property Storage.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.AllplanShop.DtoAllplanShopStorage.Forecast">
-            <summary>
-            Property Forecast.
-            </summary>
-        </member>
-        <member name="T:BimPlus.Sdk.Data.AllplanShop.DtoAllplanShopForecastStorage">
-            <summary>
-            Class DtoAllplanShopForecastStorage (Allplan shop forecast storage).
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.AllplanShop.DtoAllplanShopForecastStorage.Storage">
-            <summary>
-            Property Storage.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.AllplanShop.DtoAllplanShopForecastStorage.Date">
-            <summary>
-            Property Date
-            </summary>
-        </member>
         <member name="T:BimPlus.Sdk.Data.AllplanShop.DtoAllplanShopSubscriptions">
             <summary>
             Class DtoAllplanShopSubscriptions (Allplan shop subscriptions).
@@ -1486,6 +1366,66 @@
             Property Title.
             </summary>
         </member>
+        <member name="T:BimPlus.Sdk.Data.AllplanShop.DtoAllplanShopRestrictions">
+            <summary>
+            Class DtoAllplanShopRestrictions (Allplan shop restrictions)
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.AllplanShop.DtoAllplanShopRestrictions.TeamOwner">
+            <summary>
+            Property Team Owner.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.AllplanShop.DtoAllplanShopRestrictions.Storage">
+            <summary>
+            Property Storage.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.AllplanShop.DtoAllplanShopRestrictions.Projects">
+            <summary>
+            Property Projects.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.AllplanShop.DtoAllplanShopRestrictions.Actives">
+            <summary>
+            Property Actives.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.AllplanShop.DtoAllplanShopRestrictions.Forecast">
+            <summary>
+            Property Forecast.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.AllplanShop.DtoAllplanShopRestrictions.Functions">
+            <summary>
+            Property Functions.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.AllplanShop.DtoAllplanShopForecast">
+            <summary>
+            Class DtoAllplanShopForecast (Allplan shop forecast).
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.AllplanShop.DtoAllplanShopForecast.Storage">
+            <summary>
+            Property Storage.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.AllplanShop.DtoAllplanShopForecast.Projects">
+            <summary>
+            Property Projects.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.AllplanShop.DtoAllplanShopForecast.Actives">
+            <summary>
+            Property Actives.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.AllplanShop.DtoAllplanShopForecast.Date">
+            <summary>
+            Property Date
+            </summary>
+        </member>
         <member name="T:BimPlus.Sdk.Data.AllplanShop.DtoAllplanShopFunctions">
             <summary>
             Class DtoAllplanShopFunctions (Allplan shop functions)
@@ -1506,6 +1446,11 @@
             Property Id.
             </summary>
         </member>
+        <member name="P:BimPlus.Sdk.Data.AllplanShop.DtoAllplanShopFunction.Subscription">
+            <summary>
+            Subscription.
+            </summary>
+        </member>
         <member name="P:BimPlus.Sdk.Data.AllplanShop.DtoAllplanShopFunction.IsUser">
             <summary>
             Property IsUser.
@@ -1514,11 +1459,6 @@
         <member name="P:BimPlus.Sdk.Data.AllplanShop.DtoAllplanShopFunction.IsTeam">
             <summary>
             Property IsTeam
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.AllplanShop.DtoAllplanShopFunction.IsTeamMember">
-            <summary>
-            Property IsTeamMember.
             </summary>
         </member>
         <member name="P:BimPlus.Sdk.Data.AllplanShop.DtoAllplanShopFunction.Details">
@@ -1586,6 +1526,30 @@
             Method Arrow().
             </summary>
             <returns>CBaseElementPolyeder</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Data.Analysis.GeometryObjects.AnalysisGeometryExtensions.Moment">
+            <summary>
+            Geometry visualization for Moment.
+            </summary>
+            <returns>DbGeometry</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Data.Analysis.GeometryObjects.AnalysisGeometryExtensions.Pin2">
+            <summary>
+            Geometry visualization for Pin.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Data.Analysis.GeometryObjects.AnalysisGeometryExtensions.Pin">
+            <summary>
+            Geometry visualization for Pin.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Data.Analysis.GeometryObjects.AnalysisGeometryExtensions.Triangle">
+            <summary>
+            Geometry visualization for Pin.
+            </summary>
+            <returns></returns>
         </member>
         <member name="T:BimPlus.Sdk.Data.Analysis.GeometryObjects.AnalysisNode">
             <summary>
@@ -2213,6 +2177,18 @@
             <param name="value"></param>
             <param name="serializer"></param>
         </member>
+        <member name="T:BimPlus.Sdk.Data.DateTimeExtensions">
+            <summary>
+            DateTimeExtensions
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.Data.DateTimeExtensions.ToDateTimeOffset(System.DateTime)">
+            <summary>
+            ToDateTimeOffset
+            </summary>
+            <param name="dateTime"></param>
+            <returns>DateTimeOffset</returns>
+        </member>
         <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.AdditionalStructuralAnalysisDomain">
             <summary>
             AdditionalStructuralAnalysisDomain class.  
@@ -2341,6 +2317,32 @@
             Returns ObjectName.
         </member>
         <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralCrossSection.Elementtyp">
+            Returns Elementtyp.
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.StructuralProxyElement">
+            <summary>
+            RelConnectsSurfaceEdge class.
+            Surface Member elements of Additional SCIA SEN Structural Analysis objects.
+                Type_Id = /21/774/1/9/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralProxyElement.ObjectName">
+            Returns ObjectName.
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralProxyElement.Elementtyp">
+            Returns Elementtyp.
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.StructuralStorey">
+            <summary>
+            StructuralStorey class.
+            Surface Member elements of Additional SCIA SEN Structural Analysis objects.
+            Type_Id = /21/774/1/10/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralStorey.ObjectName">
+            Returns ObjectName.
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralStorey.Elementtyp">
             Returns Elementtyp.
         </member>
         <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.AdditionalStructuralAnalysisSurfaceMember">
@@ -2568,7 +2570,7 @@
         <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.RelConnectsStructuralActivity">
             <summary>
             RelConnectsStructuralActivity class.
-            http://www.buildingsmart-tech.org/ifc/IFC4/Add2/html/schema/ifcstructuralanalysisdomain/lexical/ifcrelconnectsstructuralactivity.htm
+            https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/schema/ifcstructuralanalysisdomain/lexical/ifcrelconnectsstructuralactivity.htm
             </summary>
         </member>
         <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.RelConnectsStructuralActivity.ObjectName">
@@ -2595,7 +2597,7 @@
         <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.RelConnectsWithEccentricity">
             <summary>
             RelConnectsWithEccentricity class.
-            http://www.buildingsmart-tech.org/ifc/IFC4/Add2/html/schema/ifcstructuralanalysisdomain/lexical/ifcrelconnectswitheccentricity.htm
+            https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2/HTML/schema/ifcstructuralanalysisdomain/lexical/ifcrelconnectswitheccentricity.htm
             </summary>
         </member>
         <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.RelConnectsWithEccentricity.ObjectName">
@@ -2608,11 +2610,26 @@
             Returns Elementtyp.
             </summary>
         </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.RelConnectsWithEccentricity.EccentricityInX">
+            <summary>
+            EccentricityInX[m].
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.RelConnectsWithEccentricity.EccentricityInY">
+            <summary>
+            Eccentricity Y[m].
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.RelConnectsWithEccentricity.EccentricityInZ">
+            <summary>
+            Eccentricity Z[m].
+            </summary>
+        </member>
         <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.RelConnectsStructuralMember">
             <summary>
             RelConnectsStructuralMember class.
-            http://www.buildingsmart-tech.org/ifc/IFC4/Add2/html/schema/ifcstructuralanalysisdomain/lexical/ifcrelconnectsstructuralmember.htm
-            http://www.buildingsmart-tech.org/ifc/IFC4/Add2/html/schema/templates/structural-connectivity.htm
+            https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/schema/ifcstructuralanalysisdomain/lexical/ifcrelconnectsstructuralmember.htm
+            https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/schema/templates/structural-connectivity.htm
             </summary>
         </member>
         <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.RelConnectsStructuralMember.ObjectName">
@@ -2681,6 +2698,7 @@
         <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.StructuralCurveAction">
             <summary>
             StructuralCurveAction class.
+            https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/schema/ifcstructuralanalysisdomain/lexical/ifcstructuralcurveaction.htm
             </summary>
         </member>
         <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralCurveAction.ObjectName">
@@ -2696,6 +2714,7 @@
         <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.StructuralCurveReaction">
             <summary>
             Defines a reaction which is distributed over a curve.
+            https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/schema/ifcstructuralanalysisdomain/lexical/ifcstructuralcurvereaction.htm
             </summary>
         </member>
         <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralCurveReaction.ObjectName">
@@ -2711,9 +2730,9 @@
         <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.StructuralLoadCase">
             <summary>
             StructuralLoadCase class.
-                Support of IfcGroup elements of Structural Analysis objects.
-                Type_Id = /21/773/15/
-                http://www.buildingsmart-tech.org/ifc/IFC4/Add2/html/schema/ifcstructuralanalysisdomain/lexical/ifcstructuralloadcase.htm
+            Support of IfcGroup elements of Structural Analysis objects.
+            Type_Id = /21/773/15/
+            https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/schema/ifcstructuralanalysisdomain/lexical/ifcstructuralloadcase.htm
             </summary>
         </member>
         <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralLoadCase.ObjectName">
@@ -2729,9 +2748,9 @@
         <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.StructuralLoadGroup">
             <summary>
             StructuralLoadGroup class.
-                Support of IfcGroup elements of Structural Analysis objects.
-                Type_Id = /21/773/16/
-                http://www.buildingsmart-tech.org/ifc/IFC4/Add2/html/schema/ifcstructuralanalysisdomain/lexical/ifcstructuralloadgroup.htm
+            Support of IfcGroup elements of Structural Analysis objects.
+            Type_Id = /21/773/16/
+            https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/schema/ifcstructuralanalysisdomain/lexical/ifcstructuralloadgroup.htm
             </summary>
             TODO: add SourceOfResultGroup ( Connection to StructuralResultGroup )
             TODO: add LoadGroupFor ( Connection to StructuralAnalysisModel )
@@ -2753,7 +2772,7 @@
         </member>
         <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.StructuralSurfaceAction">
             <summary>
-            http://www.buildingsmart-tech.org/ifc/IFC4/Add2/html/schema/ifcstructuralanalysisdomain/lexical/ifcstructuralsurfaceaction.htm
+            https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/schema/ifcstructuralanalysisdomain/lexical/ifcstructuralsurfaceaction.htm
             </summary>
         </member>
         <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralSurfaceAction.ObjectName">
@@ -2768,7 +2787,7 @@
         </member>
         <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.StructuralPlanarAction">
             <summary>
-            http://www.buildingsmart-tech.org/ifc/IFC4/Add2/html/schema/ifcstructuralanalysisdomain/lexical/ifcstructuralplanaraction.htm
+            https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/schema/ifcstructuralanalysisdomain/lexical/ifcstructuralplanaraction.htm
             </summary>
         </member>
         <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralPlanarAction.ObjectName">
@@ -2784,7 +2803,7 @@
         <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.StructuralSurfaceConnection">
             <summary>
             StructuralSurfaceConnection class.
-            http://www.buildingsmart-tech.org/ifc/IFC4/Add2/html/schema/ifcstructuralanalysisdomain/lexical/ifcstructuralsurfaceconnection.htm
+            https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/schema/ifcstructuralanalysisdomain/lexical/ifcstructuralsurfaceconnection.htm
                 Type_Id = /21/773/2/1/3/.
             </summary>
         </member>
@@ -2794,6 +2813,22 @@
             </summary>
         </member>
         <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralSurfaceConnection.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.StructuralSurfaceReaction">
+            <summary>
+            https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/schema/ifcstructuralanalysisdomain/lexical/ifcstructuralsurfacereaction.htm
+            Defines a reaction which is distributed over a surface.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralSurfaceReaction.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralSurfaceReaction.Elementtyp">
             <summary>
             Returns Elementtyp.
             </summary>
@@ -2828,7 +2863,7 @@
         <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.StructuralAction">
             <summary>
             StructuralAction class.
-            7.7.3.4 IfcStructuralAction
+            https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/schema/ifcstructuralanalysisdomain/lexical/ifcstructuralaction.htm
             A structural action is a structural activity that acts upon a structural item or building element.
             </summary>
         </member>
@@ -2845,7 +2880,7 @@
         <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.StructuralReaction">
             <summary>
             StructuralActivity class.
-                7.7.3.22 IfcStructuralReaction
+            https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/schema/ifcstructuralanalysisdomain/lexical/ifcstructuralreaction.htm
                 A structural reaction is a structural activity that results from a structural action imposed to a structural item or building element.
             </summary>
         </member>
@@ -2862,7 +2897,7 @@
         <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.StructuralCurveMember">
             <summary>
             StructuralCurveMember class.
-                Beam -> Structural Analysis objects.
+            https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/schema/ifcstructuralanalysisdomain/lexical/ifcstructuralcurvemember.htm
                 Type_Id = /21/773/10/.
             </summary>
         </member>
@@ -2896,7 +2931,8 @@
         </member>
         <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.StructuralItem">
             <summary>
-            StructuralItem class.
+            abstract StructuralItem class.
+            https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/schema/ifcstructuralanalysisdomain/lexical/ifcstructuralitem.htm
             </summary>
         </member>
         <member name="P:BimPlus.Sdk.Data.DbCore.Analysis.StructuralItem.ObjectName">
@@ -2965,7 +3001,7 @@
         <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.StructuralLinearAction">
             <summary>
             StructuralLinearAction class.
-                Support of Model data elements of Structural Analysis objects
+            https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/schema/ifcstructuralanalysisdomain/lexical/ifcstructurallinearaction.htm
                 Type_Id = /7/7/3/14/ 
                 Uniform Line Load (Gleichmäßige Linienlast).
             </summary>
@@ -2983,7 +3019,7 @@
         <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.StructuralPointAction">
             <summary>
             StructuralPointAction class.
-                Support of Model data elements of Structural Analysis objects.
+            https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/schema/ifcstructuralanalysisdomain/lexical/ifcstructuralpointaction.htm
                 Type_Id = /7/7/3/19/ 
                 Single or point load (Einzel- oder Punktlast).
             </summary>
@@ -3001,7 +3037,7 @@
         <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.StructuralPointConnection">
             <summary>
             StructuralPointConnection class.
-                Support "in node" of Model data elements of Structural Analysis objects.
+            https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/schema/ifcstructuralanalysisdomain/lexical/ifcstructuralpointconnection.htm
                 Type_Id = /21/773/21/.
             </summary>
         </member>
@@ -3037,6 +3073,7 @@
         </member>
         <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.StructuralSurfaceMember">
             <summary>
+            https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/schema/ifcstructuralanalysisdomain/lexical/ifcstructuralsurfacemember.htm
                 Platte of 2D Member elements of Structural Analysis objects
                 Type_Id = /21/773/26/
             </summary>
@@ -3054,7 +3091,7 @@
         <member name="T:BimPlus.Sdk.Data.DbCore.Analysis.StructuralPointReaction">
             <summary>
             StructuralPointReaction class.
-                Support of Model data elements of Structural Analysis objects.
+            https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/schema/ifcstructuralanalysisdomain/lexical/ifcstructuralpointreaction.htm
                 Type_Id = /21/773/21/.
             </summary>
         </member>
@@ -3454,7 +3491,7 @@
         <member name="T:BimPlus.Sdk.Data.DbCore.Connection.RelConnectsElements">
             <summary>
             /27/2/
-            http://www.buildingsmart-tech.org/ifc/IFC4/Add2/html/schema/ifcproductextension/lexical/ifcrelconnectselements.htm
+            https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcproductextension/lexical/ifcrelconnectselements.htm
             </summary>
         </member>
         <member name="P:BimPlus.Sdk.Data.DbCore.Connection.RelConnectsElements.ObjectName">
@@ -3469,12 +3506,12 @@
         </member>
         <member name="P:BimPlus.Sdk.Data.DbCore.Connection.RelConnectsElements.RelatingElement">
             <summary>
-            Property RelatingElement.
+            Reference to DtObject that is connected by the connection relationship in the role of RelatingElement.
             </summary>
         </member>
         <member name="P:BimPlus.Sdk.Data.DbCore.Connection.RelConnectsElements.RelatedElement">
             <summary>
-            Property RelatedElement.
+            Reference to a subtype of IfcElement that is connected by the connection relationship in the role of RelatedElement.
             </summary>
         </member>
         <member name="T:BimPlus.Sdk.Data.DbCore.Connection.ProjectConnection">
@@ -3505,6 +3542,36 @@
             </summary>
         </member>
         <member name="P:BimPlus.Sdk.Data.DbCore.Connection.ConnectionElement.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Document.Document">
+            <summary>
+            Attachment class.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Document.Document.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Document.Document.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Document.Attachment">
+            <summary>
+            Attachment class.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Document.Attachment.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Document.Attachment.Elementtyp">
             <summary>
             Returns Elementtyp.
             </summary>
@@ -3783,6 +3850,69 @@
             </summary>
         </member>
         <member name="P:BimPlus.Sdk.Data.DbCore.Inventory.Furnishing.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Precast.PrecastLayerSubElement">
+            PrecastLayerSubElement
+            <summary>
+            PrecastLayerSubElement class.
+                PrecastLayerSubElement
+                Type_Id = /13/340
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastLayerSubElement.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastLayerSubElement.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Precast.PrecastLayerSubElementInsulationBoard">
+            <summary>
+            PrecastLayerSubElementInsulationBoard
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastLayerSubElementInsulationBoard.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastLayerSubElementInsulationBoard.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Precast.PrecastLayerSubElementTile">
+            <summary>
+            PrecastLayerSubElementTile
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastLayerSubElementTile.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastLayerSubElementTile.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Precast.PrecastLayerSubElementOtherType">
+            <summary>
+            PrecastLayerSubElementOtherType
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastLayerSubElementOtherType.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Precast.PrecastLayerSubElementOtherType.Elementtyp">
             <summary>
             Returns Elementtyp.
             </summary>
@@ -4485,6 +4615,188 @@
             Returns Elementtyp.
             </summary>
         </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Recess.PolygonOpening">
+            <summary>
+            PolygonOpening class.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Recess.PolygonOpening.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Recess.PolygonOpening.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Recess.RoofRecess">
+            <summary>
+            RoofRecess class.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Recess.RoofRecess.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Recess.RoofRecess.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Recess.SlabRecess">
+            <summary>
+            SlabRecess class.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Recess.SlabRecess.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Recess.SlabRecess.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Recess.DoorOpening">
+            <summary>
+            DoorOpening class.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Recess.DoorOpening.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Recess.DoorOpening.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Recess.RoofOpening">
+            <summary>
+            RoofOpening class.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Recess.RoofOpening.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Recess.RoofOpening.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Recess.BodyOpening">
+            <summary>
+            BodyOpening class.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Recess.BodyOpening.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Recess.BodyOpening.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Recess.JointOpening">
+            <summary>
+            JointOpening class.
+                Joint opening
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Recess.JointOpening.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Recess.JointOpening.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Recess.Niche">
+            <summary>
+            Niche class.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Recess.Niche.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Recess.Niche.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Recess.Opening">
+            <summary>
+            Opening class.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Recess.Opening.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Recess.Opening.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Recess.Recess">
+            <summary>
+            Recess class.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Recess.Recess.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Recess.Recess.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Recess.SlabOpening">
+            <summary>
+            SlabOpening class.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Recess.SlabOpening.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Recess.SlabOpening.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Recess.WindowOpening">
+            <summary>
+            WindowOpening class.
+                Type_Id = /5/2/
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Recess.WindowOpening.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Recess.WindowOpening.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
         <member name="T:BimPlus.Sdk.Data.DbCore.Reinforcement.LatticeGirder">
             <summary>
               LatticeGirder class.
@@ -4755,6 +5067,21 @@
             Returns Elementtyp.
             </summary>
         </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Structure.StatischePosition">
+            <summary>
+            StatischePosition (structure node) class.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.StatischePosition.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.StatischePosition.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
         <member name="T:BimPlus.Sdk.Data.DbCore.Structure.Layout">
             <summary>
             Layout class.
@@ -4998,6 +5325,36 @@
             Returns Elementtyp.
             </summary>
         </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Structure.GroupStructure">
+            <summary>
+            GroupStructure Structure Node ( implementation IfcGroup object )
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.GroupStructure.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.GroupStructure.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Structure.DocumentFolder">
+            <summary>
+            DocumentFolder (document folder structure node) class.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.DocumentFolder.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.DocumentFolder.Elementtyp">
+            <summary>
+            Returns Elementtyp.
+            </summary>
+        </member>
         <member name="T:BimPlus.Sdk.Data.DbCore.Structure.StructureElement">
             <summary>
             StructureElement class.
@@ -5080,6 +5437,9 @@
             Property Number.
             Number will be used as Ordernumber for sorting.
             </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Topology.DivisionId">
+            DivisionId.
         </member>
         <member name="P:BimPlus.Sdk.Data.DbCore.Structure.Topology.TbNr">
             <summary>
@@ -6140,21 +6500,6 @@
             Returns Elementtyp.
             </summary>
         </member>
-        <member name="T:BimPlus.Sdk.Data.DbCore.Document.Attachment">
-            <summary>
-            Attachment class.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Document.Attachment.ObjectName">
-            <summary>
-            Returns ObjectName.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Document.Attachment.Elementtyp">
-            <summary>
-            Returns Elementtyp.
-            </summary>
-        </member>
         <member name="P:BimPlus.Sdk.Data.DbCore.Finishings.DoorWindowLayer.ObjectName">
             <summary>
             Returns ObjectName.
@@ -6398,6 +6743,36 @@
             </summary>
             <param name="ce">DtObject</param>
             <returns>Returns true if added.</returns>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.Collision.CustomCollision">
+            <summary>
+            custom collision class.
+            Guid is only abstract
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.Data.DbCore.Collision.CustomCollision.SetObjectName(System.String)">
+            <summary>
+            Set objectName.
+            </summary>
+            <param name="objectName"></param>
+        </member>
+        <member name="M:BimPlus.Sdk.Data.DbCore.Collision.CustomCollision.SetCustomElementType(System.Guid)">
+            SetCustomElementType
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Collision.CustomCollision.LayerId">
+            <summary>
+            Property LayerId.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Collision.CustomCollision.ObjectName">
+            <summary>
+            Returns ObjectName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.DbCore.Collision.CustomCollision.Elementtyp">
+            <summary>
+            Elementtyp
+            </summary>
         </member>
         <member name="T:BimPlus.Sdk.Data.DbCore.Collision.ElementCollision">
             <summary>
@@ -7101,143 +7476,6 @@
             </summary>
             <param name="message"></param>
         </member>
-        <member name="T:BimPlus.Sdk.Data.DbCore.Recess.DoorOpening">
-            <summary>
-            DoorOpening class.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Recess.DoorOpening.ObjectName">
-            <summary>
-            Returns ObjectName.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Recess.DoorOpening.Elementtyp">
-            <summary>
-            Returns Elementtyp.
-            </summary>
-        </member>
-        <member name="T:BimPlus.Sdk.Data.DbCore.Recess.RoofOpening">
-            <summary>
-            RoofOpening class.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Recess.RoofOpening.ObjectName">
-            <summary>
-            Returns ObjectName.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Recess.RoofOpening.Elementtyp">
-            <summary>
-            Returns Elementtyp.
-            </summary>
-        </member>
-        <member name="T:BimPlus.Sdk.Data.DbCore.Recess.ArchBodyOpening">
-            <summary>
-            ArchBodyOpening class.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Recess.ArchBodyOpening.ObjectName">
-            <summary>
-            Returns ObjectName.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Recess.ArchBodyOpening.Elementtyp">
-            <summary>
-            Returns Elementtyp.
-            </summary>
-        </member>
-        <member name="T:BimPlus.Sdk.Data.DbCore.Recess.JointOpening">
-            <summary>
-            JointOpening class.
-                Joint opening
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Recess.JointOpening.ObjectName">
-            <summary>
-            Returns ObjectName.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Recess.JointOpening.Elementtyp">
-            <summary>
-            Returns Elementtyp.
-            </summary>
-        </member>
-        <member name="T:BimPlus.Sdk.Data.DbCore.Recess.Niche">
-            <summary>
-            Niche class.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Recess.Niche.ObjectName">
-            <summary>
-            Returns ObjectName.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Recess.Niche.Elementtyp">
-            <summary>
-            Returns Elementtyp.
-            </summary>
-        </member>
-        <member name="T:BimPlus.Sdk.Data.DbCore.Recess.Opening">
-            <summary>
-            Opening class.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Recess.Opening.ObjectName">
-            <summary>
-            Returns ObjectName.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Recess.Opening.Elementtyp">
-            <summary>
-            Returns Elementtyp.
-            </summary>
-        </member>
-        <member name="T:BimPlus.Sdk.Data.DbCore.Recess.Recess">
-            <summary>
-            Recess class.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Recess.Recess.ObjectName">
-            <summary>
-            Returns ObjectName.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Recess.Recess.Elementtyp">
-            <summary>
-            Returns Elementtyp.
-            </summary>
-        </member>
-        <member name="T:BimPlus.Sdk.Data.DbCore.Recess.SlabOpening">
-            <summary>
-            SlabOpening class.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Recess.SlabOpening.ObjectName">
-            <summary>
-            Returns ObjectName.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Recess.SlabOpening.Elementtyp">
-            <summary>
-            Returns Elementtyp.
-            </summary>
-        </member>
-        <member name="T:BimPlus.Sdk.Data.DbCore.Recess.WindowOpening">
-            <summary>
-            WindowOpening class.
-                Type_Id = /5/2/
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Recess.WindowOpening.ObjectName">
-            <summary>
-            Returns ObjectName.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.DbCore.Recess.WindowOpening.Elementtyp">
-            <summary>
-            Returns Elementtyp.
-            </summary>
-        </member>
         <member name="T:BimPlus.Sdk.Data.DbCore.Revision.RevisionComparison">
             <summary>
             RevisionComparison class.
@@ -7857,6 +8095,38 @@
             <summary>
             Property GeomType.
             </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.DbCore.LicenseEnum">
+            <summary>
+            License enum
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.DbCore.LicenseEnum.ClashManager">
+            ClashManager.
+        </member>
+        <member name="F:BimPlus.Sdk.Data.DbCore.LicenseEnum.ExportManager">
+            ExportManager.
+        </member>
+        <member name="F:BimPlus.Sdk.Data.DbCore.LicenseEnum.MultiBCFDownloadManager">
+            MultiBCFDownloadManager.
+        </member>
+        <member name="F:BimPlus.Sdk.Data.DbCore.LicenseEnum.GroupManager">
+            GroupManager.
+        </member>
+        <member name="F:BimPlus.Sdk.Data.DbCore.LicenseEnum.ShareModelManager">
+            ShareModelManager.
+        </member>
+        <member name="F:BimPlus.Sdk.Data.DbCore.LicenseEnum.RevisionManager">
+            RevisionManager.
+        </member>
+        <member name="F:BimPlus.Sdk.Data.DbCore.LicenseEnum.PropertyManager">
+            PropertyManager.
+        </member>
+        <member name="F:BimPlus.Sdk.Data.DbCore.LicenseEnum.ProjectTopologyManager">
+            ProjectTopologyManager.
+        </member>
+        <member name="F:BimPlus.Sdk.Data.DbCore.LicenseEnum.ScheduleSimulationManager">
+            ScheduleSimulationManager.
         </member>
         <member name="T:BimPlus.Sdk.Data.DbCore.MembershipStatus">
             <summary>
@@ -8877,7 +9147,7 @@
         </member>
         <member name="F:BimPlus.Sdk.Data.DbCore.TableNames.tabAttribDivisionProperties">
             <summary>
-            Public member tabAttribProjectProperties.
+            Public member tabAttribDivisionProperties.
             </summary>
         </member>
         <member name="F:BimPlus.Sdk.Data.DbCore.TableNames.tabAttribCalculatedProperties">
@@ -9520,6 +9790,16 @@
             Property CrossTokenLandXml.
             </summary>
         </member>
+        <member name="P:BimPlus.Sdk.Data.Job.DtoLandXmlJobData.AttachmentLogId">
+            <summary>
+            Property AttachmentLogId.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Job.DtoLandXmlJobData.AttachmentLogUrl">
+            <summary>
+            Property AttachmentLogUrl.
+            </summary>
+        </member>
         <member name="T:BimPlus.Sdk.Data.Job.DtoExportJobData">
             <summary>
             DtoExportJobData class.
@@ -9605,6 +9885,13 @@
             <summary>
             Property revision
             Revision version - if isn't definet i will be taken the last revision automatically
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Job.DtoExportJobData.TempFileDelete">
+            <summary>
+            This value define, if will be temporary IFC file automatically deleted
+            TempFileDelete == 0, null - temporary IFC will be deleted  
+            TempFileDelete == 1       - temporary IFC will not be deleted  
             </summary>
         </member>
         <member name="T:BimPlus.Sdk.Data.Job.DtoImportJob">
@@ -9845,6 +10132,11 @@
         <member name="P:BimPlus.Sdk.Data.Job.DtoImportJobData.AttachmentLogUrl">
             <summary>
             Property AttachmentLogUrl.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Job.DtoImportJobData.Hash">
+            <summary>
+            Property Hash.
             </summary>
         </member>
         <member name="T:BimPlus.Sdk.Data.Messages.DtoSystemGroup">
@@ -10122,6 +10414,15 @@
             TOPOLOGY_UPDATED_BY_IMPORT.
             </summary>
         </member>
+        <member name="F:BimPlus.Sdk.Data.Notification.ProjectItemChangeType.ATTACHMENT_CREATED">
+            ATTACHMENT_CREATED
+        </member>
+        <member name="F:BimPlus.Sdk.Data.Notification.ProjectItemChangeType.ATTACHMENT_MODIFIED">
+            ATTACHMENT_MODIFIED
+        </member>
+        <member name="F:BimPlus.Sdk.Data.Notification.ProjectItemChangeType.ATTACHMENT_DELETED">
+            ATTACHMENT_DELETED
+        </member>
         <member name="T:BimPlus.Sdk.Data.Notification.ProjectLockChangedInfo">
             <summary>
             ProjectLockChangedInfo
@@ -10365,7 +10666,7 @@
         </member>
         <member name="P:BimPlus.Sdk.Data.StructuralLoadResource.TranslationStiffness.LinearStiffnessMeasure">
             <summary>
-            Property LinearStiffnessMeasure.
+            Property LinearStiffnessMeasure [MNm].
             </summary>
         </member>
         <member name="M:BimPlus.Sdk.Data.StructuralLoadResource.TranslationStiffness.#ctor(System.Object)">
@@ -10381,7 +10682,7 @@
         </member>
         <member name="P:BimPlus.Sdk.Data.StructuralLoadResource.RotationalStiffness.RotationalStiffnessMeasure">
             <summary>
-            Property RotationalStiffnessMeasure.
+            Property RotationalStiffnessMeasure [MNm/rad].
             </summary>
         </member>
         <member name="M:BimPlus.Sdk.Data.StructuralLoadResource.RotationalStiffness.#ctor(System.Object)">
@@ -10427,6 +10728,9 @@
             Describes linearly elastic support conditions or connection conditions.
             </summary>
         </member>
+        <member name="F:BimPlus.Sdk.Data.StructuralLoadResource.BoundaryNodeCondition.IfcBoundaryNodeCondition">
+            IfcBoundaryNodeCondition
+        </member>
         <member name="P:BimPlus.Sdk.Data.StructuralLoadResource.BoundaryNodeCondition.TranslationalStiffnessX">
             <summary>
             Property TranslationalStiffnessX.
@@ -10463,12 +10767,12 @@
             IFCBOUNDARYNODECONDITION('Fixed',IFCBOOLEAN(.T.),IFCBOOLEAN(.T.),IFCBOOLEAN(.T.),IFCBOOLEAN(.T.),IFCBOOLEAN(.T.),IFCBOOLEAN(.T.));
             </summary>
             <param name="label"></param>
-            <param name="translationX"></param>
-            <param name="translationY"></param>
-            <param name="translationZ"></param>
-            <param name="rotationX"></param>
-            <param name="rotationY"></param>
-            <param name="rotationZ"></param>
+            <param name="translationX">LinearStiffnessMeasure in</param>
+            <param name="translationY">LinearStiffnessMeasure in [MNm]</param>
+            <param name="translationZ">LinearStiffnessMeasure in [MNm]</param>
+            <param name="rotationX">RotationalStiffnessMeasure in [MNm/rad]</param>
+            <param name="rotationY">RotationalStiffnessMeasure in [MNm/rad]</param>
+            <param name="rotationZ">RotationalStiffnessMeasure in [MNm/rad]</param>
         </member>
         <member name="P:BimPlus.Sdk.Data.StructuralLoadResource.BoundaryNodeCondition.IsFree">
             <summary>
@@ -10504,6 +10808,9 @@
             <summary>
             Abstract class StructuralLoad.
             </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.StructuralLoadResource.StructuralLoad.IfcStructuralLoad">
+            IfcStructuralLoad
         </member>
         <member name="T:BimPlus.Sdk.Data.StructuralLoadResource.StructuralLoad.CustomConverter">
             <summary>
@@ -10685,17 +10992,17 @@
         </member>
         <member name="P:BimPlus.Sdk.Data.StructuralLoadResource.StructuralLoadSingleDisplacement.DisplacementX">
             <summary>
-            Property DisplacementX.
+            Property DisplacementX(usually measured in mm).
             </summary>
         </member>
         <member name="P:BimPlus.Sdk.Data.StructuralLoadResource.StructuralLoadSingleDisplacement.DisplacementY">
             <summary>
-            Property DisplacementY.
+            Property DisplacementY(usually measured in mm).
             </summary>
         </member>
         <member name="P:BimPlus.Sdk.Data.StructuralLoadResource.StructuralLoadSingleDisplacement.DisplacementZ">
             <summary>
-            Property DisplacementZ.
+            Property DisplacementZ(usually measured in mm).
             </summary>
         </member>
         <member name="P:BimPlus.Sdk.Data.StructuralLoadResource.StructuralLoadSingleDisplacement.RotationalDisplacementRX">
@@ -11355,6 +11662,21 @@
             <param name="y"></param>
             <param name="z"></param>
         </member>
+        <member name="T:BimPlus.Sdk.Data.Bcf.ClippingPlane">
+            <summary>
+            ClippingPlane
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Bcf.ClippingPlane.Location">
+            <summary>
+            Location is a 3D point on clippingplane
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Bcf.ClippingPlane.Direction">
+            <summary>
+            3D vector for setting plane direction and length
+            </summary>
+        </member>
         <member name="T:BimPlus.Sdk.Data.Bcf.CameraBuilder">
             <summary>
             CameraBuilder class.
@@ -11393,22 +11715,9 @@
             <param name="z">thirst Euler angle</param>
             <returns>Calculated matrix</returns>
         </member>
-        <member name="M:BimPlus.Sdk.Data.Bcf.CameraBuilder.Kdponb(System.Double,System.Double,System.Double[],System.Double[],System.Double[]@,System.Double[]@,System.Double[]@)">
+        <member name="M:BimPlus.Sdk.Data.Bcf.CameraBuilder.CalculateAllplanView(BimPlus.Sdk.Data.Bcf.PerspectiveCamera)">
             <summary>
-            aus Aug und Zielpunkt die Matrix generieren
-            </summary>
-            <param name="dsp1"></param>
-            <param name="dsp2"></param>
-            <param name="dv1"></param>
-            <param name="dv2"></param>
-            <param name="onb1"></param>
-            <param name="onb2"></param>
-            <param name="onb3"></param>
-            <returns></returns>
-        </member>
-        <member name="M:BimPlus.Sdk.Data.Bcf.CameraBuilder.CalculateCameraMatrix(BimPlus.Sdk.Data.Bcf.PerspectiveCamera)">
-            <summary>
-            Create View.Matrix from PerspectiveCamera.
+            Create AllplanView from PerspectiveCamera.
             </summary>
             <param name="camera"></param>
             <returns></returns>
@@ -11422,6 +11731,9 @@
             <summary>
             Property Id.
             </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Content.BaseContentDto.RelationObjectId">
+            Property RelationObjectId.
         </member>
         <member name="P:BimPlus.Sdk.Data.Content.BaseContentDto.Name">
             <summary>
@@ -11983,7 +12295,7 @@
             <summary>
             Create string from numDefinitions.
             </summary>
-            <param name="numDefinitions"></param>
+            <param name="numDefinitionsOriginal"></param>
             <returns>string</returns>
         </member>
         <member name="T:BimPlus.Sdk.Data.Content.DtoFreeAttributeGroup">
@@ -12783,6 +13095,38 @@
             Parabola type.
             </summary>
         </member>
+        <member name="T:BimPlus.Sdk.Data.ReportAction">
+            <summary>
+            enum ReportAction used for report table
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.ReportAction.Create_Project">
+            <summary>Create_Project</summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.ReportAction.Delete_Project">
+            <summary>Delete_Project</summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.ReportAction.Create_Model">
+            <summary>Create_Model</summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.ReportAction.Upload_Model">
+            <summary>Upload_Model</summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.ReportAction.Delete_Model">
+            <summary>Delete_Model</summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.ReportAction.Create_Revision">
+            <summary>Create_Revision</summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.ReportAction.Share_Revision">
+            <summary>Share_Revision</summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.ReportAction.Download_Document">
+            <summary>Download_Document</summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.ReportAction.Download_Model">
+            <summary>Download_Model</summary>
+        </member>
         <member name="T:BimPlus.Sdk.Data.Controltype">
             <summary>
             Controltype enum.
@@ -12806,6 +13150,23 @@
         <member name="F:BimPlus.Sdk.Data.Controltype.Link">
             <summary>Linkobject.</summary>
         </member>
+        <member name="T:BimPlus.Sdk.Data.HttpMethods">
+            <summary>
+            HttpMethod enum.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.HttpMethods.POST">
+            <summary>Post.</summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.HttpMethods.PUT">
+            <summary>Put.</summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.HttpMethods.GET">
+            <summary>Get.</summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.HttpMethods.DELETE">
+            <summary>Delete.</summary>
+        </member>
         <member name="T:BimPlus.Sdk.Data.ActiveStatus">
             <summary>
             ActiveStatus enum.
@@ -12827,6 +13188,17 @@
         </member>
         <member name="F:BimPlus.Sdk.Data.DatabaseType.Content">
             <summary>Content database.</summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.WebHookType">
+            <summary>
+            WebHookType enum.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.WebHookType.Unknown">
+            <summary>Unknown.</summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.WebHookType.Attachment">
+            <summary>Attachment.</summary>
         </member>
         <member name="T:BimPlus.Sdk.Data.ChangedETagType">
             <summary>
@@ -12869,6 +13241,26 @@
         </member>
         <member name="F:BimPlus.Sdk.Data.IssuePriority.High">
             <summary>High.</summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.IssueMetric">
+            <summary>
+            IssueMetric enum.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.IssueMetric.AllTask">
+            <summary>All Task.</summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.IssueMetric.AllTaskDueDateThisWeek">
+            <summary>All tasks this week  [due date this week].</summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.IssueMetric.CreatedTask">
+            <summary>Tasks assigned by me (creator).</summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.IssueMetric.ResponsibleTask">
+            <summary>My tasks - responsible </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.IssueMetric.ResponsibleTaskDueDateThisWeek">
+            <summary>My tasks this week - responsible </summary>
         </member>
         <member name="T:BimPlus.Sdk.Data.IssueType">
             <summary>
@@ -12995,10 +13387,33 @@
         <member name="F:BimPlus.Sdk.Data.AttachmentType.LandXML">
             <summary>/2/9/ LandXML file.</summary>
         </member>
+        <member name="T:BimPlus.Sdk.Data.RoleAccess">
+            <summary>
+            Role Access enum 
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.RoleAccess.Admin">
+            <summary>Admin.</summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.RoleAccess.Manager">
+            <summary>Manager.</summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.RoleAccess.Editor">
+            <summary>Editor.</summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.RoleAccess.Viewer">
+            <summary>Viewer.</summary>
+        </member>
         <member name="T:BimPlus.Sdk.Data.ModelAccess">
             <summary>
             ModelAccess enum 
             </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.ModelAccess.deny">
+            <summary>deny.</summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.ModelAccess.allow">
+            <summary>allow.</summary>
         </member>
         <member name="T:BimPlus.Sdk.Data.AttachmentClassification">
             <summary>
@@ -13096,11 +13511,17 @@
         <member name="F:BimPlus.Sdk.Data.ImportReturnCode.ERROR_DATABASE_OPERATIONS">
             <summary>ERROR_DATABASE_OPERATIONS.</summary>
         </member>
-        <member name="F:BimPlus.Sdk.Data.ImportReturnCode.ERROR_IMPORT_ALLPLAN_ASYNC">
-            <summary>ERROR_IMPORT_ALLPLANASYNC.</summary>
+        <member name="F:BimPlus.Sdk.Data.ImportReturnCode.ERROR_IMPORT_ASYNC_WORKERTYPE">
+            <summary>ERROR_IMPORT_ASYNC_WORKERTYPE.</summary>
         </member>
         <member name="F:BimPlus.Sdk.Data.ImportReturnCode.ERROR_IMPORT_LEVELOFDETAIL_FAILED">
             <summary>ERROR_IMPORT_LEVELOFDETAIL_FAILED.</summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.ImportReturnCode.ERROR_IMPORT_DONE_WITH_ERRORS">
+            <summary>ERROR_IMPORT_DONE_WITH_ERRORS.</summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.ImportReturnCode.NO_ERROR_IMPORT_EMPTY_MODEL">
+            <summary>NO_ERROR_IMPORT_EMPTY_MODEL.</summary>
         </member>
         <member name="T:BimPlus.Sdk.Data.ExportReturnCode">
             <summary>
@@ -13195,6 +13616,9 @@
         <member name="F:BimPlus.Sdk.Data.WorkerType.LANDXML">
             <summary>LANDXML.</summary>
         </member>
+        <member name="F:BimPlus.Sdk.Data.WorkerType.SCIA_ASYNC">
+            <summary>SCIA_ASYNC</summary>
+        </member>
         <member name="T:BimPlus.Sdk.Data.JobStatus">
             <summary>
             JobStatus enum.
@@ -13227,6 +13651,25 @@
             Set this status for project export in case, when is already the same project exporting (e.i. the same ProjectID and ModelID).
             </summary>
         </member>
+        <member name="F:BimPlus.Sdk.Data.JobStatus.DONE_WITH_ERRORS">
+            <summary>
+            DONE_WITH_ERRORS.
+            Set this status for IFC file import was imported, but not completely. 
+            This message is an additional information for user, that the error class is not empty and it would be good check the message log
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.JobStatus.DONE_WITH_ERRORS_REFRESHED">
+            DONE_WITH_ERRORS_REFRESHED.
+        </member>
+        <member name="F:BimPlus.Sdk.Data.JobStatus.DONE_EMPTY_MODEL">
+            <summary>
+            DONE_EMPTY_MODEL.
+            Set this status for IFC file import was imported, IFC file doesn't content any elements. 
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.JobStatus.DONE_EMPTY_MODEL_REFRESHED">
+            DONE_EMPTY_MODEL_REFRESHED.
+        </member>
         <member name="T:BimPlus.Sdk.Data.JobExecuteStatus">
             <summary>
             JobExecuteStatus enum.
@@ -13255,6 +13698,17 @@
         </member>
         <member name="F:BimPlus.Sdk.Data.MessageSeverity.Error">
             <summary>Error.</summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.LastJob">
+            <summary>
+            LastJob
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.LastJob.REVISIONS_COMPARISON">
+            <summary>REVISIONS COMPARISON.</summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.LastJob.CLASH_DETECTION">
+            <summary>CLASH DETECTION</summary>
         </member>
         <member name="T:BimPlus.Sdk.Data.IfcAttachmentExportStatus">
             <summary>
@@ -13391,6 +13845,11 @@
         <member name="F:BimPlus.Sdk.Data.CacheType.ElementPsetCache">
             <summary>
             ElementPsetCache.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.CacheType.GeometryCache">
+            <summary>
+            GeometryCache.
             </summary>
         </member>
         <member name="T:BimPlus.Sdk.Data.ExternalServices.DtoExternalServiceInput">
@@ -14752,6 +15211,63 @@
             Property Value.
             </summary>
         </member>
+        <member name="T:BimPlus.Sdk.Data.TenantDto.DtoCuttingSettings">
+            <summary>
+            DtoCuttingSettings
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.Data.TenantDto.DtoCuttingSettings.#ctor">
+            <summary>
+            DtoCuttingSettings
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoCuttingSettings.Edges">
+            <summary>
+            EdgeEnlargement (default = false)
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoCuttingSettings.Faces">
+            <summary>
+            Faces (default = true)
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoCuttingSettings.LevelOfDetail">
+            <summary>
+            LevelOfDetail (default = 0)
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.TenantDto.DtoCuttingCalculation">
+            <summary>
+            Class DtoCuttingCalculation.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoCuttingCalculation.ProjectId">
+            <summary>
+            Property ProjectId.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoCuttingCalculation.SelectionId">
+            <summary>
+            optional SelectionId.
+            here you can define selected objects for cutting service
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoCuttingCalculation.CuttingPoint">
+            <summary>
+            Property CameraViewPoint.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoCuttingCalculation.CuttingDirection">
+            <summary>
+            Property CameraDirection.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoCuttingCalculation.Settings">
+            additional settings.
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoCuttingCalculation.Selection">
+            Property Selection.
+        </member>
         <member name="T:BimPlus.Sdk.Data.TenantDto.DtoObjectsAttributes">
             <summary>
             DtoObjectsAttributes class.
@@ -15317,29 +15833,14 @@
             DtoClashDetection class.
             </summary>
         </member>
-        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoClashDetection.ObjectId1">
-            <summary>
-            Property ObjectId1.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoClashDetection.LayerId1">
-            <summary>
-            Property LayerId1.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoClashDetection.ObjectId2">
-            <summary>
-            Property ObjectId2.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoClashDetection.LayerId2">
-            <summary>
-            Property LayerId2.
-            </summary>
-        </member>
         <member name="P:BimPlus.Sdk.Data.TenantDto.DtoClashDetection.FilterId">
             <summary>
             Property FilterId.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoClashDetection.SelectionObjectId">
+            <summary>
+            Property selection object Id.
             </summary>
         </member>
         <member name="P:BimPlus.Sdk.Data.TenantDto.DtoClashDetection.ProjectId">
@@ -15421,6 +15922,12 @@
             DtoClashFilter class.
             </summary>
         </member>
+        <member name="F:BimPlus.Sdk.Data.TenantDto.DtoClashFilter.SeparatorCustomFilter">
+            SeparatorCustomFilter
+        </member>
+        <member name="F:BimPlus.Sdk.Data.TenantDto.DtoClashFilter.ClashFilterRootHierarchy">
+            ClashFilterRootHierarchy
+        </member>
         <member name="P:BimPlus.Sdk.Data.TenantDto.DtoClashFilter.Name">
             <summary>
             Property Name.
@@ -15456,6 +15963,11 @@
             Property Definitions (List of DtoClashFilterDefinition).
             </summary>
         </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoClashFilter.CustomFilter">
+            <summary>
+            Property custom.
+            </summary>
+        </member>
         <member name="T:BimPlus.Sdk.Data.TenantDto.DtoClashFilterDefinition">
             <summary>
             DtoClashFilterDefinition
@@ -15467,14 +15979,28 @@
             </summary>
         </member>
         <member name="P:BimPlus.Sdk.Data.TenantDto.DtoClashFilterDefinition.FilterId">
-            Property FilterId.
             <summary>
-            Property Name.
+            Property FilterId.
             </summary>
         </member>
         <member name="P:BimPlus.Sdk.Data.TenantDto.DtoClashFilterDefinition.Definition">
             <summary>
             Property Definition.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoClashFilterDefinition.SelectionId">
+            <summary>
+            Property SelectionID.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoClashFilterDefinition.Selection">
+            <summary>
+            Property Selection.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoClashFilterDefinition.ReadableValues">
+            <summary>
+            Property ReadableValues.
             </summary>
         </member>
         <member name="T:BimPlus.Sdk.Data.TenantDto.DtoClashResult">
@@ -15530,6 +16056,16 @@
         <member name="P:BimPlus.Sdk.Data.TenantDto.DtoClashResult.Resolved">
             <summary>
             Property Resolved (resolved clashes).
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoClashResult.Closed">
+            <summary>
+            Property Closed (closed clashes).
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoClashResult.Topology">
+            <summary>
+            Property Topology
             </summary>
         </member>
         <member name="T:BimPlus.Sdk.Data.TenantDto.DtoClashList">
@@ -15628,10 +16164,9 @@
             Property VerbalStatus.
             </summary>
         </member>
-        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoComment.ExternalCommentId">
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoComment.BcfCommentId">
             <summary>
-            Property ExternalCommentId.
-            Id of comment in external bcf server.
+            Guid from node Comment in BCF file.
             </summary>
         </member>
         <member name="T:BimPlus.Sdk.Data.TenantDto.DtoCrossSection">
@@ -15683,6 +16218,11 @@
         <member name="P:BimPlus.Sdk.Data.TenantDto.DtoCrossSection.CrossSectionDefinitionId">
             <summary>
             CrossSectionDefinition will be returned by filter query i.ex. 'filter=I200'
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoCrossSection.FormCodeId">
+            <summary>
+            FormCode is main CrossSectionDefinitionId ( f.ex. id of 'I-Section' )
             </summary>
         </member>
         <member name="M:BimPlus.Sdk.Data.TenantDto.DtoCrossSection.GetHashCode">
@@ -15826,6 +16366,11 @@
             Property FreeAttributesId.
             </summary>
         </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoCrossSectionDefinition.Parameters">
+            <summary>
+            Property Parameters.
+            </summary>
+        </member>
         <member name="P:BimPlus.Sdk.Data.TenantDto.DtoCrossSectionDefinition.Name">
             <summary>
             Property Name.
@@ -15841,6 +16386,12 @@
             <summary>
             Property CsgParameters.
             List of all rules for calculation contour’s vertex of CSG-geometry.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoCrossSectionDefinition.Shapes">
+            <summary>
+            Property Shapes.
+            List of all Profile shapes
             </summary>
         </member>
         <member name="M:BimPlus.Sdk.Data.TenantDto.DtoCrossSectionDefinition.GetHashCode">
@@ -16203,6 +16754,11 @@
             Property NodeInfoList.
             </summary>
         </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoFilterSelection.ReadableValues">
+            <summary>
+            Property ReadableValues.
+            </summary>
+        </member>
         <member name="T:BimPlus.Sdk.Data.TenantDto.DtoTopologyStructureSelection">
             <summary>
             DtoTopologyStructureSelection class.
@@ -16293,19 +16849,9 @@
             Property PropertySettings.
             </summary>
         </member>
-        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoHiddenCalculation.SectionSettings">
-            <summary>
-            Property SectionSettings.
-            </summary>
-        </member>
         <member name="P:BimPlus.Sdk.Data.TenantDto.DtoHiddenCalculation.ResponseSettings">
             <summary>
             Property ResponseSettings.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoHiddenCalculation.Result">
-            <summary>
-            Property Result.
             </summary>
         </member>
         <member name="T:BimPlus.Sdk.Data.TenantDto.DtoHierarchyNodeTopology">
@@ -16371,6 +16917,31 @@
             Property Color.
             </summary>
         </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoHierarchyNodeTopology.Open">
+            <summary>
+            Property Open (open clashes).
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoHierarchyNodeTopology.Resolved">
+            <summary>
+            Property Resolved (resolved clashes).
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoHierarchyNodeTopology.Unresolved">
+            <summary>
+            Property Unresolved (unresolved clashes).
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoHierarchyNodeTopology.Closed">
+            <summary>
+            Property Closed (closed clashes).
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoHierarchyNodeTopology.Calculated">
+            <summary>
+            Property calculated
+            </summary>
+        </member>
         <member name="M:BimPlus.Sdk.Data.TenantDto.DtoHierarchyNodeTopology.#ctor">
             <summary>
             Class constructor.
@@ -16381,6 +16952,12 @@
             Class constructor - class copy
             </summary>        
             <param name="hnt">original class DtoHierarchyNodeTopology</param>
+        </member>
+        <member name="M:BimPlus.Sdk.Data.TenantDto.DtoHierarchyNodeTopology.GetCount">
+            <summary>
+            Get the count.
+            </summary>
+            <returns></returns>
         </member>
         <member name="M:BimPlus.Sdk.Data.TenantDto.DtoHierarchyNodeTopology.FillValues(System.Int32,System.String,System.Int32@)">
             <summary>
@@ -16638,7 +17215,7 @@
         </member>
         <member name="P:BimPlus.Sdk.Data.TenantDto.DtoMaterialSurface.Transparency">
             <summary>
-            Property Transparency.
+            Property Transparency covers range from 0 - 100.
             </summary>
         </member>
         <member name="P:BimPlus.Sdk.Data.TenantDto.DtoMaterialSurface.Argb">
@@ -16752,9 +17329,50 @@
             Default constructor will initialize all properties with default values.
             </summary>
         </member>
+        <member name="M:BimPlus.Sdk.Data.TenantDto.DtoMaterialSurface.#ctor(System.UInt32)">
+            <summary>
+            Initialize by given ARGB value
+            </summary>
+            <param name="argb"></param>
+        </member>
         <member name="M:BimPlus.Sdk.Data.TenantDto.DtoMaterialSurface.InitArgb">
             <summary>
             Initialize Argb property from DiffuseColor and Transparency.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoMaterialSurface.Red">
+            <summary>
+            Red part covers range from 0 - 255.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoMaterialSurface.Green">
+            <summary>
+            Green part covers range from 0 - 255.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoMaterialSurface.Blue">
+            <summary>
+            Blue part covers range from 0 - 255.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoMaterialSurface.RedF">
+            <summary>
+            Red float part covers range from 0 - 1.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoMaterialSurface.GreenF">
+            <summary>
+            Green float part covers range from 0 - 1.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoMaterialSurface.BlueF">
+            <summary>
+            Blue floatpart covers range from 0 - 1.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoMaterialSurface.Opaque">
+            <summary>
+            Opaque covers range from 0.0 (transparent) to 1(Opaque).
             </summary>
         </member>
         <member name="T:BimPlus.Sdk.Data.TenantDto.ThreeJsViewBox">
@@ -16839,6 +17457,23 @@
             <summary>
             Property Objects.
             </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.TenantDto.DtoCuttingSelection">
+            <summary>
+            DtoCuttingSelection
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoCuttingSelection.ModelLayer">
+            ModelLayer
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoCuttingSelection.TopologyNodes">
+            TopologyNodes
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoCuttingSelection.SelectedObjects">
+            SelectedObjects
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoCuttingSelection.HiddenObjects">
+            HiddenObjects
         </member>
         <member name="T:BimPlus.Sdk.Data.TenantDto.DtoAttachment">
             <summary>
@@ -17039,6 +17674,11 @@
         <member name="P:BimPlus.Sdk.Data.TenantDto.AttachmentInformation.DocumentVersion">
             <summary>
             Property DocumentVersion.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.AttachmentInformation.DocumentFolderId">
+            <summary>
+            Property DocumentFolderId.
             </summary>
         </member>
         <member name="P:BimPlus.Sdk.Data.TenantDto.AttachmentInformation.Url">
@@ -17278,6 +17918,20 @@
             <summary>
             Property Layer.
             </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.TenantDto.IssueAttributeDefinition">
+            <summary>
+            General free attribute Id definition for Issue.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.TenantDto.IssueAttributeDefinition.Email">
+            Email.
+        </member>
+        <member name="F:BimPlus.Sdk.Data.TenantDto.IssueAttributeDefinition.FreeAttExternalIssueId">
+            FreeAttExternalIssueId.
+        </member>
+        <member name="F:BimPlus.Sdk.Data.TenantDto.IssueAttributeDefinition.FreeAttIssueIdFromBcf">
+            FreeAttIssueIdFromBcf.
         </member>
         <member name="T:BimPlus.Sdk.Data.TenantDto.DtoBaseIssue">
             <summary>
@@ -17800,6 +18454,41 @@
             </summary>
             <returns>dictionary Attributes as list of strings</returns>
         </member>
+        <member name="T:BimPlus.Sdk.Data.TenantDto.DtoObjectReport">
+            <summary>
+            DtoObjectReport class.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoObjectReport.Id">
+            <summary>
+            Property Id.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoObjectReport.User">
+            <summary>
+            Property user.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoObjectReport.DateTime">
+            <summary>
+            Property DateTime.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoObjectReport.Version">
+            <summary>
+            Property version
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoObjectReport.Action">
+            <summary>
+            Property action
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoObjectReport.UserId">
+            <summary>
+            Property CreatedByUserId.
+            </summary>
+        </member>
         <member name="T:BimPlus.Sdk.Data.TenantDto.DtoRevision">
             <summary>
             DtoRevision class.
@@ -17813,6 +18502,11 @@
         <member name="P:BimPlus.Sdk.Data.TenantDto.DtoRevision.Name">
             <summary>
             Property Name.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoRevision.ImportFileName">
+            <summary>
+            Property ImportFileName (Name of file, from which this model was imported).
             </summary>
         </member>
         <member name="P:BimPlus.Sdk.Data.TenantDto.DtoRevision.Description">
@@ -17855,6 +18549,16 @@
             Property ChangedByUser (Last time modified by user).
             </summary>
         </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoRevision.SharedBy">
+            <summary>
+            Property SharedBy user
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoRevision.SharedDate">
+            <summary>
+            Property DateTime.
+            </summary>
+        </member>
         <member name="P:BimPlus.Sdk.Data.TenantDto.DtoRevision.ApplicationId">
             <summary>
             Property ApplicationId.
@@ -17893,6 +18597,11 @@
         <member name="P:BimPlus.Sdk.Data.TenantDto.DtoRevision.ChangedByUserId">
             <summary>
             Property ChangedByUserId.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoRevision.SharedById">
+            <summary>
+            Property SharedBy.
             </summary>
         </member>
         <member name="T:BimPlus.Sdk.Data.TenantDto.DtoRevisionsComparisonResult">
@@ -18047,6 +18756,19 @@
             Property ParentId.
             </summary>
         </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoComparedElement.Attributes">
+            <summary>
+            Property Attributes.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.Data.TenantDto.DtoComparedElement.AddProperty(System.String,System.Object)">
+            <summary>
+            AddProperty
+            </summary>
+            <param name="propertyName"></param>
+            <param name="propertyValue"></param>
+            <returns>True if added, otherwise false.</returns>
+        </member>
         <member name="T:BimPlus.Sdk.Data.TenantDto.DtoScene3DPoint">
             <summary>
             3D point(x,y,z) class for scene
@@ -18086,6 +18808,12 @@
             <summary>
             Initialize default values.
             </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.Data.TenantDto.DtoSceneViewMode.MaximalSize">
+            <summary>
+            Get maximal size
+            </summary>
+            <returns>maximal size</returns>
         </member>
         <member name="T:BimPlus.Sdk.Data.TenantDto.DtoSceneCamera">
             <summary>
@@ -18279,9 +19007,19 @@
             Property HiddenCalculation.
             </summary>
         </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoServices.CuttingCalculation">
+            <summary>
+            Property CuttingCalculation.
+            </summary>
+        </member>
         <member name="P:BimPlus.Sdk.Data.TenantDto.DtoServices.RunAsnyc">
             <summary>
             Property RunAsnyc.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoServices.Response">
+            <summary>
+            Property Response.
             </summary>
         </member>
         <member name="T:BimPlus.Sdk.Data.TenantDto.DtoExternalService">
@@ -18358,6 +19096,11 @@
             ImportIfcLogAttachment type.
             </summary>
         </member>
+        <member name="F:BimPlus.Sdk.Data.TenantDto.SharedResourceType.LandXmlLogAttachment">
+            <summary>
+            LandXmlLogAttachment type.
+            </summary>
+        </member>
         <member name="T:BimPlus.Sdk.Data.TenantDto.DtoShortProject">
             <summary>
             DtoShortProject class.
@@ -18381,6 +19124,16 @@
         <member name="P:BimPlus.Sdk.Data.TenantDto.DtoShortProject.TeamSlug">
             <summary>
             Property TeamSlug.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoShortProject.TeamName">
+            <summary>
+            Property TeamName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoShortProject.TeamId">
+            <summary>
+            Property TeamId.
             </summary>
         </member>
         <member name="P:BimPlus.Sdk.Data.TenantDto.DtoShortProject.Thumbnail">
@@ -18428,6 +19181,11 @@
             Property Size.
             </summary>
         </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoShortProject.AttachmentSize">
+            <summary>
+            Property Attachment Size.
+            </summary>
+        </member>
         <member name="P:BimPlus.Sdk.Data.TenantDto.DtoShortProject.UnitSizeMB">
             <summary>
             Property UnitSizeMB.
@@ -18436,6 +19194,11 @@
         <member name="P:BimPlus.Sdk.Data.TenantDto.DtoShortProject.Rights">
             <summary>
             Property Rights.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoShortProject.ApprovalProcess">
+            <summary>
+            Property Visible.
             </summary>
         </member>
         <member name="T:BimPlus.Sdk.Data.TenantDto.DtoDiscipline">
@@ -18460,22 +19223,17 @@
             Data-Transfer-Object for project.
             </summary>
         </member>
-        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoProject.TeamName">
-            <summary>
-            Property TeamName.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoProject.TeamId">
-            <summary>
-            Property TeamId.
-            </summary>
-        </member>
         <member name="P:BimPlus.Sdk.Data.TenantDto.DtoProject.IssueCount">
             <summary>
             Property IssueCount.
             </summary>
         </member>
         <member name="P:BimPlus.Sdk.Data.TenantDto.DtoProject.AttachmentCount">
+            <summary>
+            Property AttachmentCount.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoProject.ProjectAttachmentsCount">
             <summary>
             Property AttachmentCount.
             </summary>
@@ -18713,6 +19471,11 @@
             Property Elements. Elements assigned to this structure.
             </summary>
         </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoStructureEx.Attributes">
+            <summary>
+            additional attributes as simple dictionary.
+            </summary>
+        </member>
         <member name="P:BimPlus.Sdk.Data.TenantDto.DtoStructureEx.CustomTables">
             <summary>
             Property CustomTables. CustomTables assigned to this structure.
@@ -18726,6 +19489,21 @@
         <member name="P:BimPlus.Sdk.Data.TenantDto.DtoStructureEx.TopologyNodeId">
             <summary>
             Property TopologyNodeId.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.TenantDto.DtoStructureExIfc">
+            <summary>
+            DtoStructureExIfc class. Extended DtoStructureEx allowing to create the structure by IFC import.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.Data.TenantDto.DtoStructureExIfc.#ctor">
+            <summary>
+             Default constructor.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoStructureExIfc.GlobalIfcId">
+            <summary>
+            Property IfcId (parameter "GlobalId" from IFC elements).
             </summary>
         </member>
         <member name="T:BimPlus.Sdk.Data.TenantDto.DtoStructureElement">
@@ -18884,6 +19662,26 @@
             Property Number.
             </summary>
         </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoBaseTopology.CreatedAt">
+            <summary>
+            Property DateTime.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoBaseTopology.Creator">
+            <summary>
+            Property CreatedByUser.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoBaseTopology.Changed">
+            <summary>
+            Property Changed (Time of last modification).
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoBaseTopology.ChangedBy">
+            <summary>
+            Property ChangedByUser (Last time modified by user).
+            </summary>
+        </member>
         <member name="T:BimPlus.Sdk.Data.TenantDto.DtoTopologyShort">
             <summary>
             DtoTopologyShort class
@@ -18947,6 +19745,11 @@
         <member name="P:BimPlus.Sdk.Data.TenantDto.DtoTopology.ElementTypeId">
             <summary>
             Property Type.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoTopology.DivisionId">
+            <summary>
+            Property DivisionId.
             </summary>
         </member>
         <member name="T:BimPlus.Sdk.Data.TenantDto.DtoTopologyStructure">
@@ -19064,6 +19867,11 @@
             Property WithIfc.
             </summary>
         </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.TopologyInputData.RootObjectType">
+            <summary>
+            Property WithIfc.
+            </summary>
+        </member>
         <member name="M:BimPlus.Sdk.Data.TenantDto.TopologyInputData.#ctor">
             Constructor.
         </member>
@@ -19144,6 +19952,11 @@
             Property Revisions.
             </summary>
         </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoProjectDiscipline.ReleasedRevisions">
+            <summary>
+            Property released Revisions.
+            </summary>
+        </member>
         <member name="P:BimPlus.Sdk.Data.TenantDto.DtoProjectDiscipline.Visible">
             <summary>
             Property Visibility.
@@ -19161,7 +19974,7 @@
         </member>
         <member name="P:BimPlus.Sdk.Data.TenantDto.DtoProjectDiscipline.Valid">
             <summary>
-            Property Valid.
+            Property Valid. (Private public discipline)
             </summary>
         </member>
         <member name="P:BimPlus.Sdk.Data.TenantDto.DtoProjectDiscipline.Elements">
@@ -19201,6 +20014,34 @@
             Constructor with parameter projectDiscipline.
             </summary>
             <param name="projectDiscipline"></param>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.TenantDto.DtoValidDiscipline">
+            <summary>
+            DtoValidDiscipline
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoValidDiscipline.DivisionId">
+            <summary>
+            Property DivisionId.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoValidDiscipline.DisciplineId">
+            <summary>
+            Property DisciplineId.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoValidDiscipline.Valid">
+            <summary>
+            Property valid disciplines (private or public).
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.TenantDto.UnitConversionsDictionary">
+            <summary>
+            UnitConversionsDictionary
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.UnitConversionsDictionary.SuppressSpecialConversion">
+            SuppressSpecialConversion
         </member>
         <member name="T:BimPlus.Sdk.Data.TenantDto.DtoUnitConversion">
             <summary>
@@ -19381,6 +20222,16 @@
         <member name="P:BimPlus.Sdk.Data.TenantDto.DtoFilterHierarchyElement.IsDefault">
             <summary>
             Property IsDefault.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoFilterHierarchyElement.DisableSortByModels">
+            <summary>
+            Property IsDefault.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.TenantDto.DtoFilterHierarchyElement.ReadableValues">
+            <summary>
+            Property ReadableValues.
             </summary>
         </member>
         <member name="T:BimPlus.Sdk.Data.TenantDto.DtoUserSettingsHierarchyFilterList">
@@ -19665,6 +20516,13 @@
             <param name="min">CElementPoint</param>
             <param name="max">CElementPoint</param>
         </member>
+        <member name="M:BimPlus.Sdk.Data.TenantDto.DtoGeometry.GetFace(System.Int32)">
+            <summary>
+            returns face coordinates
+            </summary>
+            <param name="face">face index starts with 0</param>
+            <returns>list of CElementPoint's 3 if it's a triangle and 4 if it's a quad</returns>
+        </member>
         <member name="T:BimPlus.Sdk.Data.UserAdministration.DtoAccountSetting">
             <summary>
             DtoAccountSetting class.
@@ -19708,6 +20566,16 @@
         <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoAccountSetting.Status">
             <summary>
             Property Status.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoAccountSetting.LogInfo">
+            <summary>
+            Property Log info.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoAccountSetting.Unit">
+            <summary>
+            Property Unit
             </summary>
         </member>
         <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoAccountSetting.IsTeamAccount">
@@ -19969,6 +20837,94 @@
             Property NewPassword.
             </summary>
         </member>
+        <member name="T:BimPlus.Sdk.Data.UserAdministration.DtoCustomProjectRole">
+            <summary>
+            DtoCustomProjectRole class.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoCustomProjectRole.Id">
+            <summary>
+            Property Id.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoCustomProjectRole.Name">
+            <summary>
+            Property Name.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoCustomProjectRole.Description">
+            <summary>
+            Property Description.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoCustomProjectRole.ProjectId">
+            <summary>
+            Property ProjectId.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoCustomProjectRole.Layers">
+            <summary>
+            Property layers.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.UserAdministration.DtoRoleMember">
+            <summary>
+            DtoRoleMember class.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoRoleMember.UserId">
+            <summary>
+            Property UserId.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoRoleMember.Access">
+            <summary>
+            Property Access.
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.UserAdministration.DtoSystemEdition">
+            <summary>
+            DtoSystemEdition class.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoSystemEdition.Id">
+            <summary>Edition Id</summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoSystemEdition.PacketName">
+            <summary>Packet name</summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoSystemEdition.PacketExtension">
+            <summary>Packet extension</summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoSystemEdition.MaxProject">
+            <summary>Max. project</summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoSystemEdition.MaxTeamMember">
+            <summary>Max. team member</summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoSystemEdition.MaxStorage">
+            <summary>Max. storage</summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoSystemEdition.Functions">
+            <summary>List of functions</summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.UserAdministration.DtoSystemFunction">
+            <summary>
+            DtoSystemFunction class.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoSystemFunction.Id">
+            <summary>Function Id</summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoSystemFunction.EditionId">
+            <summary>Edition Id</summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoSystemFunction.FunctionName">
+            <summary>Function name</summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoSystemFunction.FunctionId">
+            <summary>Shop function Id</summary>
+        </member>
         <member name="T:BimPlus.Sdk.Data.UserAdministration.DtoUserGroup">
             <summary>
             DtoUserGroup class.
@@ -20004,11 +20960,6 @@
             Property Rights.
             </summary>
         </member>
-        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoUserGroup.DisciplinesAccess">
-            <summary>
-            Property Disciplines Access.
-            </summary>
-        </member>
         <member name="T:BimPlus.Sdk.Data.UserAdministration.UserGroup">
             <summary>
             UserGroup class.
@@ -20039,6 +20990,9 @@
             <summary>
             Rate of class userGroupRole Id higher have default value bigger 
             </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.UserAdministration.UserGroupRoleRatePriority.PriorityOfGroup">
+            PriorityOfGroup
         </member>
         <member name="T:BimPlus.Sdk.Data.UserAdministration.UserGroupRoleName">
             <summary>
@@ -20071,31 +21025,6 @@
             DtoGroupUser rights.
             </summary>
         </member>
-        <member name="T:BimPlus.Sdk.Data.UserAdministration.DtoDisciplineAccess">
-            <summary>
-            DtoDisciplineAccess class.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoDisciplineAccess.Id">
-            <summary>
-            Property Id.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoDisciplineAccess.Name">
-            <summary>
-            Property Name.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoDisciplineAccess.Share">
-            <summary>
-            Property Share.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoDisciplineAccess.WIP">
-            <summary>
-            Property wip.
-            </summary>
-        </member>
         <member name="T:BimPlus.Sdk.Data.UserAdministration.DtoRole">
             <summary>
             DtoRole class.
@@ -20105,11 +21034,6 @@
         <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoRole.Id">
             <summary>
             Property Id.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoRole.ParentId">
-            <summary>
-            Property ParentId.
             </summary>
         </member>
         <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoRole.Name">
@@ -20135,11 +21059,6 @@
         <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoRole.Resources">
             <summary>
             Property Resources.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoRole.Children">
-            <summary>
-            Property Children.
             </summary>
         </member>
         <member name="T:BimPlus.Sdk.Data.UserAdministration.RoleTypes">
@@ -20279,6 +21198,11 @@
             Property UsedSpace.
             </summary>
         </member>
+        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoStorageStatistics.UsedSpaceMB">
+            <summary>
+            Property UsedSpace.
+            </summary>
+        </member>
         <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoStorageStatistics.NumberOfProjects">
             <summary>
             Property NumberOfProjects.
@@ -20287,6 +21211,11 @@
         <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoStorageStatistics.NumberOfMembers">
             <summary>
             Property NumberOfMembers.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoStorageStatistics.UsedSpaceForAllplanShare">
+            <summary>
+            Property UsageAllplanShareMb.
             </summary>
         </member>
         <member name="T:BimPlus.Sdk.Data.UserAdministration.DtoClientTeam">
@@ -20388,6 +21317,11 @@
             Property Account type.
             </summary>
         </member>
+        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoTeam.WhiteList">
+            <summary>
+            Property WhiteList (User in white list ? true/false).
+            </summary>
+        </member>
         <member name="T:BimPlus.Sdk.Data.UserAdministration.DtoTeamShort">
             <summary>
             DtoTeamShort class.
@@ -20450,6 +21384,11 @@
         <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoTeamShort.AccountType">
             <summary>
             Property AccountType.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoTeamShort.WhiteList">
+            <summary>
+            Property WhiteList (User in white list ? true/false).
             </summary>
         </member>
         <member name="T:BimPlus.Sdk.Data.UserAdministration.DtoLegalText">

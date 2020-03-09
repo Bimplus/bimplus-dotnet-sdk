@@ -469,10 +469,34 @@
             </summary>
             <param name="intBase"></param>
         </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.ProjectSelection.#ctor(BimPlus.Client.Integration.IntegrationBase,System.Int32,System.Int32,System.String,System.Windows.Media.ImageSource)">
+            <summary>
+            Create the ProjectSelection 
+            </summary>
+            <param name="intBase"></param>
+            <param name="height"></param>
+            <param name="width"></param>
+            <param name="title"></param>
+            <param name="icon"></param>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.ProjectSelection.SelectBimPlusProject(System.Guid)">
+            <summary>
+            Start Modal WPF Dialog with embedded BimPlus ProjectSelection dialog
+            IntegrationBase.CurrentProject will be assigned automatically after Project selection
+            </summary>
+            <param name="defaultProject"></param>
+            <returns>Guid of selected project; if canceled it returns defaultProject</returns>
+        </member>
         <member name="M:BimPlus.Client.WebControls.WPF.ProjectSelection.NavigateToControl">
             <summary>
             Load the control control content.
             </summary>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.ProjectSelection.GetNavigateUrl">
+            <summary>
+            Get Url.
+            </summary>
+            <returns></returns>
         </member>
         <member name="M:BimPlus.Client.WebControls.WPF.ProjectSelection.SetCurrentTeamInWebControl(System.String)">
             <summary>
