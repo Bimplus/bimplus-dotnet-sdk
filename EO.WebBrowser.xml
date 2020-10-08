@@ -35,7 +35,12 @@
             Gets the SSL port used.
             </summary>
     </member>
-    <member name="M:EO.WebBrowser.NeedClientCertificateEventArgs.Continue(System.Security.Cryptography.X509Certificates.X509Certificate)">
+    <member name="P:EO.WebBrowser.NeedClientCertificateEventArgs.TrustedAuthorities">
+      <summary>
+            List of DER-encoded X.509 DistinguishedName of certificate authorities allowed by the server.
+            </summary>
+    </member>
+    <member name="M:EO.WebBrowser.NeedClientCertificateEventArgs.Continue(System.Security.Cryptography.X509Certificates.X509Certificate,System.String)">
       <summary>
             Continue the request with the specified client certificate.
             </summary>
@@ -47,6 +52,8 @@
             you must provide a valid certificate, otherwise the connection will
             fail.
             </remarks>
+      <param name="certificate">The certificate to use.</param>
+      <param name="password">The export password of the certificate.</param>
     </member>
     <member name="M:EO.WebBrowser.NeedClientCertificateEventArgs.Continue(System.Byte[],System.String)">
       <summary>
@@ -66,7 +73,7 @@
             Continue the request without a client certificate.
             </summary>
       <remarks>
-            This method calls <see cref="M:EO.WebBrowser.NeedClientCertificateEventArgs.Continue(System.Security.Cryptography.X509Certificates.X509Certificate)">Continue(X509Certificate)</see>
+            This method calls <see cref="M:EO.WebBrowser.NeedClientCertificateEventArgs.Continue(System.Security.Cryptography.X509Certificates.X509Certificate,System.String)">Continue(X509Certificate, string)</see>
             with a <b>null</b> value.
             </remarks>
     </member>
@@ -656,23 +663,6 @@
       <param name="sender">The source of the event.</param>
       <param name="e">Additional event data.</param>
     </member>
-    <member name="F:EO.WebBrowser.DevToolsUI.components">
-      <summary>
-            Required designer variable.
-            </summary>
-    </member>
-    <member name="M:EO.WebBrowser.DevToolsUI.Dispose(System.Boolean)">
-      <summary>
-            Clean up any resources being used.
-            </summary>
-      <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-    </member>
-    <member name="M:EO.WebBrowser.DevToolsUI.InitializeComponent">
-      <summary>
-            Required method for Designer support - do not modify
-            the contents of this method with the code editor.
-            </summary>
-    </member>
     <member name="T:EO.WebBrowser.DOM.Collection`1">
       <summary>
             Represents a collection of objects.
@@ -798,6 +788,73 @@
             Gets the vertical window location.
             </summary>
     </member>
+    <member name="T:EO.WebBrowser.DOMNodeType">
+      <summary>
+            Specifies the type of a DOM node.
+            </summary>
+    </member>
+    <member name="F:EO.WebBrowser.DOMNodeType.Unsupported">
+      <summary>
+            Not supported node type.
+            </summary>
+    </member>
+    <member name="F:EO.WebBrowser.DOMNodeType.Element">
+      <summary>
+            The node is an element.
+            </summary>
+    </member>
+    <member name="F:EO.WebBrowser.DOMNodeType.Text">
+      <summary>
+            The node is a text node.
+            </summary>
+    </member>
+    <member name="T:EO.WebBrowser.DOMNodeInfo">
+      <summary>
+            Contains information about a DOM node.
+            </summary>
+    </member>
+    <member name="P:EO.WebBrowser.DOMNodeInfo.Type">
+      <summary>
+            Gets the type of the DOM node.
+            </summary>
+    </member>
+    <member name="P:EO.WebBrowser.DOMNodeInfo.TagName">
+      <summary>
+            Gets the tag name of a DOM element.
+            </summary>
+    </member>
+    <member name="P:EO.WebBrowser.DOMNodeInfo.IsEditable">
+      <summary>
+            Gets a value indicating whether the element is editable.
+            </summary>
+    </member>
+    <member name="P:EO.WebBrowser.DOMNodeInfo.Attributes">
+      <summary>
+            Gets a collection that contains all the attributes of the DOM element.
+            </summary>
+    </member>
+    <member name="P:EO.WebBrowser.DOMNodeInfo.Bounds">
+      <summary>
+            Gets the bounds of the element.
+            </summary>
+    </member>
+    <member name="T:EO.WebBrowser.DOMNodeEventArgs">
+      <summary>
+            Contains event information related to a DOM node.
+            </summary>
+    </member>
+    <member name="P:EO.WebBrowser.DOMNodeEventArgs.Node">
+      <summary>
+            The DOM node.
+            </summary>
+    </member>
+    <member name="T:EO.WebBrowser.DOMNodeEventHandler">
+      <summary>
+            Represents the method that will handle event related to a DOM node.
+            </summary>
+      <param name="sender">The source of the event.</param>
+      <param name="e">Additional event data.</param>
+    </member>
     <member name="T:EO.WebBrowser.DownloadState">
       <summary>
             Sepcifies the state of a download.
@@ -891,6 +948,11 @@
     <member name="P:EO.WebBrowser.DownloadItem.MimeType">
       <summary>
             Gets the MIME type of the content.
+            </summary>
+    </member>
+    <member name="P:EO.WebBrowser.DownloadItem.ErrorCode">
+      <summary>
+            Gets or sets the error code when download fails.
             </summary>
     </member>
     <member name="E:EO.WebBrowser.DownloadItem.PropertyChanged">
@@ -1898,7 +1960,7 @@
     </member>
     <member name="P:EO.WebBrowser.WebView.Title">
       <summary>
-            Gets the page title.
+            Gets or sets the page title.
             </summary>
     </member>
     <member name="E:EO.WebBrowser.WebView.TitleChanged">
@@ -2192,7 +2254,7 @@
             Execute JavaScript code.
             </summary>
       <remarks>
-            This function calls <see cref="M:EO.WebBrowser.WebView.EvalScript(System.String,System.Boolean)" /> with <i>throwOnError</i> set to <b>false</b>.
+            This function calls <see cref="M:EO.WebBrowser.WebView.EvalScript(System.String,System.Boolean)" /> with <i>throwOnError</i> set to <b>true</b>.
             </remarks>
     </member>
     <member name="M:EO.WebBrowser.WebView.GetDOMWindow">
@@ -2280,10 +2342,18 @@
             property of the event argument will be set to <b>true</b>.
             </remarks>
     </member>
-    <member name="M:EO.WebBrowser.WebView.SetFocus">
+    <member name="M:EO.WebBrowser.WebView.SetFocus(System.Boolean)">
       <summary>
             Sets the keyboard focus to this <see cref="T:EO.WebBrowser.WebView" />.
             </summary>
+      <param name="preserveFocusedNode">
+        <b>true</b> to only set focus to the <see cref="T:EO.WebBrowser.WebView" /> but
+            without changing the currently focused node. <b>false</b> to
+            reset the focus to the first node.
+            </param>
+      <remarks>
+            Specifies the node to be focused.
+            </remarks>
     </member>
     <member name="P:EO.WebBrowser.WebView.HasFocus">
       <summary>
@@ -2541,12 +2611,17 @@
             Hides the developer tools interface.
             </summary>
     </member>
+    <member name="E:EO.WebBrowser.WebView.FocusedNodeChanged">
+      <summary>
+            Occurs when the focused node changed.
+            </summary>
+    </member>
     <member name="E:EO.WebBrowser.WebView.NeedClientCertificate">
       <summary>
             Raised when the server requires a client certificate.
             </summary>
       <remarks>
-            Call <see cref="M:EO.WebBrowser.NeedClientCertificateEventArgs.Continue(System.Security.Cryptography.X509Certificates.X509Certificate)" /> or 
+            Call <see cref="M:EO.WebBrowser.NeedClientCertificateEventArgs.Continue(System.Security.Cryptography.X509Certificates.X509Certificate,System.String)" /> or 
             <see cref="M:EO.WebBrowser.NeedClientCertificateEventArgs.ContinueWithoutCertificate" />
             to continue the request either with or without a certificate.
             </remarks>
@@ -2578,7 +2653,7 @@
             has not been destroyed yet.
             </summary>
     </member>
-    <member name="M:EO.WebBrowser.WebView.SendMouseEvent(EO.WebBrowser.MouseEventType,System.Windows.Forms.MouseEventArgs)">
+    <member name="M:EO.WebBrowser.WebView.SendMouseEvent(EO.WebBrowser.MouseEventType,EO.Base.UI.MouseEventArgs)">
       <summary>
             Simulates a mouse event to the <see cref="T:EO.WebBrowser.WebView" />.
             </summary>
@@ -2728,6 +2803,12 @@
             A <see cref="T:EO.WebBrowser.DownloadResult" /> object that contains information about the download.
             </returns>
     </member>
+    <member name="P:EO.WebBrowser.WebView.InputMsgFilter">
+      <summary>
+            Gets or sets an <see cref="T:EO.WebBrowser.IInputMsgFilter" /> that can be used
+            to filter input messages from the <see cref="T:EO.WebBrowser.WebView" />.
+            </summary>
+    </member>
     <member name="T:EO.WebBrowser.FullscreenModeChangedArgs">
       <summary>
             Provides additional information for the <see cref="E:EO.WebBrowser.WebView.FullScreenModeChanged" /> event.
@@ -2750,28 +2831,22 @@
             to use your own owner window.
             </remarks>
     </member>
-    <member name="P:EO.WebBrowser.FullscreenModeChangedArgs.Parent">
+    <member name="P:EO.WebBrowser.FullscreenModeChangedArgs.HWndParent">
       <summary>
-            Gets or sets the parent <see cref="T:System.Windows.Forms.Control" /> that will be used to host the full screen window.
+            Gets or sets the handle of the parent window that will be used to host the full screen window.
             </summary>
       <remarks>
         <para>
-            By default, there is no parent control for the full screen window. In that case
+            By default, there is no parent window for the full screen window. In that case
             the full screen window will be truely full screen. However in case you wish
             to contain the full screen window (for example, to preserve certain UI element
-            such as your application's menu bar), then you can specify a Windows.Forms 
-            <see cref="T:System.Windows.Forms.Control" /> as the container of the full screen
-            window through this property.
-            </para>
-        <para>
-            If your application uses WPF, then you use <b>WindowsFormsHost</b>
-            to host a Windows Forms container control (such as a <see cref="T:System.Windows.Forms.Panel" />),
-            you can then set this property to the Windows Forms container control.
+            such as your application's menu bar), then you can specify a window handle
+            as the container of the full screen window through this property.
             </para>
         <para>
             Note that if you use this property, then:
             <list type="bullet"><item>
-                Your code will be responsible for destroying the parent control when it is no longer 
+                Your code will be responsible for destroying the parent window when it is no longer 
                 needed (for example, when the <see>WebView</see> is destroyed or exit full screen mode;
                 </item><item><see>ShowExitInstruction</see> will be ignored. You must display your own exit full
                 screen mode hint message;
@@ -2934,11 +3009,6 @@
             The navigation was caused by a reload.
             </summary>
     </member>
-    <member name="F:EO.WebBrowser.NavigationType.FormResubmitted">
-      <summary>
-            The navigation was caused by resubmitting a form.
-            </summary>
-    </member>
     <member name="F:EO.WebBrowser.NavigationType.Other">
       <summary>
             The navigation was caused by other reasons, for example, by calling <see cref="M:EO.WebBrowser.WebView.LoadUrl(System.String)">WebView.LoadUrl</see>.
@@ -2964,24 +3034,29 @@
             Gets the target frame name.
             </summary>
     </member>
-    <member name="P:EO.WebBrowser.BeforeNavigateEventArgs.IsMainFrame">
-      <summary>
-            Gets a value indicating whether the target frame is the main frame.
-            </summary>
-    </member>
     <member name="P:EO.WebBrowser.BeforeNavigateEventArgs.NavigationType">
       <summary>
             Gets the type of the navigation.
             </summary>
     </member>
-    <member name="P:EO.WebBrowser.BeforeNavigateEventArgs.Method">
+    <member name="P:EO.WebBrowser.BeforeNavigateEventArgs.IsMainFrame">
       <summary>
-            Gets the HTTP method.
+            Gets a value indicating whether the target frame is the main frame.
+            </summary>
+    </member>
+    <member name="P:EO.WebBrowser.BeforeNavigateEventArgs.IsUserGesture">
+      <summary>
+            Gets whether this navigation is caused by user such as clicking a link.
             </summary>
     </member>
     <member name="P:EO.WebBrowser.BeforeNavigateEventArgs.IsRedirect">
       <summary>
             Gets a value indicating whether this navigation is a redirection.
+            </summary>
+    </member>
+    <member name="P:EO.WebBrowser.BeforeNavigateEventArgs.Method">
+      <summary>
+            Gets the HTTP method.
             </summary>
     </member>
     <member name="T:EO.WebBrowser.BeforeNavigateHandler">
@@ -3091,14 +3166,14 @@
             Requesting video capturing permission.
             </summary>
     </member>
-    <member name="F:EO.WebBrowser.Permissions.GeoLocation">
-      <summary>
-            Requring location permission.
-            </summary>
-    </member>
     <member name="F:EO.WebBrowser.Permissions.StorageQuota">
       <summary>
-            Requesting storage quota permission.
+            Requesting storage quota permission through navigator.webkitPersistentStorage API.
+            </summary>
+    </member>
+    <member name="F:EO.WebBrowser.Permissions.Clipboard">
+      <summary>
+            Requesting clipboard permission through navigator.clipboard API.
             </summary>
     </member>
     <member name="T:EO.WebBrowser.RequestPermissionEventArgs">
@@ -3169,6 +3244,15 @@
             Provides additional information for the <see cref="E:EO.WebBrowser.WebView.BeforePrint" /> event.
             </summary>
     </member>
+    <member name="M:EO.WebBrowser.BeforePrintEventArgs.UpdateSettings(System.Drawing.Printing.PrinterSettings,System.Drawing.Printing.PageSettings)">
+      <summary>
+            Updates printing settings.
+            </summary>
+      <param name="printerSettings">Set the default printer settings. Pass <b>null</b> to display the print dialog to ask user for the settings.</param>
+      <param name="pageSettings">Set the default page settings. Pass <b>null</b> to use <see cref="P:System.Drawing.Printing.PrinterSettings.DefaultPageSettings" />
+            of the <i>printerSettings</i> argument.
+            </param>
+    </member>
     <member name="P:EO.WebBrowser.BeforePrintEventArgs.IsFromScript">
       <summary>
             Returns a value indicating whether this print task was raised by the page
@@ -3231,27 +3315,6 @@
             </summary>
       <param name="sender">The source of the event.</param>
       <param name="e">Additional event data.</param>
-    </member>
-    <member name="T:EO.WebBrowser.Properties.Resources">
-      <summary>
-              A strongly-typed resource class, for looking up localized strings, etc.
-            </summary>
-    </member>
-    <member name="P:EO.WebBrowser.Properties.Resources.ResourceManager">
-      <summary>
-              Returns the cached ResourceManager instance used by this class.
-            </summary>
-    </member>
-    <member name="P:EO.WebBrowser.Properties.Resources.Culture">
-      <summary>
-              Overrides the current thread's CurrentUICulture property for all
-              resource lookups using this strongly typed resource class.
-            </summary>
-    </member>
-    <member name="P:EO.WebBrowser.Properties.Resources.DropDownArrow">
-      <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
-            </summary>
     </member>
     <member name="T:EO.WebBrowser.ResourceType">
       <summary>
@@ -3428,6 +3491,19 @@
             Initialize a <see cref="T:EO.WebBrowser.PostDataItem" /> object with a file.
             </summary>
       <param name="fileName">The name of the file to be posted.</param>
+      <remarks>
+            Note that using this constructor alone is not sufficient to create a
+            request to upload a file. To upload a file,
+            you must also do the following with the <see cref="T:EO.WebBrowser.Request" /> object:
+            <list type="bullet"><item><see cref="P:EO.WebBrowser.Request.ContentType" /> 
+                must be <b>multipart/form-data</b> with a unique boundary value;
+                </item><item><see cref="P:EO.WebBrowser.Request.Method" /> must be <b>POST</b>;
+                </item><item>
+                Placing two raw <see cref="T:EO.WebBrowser.PostDataItem" /> objects that contains
+                the boundary data before and after this file <see cref="T:EO.WebBrowser.PostDataItem" />.
+                These three <see cref="T:EO.WebBrowser.PostDataItem" /> together form a valid
+                multipart-form-data request body;
+                </item></list></remarks>
     </member>
     <member name="M:EO.WebBrowser.PostDataItem.#ctor(System.Byte[])">
       <summary>
@@ -3490,6 +3566,11 @@
     <member name="T:EO.WebBrowser.RequestEventArgs">
       <summary>
             Provides event data for events related to a <see cref="P:EO.WebBrowser.RequestEventArgs.Request" />.
+            </summary>
+    </member>
+    <member name="P:EO.WebBrowser.RequestEventArgs.Task">
+      <summary>
+            Gets the <see cref="T:EO.WebBrowser.NavigationTask" /> object associated to the request.
             </summary>
     </member>
     <member name="P:EO.WebBrowser.RequestEventArgs.Request">
@@ -3885,6 +3966,9 @@
             </summary>
       <typeparam name="T">The target type.</typeparam>
       <param name="from">The source object.</param>
+      <remarks>
+            The source object is no longer valid after this call.
+            </remarks>
     </member>
     <member name="M:EO.WebBrowser.JSObject.InvokeFunction(System.String,System.Object[])">
       <summary>
@@ -4038,6 +4122,11 @@
     <member name="P:EO.WebBrowser.JSExtInvokeArgs.ReturnValue">
       <summary>
             Sets the function's return value.
+            </summary>
+    </member>
+    <member name="P:EO.WebBrowser.JSExtInvokeArgs.Handled">
+      <summary>
+            Gets or sets whether the function has been handled.
             </summary>
     </member>
     <member name="T:EO.WebBrowser.JSExtInvokeHandler">
@@ -5158,6 +5247,11 @@
             Specifies the type of the console message.
             </summary>
     </member>
+    <member name="F:EO.WebBrowser.ConsoleMessageType.Unknown">
+      <summary>
+            Unknown message types.
+            </summary>
+    </member>
     <member name="F:EO.WebBrowser.ConsoleMessageType.JavaScript">
       <summary>
             Message related to JavaScript.
@@ -5491,11 +5585,6 @@
             Provides additional information for the <see cref="E:EO.WebBrowser.WebView.RenderUnresponsive" /> event.
             </summary>
     </member>
-    <member name="P:EO.WebBrowser.RenderUnresponsiveEventArgs.JavaScriptStackTrace">
-      <summary>
-            Gets the current JavaScript stack trace.
-            </summary>
-    </member>
     <member name="T:EO.WebBrowser.RenderUnresponsiveEventHandler">
       <summary>
             Represents the method that will handle the <see cref="E:EO.WebBrowser.WebView.Closed" /> event.
@@ -5525,73 +5614,52 @@
       <param name="sender">The source of the event.</param>
       <param name="e">Additional event data.</param>
     </member>
-    <member name="T:EO.WebBrowser.WndMsgEventArgs">
+    <member name="T:EO.WebBrowser.InputMsgTarget">
       <summary>
-            Provides additional information for an event that passes a Windows message.
+            Specifies the target to which an input message should be dispatched.
             </summary>
     </member>
-    <member name="P:EO.WebBrowser.WndMsgEventArgs.HWnd">
+    <member name="F:EO.WebBrowser.InputMsgTarget.None">
       <summary>
-            Get the window handle of the message.
+            No further processing needed. This "consumes" the message. Use
+            this option for scenarios such as you wish to completely disable 
+            certain input events (for example, right mouse click), or if you 
+            wish to intercept certain keystrokes and use them as hotkeys 
+            for your own specific action and no longer wish these keystrokes 
+            to reach the web page.
             </summary>
     </member>
-    <member name="P:EO.WebBrowser.WndMsgEventArgs.Message">
+    <member name="F:EO.WebBrowser.InputMsgTarget.WebView">
       <summary>
-            Gets the ID number of the message.
+            The message should be dispatched to the <see cref="F:EO.WebBrowser.InputMsgTarget.WebView" /> directly.
+            This bypasses application level message routing thus will not raises
+            events on that level. For example, a keyboard message that would have
+            matched a menu item shortcut would no longer trigger the menu item's
+            Click event if <see cref="M:EO.WebBrowser.IInputMsgFilter.PreDispatchMsg(System.Int32,System.IntPtr,System.IntPtr)" />
+            returns this value.
             </summary>
     </member>
-    <member name="P:EO.WebBrowser.WndMsgEventArgs.WParam">
+    <member name="F:EO.WebBrowser.InputMsgTarget.Application">
       <summary>
-            Gets the WPARAM for the message.
+            The message should be dispatched to the host application. This
+            is the default behavior. See <a href="WebBrowser/Advanced/input_events.html">here</a> for more details.
             </summary>
     </member>
-    <member name="P:EO.WebBrowser.WndMsgEventArgs.LParam">
+    <member name="T:EO.WebBrowser.IInputMsgFilter">
       <summary>
-            Gets the LPARAM for the message.
+            Defines an input message filter interface for the <see cref="T:EO.WebBrowser.WebView" />.
             </summary>
     </member>
-    <member name="T:EO.WebBrowser.WndMsgEventHandler">
+    <member name="M:EO.WebBrowser.IInputMsgFilter.PreDispatchMsg(System.Int32,System.IntPtr,System.IntPtr)">
       <summary>
-            Represents the method that will handle an event that carries a Windows message.
+            Filter an input message before it is dispatched.
             </summary>
-      <param name="sender">The source of the event.</param>
-      <param name="e">Additional event data.</param>
-    </member>
-    <member name="T:EO.WinForm.WebViewHost">
-      <summary>
-            Provides the base class for a Windows Forms control that hosts a <see cref="T:EO.WebBrowser.WebView" />.
-            </summary>
-    </member>
-    <member name="P:EO.WinForm.WebViewHost.AutoProcessCmdKeys">
-      <summary>
-            Gets or sets whether to automatically process shortcut keys.
-            </summary>
-      <remarks>
-            By default, the WebControl class auotmatically processes shortcut keys
-            in your Windows application such as shortcut key for a menu item. Set
-            this property to false if this is not desired (for example, the Web page
-            wish to handle certain shortcut keys).
-            </remarks>
-    </member>
-    <member name="P:EO.WinForm.WebViewHost.IsReady">
-      <summary>
-            Gets a value indicating whether the underlying <see cref="T:EO.WebBrowser.WebView" /> is ready.
-            </summary>
-    </member>
-    <member name="E:EO.WinForm.WebViewHost.IsReadyChanged">
-      <summary>
-            Occurs when <see cref="P:EO.WinForm.WebViewHost.IsReady" /> is changed.
-            </summary>
-    </member>
-    <member name="T:EO.WinForm.WebControl">
-      <summary>
-            A Windows Forms control that provides a thin wrapper to the <see cref="T:EO.WebBrowser.WebView" /> class.
-            </summary>
-    </member>
-    <member name="P:EO.WinForm.WebControl.WebView">
-      <summary>
-            Gets or sets the associated <see cref="P:EO.WinForm.WebControl.WebView" /> object.
-            </summary>
+      <param name="Msg">The ID number of the message..</param>
+      <param name="wParam">The WPARAM for the message.</param>
+      <param name="lParam">The LPARAM for the message.</param>
+      <returns>
+            An <see cref="T:EO.WebBrowser.InputMsgTarget" /> value indicating the next step of this message.
+            </returns>
     </member>
   </members>
 </doc>

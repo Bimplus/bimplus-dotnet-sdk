@@ -196,6 +196,12 @@
             </summary>
             <returns>DtoUserOverview</returns>
         </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.Connection.GetUserId">
+            <summary>
+            Get UserId of current user.
+            </summary>
+            <returns>Guid</returns>
+        </member>
         <member name="M:BimPlus.Sdk.Utilities.V2.Connection.SearchDivision(System.String,System.String)">
             <summary>
             Search division in all available teams by inputType and identifier
@@ -286,6 +292,11 @@
         <member name="F:BimPlus.Sdk.Utilities.V2.Connection.m_Timer">
             <summary>
             Protected member m_Timer.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Utilities.V2.Connection.m_User">
+            <summary>
+            Protected member m_User.
             </summary>
         </member>
         <member name="T:BimPlus.Sdk.Utilities.V2.IConnection">
@@ -402,6 +413,12 @@
             Get Userinfo about current user.
             </summary>
             <returns>DtoUserOverview</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.IConnection.GetUserId">
+            <summary>
+            Get UserId of current user.
+            </summary>
+            <returns></returns>
         </member>
         <member name="M:BimPlus.Sdk.Utilities.V2.IConnection.GetDivisions">
             <summary>
@@ -1446,6 +1463,13 @@
             <param name="issue"></param>
             <returns>List of string</returns>
         </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetIssueReports(System.Guid)">
+            <summary>
+            Get Issue history.
+            </summary>
+            <param name="issueId"></param>
+            <returns></returns>
+        </member>
         <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.PostCache``1(System.Guid,System.String,``0)">
             <summary>
             Post some ClientCacheData.
@@ -1525,6 +1549,14 @@
             Validate Subscription from actual user.
             </summary>
             <returns>HttpStatusCode.OK if succeed</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetSubscriptions(System.Guid,System.String)">
+            <summary>
+            Get account settings from requested team.
+            </summary>
+            <param name="teamId"></param>
+            <param name="subscription"></param>
+            <returns></returns>
         </member>
         <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetAccountSettings">
             <summary>
@@ -1811,6 +1843,14 @@
             </summary>
             <returns>DtoShopSubscriptionResponse</returns>
         </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetSubscriptions(System.Guid,System.String)">
+            <summary>
+            Get subscriptions from requested team.
+            </summary>
+            <param name="teamId"></param>
+            <param name="subscription">optional for one requested subscription</param>
+            <returns>all subscriptions, or validation of requested subscription</returns>
+        </member>
         <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.ValidateSubscription(System.String)">
             <summary>
             Validate Subscription from actual user.
@@ -2071,6 +2111,13 @@
             </summary>
             <param name="issue"></param>
             <returns>List of string</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetIssueReports(System.Guid)">
+            <summary>
+            Get Issue history.
+            </summary>
+            <param name="issueId"></param>
+            <returns></returns>
         </member>
         <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.CreateConnection(System.Guid,BimPlus.Sdk.Data.TenantDto.DtoConnections)">
             <summary>

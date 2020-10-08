@@ -305,6 +305,14 @@
             </summary>
             <returns>DtoShopSubscriptionResponse</returns>
         </member>
+        <member name="M:BimPlus.Sdk.Api.Core.GetSubscriptions(System.Guid,System.String)">
+            <summary>
+            GetSubscriptions
+            </summary>
+            <param name="teamId"></param>
+            <param name="subscription"></param>
+            <returns></returns>
+        </member>
         <member name="M:BimPlus.Sdk.Api.Core.ValidateSubscription(System.String)">
             <summary>
             Validate Shop subscription against actual user.
@@ -1389,6 +1397,13 @@
             <param name="issue"></param>
             <returns>List of string.</returns>
         </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Issues.GetIssueHistory(System.Guid)">
+            <summary>
+            Get Issue history.
+            </summary>
+            <param name="issueId"></param>
+            <returns></returns>
+        </member>
         <member name="T:BimPlus.Sdk.Api.Wrapper.Objects">
             <summary>
             Direct wrap several objects.
@@ -1504,14 +1519,21 @@
             <param name="selectionId"></param>
             <returns></returns>
         </member>
-        <member name="M:BimPlus.Sdk.Api.Wrapper.Objects.CreateSelection``1(System.Guid,``0)">
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Objects.CreateSelection``1(System.Guid,``0,System.Boolean)">
             <summary>
             Create SelectionObject
             'SelectionId' can now used for further DtObjects calls.
             If it's no longer used by client it should be deleted with function 'DeleteSelection'
             </summary>
             <param name="projectId"></param>
-            <param name="objects">can be List of Guids or List of RevisionElement</param>
+            <param name="objects">T</param>
+            <typeparamref name="T"/>List of Guids for SelectionType.Elements
+            <typeparamref name="T"/>List of RevisionElement for SelectionType.RevisionElements
+            <typeparamref name="T"/>DtoStructureSelection for SelectionType.Structure
+            <typeparamref name="T"/>DtoFilterSelection for SelectionType.DtoFilterSelection
+            <typeparamref name="T"/>DtoScene for SelectionType.Topology
+            <typeparamref name="T"/>Guid for SelectionType.Model
+            <param name="singleUse">if it's true, selection object will be deleted after first usage</param>
             <returns>SelectionId</returns>
         </member>
         <member name="M:BimPlus.Sdk.Api.Wrapper.Objects.DeleteSelection(System.Guid)">

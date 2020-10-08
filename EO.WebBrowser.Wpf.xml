@@ -9,22 +9,6 @@
             Provides the base class for a control that hosts a <see cref="T:EO.Wpf.WebView" />.
             </summary>
     </member>
-    <member name="F:EO.Wpf.WebViewHost.AutoProcessCmdKeysProperty">
-      <summary>
-            Identifies the <see cref="P:EO.Wpf.WebViewHost.AutoProcessCmdKeys" /> dependency property.
-            </summary>
-    </member>
-    <member name="P:EO.Wpf.WebViewHost.AutoProcessCmdKeys">
-      <summary>
-            Gets or sets whether to automatically process shortcut keys.
-            </summary>
-      <remarks>
-            By default, the WebControl class auotmatically processes shortcut keys
-            in your Windows application such as shortcut key for a menu item. Set
-            this property to false if this is not desired (for example, the Web page
-            wish to handle certain shortcut keys).
-            </remarks>
-    </member>
     <member name="P:EO.Wpf.WebViewHost.IsReady">
       <summary>
             Gets a value indicating whether the underlying <see cref="T:EO.WebBrowser.WebView" /> is ready.

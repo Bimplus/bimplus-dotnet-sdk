@@ -208,6 +208,66 @@
             <param name="layer"></param>
             <returns>True if IsStructuralAnalysisDomain() otherwise false.</returns>
         </member>
+        <member name="T:BimPlus.Sdk.IfcData.ProgressIntervalType">
+            <summary>
+            Enums of types for all progress type by IFC Import
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.ProgressIntervalType.ProgressType_ParsingUndefined">
+            <summary>
+            Undefined progress type for parsing.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.ProgressIntervalType.ProgressType_ImportUndefined">
+            <summary>
+            Undefined progress type for import.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.ProgressIntervalType.ProgressType_ParsingOrig">
+            <summary>
+            Parsing the original IFC file.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.ProgressIntervalType.ProgressType_ParsingOptim">
+            <summary>
+            Parsing the optimized IFC file.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.ProgressIntervalType.ProgressType_ImportFileData">
+            <summary>
+            Import data from the original / optimized IFC file.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.ProgressIntervalType.ProgressType_GeneralParsingOrig">
+            <summary>
+            Parsing separate IFC file "General" - original.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.ProgressIntervalType.ProgressType_GeneralParsingOptim">
+            <summary>
+            Parsing separate IFC file "General" - optimized.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.ProgressIntervalType.ProgressType_GeneralImportFileData">
+            <summary>
+            Import data from the original / optimized IFC file "General".
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.ProgressIntervalType.ProgressType_PropertiesParsingOrig">
+            <summary>
+            Parsing separate IFC file "Properties" - original.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.ProgressIntervalType.ProgressType_PropertiesParsingOptim">
+            <summary>
+            Parsing separate IFC file "Properties" - optimized.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.ProgressIntervalType.ProgressType_PropertiesImportFileData">
+            <summary>
+            Import data from the original / optimized IFC file "Properties".
+            </summary>
+        </member>
         <member name="T:BimPlus.Sdk.IfcData.IfcImportReportType">
             <summary>
             Enum for definition report type by IFC import.
@@ -263,6 +323,11 @@
             Undefined import warning type.
             </summary>
         </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcImportInfoType.importInfo_General">
+            <summary>
+            general information which should be add in report
+            </summary>
+        </member>
         <member name="T:BimPlus.Sdk.IfcData.IfcImportDetailedInfoTypes">
             <summary>
             Enum for definition detailed report types by IFC import.
@@ -271,6 +336,86 @@
         <member name="F:BimPlus.Sdk.IfcData.IfcImportDetailedInfoTypes.info_000">
             <summary>
             Info_000.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcImportDetailedInfoTypes.info_001">
+            <summary>
+            IFC-file was optimized before import.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcImportDetailedInfoTypes.info_002">
+            <summary>
+            Original IFC-file size is {0} Mbyte.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcImportDetailedInfoTypes.info_003">
+            <summary>
+            IFC-file size after optimizing is {0} Mbyte.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcImportDetailedInfoTypes.info_004">
+            <summary>
+            File optimizing ended without any problems.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcImportDetailedInfoTypes.info_005">
+            <summary>
+            File optimizing ended with some problems.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcImportDetailedInfoTypes.info_006">
+            <summary>
+            The name of optimized IFC file is '{0}'.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcImportDetailedInfoTypes.info_007">
+            <summary>
+            The name of complete log-file is '{0}'.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcImportDetailedInfoTypes.info_008">
+            <summary>
+            The name of original IFC file is '{0}'.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcImportDetailedInfoTypes.info_009">
+            <summary>
+            IFC-file dividing before import.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcImportDetailedInfoTypes.info_010">
+            <summary>
+            Size of divided IFC-file (xxx) is {0} Mbyte.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcImportDetailedInfoTypes.info_011">
+            <summary>
+            The name of divided IFC-file (xxx) is '{0}'.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcImportDetailedInfoTypes.info_014">
+            <summary>
+            Optimization divided file (xxx) before import.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcImportDetailedInfoTypes.info_016">
+            <summary>
+            Size of divided IFC-file (xxx) after optimizing is {0} Mbyte
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcImportDetailedInfoTypes.info_017">
+            <summary>
+            File optimizing ended successful (divided file with xxx).
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcImportDetailedInfoTypes.info_018">
+            <summary>
+            File optimizing ended with some problems (divided file with xxx)
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcImportDetailedInfoTypes.info_019">
+            <summary>
+            The name of optimized divided IFC-file (xxx) is '{0}'
             </summary>
         </member>
         <member name="F:BimPlus.Sdk.IfcData.IfcImportDetailedInfoTypes.error_000">
@@ -339,6 +484,26 @@
             Because of task BIM-4194 was this class moved here (on 9.2.2016). The reason is to have only one place, where are data for IFC classes.
             This data can be than used in both projects ("BimPlus" and "BimPlus.ImportWorker")
             </summary>        
+        </member>
+        <member name="T:BimPlus.Sdk.IfcData.IfcGeneralData.ProgressInterval">
+            <summary>
+            Structure with information for progress by IFC file import 
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.ProgressInterval.IntervalBegin">
+            <summary>
+            Interval begin for progress by IFC file import 
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.ProgressInterval.IntervalEnd">
+            <summary>
+            Interval begin for progress by IFC file import 
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.IfcGeneralData.ProgressInterval.#ctor(System.Int64,System.Int64)">
+            <summary>
+            Structure constructor
+            </summary>
         </member>
         <member name="T:BimPlus.Sdk.IfcData.IfcGeneralData.IfcImportOneLogReport">
             <summary>
@@ -1882,6 +2047,21 @@
             Class CElectricalElementNames.
             </summary>
         </member>
+        <member name="T:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CV4x1_IfcAlignmentNames">
+            <summary>
+            All Alignment elements, which are defined in IFC V4x1.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CV4x1_IfcAlignmentNames.IfcAlignment">
+            <summary>
+            Get IfcAlignment string.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CV4x1_IfcAlignmentNames.#ctor">
+            <summary>
+            Class CV4x1_IfcAlignmentNames.
+            </summary>
+        </member>
         <member name="T:BimPlus.Sdk.IfcData.IfcGeneralData.HelperFunctions">
             <summary>
             Class for definition base functionality for IFC elements
@@ -1907,6 +2087,13 @@
             </summary>
             <param name="objName">Inventory element name</param>
             <returns>Inventory element for IFC V4? 1/0</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.IfcGeneralData.HelperFunctions.ContainsAlignmentElement(System.String)">
+            <summary>
+            Is defined Alignment element for IFC V4x1? 1/0
+            </summary>
+            <param name="objName">Alignment element name</param>
+            <returns>Alignment element for IFC V4x1? 1/0</returns>
         </member>
         <member name="M:BimPlus.Sdk.IfcData.IfcGeneralData.HelperFunctions.ContainsSpecialArchitecturalElement(System.String)">
             <summary>
@@ -2048,6 +2235,43 @@
             <param name="objName">Element name</param>
             <returns>Electrical Domain element for IFC V4? 1/0</returns>
         </member>
+        <member name="T:BimPlus.Sdk.IfcData.DivideIfcFileType">
+            <summary>
+            Enums of types for all separate IFC files, which was created by original IFC file dividing
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.IfcData.IfcElementNamesByDividing">
+            <summary>
+            Enums of IFC Element names, which are used by IFC file dividing
+            </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.IfcData.DataForDividing">
+            <summary>
+            Class with general data for file dividing
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.DataForDividing.ListOfElementNameString">
+            <summary>
+            Dictionary for definition IFC Element names, which are used by IFC file dividing (as string)
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.DataForDividing.IfcElementNameFromType(BimPlus.Sdk.IfcData.IfcElementNamesByDividing)">
+            <summary>
+            Find name for known enum for element type
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.DataForDividing.DivideFileTypeElementsList">
+            <summary>
+            List of all element types, which belong to particular file type
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.DataForDividing.FindIfcFileTypeForElement(System.String)">
+            <summary>
+            Find DivideIfcFileType for known IFC Element name 
+            </summary>
+            <param name="ElemName">IFC Element name </param>
+            <returns>Type of </returns>
+        </member>
         <member name="T:BimPlus.Sdk.IfcData.IfcStaticData">
             <summary>
             Static data for IFC elements
@@ -2071,6 +2295,9 @@
         </member>
         <member name="F:BimPlus.Sdk.IfcData.IfcStaticData.generalStringDefinition">
             <summary> Initialize all general strings defined in log report </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcStaticData.exludedPropertyIdImport">
+            <summary> List, where are defined all properties from CONTENT database, which shouldn't be imported in IFC file as free attribute</summary>
         </member>
         <member name="F:BimPlus.Sdk.IfcData.IfcStaticData.exludedPropertyIdExport">
             <summary> List, where are defined all properties from CONTENT database, which shouldn't be exported in IFC file</summary>
@@ -2363,6 +2590,507 @@
             Because of task BIM-4194 was this class moved here (on 9.2.2016). The reason is to have only one place, where are data for IFC classes.
             This data can be than used in both projects ("BimPlus" and "BimPlus.ImportWorker")
             </summary>  
+        </member>
+        <member name="T:Nemetschek.Allready.Logistics.DbCore.ElementTypes">
+            <summary>
+            ElementTypes
+            </summary>
+        </member>
+        <member name="M:Nemetschek.Allready.Logistics.DbCore.ElementTypes.IsBarReinforcement(System.Guid)">
+            <summary>
+            Determines whether specified type relates bar reinforcement.
+            </summary>
+            <param name="elementType">The element type.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nemetschek.Allready.Logistics.DbCore.ElementTypes.IsArchitectObject(System.Guid)">
+            <summary>
+            Determines whether specified type relates architect object.
+            </summary>
+            <param name="elementType">The element type.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nemetschek.Allready.Logistics.DbCore.ElementTypes.IsMeshReinforcement(System.Guid)">
+            <summary>
+            Determines whether specified type relates mesh reinforcement.
+            </summary>
+            <param name="elementType">The element type</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nemetschek.Allready.Logistics.DbCore.ElementTypes.IsReinforcement(System.Guid)">
+            <summary>
+            Determines whether specified type relates reinforcement.
+            </summary>
+            <param name="elementType">The element type</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nemetschek.Allready.Logistics.DbCore.ElementTypes.IsFixture(System.Guid)">
+            <summary>
+            Determines whether specified type relates fixture.
+            </summary>
+            <param name="elementType">The element type</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nemetschek.Allready.Logistics.DbCore.ElementTypes.IsNonElementBoundMesh(System.Guid)">
+            <summary>
+            Determines whether specified type relates free mesh.
+            </summary>
+            <param name="elementType">The element type</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nemetschek.Allready.Logistics.DbCore.ElementTypes.IsBoundingBox(System.Guid)">
+            <summary>
+            Determines whether the specified element type is bounding box.
+            </summary>
+            <param name="elementType"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Project">
+            Project
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.TopologyDivision">
+            Project
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Teilbild">
+            Teilbild as TopologyItem
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.TopologyItem">
+            Teilbild as TopologyItem
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Topology">
+            Topology
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Site">
+            Site
+        </member>
+        <member name="T:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Architecture">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Architecture.Wall">
+            Wall
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Architecture.Column">
+            Column
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Architecture.Slab">
+            Slab
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Architecture.Body">
+            Body
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Architecture.Beam">
+            Beam
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Architecture.Arch3DObject">
+            
+        </member>
+        <member name="T:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Slabs">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Slabs.Slab">
+            Slab
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Slabs.HollowFloor">
+            HollowFloor
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Slabs.HollowFloorOfPrestrConcr">
+            HollowFloorOfPrestrConcr
+        </member>
+        <member name="T:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Walls">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Walls.Wall">
+            Wall
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Walls.DoubleWall">
+            DoubleWall
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Walls.SolidWall">
+            SolidWall
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Walls.SteelProfileWall">
+            SteelProfileWall
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Walls.WallPanelElement">
+            WallPanelElement
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Walls.WallPanel">
+            WallPanel
+        </member>
+        <member name="T:Nemetschek.Allready.Logistics.DbCore.ElementTypes.KoFe">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.KoFe.RectangularColumn">
+            RectangularColumn
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.KoFe.Beam">
+            Beam
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.KoFe.Wall">
+            Wall
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.KoFe.Slab">
+            Slab
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.KoFe.ColumnFree">
+            ColumnFree
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.KoFe.BeamFree">
+            BeamFree
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.KoFe.WallFree">
+            WallFree
+        </member>
+        <member name="T:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Steel">
+            
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Steel.ElementAssembly">
+            Assemblies
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Steel.DiscreteAccessory">
+            
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Steel.SteelBeam">
+            
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Steel.SteelColumn">
+            
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Steel.SteelPlate">
+            
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Steel.Weld">
+            Weld
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Steel.MechanicalFastener">
+            MechanicalFastener
+        </member>
+        <member name="T:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound">
+            <summary>
+            elements, which belongs to an element. Can be seen as a subElement in the Properties-Views
+            Have Appflag set to 0.
+            </summary>
+        </member>
+        <member name="T:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Reinforcements">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Reinforcements.Reinforcement">
+            Reinforcement
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Reinforcements.ReinforcingBar">
+            UndefinedBars
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Reinforcements.LongitudinalBars">
+            LongitudinalBars
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Reinforcements.CrossBars">
+            CrossBars
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Reinforcements.SecondaryBars">
+            SecondaryBars
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Reinforcements.TrimmingBars">
+            TrimmingBars
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Reinforcements.TransportBars">
+            TransportBars
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Reinforcements.WebBars">
+            WebBars
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Reinforcements.ConnectionBars">
+            ConnectionBars
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Reinforcements.LiftingBolts">
+            LiftingBolts
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Reinforcements.SecondaryStirrups">
+            SecondaryStirrups
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Reinforcements.L_connectionBars">
+            L_connectionBars
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Reinforcements.StirrupLongitudinalBars">
+            StirrupLongitudinalBars
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Reinforcements.MWSLongitudinalBars">
+            MWSLongitudinalBars
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Reinforcements.MWSCrossBars">
+            MWSCrossBars
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Reinforcements.MWSSecondaryBars">
+            MWSSecondaryBars
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Reinforcements.MWSLooseBars">
+            MWSLooseBars
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Reinforcements.MWSAssemblyBars">
+            MWSAssemblyBars
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Reinforcements.MWSSecondaryStirrups">
+            MWSSecondaryStirrups
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Reinforcements.MWSStirrupLongitudinalBars">
+            MWSStirrupLongitudinalBars
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Reinforcements.AlreadyTransfered">
+            AlreadyTransfered
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Reinforcements.MWSStirrupLongitudinalLooseBars">
+            MWSStirrupLongitudinalLooseBars
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Reinforcements.FEHRStirrupLongitudinalBars">
+            FEHRStirrupLongitudinalBars
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Reinforcements.FEHRStirrups">
+            FEHRStirrups
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Reinforcements.FFStirrupLongitudinalBars">
+            FFStirrupLongitudinalBars
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Reinforcements.FFStirrups">
+            FFStirrups
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Reinforcements.MWSBulkLongitudinalBars">
+            MWSBulkLongitudinalBars
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Reinforcements.MWSBulkCrossBars">
+            ID_MWSBulkCrossBars
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Reinforcements.EdgeBars">
+            EdgeBars
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Reinforcements.GrpEbtBuegel">
+            GrpEbtBuegel
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Reinforcements.GrpEbtLaengsEisen">
+            GrpEbtLaengsEisen
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Reinforcements.MWSLooseLongitudinalBars">
+            MWSLooseLongitudinalBars
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Reinforcements.MWSLooseCrossBars">
+            MWSLooseCrossBars
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Reinforcements.MWSLooseAssembly">
+            MWSLooseAssembly
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Reinforcements.MWSLooseSecondaryBars">
+            MWSLooseSecondaryBars
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Reinforcements.MWSSecondaryStirrupsLoose">
+            MWSSecondaryStirrupsLoose
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Reinforcements.CuttingList_without_MWS">
+            CuttingList_without_MWS
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Reinforcements.CuttingList_with_MWS">
+            CuttingList_with_MWS
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Stirrup">
+            Stirrup
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.StirrupLongReinforcement">
+            StirrupLongReinforcement
+        </member>
+        <member name="T:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Meshes">
+            
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Meshes.Mesh">
+            Mesh
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Meshes.ReinforcingMesh">
+            UndefinedMesh
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Meshes.BasicMesh">
+            BasicMesh
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Meshes.SecondaryMesh">
+            SecondaryMesh
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Meshes.EdgeMesh">
+            EdgeMesh
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Meshes.JointMesh">
+            JointMesh
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Mesh_cage">
+            Mesh_cage
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.SecondaryFreeBentMesh">
+            SecondaryFreeBentMesh
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.BentMesh">
+            BentMesh
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.AWMMesh">
+            AWMMesh
+        </member>
+        <member name="T:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Girders">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Girders.Girder">
+            Girder
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Girders.UndefinedGirders">
+            UndefinedGirders
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Girders.StandardGirders">
+            StandardGirders
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Girders.SecondaryGirders">
+            SecondaryGirders
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Girders.ShearGirders">
+            ShearGirders
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Girders.TrimmingGirders">
+            TrimmingGirders
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Girders.EdgeGirders">
+            EdgeGirders
+        </member>
+        <member name="T:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.FixtureGroup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.FixtureGroup.Fixture">
+            Fixture
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.FixtureGroup.UndefinedFixture">
+            UndefinedFixture
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.FixtureGroup.SymbolShapedFixture">
+            SymbolShapedFixture
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.FixtureGroup.LinearFixture">
+            LinearFixture
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.FixtureGroup.SurfaceFixture">
+            SurfaceFixture
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.FixtureGroup.SymbolShaped2DFixture">
+            SymbolShaped2DFixture
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.FixtureGroup.Linear2DFixture">
+            Linear2DFixture
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.FixtureGroup.Surface2DFixture">
+            Surface2DFixture
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.FixtureGroup.OutlineFixture">
+            OutlineFixture
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.FixtureGroup.ProfileFixture">
+            ProfileFixture
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.FixtureGroup.Bubble">
+            Bubble
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Leaf">
+            Leaf
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Plate">
+            Plate
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Opening">
+            Opening
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Edge">
+            Edge
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.BendingShape">
+            BendingShape
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.StirrupCage">
+            StirrupCage
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.ReinforcementLevel">
+            ReinforcementLevel
+        </member>
+        <member name="T:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Fillings">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Fillings.Filling">
+            Filling
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Fillings.UndefinedFilling">
+            UndefinedFilling
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Fillings.BoxFilling">
+            BoxFilling
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Fillings.BubbleFilling">
+            BubbleFilling
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Fillings.InsulationFilling">
+            InsulationFilling
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.HollowBlock">
+            HollowBlock
+        </member>
+        <member name="T:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.RasterStones">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.RasterStones.RasterStone">
+            RasterStone
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.RasterStones.RasterStone_Standard">
+            RasterStone_Standard
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.RasterStones.RasterStone_Half">
+            RasterStone_Half
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.RasterStones.RasterStone_Rib">
+            RasterStone_Rib
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.RasterStones.RasterStone_Girder">
+            RasterStone_Girder
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Reinforcement_Bottom">
+            Reinforcement_Bottom
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Reinforcement_Top">
+            Reinforcement_Top
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Fixtures">
+            Fixtures
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.SlabParts">
+            SlabParts
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Openings">
+            Openings
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.Edges">
+            Edges
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.Elementbound.MinMaxBody">
+            MinMaxBody
+        </member>
+        <member name="T:Nemetschek.Allready.Logistics.DbCore.ElementTypes.OperationType">
+            
+        </member>
+        <member name="F:Nemetschek.Allready.Logistics.DbCore.ElementTypes.OperationType.SurfaceTreatment">
+            
         </member>
     </members>
 </doc>

@@ -57,7 +57,7 @@
             Gets or sets a value indicating whether accessing clipboard from JavaScript should be allowed.
             </summary>
       <remarks>
-            If you do not set this property, the default value <b>false</b> is used.
+            If you do not set this property, the default value <b>true</b> is used.
             </remarks>
     </member>
     <member name="P:EO.WebEngine.BrowserOptions.AllowJavaScriptDOMPaste">
@@ -88,16 +88,6 @@
             not allow JavaScript code from one site to access contents of a page from 
             another site. This is a major security measure thus all modern browsers enforce 
             this policy by default. 
-            </remarks>
-    </member>
-    <member name="P:EO.WebEngine.BrowserOptions.EnableXSSAuditor">
-      <summary>
-            Gets or sets a value indicating whether to enable XSS auditor.
-            </summary>
-      <remarks>
-            If you do not set this property, default value <b>true</b> is used, which
-            enables the XSS Auditor. The XSS auditor is a built-in security feature
-            designed to mitigate reflective XSS (cross site scripting).
             </remarks>
     </member>
     <member name="P:EO.WebEngine.BrowserOptions.LoadImages">
@@ -203,6 +193,11 @@
             Gets a collection of key/value pairs that are contained within a single cookie object.
             </summary>
     </member>
+    <member name="M:EO.WebEngine.Cookie.Clone">
+      <summary>
+            Make a copy of the cookie.
+            </summary>
+    </member>
     <member name="T:EO.WebEngine.CookieCollection">
       <summary>
             Represents a collection of <see cref="T:EO.WebEngine.Cookie" /> objects.
@@ -305,6 +300,14 @@
             if they are not specified in the <see cref="T:EO.WebEngine.Cookie" /> object.
             </param>
       <param name="cookie">The cookie to be added.</param>
+      <returns>Returns true if successful. Otherwise false.</returns>
+    </member>
+    <member name="M:EO.WebEngine.CookieManager.SetCookie(EO.WebEngine.Cookie)">
+      <summary>
+            Adds a new cookie to the cookie store.
+            </summary>
+      <param name="cookie">The cookie to be added.</param>
+      <returns>Returns true if successful. Otherwise false.</returns>
     </member>
     <member name="M:EO.WebEngine.CookieManager.DeleteCookies(System.String,System.String)">
       <summary>
@@ -895,18 +898,6 @@
             Gets or sets a value to whether disable the built-in spell checker.
             </summary>
     </member>
-    <member name="P:EO.WebEngine.EngineOptions.AlwaysShowOnScreenKeyboardOnTouch">
-      <summary>
-            Gets or sets a value indicating whether to always display on screen keyboard when an
-            editable field is touched regardless whether a physical keyboard is present.
-            </summary>
-      <remarks>
-            When an editable field is touched, the browser engine by default will check
-            if a physical keyboard or stylus device is present. It will display the on screen
-            keyboard only if such device does not exist. Setting this property to true to always
-            display the on screen keyboard even if such device exists.
-            </remarks>
-    </member>
     <member name="P:EO.WebEngine.EngineOptions.BypassUserGestureCheck">
       <summary>
             Gets or sets a value indicating whether to bypass user gesture check.
@@ -919,19 +910,6 @@
             input element's click event) would fail due to this check. Setting this property to
             true to bypass this check.
             </remarks>
-    </member>
-    <member name="P:EO.WebEngine.EngineOptions.SkipWaitForLayerActivation">
-      <summary>
-            Gets or sets a value indicating whether the render's main UI thread should wait
-            for the GPU layer tree to finish rasterizing the updated area when screen update 
-            occurs.
-            </summary>
-    </member>
-    <member name="P:EO.WebEngine.EngineOptions.DisableWMPointer">
-      <summary>
-            Gets or sets a value indicating whether to disable Windows WM_POINTERxxxx family
-            message processing on Windows 8 and newer.
-            </summary>
     </member>
     <member name="M:EO.WebEngine.EngineOptions.RegisterCustomSchemes(System.String[])">
       <summary>
