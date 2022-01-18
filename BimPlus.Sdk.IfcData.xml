@@ -208,6 +208,13 @@
             <param name="layer"></param>
             <returns>True if IsStructuralAnalysisDomain() otherwise false.</returns>
         </member>
+        <member name="M:BimPlus.Sdk.IfcData.DbLayerHandler.IsInternal(BimPlus.Sdk.IfcData.DbLayer)">
+            <summary>
+            Is layer internal for use.
+            </summary>
+            <param name="layer"></param>
+            <returns>True if is layer for internal use, otherwise false.</returns>
+        </member>
         <member name="T:BimPlus.Sdk.IfcData.ProgressIntervalType">
             <summary>
             Enums of types for all progress type by IFC Import
@@ -326,6 +333,11 @@
         <member name="F:BimPlus.Sdk.IfcData.IfcImportInfoType.importInfo_General">
             <summary>
             general information which should be add in report
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcImportInfoType.importError_ReferenceDeclaredTwice">
+            <summary>
+            Reference Declared Twice
             </summary>
         </member>
         <member name="T:BimPlus.Sdk.IfcData.IfcImportDetailedInfoTypes">
@@ -1302,6 +1314,21 @@
             Class CCommonArchitecturalElementNames.
             </summary>
         </member>
+        <member name="T:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.AllImportIgnoreElementNames">
+            <summary>
+            All IFC Elements, which should be by IFC Import ignored  
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.AllImportIgnoreElementNames.IfcDistributionPort">
+            <summary>
+            Get IfcColumnStandardCase string.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.AllImportIgnoreElementNames.#ctor">
+            <summary>
+            Class CArchitecturalFinishElementNames.
+            </summary>
+        </member>
         <member name="T:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.CArchitecturalFinishElementNames">
             <summary>
             All architectonic finish elements, which need own class - there are used some spacial functions
@@ -2062,10 +2089,48 @@
             Class CV4x1_IfcAlignmentNames.
             </summary>
         </member>
+        <member name="T:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.AlternativeIfcElementNames">
+            <summary>
+            Class AlternativeIfcElementNames - find alternative name of obsolete IFC Element name.
+            The obsolete IFC element will be imported as IFC Element with new name - otherwise is this
+            element by import ignored and imported file is different as result in Solibri or FZKViewer
+            !!! count and meaning af all parameters in both IFC Elements must be identical !!!
+            (e.g. IFC Element "IfcElectricalElement" was replaced in IFC2x2 with subtypes of "IfcDistributionElement")
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.AlternativeIfcElementNames.AlternativeIfcNames">
+            <summary> List of all alternative names for obsolete IFC Element names
+            - as "Key"   is defined original obsolete IFC Element name  
+            - as "Value" is defined alternative IFC Element name  
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.IfcGeneralData.IFC.AlternativeIfcElementNames.FindAlterantiveIfcName(System.String)">
+            <summary>
+            Find alternative name of obsolete IFC Element name.
+            (if alternative name isn't find, return name will be set as original IFC Element name)
+            </summary>
+            <param name="origname">Original IFC Element name</param>
+            <returns> Alternative name of obsolete IFC Element name (if was find)</returns>
+        </member>
         <member name="T:BimPlus.Sdk.IfcData.IfcGeneralData.HelperFunctions">
             <summary>
             Class for definition base functionality for IFC elements
             </summary>        
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.IfcGeneralData.HelperFunctions.IgnoreIfcElementByImport(System.String)">
+            <summary>
+            Should be IFC Element ignore by IFC Import? 1/0
+            </summary>
+            <param name="objName">Element name</param>
+            <returns>IFC Element should be ignore by IFC Import (1/0)</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.IfcGeneralData.HelperFunctions.FindAlterantiveIfcName(System.String)">
+            <summary>
+            Find alternative name of obsolete IFC Element name.
+            (if alternative name isn't find, return name will be set as original IFC Element name)
+            </summary>
+            <param name="origname">Original IFC Element name</param>
+            <returns> Alternative name of obsolete IFC Element name (if was find)</returns>
         </member>
         <member name="M:BimPlus.Sdk.IfcData.IfcGeneralData.HelperFunctions.FindLayerNameForIfcObject(System.String)">
             <summary>
@@ -2235,15 +2300,176 @@
             <param name="objName">Element name</param>
             <returns>Electrical Domain element for IFC V4? 1/0</returns>
         </member>
+        <member name="T:BimPlus.Sdk.IfcData.IfcElementRelationType">
+            <summary>
+            Enums of all relation types used by IFC-File import
+            (used by parallel IFC-File Import)
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcElementRelationType.IfcRelType_undefined">
+            undefined relation type of IFC-Element
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcElementRelationType.IfcRelType_ContainedInSpatialStructure">
+            relation type for IFC Element "IfcRelContainedInSpatialStructure"
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcElementRelationType.IfcRelType_Aggregates">
+            relation type for IFC Element "IfcRelAggregates"
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcElementRelationType.IfcRelType_CoversBldgElements">
+            relation type for IFC Element "IfcRelCoversBldgElements"
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcElementRelationType.IfcRelType_DefinesByProperties">
+            relation type for IFC Element "IfcRelDefinesByProperties"
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcElementRelationType.IfcRelType_AssociatesMaterial">
+            relation type for IFC Element "IfcRelAssociatesMaterial"
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcElementRelationType.IfcRelType_VoidsElement">
+            relation type for IFC Element "IfcRelVoidsElement"
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcElementRelationType.IfcRelType_FillsElement">
+            relation type for IFC Element "IfcRelFillsElement"
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcElementRelationType.IfcRelType_ProjectsElement">
+            relation type for IFC Element "IfcRelProjectsElement"
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcElementRelationType.IfcRelType_RelAssignsToGroup">
+            relation type for IFC Element "IfcRelAssignsToGroup"
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcElementRelationType.IfcRelType_DefinesByType">
+            relation type for IFC Element "IfcRelDefinesByType"
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcElementRelationType.IfcRelType_Nests">
+            relation type for IFC Element "IfcRelNests"
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcElementRelationType.IfcRelType_DeclaresIfcRelDeclares">
+            relation type for IFC Element "IfcRelDeclaresIfcRelDeclares"
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcElementRelationType.IfcRelType_AssociatesClassification">
+            relation type for IFC Element "IfcRelAssociatesClassification"
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcElementRelationType.IfcRelType_ConnectsStructuralMember">
+            relation type for IFC Element "IfcRelConnectsStructuralMember"
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcElementRelationType.IfcRelType_ConnectsStructuralActivity">
+            relation type for IFC Element "IfcRelConnectsStructuralActivity"
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcElementRelationType.IfcRelType_ConnectsWithEccentricity">
+            relation type for IFC Element "IfcRelConnectsWithEccentricity"
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcElementRelationType.IfcRelType_ConnectsPortToElement">
+            relation type for IFC Element "IfcRelConnectsPortToElement"
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcElementRelationType.IfcRelType_ConnectsPorts">
+            relation type for IFC Element "IfcRelConnectsPorts"
+        </member>
         <member name="T:BimPlus.Sdk.IfcData.DivideIfcFileType">
             <summary>
             Enums of types for all separate IFC files, which was created by original IFC file dividing
             </summary>
         </member>
+        <member name="F:BimPlus.Sdk.IfcData.DivideIfcFileType.DivideIfcType_undefined">
+            undefined separate IFC file (this value is also by original IFC file used) 
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.DivideIfcFileType.DivideIfcType_General">
+            separate IFC file with general information 
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.DivideIfcFileType.DivideIfcType_Properties">
+            separate IFC file with properties information 
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.DivideIfcFileType.DivideIfcType_CartesianPoint">
+            separate IFC file with Cartesian points  
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.DivideIfcFileType.DivideIfcType_Direction">
+            separate IFC file with directions 
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.DivideIfcFileType.DivideIfcType_Placement">
+            separate IFC file with placement information 
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.DivideIfcFileType.DivideIfcType_Styles">
+            separate IFC file with styles information 
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.DivideIfcFileType.DivideIfcType_Material">
+            separate IFC file with material information 
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.DivideIfcFileType.DivideIfcType_Polylines">
+            separate IFC file with polyline information 
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.DivideIfcFileType.DivideIfcType_Faces">
+            separate IFC file with face information 
+        </member>
         <member name="T:BimPlus.Sdk.IfcData.IfcElementNamesByDividing">
             <summary>
             Enums of IFC Element names, which are used by IFC file dividing
             </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcElementNamesByDividing.DivideIfcElName_undefined">
+            Ifc Element name isn't defined 
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcElementNamesByDividing.DivideIfcElName_IfcCartesianPoint">
+            Ifc Element "IfcCartesianPoint" 
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcElementNamesByDividing.DivideIfcElName_IfcDirection">
+            Ifc Element "IfcDirection" 
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcElementNamesByDividing.DivideIfcElName_IfcLocalPlacement">
+            Ifc Element "IfcLocalPlacement" 
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcElementNamesByDividing.DivideIfcElName_IfcAxis1Placement">
+            Ifc Element "IfcAxis1Placement" 
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcElementNamesByDividing.DivideIfcElName_IfcAxis2Placement3D">
+            Ifc Element "IfcAxis2Placement3D" 
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcElementNamesByDividing.DivideIfcElName_IfcAxis2Placement2D">
+            Ifc Element "IfcAxis2Placement2D" 
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcElementNamesByDividing.DivideIfcElName_IfcPolyLoop">
+            Ifc Element "IfcPolyLoop" 
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcElementNamesByDividing.DivideIfcElName_IfcPolyline">
+            Ifc Element "IfcPolyline" 
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcElementNamesByDividing.DivideIfcElName_IfcFace">
+            Ifc Element "IfcFace" 
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcElementNamesByDividing.DivideIfcElName_IfcFaceBound">
+            Ifc Element "IfcFaceBound" 
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcElementNamesByDividing.DivideIfcElName_IfcFaceOuterBound">
+            Ifc Element "IfcFaceOuterBound" 
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcElementNamesByDividing.DivideIfcElName_IfcPresentationStyleAssignment">
+            Ifc Element "IfcPresentationStyleAssignment" 
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcElementNamesByDividing.DivideIfcElName_IfcSurfaceStyle">
+            Ifc Element "IfcSurfaceStyle" 
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcElementNamesByDividing.DivideIfcElName_IfcSurfaceStyleRendering">
+            Ifc Element "IfcSurfaceStyleRendering" 
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcElementNamesByDividing.DivideIfcElName_IfcColourRgb">
+            Ifc Element "IfcColourRgb"  
+        </member>
+        <member name="T:BimPlus.Sdk.IfcData.DataForParallelImport">
+            <summary>
+            Class with general static data for parallel IFC Import
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.DataForParallelImport.IfcElementPatterns">
+            <summary> Pattern for all IFC elements, which are exported in separate IFC-files by parallel IFC Import </summary>  
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.DataForParallelImport.RelationIfcTypesElementsList">
+            <summary>
+            List of names for all used relation types used by IFC-File import
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.DataForParallelImport.FindIfcElementRelationTypeForElement(System.String)">
+            <summary>
+            Find IfcElementRelationType for known IFC Element name 
+            </summary>
+            <param name="ElemName">IFC Element name </param>
+            <returns>Type of </returns>
         </member>
         <member name="T:BimPlus.Sdk.IfcData.DataForDividing">
             <summary>
@@ -2269,7 +2495,7 @@
             <summary>
             Find DivideIfcFileType for known IFC Element name 
             </summary>
-            <param name="ElemName">IFC Element name </param>
+            <param name="elemName">IFC Element name </param>
             <returns>Type of </returns>
         </member>
         <member name="T:BimPlus.Sdk.IfcData.IfcStaticData">
@@ -2287,6 +2513,12 @@
             definition of default topology node Guid
             </summary>
         </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcStaticData.ArticleIdGeometryByMaterialDefinition">
+            <summary>
+            Special case of using ArticleId  (id of geometry template), when is geometry defined in MatarialLayer and not in parent element
+            In this case will be for parent element geometry set Id = "A913D016-7FA1-40DD-A220-EF6A8589AF1F"
+            </summary>
+        </member>
         <member name="F:BimPlus.Sdk.IfcData.IfcStaticData.reportTypeDescription">
             <summary> Initialize strings for  definition report type by IFC import </summary>
         </member>
@@ -2297,13 +2529,29 @@
             <summary> Initialize all general strings defined in log report </summary>
         </member>
         <member name="F:BimPlus.Sdk.IfcData.IfcStaticData.exludedPropertyIdImport">
-            <summary> List, where are defined all properties from CONTENT database, which shouldn't be imported in IFC file as free attribute</summary>
+            <summary> 
+            List, where are defined all properties from CONTENT database, which shouldn't be imported in IFC file as free attribute
+            (this properties are defined direct as parameter in IFC Element, 
+             e.g. "Element.Ifc ID" '2BCw4EMIr4g9ls4odsNq4v' - "93027BAD-DF91-48EE-A0BB-60A8184CDDBA" 
+             from IFC Element #1325= IFCCOLUMN('2BCw4EMIr4g9ls4odsNq4v',$,' ',$,$,#1230,#1231,$,.NOTDEFINED.);)
+            </summary>
         </member>
         <member name="F:BimPlus.Sdk.IfcData.IfcStaticData.exludedPropertyIdExport">
-            <summary> List, where are defined all properties from CONTENT database, which shouldn't be exported in IFC file</summary>
+            <summary> 
+            List, where are defined all properties from CONTENT database, which shouldn't be exported in IFC file
+            (this properties are defined direct as parameter in IFC Element, 
+             e.g. "Element.Ifc ID" '2BCw4EMIr4g9ls4odsNq4v' - "93027BAD-DF91-48EE-A0BB-60A8184CDDBA" 
+             from IFC Element #1325= IFCCOLUMN('2BCw4EMIr4g9ls4odsNq4v',$,' ',$,$,#1230,#1231,$,.NOTDEFINED.);)
+             </summary>
         </member>
         <member name="F:BimPlus.Sdk.IfcData.IfcStaticData.reportStringDefinition">
             <summary> Initialize all strings defined in log report</summary> IfcImportDetailedInfoTypes.
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcStaticData.generalBcfErrorStrings">
+            <summary>
+            Initialize all possible error strings by BCF Import/Export functionality
+            !!!!!!!!!!!!!!! FOR EACH NEW ERROR STRING IS NECESSARY IMPLEMENT IT ALSO IN FRONTEND  !!!!!!!!!!!!!!!!!!!!
+            </summary>
         </member>
         <member name="T:BimPlus.Sdk.IfcData.IfcStaticData.IfcElementData">
             <summary>
@@ -2348,6 +2596,45 @@
             Order of attribute "PredefinedType" of actual IFC element (from 1, if isn't defined there will be set value "-1")
             </summary>
         </member>
+        <member name="T:BimPlus.Sdk.IfcData.IfcStaticData.IfcFreeAttribInDtbData">
+            <summary>
+            Structure with base informations about free attributes, which is needed store direct in database table
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcStaticData.IfcFreeAttribInDtbData.DtbTableName">
+            <summary>
+            Database table name 
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcStaticData.IfcFreeAttribInDtbData.DtbColumnName">
+            <summary>
+            Database column name 
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcStaticData.IfcFreeAttribInDtbData.DtbColumnType">
+            <summary>
+            Database column type 
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcStaticData.IfcFreeAttribInDtbData.DtbFreeAttrName">
+            <summary>
+            Free attribute name 
+            (value "Name" from database table "tabAttribGeneral") 
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcStaticData.IfcFreeAttribInDtbData.ContentFreeAttrId">
+            <summary>
+            Id (from content database) for actual free attribute 
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcStaticData.IfcFreeAttribInDtbData.IfcElementParam">
+            <summary>
+            Information, if is actual attribute stored direct as element parameter (1/0)
+            e.g. for  IFC Element #589= IFCCOLUMNSTANDARDCASE('2BCw4EMIr4g9ls4odsNq4v',$,'Atribut3 - Name','Atribut4 - Description','Atribut5 - Label',#532,#533,'Atribut8 - Tag',.PILASTER.);
+                 is first parameter stored  in database table "tabAttribIFC" as column "IfcGloballyUniqueId" with Id="93027bad-df91-48ee-a0bb-60a8184cddba"
+                 Therefore is for this parameter defined "IfcElementParam = true"
+            </summary>
+        </member>
         <member name="T:BimPlus.Sdk.IfcData.IfcStaticData.IfcParameterCountIfc4Add2">
             <summary>
             Definition exception by parameter count for IFC4 Add2 elements
@@ -2383,6 +2670,15 @@
             List of all defined IFC elements
             </summary>
         </member>
+        <member name="F:BimPlus.Sdk.IfcData.IfcStaticData.IfcFreeAttribInDtb">
+            <summary>
+            List of all free attributes, which is needed store direct in database table, 
+            e.g. next properties 'Enddate' and 'Startdate' will be save direct in database Table tabAttribStructure:
+            #112= IFCPROPERTYSET('1df97I3Hj9mANu6xGRjeNC',$,'others',$,(#95,#96));
+              #95= IFCPROPERTYSINGLEVALUE('Enddate',$,IFCTEXT('9. 21. 2019 0:00:00'),$);
+              #96= IFCPROPERTYSINGLEVALUE('Startdate',$,IFCTEXT('11. 1. 2018 0:00:00'),$);
+            </summary>
+        </member>
         <member name="F:BimPlus.Sdk.IfcData.IfcStaticData.DtbObjects">
             <summary>
             List of all elements, which can exit in database, but have no direct representation as IFC object
@@ -2408,6 +2704,18 @@
             Get list of all IFC elements
             </summary>
             <returns>list of all IFC elements</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.IfcStaticData.CreateOneFreeAttribute(System.String,System.String,System.String,System.String,System.Guid,System.Int32)">
+            <summary>
+            Create new free attribute, which is needed store direct in database table
+            </summary>
+            <param name="tablename">Database table name</param>
+            <param name="colname">Database column name</param>
+            <param name="attrname">Free attribute name (value "Name" from database table "tabAttribGeneral")</param>
+            <param name="eltype">Database column type</param>
+            <param name="contdtbid">Id (from content database) for actual free attribute</param>
+            <param name="freeattrint">Actual attribute stored direct as element parameter (1/0)</param>
+            <returns>new free attribute</returns>
         </member>
         <member name="M:BimPlus.Sdk.IfcData.IfcStaticData.CreateIfcElement(System.Guid,System.String,BimPlus.Sdk.IfcData.EXPRESS.IfcTypes.EIfcName,System.Guid,System.Int32,System.Int32)">
             <summary>
@@ -2514,6 +2822,36 @@
             <param name="name">Name of actual IFC element</param>
             <returns> Count of parameter of actual IFC element</returns>
         </member>
+        <member name="M:BimPlus.Sdk.IfcData.IfcStaticData.InitialiseFreeAttribInDtb">
+            <summary>
+            Initialization of all free attributes, which is needed store direct in database table
+             - in this list are all free attributes, which are finf via function GetAllFreeAttributesFromTables()
+             - valid for use are only "DbProperty", which are not defined as attribute direct in IFC Element
+               (e.g. isn't valid)
+            </summary>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.IfcStaticData.GetDtbContFreeAttribElement(System.Guid)">
+            <summary>
+            Get free attribute element from free element list by known free attribute Id from content database
+            </summary>
+            <param name="id">Free attribute Id from content database</param>
+            <returns>Free attribute element from free attribute list</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.IfcStaticData.GetDtbContFreeAttribNameElement(System.String)">
+            <summary>
+            Get free attribute element from free element list by known free attribute name from content database
+            (value "Name" from database table "tabAttribGeneral")
+            </summary>
+            <param name="name">Free attribute name from content database</param>
+            <returns>Free attribute element from free attribute list</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.IfcData.IfcStaticData.GetDtbContFreeAttribColumnNameElement(System.String)">
+            <summary>
+            Get free attribute element from free element list by known free attribute Column name from content database
+            </summary>
+            <param name="name">Free attribute column name from content database</param>
+            <returns>Free attribute element from free attribute list</returns>
+        </member>
         <member name="M:BimPlus.Sdk.IfcData.IfcStaticData.InitialiseDtbElements">
             <summary>
             Initialization of all IFC objects
@@ -2576,7 +2914,7 @@
             Characters for calculations between IfcId and Guid
             </summary>
         </member>
-        <member name="M:BimPlus.Sdk.IfcData.IfcStaticData.GetGuidFromIfcGuid(System.Guid)">
+        <member name="M:BimPlus.Sdk.IfcData.IfcStaticData.GetIfcGuidFromGuid(System.Guid)">
             <summary>
             Calculate IfcId from Guid
             (function created in according to http://thebuildingcoder.typepad.com/blog/2009/02/uniqueid-dwf-and-ifc-guid.html)

@@ -156,44 +156,11 @@
         <member name="F:Nemetschek.NUtilLibrary.PolyederType.Transparent">
             <summary>Transparent type</summary>
         </member>
-        <member name="F:Nemetschek.NUtilLibrary.PolyederType.ColorImmutable">
-            <summary>
-            The polyhedron with immutable color.
-            </summary>
-        </member>
-        <member name="F:Nemetschek.NUtilLibrary.PolyederType.ColorBarReinforcement">
-            <summary>
-            The polyhedron with color defined for bar reinforcement.
-            </summary>
-        </member>
-        <member name="F:Nemetschek.NUtilLibrary.PolyederType.ColorMeshReinforcement">
-            <summary>
-            The polyhedron with color defined for mesh reinforcement.
-            </summary>
-        </member>
-        <member name="F:Nemetschek.NUtilLibrary.PolyederType.ColorFixture">
-            <summary>
-            The polyhedron with color defined for fixture.
-            </summary>
-        </member>
-        <member name="F:Nemetschek.NUtilLibrary.PolyederType.ColorBoundingBox">
-            <summary>
-            The polyhedron with color defined for bounding box.
-            </summary>
-        </member>
-        <member name="F:Nemetschek.NUtilLibrary.PolyederType.ColorRevisionCompare">
-            <summary>
-            The polyhedron with color by revision compare
-            </summary>
-        </member>
         <member name="F:Nemetschek.NUtilLibrary.PolyederType.Element">
             <summary>Element</summary>
         </member>
         <member name="F:Nemetschek.NUtilLibrary.PolyederType.SubElement">
             <summary>SubElement</summary>
-        </member>
-        <member name="F:Nemetschek.NUtilLibrary.PolyederType.Bedplate">
-            <summary>Bedplate</summary>
         </member>
         <member name="F:Nemetschek.NUtilLibrary.PolyederType.Bubble">
             <summary>Bubble</summary>
@@ -201,41 +168,14 @@
         <member name="F:Nemetschek.NUtilLibrary.PolyederType.Reinforcement">
             <summary>Reinforcement</summary>
         </member>
-        <member name="F:Nemetschek.NUtilLibrary.PolyederType.Handle">
-            <summary>Handle</summary>
-        </member>
-        <member name="F:Nemetschek.NUtilLibrary.PolyederType.HandleLine">
-            <summary>HandleLine</summary>
-        </member>
-        <member name="F:Nemetschek.NUtilLibrary.PolyederType.Collision">
-            <summary>Collision</summary>
-        </member>
-        <member name="F:Nemetschek.NUtilLibrary.PolyederType.UnchangedElem">
-            <summary>unchanged element (needed for revision compare)</summary>
-        </member>
-        <member name="F:Nemetschek.NUtilLibrary.PolyederType.NewElem">
-            <summary>new element (needed for revision compare)</summary>
-        </member>
-        <member name="F:Nemetschek.NUtilLibrary.PolyederType.DeletedElem">
-            <summary>deleted element (needed for revision compare)</summary>
-        </member>
-        <member name="F:Nemetschek.NUtilLibrary.PolyederType.ModifiedElem">
-            <summary>modified element (needed for revision compare)</summary>
-        </member>
-        <member name="F:Nemetschek.NUtilLibrary.PolyederType.ModifiedElem_NEWminusOLD">
-            <summary>modified element - new-old (needed for revision compare)</summary>
-        </member>
-        <member name="F:Nemetschek.NUtilLibrary.PolyederType.ModifiedElem_OLDminusNEW">
-            <summary>modified element - old-new (needed for revision compare)</summary>
-        </member>
-        <member name="F:Nemetschek.NUtilLibrary.PolyederType.ModifiedElem_NEWandOLD">
-            <summary>modified element - new AND old (needed for revision compare)</summary>
-        </member>
-        <member name="F:Nemetschek.NUtilLibrary.PolyederType.ErrorByRevisionCompare">
-            <summary>this bit is active, if the function for geometry section Schneide2BelKoerper() ended uncorrect. This element will be than draw with fuchsia color</summary>
-        </member>
         <member name="F:Nemetschek.NUtilLibrary.PolyederType.BackfaceCulling">
             <summary>back-face culling determines whether a polygon of a graphical object is visible</summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.PolyederType.DecimatedAsTube">
+            <summary>DecimatedAsTube</summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.PolyederType.DecimatedGeneral">
+            <summary>DecimatedGeneral</summary>
         </member>
         <member name="T:Nemetschek.NUtilLibrary.eCSGOperator">
             <summary>
@@ -275,6 +215,11 @@
         <member name="F:Nemetschek.NUtilLibrary.eCSGOperator.Adding">
             <summary>
             Complet add one polyeder to another
+            </summary>
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.eCSGOperator.Cut">
+            <summary>
+            cut polyeder with plane.
             </summary>
         </member>
         <member name="T:Nemetschek.NUtilLibrary.eGeometryObjects">
@@ -622,6 +567,14 @@
             
             </summary>
             <returns></returns>
+        </member>
+        <member name="M:Nemetschek.NUtilLibrary.CElementFace.PointIndex(System.Int32,Nemetschek.NUtilLibrary.CBaseElementPolyeder)">
+            <summary>
+            returns point index of requested edge ( zero based )
+            </summary>
+            <param name="index">zero based</param>
+            <param name="polyeder"></param>
+            <returns>Point index or -1 if index is outside of edge list</returns>
         </member>
         <member name="T:Nemetschek.NUtilLibrary.CBaseElementPolyeder">
             <summary>
@@ -1008,6 +961,9 @@
         </member>
         <member name="F:Nemetschek.NUtilLibrary.BinaryCompress.ProtoBuf">
             Serialize with ProtoBuf
+        </member>
+        <member name="F:Nemetschek.NUtilLibrary.BinaryCompress.Gltf">
+            Serialize with SharpGltf
         </member>
         <member name="T:Nemetschek.NUtilLibrary.DeserializeVarbinaryMax">
             <summary>

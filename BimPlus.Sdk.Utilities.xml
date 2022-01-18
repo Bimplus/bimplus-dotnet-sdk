@@ -536,6 +536,27 @@
             <param name="objectId"></param>
             <param name="callback"></param>
         </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetGlbGeometry(System.Guid,System.Nullable{System.Guid},System.Boolean,System.String)">
+            <summary>
+            GetGlbGeometry
+            </summary>
+            <param name="objectId">root object</param>
+            <param name="layerId">additional filter for layer (discipline)</param>
+            <param name="vertexNormal">calculate vertexNormals, default = true</param>
+            <param name="etag">default is null</param>
+            <returns></returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetChunkGlbGeometry(System.Guid,System.Nullable{System.Guid},System.Boolean,System.Int32,System.Int32@)">
+            <summary>
+            GetChunkGlbGeometry
+            </summary>
+            <param name="objectId"></param>
+            <param name="layerId"></param>
+            <param name="vertexNormal"></param>
+            <param name="chunk"></param>
+            <param name="totalCount"></param>
+            <returns></returns>
+        </member>
         <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetObjectGeometry(System.Guid)">
             <summary>
             Get object geometry from DtObject objectId.
@@ -670,6 +691,20 @@
             </summary>
             <param name="projectId"></param>
             <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetTopologyStructure(System.Guid)">
+            <summary>
+            Get TopologyStructure from a project.
+            </summary>
+            <param name="projectId"></param>
+            <returns>DtoTopologyStructure</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.ResetTopologyStructure(System.Guid)">
+            <summary>
+            Reset TopologyStructure from a project.
+            </summary>
+            <param name="projectId"></param>
+            <returns>DtoTopologyStructure</returns>
         </member>
         <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.GetProjectThumbnail(System.Guid)">
             <summary>
@@ -2157,6 +2192,17 @@
             <param name="flags"></param>
             <returns>DtObject</returns>
         </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetPagedObjectsAsync(System.Guid,System.Type,System.Nullable{BimPlus.Sdk.IfcData.DbLayer},System.Int32,System.Int32,BimPlus.LightCaseClient.Support.RestCallBack{System.Collections.Generic.List{BimPlus.Sdk.Data.DbCore.DtObject}})">
+            <summary>
+            Get paged object geometry asynchronously by layerId and objectId.
+            </summary>
+            <param name="objectId">requested root node</param>
+            <param name="type">element type</param>
+            <param name="layer">element Layer</param>
+            <param name="page">page</param>
+            <param name="pageSize">pagesize</param>
+            <param name="callback"></param>
+        </member>
         <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetObjects``1(System.Guid,BimPlus.Sdk.Utilities.V2.ObjectRequestProperties)">
             <summary>
             GetObjects from requested ElementType (DtObject)
@@ -2204,6 +2250,27 @@
             </summary>
             <param name="objectId"></param>
             <returns>DtObject</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetGlbGeometry(System.Guid,System.Nullable{System.Guid},System.Boolean,System.String)">
+            <summary>
+            read geometry data as binary gltf (glb)
+            </summary>
+            <param name="objectId"></param>
+            <param name="layerId"></param>
+            <param name="vertexNormals"></param>
+            <param name="etag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetChunkGlbGeometry(System.Guid,System.Nullable{System.Guid},System.Boolean,System.Int32,System.Int32@)">
+            <summary>
+            read chunk geometry data as binary gltf (glb)
+            </summary>
+            <param name="objectId"></param>
+            <param name="layerId"></param>
+            <param name="vertexNormals"></param>
+            <param name="chunk"></param>
+            <param name="totalCount"></param>
+            <returns></returns>
         </member>
         <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetObjectGeometry(System.Guid)">
             <summary>
@@ -2787,6 +2854,20 @@
             </summary>
             <param name="projectId"></param>
             <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.GetTopologyStructure(System.Guid)">
+            <summary>
+            Get TopologyStructure from a project.
+            </summary>
+            <param name="projectId"></param>
+            <returns>DtoTopologyStructure</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.ResetTopologyStructure(System.Guid)">
+            <summary>
+            Reset TopologyStructure from a project.
+            </summary>
+            <param name="projectId"></param>
+            <returns>DtoTopologyStructure</returns>
         </member>
         <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.ExecuteService(System.String,System.String,BimPlus.Sdk.Data.TenantDto.DtoExternalService)">
             <summary>

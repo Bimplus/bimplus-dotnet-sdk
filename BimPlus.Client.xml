@@ -901,7 +901,7 @@
             <param name="signalRLogFileName"></param>
             <param name="connection"></param>
             <param name="eventHandlerCore"></param>
-            <param name="signalREnableUIMessages"></param>
+            <param name="signalREnableUiMessages"></param>
         </member>
         <member name="P:BimPlus.Client.SignalRCore.ProjectHubClient">
             <summary>

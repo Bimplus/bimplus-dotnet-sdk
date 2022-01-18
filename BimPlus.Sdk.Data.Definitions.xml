@@ -83,6 +83,9 @@
         <member name="F:BimPlus.Sdk.Data.Definitions.ResponseMode.NOIXml">
             <summary>NOIXml.</summary>
         </member>
+        <member name="F:BimPlus.Sdk.Data.Definitions.ResponseMode.SvgStream">
+            <summary>SvgStream.</summary>
+        </member>
         <member name="T:BimPlus.Sdk.Data.Definitions.ResponseSettings">
             <summary>
             ResponseSettings class.

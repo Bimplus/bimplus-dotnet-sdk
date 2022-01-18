@@ -9,6 +9,23 @@
             Base class for WPF-UserControls.
             </summary>
         </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.BimPlusUserControl.Dispose">
+            <summary>
+            Public implementation of Dispose pattern callable by consumers.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.BimPlusUserControl.Finalize">
+            <summary>
+            Finalizer, to be finalizable class. 
+            It is called when public Dispose() has not been called
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.BimPlusUserControl.Dispose(System.Boolean)">
+            <summary>
+            Protected implementation of Dispose pattern.
+            </summary>
+            <param name="disposing"></param>
+        </member>
         <member name="M:BimPlus.Client.WebControls.WPF.BimPlusUserControl.#ctor">
             <summary>
             Create the BimPlusUserControl.
@@ -35,26 +52,9 @@
             Process external event handler.
             </summary>
         </member>
-        <member name="P:BimPlus.Client.WebControls.WPF.BimPlusUserControl.EnableCache">
-            <summary>
-            Enable web engine cache.
-            Default value: false.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Client.WebControls.WPF.BimPlusUserControl.IgnoreCertificateError">
-            <summary>
-            Ignore certificate error. Do not set this property in the production branch!
-            Default value: false.
-            </summary>
-        </member>
         <member name="F:BimPlus.Client.WebControls.WPF.BimPlusUserControl._integrationBase">
             <summary>
             The IntegrationBase.
-            </summary>
-        </member>
-        <member name="F:BimPlus.Client.WebControls.WPF.BimPlusUserControl._keyBoardHandler">
-            <summary>
-            The KeyBoardHandler.
             </summary>
         </member>
         <member name="F:BimPlus.Client.WebControls.WPF.BimPlusUserControl._subscribeNewWindowEvent">
@@ -62,7 +62,7 @@
             Subscribe new window event.
             </summary>
         </member>
-        <member name="F:BimPlus.Client.WebControls.WPF.BimPlusUserControl._webControl">
+        <member name="F:BimPlus.Client.WebControls.WPF.BimPlusUserControl._webView2">
             <summary>
             The WebControl.
             </summary>
@@ -70,6 +70,13 @@
         <member name="F:BimPlus.Client.WebControls.WPF.BimPlusUserControl._cachePath">
             <summary>
             Path to cache folder.
+            </summary>
+        </member>
+        <member name="F:BimPlus.Client.WebControls.WPF.BimPlusUserControl._language">
+            <summary>
+            When _language is set before _webView initialization, will be used to initialize embedded browser UIs such as context menu and dialogs.
+            It also applies to the accept-languages HTTP header that WebView sends to websites.
+            It is in the format of language[-country] where language is the 2-letter code from ISO 639 and country is the 2-letter code from ISO 3166
             </summary>
         </member>
         <member name="M:BimPlus.Client.WebControls.WPF.BimPlusUserControl.EvalScript(System.String,System.Boolean)">
@@ -82,7 +89,9 @@
         </member>
         <member name="M:BimPlus.Client.WebControls.WPF.BimPlusUserControl.SetWebBrowserRuntimeUILanguage(System.Globalization.CultureInfo)">
             <summary>
-            Set the language for value 
+            When SetWebBrowserRuntimeUILanguage is called before _webView initialization, will be used to initialize embedded browser UIs such as context menu and dialogs.
+            It also applies to the accept-languages HTTP header that WebView sends to websites.
+            It is in the format of language[-country] where language is the 2-letter code from ISO 639 and country is the 2-letter code from ISO 3166
             </summary>
             <param name="currentUICulture"></param>
         </member>
@@ -96,14 +105,9 @@
             Close the WebView.
             </summary>
         </member>
-        <member name="M:BimPlus.Client.WebControls.WPF.BimPlusUserControl.Dispose">
+        <member name="M:BimPlus.Client.WebControls.WPF.BimPlusUserControl.InitializeWebControl(Microsoft.Web.WebView2.Wpf.WebView2,System.Boolean)">
             <summary>
-            Abstract  Dispose method. 
-            </summary>
-        </member>
-        <member name="M:BimPlus.Client.WebControls.WPF.BimPlusUserControl.InitializeWebControl(EO.Wpf.WebControl,System.Boolean)">
-            <summary>
-            Initialize events.
+            Initialize web control.
             </summary>
             <param name="webControl"></param>
             <param name="subscribeNewWindowEvent"></param>
@@ -128,9 +132,9 @@
             <param name="jObject"></param>
             <returns></returns>
         </member>
-        <member name="M:BimPlus.Client.WebControls.WPF.BimPlusUserControl.WebView_LoadCompleted(System.Object,EO.WebBrowser.LoadCompletedEventArgs)">
+        <member name="M:BimPlus.Client.WebControls.WPF.BimPlusUserControl.OnNavigationCompleted(System.Object,Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs)">
             <summary>
-            Load complete action.
+            OnNavigationCompleted
             </summary>
             <param name="sender"></param>
             <param name="e"></param>
@@ -139,7 +143,45 @@
             <summary>
             Get the WebView.
             </summary>
-            <returns>WebView</returns>
+            <returns>WebView</returns>  
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.BimPlusUserControl.IsWebViewValid(Microsoft.Web.WebView2.Wpf.WebView2)">
+            <summary>
+            Check if webView.CoreWebView2 is properly initialized
+            </summary>
+            <param name="webView"></param>
+            <returns></returns>
+        </member>
+        <member name="F:BimPlus.Client.WebControls.WPF.BimPlusUserControl._initializationIsDone">
+            <summary>
+            Just to be sure that init will be executed only once
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.BimPlusUserControl.OnCoreWebView2InitializationCompleted(System.Object,Microsoft.Web.WebView2.Core.CoreWebView2InitializationCompletedEventArgs)">
+            <summary>
+            This event is triggered when the control's CoreWebView2 has finished being initialized.
+            Also used to perform one time setup operations.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:BimPlus.Client.WebControls.WPF.BimPlusUserControl.ExtendedKeyBoardEventHandling">
+            <summary>
+            ExtendedKeyBoardEventHandling can raise JavaScript events to the c# clients.
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.BimPlusUserControl.OnNewWindowRequested(System.Object,Microsoft.Web.WebView2.Core.CoreWebView2NewWindowRequestedEventArgs)">
+            <summary>
+            NewWindowRequested event handler (source  CoreWebView2)
+            </summary>
+            <param name="sender">CoreWebView2</param>
+            <param name="args"></param>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.BimPlusUserControl.GetCachePath">
+            <summary>
+            Default folder where user data cache is created for embedded browser 
+            </summary>
+            <returns></returns>
         </member>
         <member name="T:BimPlus.Client.WebControls.WPF.BimPlusUserControl.DevPortalSettings">
             <summary>
@@ -150,6 +192,13 @@
             <summary>
             development branch string.
             </summary>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.BimPlusUserControl.IsWebView2RuntimeInstalled(System.Boolean)">
+            <summary>
+            IsWebView2RuntimeInstalled - checks if WebView2 runtime is present in system, if not will advice user to install it.
+            </summary>
+            <param name="showDownloadUI">true - to show info to install WebView2 runtime, othervise only check required version is executed</param>
+            <returns></returns>
         </member>
         <member name="T:BimPlus.Client.WebControls.WPF.WebViewRecreatedArgs">
             <summary>
@@ -170,6 +219,12 @@
             <summary>
             ExportManager
             </summary>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.ExportManager.Dispose(System.Boolean)">
+            <summary>
+            Protected implementation of Dispose pattern.
+            </summary>
+            <param name="disposing"></param>
         </member>
         <member name="M:BimPlus.Client.WebControls.WPF.ExportManager.#ctor(BimPlus.Client.Integration.IntegrationBase)">
             <summary>
@@ -196,6 +251,12 @@
             IssueDetailsControl
             </summary>
         </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.IssueDetailsControl.Dispose(System.Boolean)">
+            <summary>
+            Protected implementation of Dispose pattern.
+            </summary>
+            <param name="disposing"></param>
+        </member>
         <member name="M:BimPlus.Client.WebControls.WPF.IssueDetailsControl.#ctor(BimPlus.Client.Integration.IntegrationBase)">
             <summary>
             Create the IssueDetailsControl.
@@ -213,11 +274,6 @@
             Reloads the current page.
             </summary>
             <param name="ignoreCache"></param>
-        </member>
-        <member name="M:BimPlus.Client.WebControls.WPF.IssueDetailsControl.Dispose">
-            <summary>
-            Releases all resources.
-            </summary>
         </member>
         <member name="M:BimPlus.Client.WebControls.WPF.IssueDetailsControl.GetWebView">
             <summary>
@@ -237,6 +293,12 @@
             <summary>
             IssueListControl
             </summary>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.IssueListControl.Dispose(System.Boolean)">
+            <summary>
+            Protected implementation of Dispose pattern.
+            </summary>
+            <param name="disposing"></param>
         </member>
         <member name="M:BimPlus.Client.WebControls.WPF.IssueListControl.#ctor(BimPlus.Client.Integration.IntegrationBase)">
             <summary>
@@ -263,11 +325,6 @@
             </summary>
             <param name="ignoreCache"></param>
         </member>
-        <member name="M:BimPlus.Client.WebControls.WPF.IssueListControl.Dispose">
-            <summary>
-            Releases all resources.
-            </summary>
-        </member>
         <member name="M:BimPlus.Client.WebControls.WPF.IssueListControl.GetWebView">
             <summary>
             Get the WebView.
@@ -279,23 +336,6 @@
             InitializeComponent
             </summary>
         </member>
-        <member name="T:BimPlus.Client.WebControls.WPF.KeyBoardHandler">
-            <summary>
-            Keybordhandler for EO WebView.
-            </summary>
-        </member>
-        <member name="M:BimPlus.Client.WebControls.WPF.KeyBoardHandler.#ctor(BimPlus.Client.EventHandlerCore,EO.Wpf.WebControl)">
-            <summary>
-            Create the src/BimPlus.ClientIntegration/BimPlus.Client.Integration/BimPlus.Client.Integration.csproj.
-            </summary>
-            <param name="eventHandlerCore"></param>
-            <param name="webControl"></param>
-        </member>
-        <member name="F:BimPlus.Client.WebControls.WPF.KeyBoardHandler.ExtendedKeyBoardEventHandling">
-            <summary>
-            ExtendedKeyBoardEventHandling can raise JavaScript events to the c# clients.
-            </summary>
-        </member>
         <member name="T:BimPlus.Client.WebControls.WPF.LeftNavigationBar">
             <summary>
             Interaction logic for LeftNavigationBar.xaml
@@ -303,6 +343,12 @@
             <summary>
             LeftNavigationBar
             </summary>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.LeftNavigationBar.Dispose(System.Boolean)">
+            <summary>
+            Protected implementation of Dispose pattern.
+            </summary>
+            <param name="disposing"></param>
         </member>
         <member name="M:BimPlus.Client.WebControls.WPF.LeftNavigationBar.#ctor(BimPlus.Client.Integration.IntegrationBase)">
             <summary>
@@ -397,11 +443,6 @@
             </summary>
             <param name="ignoreCache"></param>
         </member>
-        <member name="M:BimPlus.Client.WebControls.WPF.LeftNavigationBar.Dispose">
-            <summary>
-            Dispose WebView.
-            </summary>
-        </member>
         <member name="M:BimPlus.Client.WebControls.WPF.LeftNavigationBar.GetWebView">
             <summary>
             Get the WebView.
@@ -421,6 +462,12 @@
             ObjectPropertiesControl
             </summary>
         </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.ObjectPropertiesControl.Dispose(System.Boolean)">
+            <summary>
+            Protected implementation of Dispose pattern.
+            </summary>
+            <param name="disposing"></param>
+        </member>
         <member name="M:BimPlus.Client.WebControls.WPF.ObjectPropertiesControl.#ctor(BimPlus.Client.Integration.IntegrationBase)">
             <summary>
             Create the ObjectPropertiesControl.
@@ -439,11 +486,6 @@
             </summary>
             <param name="ignoreCache"></param>
         </member>
-        <member name="M:BimPlus.Client.WebControls.WPF.ObjectPropertiesControl.Dispose">
-            <summary>
-            Dispose WebView.
-            </summary>
-        </member>
         <member name="M:BimPlus.Client.WebControls.WPF.ObjectPropertiesControl.GetWebView">
             <summary>
             Get the WebView.
@@ -461,6 +503,17 @@
             </summary>
             <summary>
             ProjectSelection
+            </summary>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.ProjectSelection.Dispose(System.Boolean)">
+            <summary>
+            Protected implementation of Dispose pattern.
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.ProjectSelection.#ctor">
+            <summary>
+            Default Constructor
             </summary>
         </member>
         <member name="M:BimPlus.Client.WebControls.WPF.ProjectSelection.#ctor(BimPlus.Client.Integration.IntegrationBase)">
@@ -510,12 +563,7 @@
             </summary>
             <param name="ignoreCache"></param>
         </member>
-        <member name="M:BimPlus.Client.WebControls.WPF.ProjectSelection.Dispose">
-            <summary>
-            Releases all resources.
-            </summary>
-        </member>
-        <member name="M:BimPlus.Client.WebControls.WPF.ProjectSelection.WebView_LoadCompleted(System.Object,EO.WebBrowser.LoadCompletedEventArgs)">
+        <member name="M:BimPlus.Client.WebControls.WPF.ProjectSelection.OnNavigationCompleted(System.Object,Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs)">
             <summary>
             Load complete action.
             </summary>
@@ -541,27 +589,35 @@
             WebViewer
             </summary>
         </member>
+        <member name="M:BimPlus.Client.WebControls.WPF.WebViewer.Dispose(System.Boolean)">
+            <summary>
+            Protected implementation of Dispose pattern.
+            </summary>
+            <param name="disposing"></param>
+        </member>
         <member name="M:BimPlus.Client.WebControls.WPF.WebViewer.#ctor(BimPlus.Client.Integration.IntegrationBase)">
             <summary>
             Create the WebViewer class.
             </summary>
             <param name="intBase"></param>
         </member>
-        <member name="M:BimPlus.Client.WebControls.WPF.WebViewer.HighlightObjectByID(System.Guid,System.Boolean,System.Boolean)">
+        <member name="M:BimPlus.Client.WebControls.WPF.WebViewer.HighlightObjectByID(System.Guid,System.Boolean,System.Boolean,System.Boolean)">
             <summary>
             Select one object.
             </summary>
             <param name="objectID"></param>
             <param name="throwOnError">default false</param>
             <param name="isolate">default true</param>
+            <param name="blockProperties">default false</param>
         </member>
-        <member name="M:BimPlus.Client.WebControls.WPF.WebViewer.HighlightObjectsByID(System.Collections.Generic.List{System.Guid},System.Boolean,System.Boolean)">
+        <member name="M:BimPlus.Client.WebControls.WPF.WebViewer.HighlightObjectsByID(System.Collections.Generic.List{System.Guid},System.Boolean,System.Boolean,System.Boolean)">
             <summary>
             Select objects.
             </summary>
             <param name="objectIDs"></param>
             <param name="throwOnError">default false</param>
             <param name="isolate">default true</param>
+            <param name="blockProperties">default false</param>
         </member>
         <member name="M:BimPlus.Client.WebControls.WPF.WebViewer.FlyToObject(System.Guid,System.Boolean,System.Boolean)">
             <summary>
@@ -630,11 +686,6 @@
             Reloads the current page.
             </summary>
             <param name="ignoreCache"></param>
-        </member>
-        <member name="M:BimPlus.Client.WebControls.WPF.WebViewer.Dispose">
-            <summary>
-            Releases all resources.
-            </summary>
         </member>
         <member name="M:BimPlus.Client.WebControls.WPF.WebViewer.GetWebView">
             <summary>

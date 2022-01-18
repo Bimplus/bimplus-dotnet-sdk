@@ -53,13 +53,13 @@
         </member>
         <member name="M:BimPlus.Client.Integration.IntegrationBase.ConnectWithRememberMe">
             <summary>
-            Connect with rememberme token.
+            Connect with rememberMe token.
             </summary>
             <returns>True, if connected</returns>
         </member>
         <member name="M:BimPlus.Client.Integration.IntegrationBase.ConnectWithRememberMeAndClientId">
             <summary>
-            Connect with rememberme token, client Id and server name.
+            Connect with rememberMe token, client Id and server name.
             </summary>
             <returns>True, if connected</returns>
         </member>

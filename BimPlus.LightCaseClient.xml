@@ -281,6 +281,17 @@
             <param name="etag"></param>
             <returns>HttpStatusCode</returns>
         </member>
+        <member name="M:BimPlus.LightCaseClient.GenericProxies.RestGetStream(System.String,BimPlus.LightCaseClient.Support.ClientConfiguration,System.String,System.String,System.Net.HttpStatusCode@)">
+            <summary>
+            Synchronous get stream method with ClientConfiguration and etag.
+            </summary>
+            <param name="url"></param>
+            <param name="configuration"></param>
+            <param name="mimeType"></param>
+            <param name="etag"></param>
+            <param name="status">output HttpStatusCode </param>
+            <returns>byte[]</returns>
+        </member>
         <member name="M:BimPlus.LightCaseClient.GenericProxies.RestGetNonQuery(System.String,BimPlus.LightCaseClient.Support.ClientConfiguration)">
             <summary>
             Synchronous get method with ClientConfiguration. No response expected.
@@ -688,6 +699,11 @@
         <member name="P:BimPlus.LightCaseClient.Support.ClientConfiguration.AuthorizationClientId">
             <summary>
             AuthorizationClientId.
+            </summary>
+        </member>
+        <member name="P:BimPlus.LightCaseClient.Support.ClientConfiguration.TotalCount">
+            <summary>
+            TotalCount
             </summary>
         </member>
         <member name="M:BimPlus.LightCaseClient.Support.ClientConfiguration.Clone">

@@ -238,7 +238,7 @@
         </member>
         <member name="M:BimPlus.Sdk.Api.Core.RememberMe(System.String,System.String)">
             <summary>
-            Connect with Rememberme token.
+            Connect with RememberMe token.
             </summary>
             <param name="rememberMeToken"></param>
             <param name="serverName"></param>
@@ -246,7 +246,7 @@
         </member>
         <member name="M:BimPlus.Sdk.Api.Core.RememberMe(System.String,System.Guid,System.String)">
             <summary>
-            Connect with Rememberme token, Client Id and server name.
+            Connect with RememberMe token, Client Id and server name.
             </summary>
             <param name="rememberMeToken"></param>
             <param name="clientId"></param>
@@ -280,6 +280,12 @@
             Get Connection Accesstoken Guid.
             </summary>
             <returns>Guid</returns>
+        </member>
+        <member name="P:BimPlus.Sdk.Api.Core.Application">
+            <summary>
+            Get Application
+            </summary>
+            <returns></returns>
         </member>
         <member name="M:BimPlus.Sdk.Api.Core.RememberMeToken">
             <summary>
@@ -553,6 +559,12 @@
         <member name="P:BimPlus.Sdk.Api.IntegrationBase.ApiCore">
             <summary>
             The API core.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Api.IntegrationBase.WebView2FixedVersionRuntimePath">
+            <summary>
+            Path to folder where can be found Microsoft.WebView2.FixedVersionRuntime. 
+            Initially supported version 91.0.864.37 - platform x64.
             </summary>
         </member>
         <member name="P:BimPlus.Sdk.Api.IntegrationBase.ServerName">
@@ -851,6 +863,27 @@
             </summary>
             <param name="objectId"></param>
             <returns>DtObject</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtObjects.GetGlbGeometry(System.Guid,System.Nullable{System.Guid},System.Boolean,System.String)">
+            <summary>
+            read geometry data as binary gltf (glb)
+            </summary>
+            <param name="objectId">root object</param>
+            <param name="layerId">additional filter for layer (discipline)</param>
+            <param name="vertexNormals">calculate vertexNormals</param>
+            <param name="etag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.DtObjects.GetChunkGlbGeometry(System.Guid,System.Int32,System.Int32@,System.Nullable{System.Guid},System.Boolean)">
+            <summary>
+            read chunk geometry data as binary gltf (glb)
+            </summary>
+            <param name="objectId">root object</param>
+            <param name="chunk">requested chunk (should be started with 1)</param>
+            <param name="totalCount">returns totalCount of chunks</param>
+            <param name="layerId">optional layer</param>
+            <param name="vertexNormals">calculate vertexNormals</param>
+            <returns></returns>
         </member>
         <member name="M:BimPlus.Sdk.Api.Wrapper.DtObjects.GetObjectGeometry(System.Guid)">
             <summary>
@@ -1730,6 +1763,20 @@
             </summary>
             <param name="projectId"></param>
             <returns>HttpStatusCode</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Projects.GetTopologyStructure(System.Guid)">
+            <summary>
+            Get TopologyStructure from a project.
+            </summary>
+            <param name="projectId"></param>
+            <returns>DtoTopologyStructure</returns>
+        </member>
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Projects.ResetTopologyStructure(System.Guid)">
+            <summary>
+            Reset Topologystructure from a project.
+            </summary>
+            <param name="projectId"></param>
+            <returns>DtoTopologyStructure</returns>
         </member>
         <member name="T:BimPlus.Sdk.Api.Wrapper.Services">
             <summary>
