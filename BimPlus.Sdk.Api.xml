@@ -632,17 +632,18 @@
             <param name="attachmentGuid"></param>
             <returns>byte[]</returns>
         </member>
-        <member name="M:BimPlus.Sdk.Api.Wrapper.Attachments.UploadAttachment(System.Guid,System.String,System.Byte[],System.String)">
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Attachments.UploadAttachment(System.Guid,System.String,System.Byte[],System.String,System.String)">
             <summary>
             Post attachment for a specific object.
             </summary>
-            <param name="relatedObjectId"></param>
-            <param name="filename"></param>
+            <param name="relatedObjectId">default should be the projectId</param>
+            <param name="filename">filename.</param>
             <param name="data"></param>
-            <param name="name"></param>
+            <param name="name">optional document name.</param>
+            <param name="documentFolder">optional document folder name.</param>
             <returns>DtoAttachment</returns>
         </member>
-        <member name="M:BimPlus.Sdk.Api.Wrapper.Attachments.UploadAttachment(System.Guid,System.String,System.Byte[],BimPlus.Sdk.Data.AttachmentType)">
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Attachments.UploadAttachment(System.Guid,System.String,System.Byte[],BimPlus.Sdk.Data.AttachmentType,System.String)">
             <summary>
             Post internal attachment for a specific object.
             </summary>
@@ -650,13 +651,15 @@
             <param name="filename"></param>
             <param name="data"></param>
             <param name="type"></param>
+            <param name="documentFolder"></param>
         </member>
-        <member name="M:BimPlus.Sdk.Api.Wrapper.Attachments.UpdateAttachment(System.Guid,System.Byte[])">
+        <member name="M:BimPlus.Sdk.Api.Wrapper.Attachments.UpdateAttachment(System.Guid,System.Byte[],System.String)">
             <summary>
             Update internal attachment for a specific object.
             </summary>
             <param name="attachmentId"></param>
             <param name="data"></param>
+            <param name="documentFolder"></param>
             <returns>DtoAttachment</returns>
         </member>
         <member name="M:BimPlus.Sdk.Api.Wrapper.Attachments.DeleteAttachment(System.Guid)">

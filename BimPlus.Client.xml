@@ -29,6 +29,9 @@
             An object property.
             </summary>
         </member>
+        <member name="P:BimPlus.Client.BimPlusEventArgs.Ids">
+            Object Id's, for multi select.
+        </member>
         <member name="T:BimPlus.Client.BimPlusUserControlProcessJsArgs">
             <summary>
             ProcessJsMessage args.

@@ -899,6 +899,33 @@
             Property StatUsageCacheSizeOnDiskMb.
             </summary>
         </member>
+        <member name="P:BimPlus.Sdk.Data.Administration.DtoExternalServerAuth.Id">
+            <summary>ID</summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Administration.DtoExternalServerAuth.UserClientId">
+            <summary>ID of currently logged user client</summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Administration.DtoExternalServerAuth.UserId">
+            <summary>User ID</summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Administration.DtoExternalServerAuth.ServerName">
+            <summary>External server name or identification</summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Administration.DtoExternalServerAuth.AccessToken">
+            <summary>Access token</summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Administration.DtoExternalServerAuth.RefreshToken">
+            <summary>Refresh token</summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Administration.DtoExternalServerAuth.TokenType">
+            <summary>Token type</summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Administration.DtoExternalServerAuth.ExpiresIn">
+            <summary>Expiration date and time</summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Administration.DtoExternalServerAuth.ResourceUrl">
+            <summary>Resource (instance) url for this auth server</summary>
+        </member>
         <member name="T:BimPlus.Sdk.Data.Administration.DtoApp">
             <summary>
             Class DtoApp.
@@ -1200,6 +1227,64 @@
             <summary>
             Property RevisionsSizeMbyte (Size of all revisions in MByte).
             </summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.Administration.DtoSystemAttachment">
+            <summary>
+            Class DtoSystemObject.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Administration.DtoSystemAttachment.ObjectId">
+            <summary>Id of entity to which this attachment belongs ( could be e.g. UserId, CompanyId, .. )</summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Administration.DtoSystemAttachment.FileName">
+            <summary>File name</summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Administration.DtoSystemAttachment.Type">
+            <summary>File type</summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Administration.DtoSystemAttachment.Url">
+            <summary>Storage link</summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Administration.DtoSystemAttachment.AttachmentType">
+            <summary>Attachment type</summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Administration.DtoSystemAttachment.Attachment">
+            <summary>Attachment</summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Administration.DtoSystemAttachment.Hash">
+            <summary>Hash</summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Administration.DtoSystemAttachment.Size">
+            <summary>File size</summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Administration.DtoSystemAttachment.Language">
+            <summary>Language</summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Administration.DtoSystemAttachment.Timestamp">
+            <summary>Timestamp</summary>
+        </member>
+        <member name="T:BimPlus.Sdk.Data.Administration.SystemAttachmentType">
+            <summary>
+            Class containing definitions of system attachment types
+            </summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.Administration.SystemAttachmentType.UserPhoto">
+            <summary>Photo of an user</summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.Administration.SystemAttachmentType.TermsAndConditionsDocument">
+            <summary>TermsAndConditions document</summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.Administration.SystemAttachmentType.DataProtectionDeclarationsDocument">
+            <summary>Data Protection Declaration document</summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.Administration.SystemAttachmentType.Imprints">
+            <summary>Imprint document</summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.Administration.SystemAttachmentType.ErrorLog">
+            <summary>Error log</summary>
+        </member>
+        <member name="F:BimPlus.Sdk.Data.Administration.SystemAttachmentType.CleanCacheReport">
+            <summary>Clean cache report</summary>
         </member>
         <member name="T:BimPlus.Sdk.Data.Administration.DtoSystemObject">
             <summary>
@@ -2494,6 +2579,16 @@
             Property Password.
             </summary>
         </member>
+        <member name="P:BimPlus.Sdk.Data.Authentication.DtoUser.PasswordHash">
+            <summary>
+            Property PasswordHash.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Authentication.DtoUser.PasswordSalt">
+            <summary>
+            Property PasswordSalt.
+            </summary>
+        </member>
         <member name="P:BimPlus.Sdk.Data.Authentication.DtoUser.SalesforceId">
             <summary>
             Property SalesforceId.
@@ -2537,11 +2632,6 @@
         <member name="P:BimPlus.Sdk.Data.Authentication.DtoUser.Address">
             <summary>
             Property Address.
-            </summary>
-        </member>
-        <member name="P:BimPlus.Sdk.Data.Authentication.DtoUser.PreferedLanguage">
-            <summary>
-            Property PreferedLanguage.
             </summary>
         </member>
         <member name="P:BimPlus.Sdk.Data.Authentication.DtoUser.Telephone">
@@ -2699,6 +2789,11 @@
         <member name="P:BimPlus.Sdk.Data.Authentication.DtoMediumUser.ShortDisplayName">
             <summary>
             Returns ShortDisplayName.
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.Authentication.DtoMediumUser.PreferredLanguage">
+            <summary>
+            Property PreferedLanguage.
             </summary>
         </member>
         <member name="M:BimPlus.Sdk.Data.Authentication.DtoMediumUser.#ctor">
@@ -21924,6 +22019,7 @@
             <summary>
             Property IssueIdFromBcf - IssueId defined direct in BCF-file as directory name
             (this value is saved as free attribute "FreeAttIssueIdFromBcf - 2129C121-5311-4F1C-8DA5-05DD74FC0C66" fr issue)
+            (i.e. attribute "Guid" from node "Topic" from file "markup.bcf" for BCF-File)
             </summary>
         </member>
         <member name="P:BimPlus.Sdk.Data.TenantDto.DtoBaseIssue.IsObjectValid">
@@ -25217,12 +25313,12 @@
             Auxiliary class for role info.
             </summary>
         </member>
-        <member name="P:BimPlus.Sdk.Data.UserAdministration.UserRoleInfo.UserID">
+        <member name="P:BimPlus.Sdk.Data.UserAdministration.UserRoleInfo.UserId">
             <summary>
             Property UserID.
             </summary>
         </member>
-        <member name="P:BimPlus.Sdk.Data.UserAdministration.UserRoleInfo.RoleID">
+        <member name="P:BimPlus.Sdk.Data.UserAdministration.UserRoleInfo.RoleId">
             <summary>
             Property RoleID.
             </summary>
@@ -25244,12 +25340,12 @@
             Auxiliary class for pair of user role id and right id.
             </summary>
         </member>
-        <member name="P:BimPlus.Sdk.Data.UserAdministration.RoleUserRightsIDs.RoleID">
+        <member name="P:BimPlus.Sdk.Data.UserAdministration.RoleUserRightsIDs.RoleId">
             <summary>
             Property RoleID.
             </summary>
         </member>
-        <member name="P:BimPlus.Sdk.Data.UserAdministration.RoleUserRightsIDs.UserRightID">
+        <member name="P:BimPlus.Sdk.Data.UserAdministration.RoleUserRightsIDs.UserRightId">
             <summary>
             Property UserRightID.
             </summary>
@@ -25455,7 +25551,7 @@
             Property Name.
             </summary>
         </member>
-        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoTeamMedium.Hostname">
+        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoTeamMedium.HostName">
             <summary>
             Property Name.
             </summary>
@@ -25470,6 +25566,11 @@
             Property Name.
             </summary>
         </member>
+        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoTeamMedium.SchemaName">
+            <summary>
+            Property Name.
+            </summary>
+        </member>
         <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoTeamMedium.DisplayName">
             <summary>
             Property DisplayName.
@@ -25477,6 +25578,11 @@
             Nemetschek bim+ GmbH,
             Hans Schmidt (hansschmidt@bimplus.net)   if companyName available
             Karl Müller (k.mueller@t-online.de)      if company not available
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoTeamMedium.OwnerId">
+            <summary>
+            Property Owner.
             </summary>
         </member>
         <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoTeamMedium.Owner">
@@ -25969,7 +26075,7 @@
         </member>
         <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoTeam.TeamRights">
             <summary>
-            Property Teamrights (read, write ...).
+            Property TeamRights (read, write ...).
             </summary>
         </member>
         <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoTeam.Rights">
@@ -26258,6 +26364,11 @@
             The user who owns this client
             </summary>
         </member>
+        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoUserClient.User">
+            <summary>
+            Property User.
+            </summary>
+        </member>
         <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoUserClient.TokenType">
             <summary>
             The token type
@@ -26276,6 +26387,11 @@
         <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoUserClient.CurrentTeamId">
             <summary>
             Team the user is currently working with
+            </summary>
+        </member>
+        <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoUserClient.CurrentTeam">
+            <summary>
+            Property User.
             </summary>
         </member>
         <member name="P:BimPlus.Sdk.Data.UserAdministration.DtoUserClient.CurrentTeamRight">

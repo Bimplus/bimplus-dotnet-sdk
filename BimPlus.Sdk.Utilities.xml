@@ -936,7 +936,7 @@
             <param name="data">Data.</param>
             <returns>DtoAttachment</returns>
         </member>
-        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.PostObjectAttachment(System.Guid,System.String,System.String,System.Byte[])">
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.PostObjectAttachment(System.Guid,System.String,System.String,System.Byte[],System.Guid)">
             <summary>
             Post attachment for a specific object.
             </summary>
@@ -944,9 +944,10 @@
             <param name="filename">File name.</param>
             <param name="name">Attachment name.</param>
             <param name="data">Data.</param>
+            <param name="documentFolder">default is Guid.Empty</param>
             <returns>DtoAttachment</returns>
         </member>
-        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.PostAttachment(System.Guid,System.String,System.Byte[],BimPlus.Sdk.Data.AttachmentType)">
+        <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.PostAttachment(System.Guid,System.String,System.Byte[],BimPlus.Sdk.Data.AttachmentType,System.Guid)">
             <summary>
             Post internal attachment for a specific object.
             </summary>
@@ -954,6 +955,7 @@
             <param name="filename"></param>
             <param name="data"></param>
             <param name="type"></param>
+            <param name="documentFolder">default is Guid.Empty</param>
             <returns>DtoAttachment</returns>
         </member>
         <member name="M:BimPlus.Sdk.Utilities.V2.ITeamSession.UpdateAttachment(System.Guid,System.Byte[])">
@@ -2497,7 +2499,7 @@
             <param name="data">Data.</param>
             <returns>DtoAttachment</returns>
         </member>
-        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.PostObjectAttachment(System.Guid,System.String,System.String,System.Byte[])">
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.PostObjectAttachment(System.Guid,System.String,System.String,System.Byte[],System.Guid)">
             <summary>
             Post attachment for a specific object.
             </summary>
@@ -2505,9 +2507,10 @@
             <param name="filename"></param>
             <param name="name"></param>
             <param name="data"></param>
+            <param name="documentFolder">default is Guid.Empty</param>
             <returns>DtoAttachment</returns>
         </member>
-        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.PostAttachment(System.Guid,System.String,System.Byte[],BimPlus.Sdk.Data.AttachmentType)">
+        <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.PostAttachment(System.Guid,System.String,System.Byte[],BimPlus.Sdk.Data.AttachmentType,System.Guid)">
             <summary>
             Post internal attachment for a specific object.
             </summary>
@@ -2515,6 +2518,7 @@
             <param name="filename"></param>
             <param name="data"></param>
             <param name="type"></param>
+            <param name="documentFolder">default is Guid.Empty</param>
             <returns>DtoAttachment</returns>
         </member>
         <member name="M:BimPlus.Sdk.Utilities.V2.TeamSession.UpdateAttachment(System.Guid,System.Byte[])">

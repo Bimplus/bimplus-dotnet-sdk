@@ -168,6 +168,9 @@
         <member name="F:Nemetschek.NUtilLibrary.PolyederType.Reinforcement">
             <summary>Reinforcement</summary>
         </member>
+        <member name="F:Nemetschek.NUtilLibrary.PolyederType.Axis">
+            <summary>Axis</summary>
+        </member>
         <member name="F:Nemetschek.NUtilLibrary.PolyederType.BackfaceCulling">
             <summary>back-face culling determines whether a polygon of a graphical object is visible</summary>
         </member>
