@@ -4,7 +4,9 @@ Available frameworks are currently
 .NETStandard 2.0
 .net8.0
 
-are published at https://www.nuget.org/ 
+are published at 
+https://www.nuget.org/packages/Allplan.BIF.Core
+https://www.nuget.org/packages/Allplan.BIF.WebControls
 (actual version is 2025.0.0.1)
 
 
