@@ -23,4 +23,7 @@ includes many WebView components which allows you to use Webcomponents for
 inside of your desktop application.
 Eventhandler to receive/send messages.
 
+API Documentation (PreRelease)
+[BimPlus API Documentation](https://api-dev.bimplus.net/swagger/index.html)
+
 
